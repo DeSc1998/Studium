@@ -1,0 +1,15 @@
+
+test.*
+
+*~
+*.tex
+*.log
+*.out
+*.aux
+*.toc
+
+test.pdf
+  
+Uni-Mathe/
+auto/
+Übungen/
