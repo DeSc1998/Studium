@@ -1,0 +1,265 @@
+
+Lösungsvorschlag zu Hausaufgabe 02:
+
+M1 || M2 := "Vereinigung von M1 und M2"
+M1 && M2 := "Schnittmenge von M1 und M2"
+
+N := {0, 1, 2, 3, ...}
+R := {x | x ist eine Dezimalzahl}
+
+sum(k=n0, n, e_k) := "Summe über k = n0 bis n von e_k"
+prod(k=n0, n, e_k) := "Produkt über k = n0 bis n von e_k"
+
+* Aufgabe 1
+** a
+sun(k=1, n, k^2) = n(n + 1)(2n + 1) / 6
+
+IA:
+  Es gilt
+    sun(k=1, 1, k^2) = 1(1 + 1)(2*1 + 1) / 6
+                     = 1 * 2 * 3 / 6
+                     = 1
+                     = 1^2
+
+IV:
+  Es gelte für ein beliebiges n aus N mit n > 0
+    sun(k=1, n, k^2) = n(n + 1)(2n + 1) / 6
+
+IB:
+  Dann gilt
+    sun(k=1, n + 1, k^2) = (n + 1)(n + 2)(2n + 3) / 6
+
+IS:
+  Es gilt
+    sun(k=1, n + 1, k^2) = sun(k=1, n, k^2) + (n + 1)^2
+                         = n(n + 1)(2n + 1) / 6 + (n + 1)^2
+                         = n(n + 1)(2n + 1) / 6 + 6(n + 1)^2 / 6
+                         = ( n(n + 1)(2n + 1) + 6(n + 1)^2 ) / 6
+                         = ( n(n + 1)(2n + 1) + 6(n + 1)(n + 1) ) / 6
+                         = ( n(n + 1)(2n + 1) + 3(n + 1)(2n + 2) ) / 6
+                         = ( n(n + 1)(2n + 1) + 3(n + 1)(2n + 1) + 3(n + 1) ) / 6
+                         = ( (n + 2)(n + 1)(2n + 1) + (n + 1)(2n + 1) + 3(n + 1) ) / 6
+                         = ( (n + 2)(n + 1)(2n + 1) + (n + 1)(2n + 4) ) / 6
+                         = ( (n + 2)(n + 1)(2n + 1) + 2(n + 1)(n + 2) ) / 6
+                         = (n + 2)(n + 1)(2n + 3) / 6
+
+Damit gilt für alle n aus N mit n > 0
+  sun(k=1, n, k^2) = n(n + 1)(2n + 1) / 6
+
+** b
+prod(k=2, n, 1 - 1/k^2) = (n + 1) / 2n
+
+IA:
+  Es gilt
+    prod(k=2, 2, 1 - 1/k^2) = (2 + 1) / 4
+                            = 3/4
+                            = 1 - 1/4
+
+IV:
+  Es gelte für ein beliebiges n aus N mit n > 1
+    prod(k=2, n, 1 - 1/k^2) = (n + 1) / 2n
+
+IB:
+  Dann gilt
+    prod(k=2, n + 1, 1 - 1/k^2) = (n + 2) / 2(n + 1)
+
+IS:
+  Es gilt
+    prod(k=2, n + 1, 1 - 1/k^2) = prod(k=2, n, 1 - 1/k^2) * (1 - 1/(n + 1)^2)
+                                = (n + 1) / 2n * (1 - 1/(n + 1)^2)
+                                = (n + 1) / 2n * ((n+1)^2 / (n+1)^2 - 1/(n + 1)^2)
+                                = (n + 1) / 2n * ( ((n+1)^2 - 1) / (n+1)^2 )
+                                = (n + 1) / 2n * ( ((n+1) - 1)((n+1) + 1) / (n+1)^2 )
+                                = (n + 1) / 2n * ( n(n + 2) / (n+1)(n+1) )
+                                = (n + 1) * n(n + 2) / 2n(n + 1)(n + 1)
+                                = (n + 2) / 2(n + 1)
+
+Damit gilt für alle n aus N mit n > 1
+  prod(k=2, n, 1 - 1/k^2) = (n + 1) / 2n
+
+** c
+Für alle n aus N, n >= 4, gilt 2^n >= n^2
+
+IA:
+  Es gilt für n = 4
+    2^4 >= 4^2
+<=> 16  >= 16
+
+IV:
+  Es gelte für ein beliebiges n aus N mit n >= 4
+    2^n >= n^2
+
+IB:
+  Dann gilt
+    2^(n + 1) >= (n + 1)^2
+
+IS:
+  Es gilt
+    2^(n + 1) >= (n + 1)^2
+<=> 2 * 2^n   >= 2 * n^2 = n^2 + 2n + 1
+ => n^2 = 2n + 1
+<=> 0 = n^2 - 2n - 1
+ => n1 = 1 - sqrt(2) und n2 = 1 - sqrt(2)
+ => n1 < 4 und n2 < 4
+ => n^2 > 2n + 1
+ => 2 * n^2 > n^2 + 2n + 1 = (n + 1)^2
+ => 2 * 2^n > (n + 1)^2
+<=> 2^(n + 1) > (n + 1)^2
+
+Damit gilt für alle n aus N mit n >= 4
+  2^n >= n^2
+
+* Aufgabe 2
+D(f) := "Definitionsbereich von f"
+U(f) := "Inverse von f"
+(f1 . f2)(x) := f1(f2(x))
+
+** a
+D(f1) = R
+D(f2) = R \ {-1}
+
+** b
+  (f1 . f2)(x)
+= f1(f2(x))
+= f1(1 / (x + 1))
+= 1 / (x + 1)^4 - 1
+
+D(f1 . f2) = R \ {-1}
+
+  (f2 . f1)(x)
+= f2(f1(x))
+= f2(x^4 - 1)
+= 1 / x^4
+
+D(f2 . f1) = R \ {0}
+
+** c
+  U(f1)(]0, 15])
+= [-2, -1[ || ]1, 2]
+
+** d
+f1 ist nach unten beschränkt mit m = -1.
+f1 ist nicht nach oben beschränkt.
+
+* Aufgabe 3
+** a
+f(x) = y = (2x + 3) / (x + 2)
+
+Beim Inversen von f gilt:
+    x = (2y + 3) / (y + 2)
+<=> x(y + 2) = 2y + 3
+<=> xy + 2x  = 2y + 3
+<=> xy - 2y  = 3 - 2x
+<=> y(x - 2) = 3 - 2x
+<=> y        = (3 - 2x) / (x - 2)
+
+=> U(f)(x) = y = (3 - 2x) / (x - 2), x ungleich 2
+
+D(U(f)) = R \ {2}
+
+** b
+(f . U(f))(y) = f( (3 - 2y) / (y - 2) )
+              = ( 2(3 - 2y) / (y - 2) + 3 ) / ( (3 - 2y) / (y - 2) + 2 )
+              = ( (2(3 - 2y) + 3(y - 2)) / (y - 2) ) / ( (3 - 2y) / (y - 2) + 2 )
+              = ( (6 - 4y + 3y - 6) / (y - 2) ) / ( (3 - 2y) / (y - 2) + 2 )
+              = ( -y / (y - 2) ) / ( (3 - 2y) / (y - 2) + 2 )
+              = ( -y / (y - 2) ) / ( (3 - 2y + 2(y - 2)) / (y - 2) )
+              = ( -y / (y - 2) ) / ( -1 / (y - 2) )
+              = y
+
+** c
+Sei h aus R, h > 0
+
+Es gilt für den Nenner:
+  (-2 + h) + 2 > 0
+
+Daraus folgt für den Zähler:
+   2(-2 + h) + 3 < 0
+=> f(-2 + h) < 0
+
+Es gilt für den Zähler:
+    2x + 3 = 0 mit x aus R
+<=> x = 3/2
+
+Daraus folgt für den Nenner:
+   (3/2) + 2 != 0
+=> f(3/2) = 0
+=> -2 + h < 3/2 und f(-2 + h) < f(3/2)
+=> f ist monoton wachsend
+
+* Aufgabe 4
+** a
+    exp(x^2 - 9) - 1 = 0
+<=> exp(x^2 - 9) = 1
+ => x^2 - 9 = 0 nach exp(0) = 1
+<=> x^2 = 9
+ => x = -3 und x = 3
+
+** b
+f2(x) = ln( (x^2 - 4x + 3) / (x^2 - 6x + 8) )
+      = ln( (x - 3)(x - 1) / (x - 2)(x - 4) )
+=> x != 2 und x != 4
+
+Im folgenden wird untersucht, wann der Funktionswerte Beträge annehmen, die
+größer als 0 sind:
+
+Für Nenner:
+1. Fall (>0): x - 2 > 0 und x - 4 > 0
+        => x > 2 und x > 4
+        => I1 = ]4, inf[
+
+2. Fall (>0): x - 2 < 0 und x - 4 < 0
+        => x < 2 und x < 4
+        => I2 = ]-inf, 2[
+
+3. Fall (<0): x - 2 < 0 oder x - 4 < 0
+        => x < 2 oder x < 4
+        => I3 = ]2, 4[
+
+Für Zähler:
+1. Fall (>0): x - 3 > 0 und x - 1 > 0
+        => x > 3 und x > 1
+        => I4 = ]3, inf[
+
+2. Fall (>0): x - 3 < 0 und x - 1 < 0
+        => x < 3 und x < 1
+        => I5 = ]-inf, 1[
+
+3. Fall (<0): x - 3 < 0 oder x - 1 < 0
+        => x < 3 oder x < 1
+        => I6 = ]1, 3[
+
+Nenner und Zähler sind > 0:
+  L1 = (I1 && I4) || (I2 && I5)
+     = ]-inf, 1[ || ]4, inf[
+
+Nenner und Zähler sind < 0:
+  L2 = I3 && I6
+     = ]2, 3[
+
+D(f2) = ]-inf, 1[ || ]2, 3[ || ]4, inf[
+      = R \ ([1, 2] || [3, 4])
+
+** c
+   Sinus und Cosinus sind beschränkt auf Werte im Intervall [-1, 1]
+=> der Betrag des Produkts kann auch nur höchstens 1 sein
+
+   f3(-x)
+=  cos(-x) sin(-x) "Sinus ist ungerade und Cosinus ist gerade"
+=  cos(x) (-sin(x))
+= -(cos(x) sin(x))
+= -f3(x)
+=> f3 ist ungerade
+
+* Aufgabe 5
+** a
+sin(2x) = sin(x + x)
+        = sin(x) cos(x) + cos(x) sin(x)
+        = 2 sin(x) cos(x)
+
+** b
+cos(7 pi / 12) = cos(pi/4 + pi/3)
+               = cos(pi/4) cos(pi/3) - sin(pi/4) sin(pi/3)
+               = sqrt(2)/2 * 1/2 - sqrt(2)/2 * sqrt(3)/2
+               = sqrt(2)/4 - sqrt(6)/4
+               = (sqrt(2) - sqrt(6)) / 4
