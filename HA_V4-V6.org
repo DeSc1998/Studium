@@ -250,7 +250,7 @@ Beim Inversen von f gilt:
 D(U(f)) = R \ {2}
 
 ** b
-(f \circ U(f))(y) = f( \frac{3 - 2y}{y - 2} )
+(f \circ U(f))(y) = f( $\frac{3 - 2y}{y - 2}$ )
 
               = ( 2(3 - 2y) / (y - 2) + 3 ) / ( (3 - 2y) / (y - 2) + 2 )
 
