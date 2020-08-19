@@ -183,13 +183,15 @@ D(f) := "Definitionsbereich von f"
 
 U(f) := "Inverse von f"
 
+(f1 \cdot f2)(x) := f2(f1(x))
+
 ** a
 D(f1) = R
 
 D(f2) = R \ {-1}
 
 ** b
-  (f1 \circ f2)(x)
+  (f1 \cdot f2)(x)
 
 = f1(f2(x))
 
@@ -198,10 +200,10 @@ D(f2) = R \ {-1}
 = 1 / (x + 1)^4 - 1
 
 
-D(f1 \circ f2) = R \ {-1}
+D(f1 \cdot f2) = R \ {-1}
 
 
-  (f2 \circ f1)(x)
+  (f2 \cdot f1)(x)
 
 = f2(f1(x))
 
@@ -210,7 +212,7 @@ D(f1 \circ f2) = R \ {-1}
 = 1 / x^4
 
 
-D(f2 \circ f1) = R \ {0}
+D(f2 \cdot f1) = R \ {0}
 
 ** c
   U(f1)(]0, 15])
