@@ -250,7 +250,7 @@ Beim Inversen von f gilt:
 D(U(f)) = R \ {2}
 
 ** b
-(f \circ U(f))(y) = f( (3 - 2y) / (y - 2) )
+(f \circ U(f))(y) = f( \frac{3 - 2y}{y - 2} )
 
               = ( 2(3 - 2y) / (y - 2) + 3 ) / ( (3 - 2y) / (y - 2) + 2 )
 
@@ -284,7 +284,7 @@ Daraus folgt für den Zähler:
 
 Es gilt für den Zähler:
 
-    2x + 3 = 0 mit x aus R
+    2x + 3 = 0 mit x \in R
 
 \Leftrightarrow x = 3/2
 
@@ -329,14 +329,14 @@ Für Nenner:
 
         => x > 2 und x > 4
 
-        => I1 = ]4, inf[
+        => I1 = ]4, \infty[
 
 
 2. Fall (>0): x - 2 < 0 und x - 4 < 0
 
         => x < 2 und x < 4
 
-        => I2 = ]-inf, 2[
+        => I2 = ]-\infty, 2[
 
 
 3. Fall (<0): x - 2 < 0 oder x - 4 < 0
@@ -352,14 +352,14 @@ Für Zähler:
 
         => x > 3 und x > 1
 
-        => I4 = ]3, inf[
+        => I4 = ]3, \infty[
 
 
 2. Fall (>0): x - 3 < 0 und x - 1 < 0
 
         => x < 3 und x < 1
 
-        => I5 = ]-inf, 1[
+        => I5 = ]-\infty, 1[
 
 
 3. Fall (<0): x - 3 < 0 oder x - 1 < 0
@@ -373,7 +373,7 @@ Nenner und Zähler sind > 0:
 
   L1 = (I1 \cap I4) \cup (I2 \cap I5)
 
-     = ]-inf, 1[ \cup ]4, inf[
+     = ]-\infty, 1[ \cup ]4, \infty[
 
 
 Nenner und Zähler sind < 0:
@@ -383,7 +383,7 @@ Nenner und Zähler sind < 0:
      = ]2, 3[
 
 
-D(f2) = ]-inf, 1[ || ]2, 3[ || ]4, inf[
+D(f2) = ]-\infty, 1[ || ]2, 3[ || ]4, \infty[
 
       = R \ ([1, 2] || [3, 4])
 
