@@ -1,27 +1,23 @@
 
 Lösungsvorschlag zu Hausaufgabe 02:
 
-M1 || M2 := "Vereinigung von M1 und M2"
-
-M1 && M2 := "Schnittmenge von M1 und M2"
-
 N := {0, 1, 2, 3, ...}
 
 R := {x | x ist eine Dezimalzahl}
 
-sum(k=n0, n, e_k) := "Summe über k = n0 bis n von e_k"
+\sum(k=n0, n, e_k) := "Summe über k = n0 bis n von e_k"
 
-prod(k=n0, n, e_k) := "Produkt über k = n0 bis n von e_k"
+\prod(k=n0, n, e_k) := "Produkt über k = n0 bis n von e_k"
 
 * Aufgabe 1
 ** a
-sun(k=1, n, k^2) = n(n + 1)(2n + 1) / 6
+\sum(k=1, n, k^2) = n(n + 1)(2n + 1) / 6
 
 IA:
 
   Es gilt
 
-    sun(k=1, 1, k^2) = 1(1 + 1)(2*1 + 1) / 6
+    \sum(k=1, 1, k^2) = 1(1 + 1)(2*1 + 1) / 6
 
                      = 1 * 2 * 3 / 6
 
@@ -34,20 +30,20 @@ IV:
 
   Es gelte für ein beliebiges n aus N mit n > 0
 
-    sun(k=1, n, k^2) = n(n + 1)(2n + 1) / 6
+    \sum(k=1, n, k^2) = n(n + 1)(2n + 1) / 6
 
 IB:
 
   Dann gilt
 
-    sun(k=1, n + 1, k^2) = (n + 1)(n + 2)(2n + 3) / 6
+    \sum(k=1, n + 1, k^2) = (n + 1)(n + 2)(2n + 3) / 6
 
 
 IS:
 
   Es gilt
 
-    sun(k=1, n + 1, k^2) = sun(k=1, n, k^2) + (n + 1)^2
+    \sum(k=1, n + 1, k^2) = \sum(k=1, n, k^2) + (n + 1)^2
 
                          = n(n + 1)(2n + 1) / 6 + (n + 1)^2
 
@@ -72,16 +68,16 @@ IS:
 
 Damit gilt für alle n aus N mit n > 0
 
-  sun(k=1, n, k^2) = n(n + 1)(2n + 1) / 6
+  \sum(k=1, n, k^2) = n(n + 1)(2n + 1) / 6
 
 ** b
-prod(k=2, n, 1 - 1/k^2) = (n + 1) / 2n
+\prod(k=2, n, 1 - 1/k^2) = (n + 1) / 2n
 
 IA:
 
   Es gilt
 
-    prod(k=2, 2, 1 - 1/k^2) = (2 + 1) / 4
+    \prod(k=2, 2, 1 - 1/k^2) = (2 + 1) / 4
 
                             = 3/4
 
@@ -92,20 +88,20 @@ IV:
 
   Es gelte für ein beliebiges n aus N mit n > 1
 
-    prod(k=2, n, 1 - 1/k^2) = (n + 1) / 2n
+    \prod(k=2, n, 1 - 1/k^2) = (n + 1) / 2n
 
 
 IB:
 
   Dann gilt
 
-    prod(k=2, n + 1, 1 - 1/k^2) = (n + 2) / 2(n + 1)
+    \prod(k=2, n + 1, 1 - 1/k^2) = (n + 2) / 2(n + 1)
 
 IS:
 
   Es gilt
 
-    prod(k=2, n + 1, 1 - 1/k^2) = prod(k=2, n, 1 - 1/k^2) * (1 - 1/(n + 1)^2)
+    \prod(k=2, n + 1, 1 - 1/k^2) = \prod(k=2, n, 1 - 1/k^2) * (1 - 1/(n + 1)^2)
 
                                 = (n + 1) / 2n * (1 - 1/(n + 1)^2)
 
@@ -124,70 +120,68 @@ IS:
 
 Damit gilt für alle n aus N mit n > 1
 
-  prod(k=2, n, 1 - 1/k^2) = (n + 1) / 2n
+  \prod(k=2, n, 1 - 1/k^2) = (n + 1) / 2n
 
 ** c
-Für alle n aus N, n >= 4, gilt 2^n >= n^2
+\forall n \in N, n \ge 4, gilt 2^n \ge n^2
 
 
 IA:
 
   Es gilt für n = 4
 
-    2^4 >= 4^2
+    2^4 \ge 4^2
 
-<=> 16  >= 16
+\Leftrightarrow 16  \ge 16
 
 
 IV:
 
-  Es gelte für ein beliebiges n aus N mit n >= 4
+  Es gelte für ein beliebiges n aus N mit n \ge 4
 
-    2^n >= n^2
+    2^n \ge n^2
 
 
 IB:
 
   Dann gilt
 
-    2^(n + 1) >= (n + 1)^2
+    2^(n + 1) \ge (n + 1)^2
 
 
 IS:
 
   Es gilt
 
-    2^(n + 1) >= (n + 1)^2
+    2^(n + 1) \ge (n + 1)^2
 
-<=> 2 * 2^n   >= 2 * n^2 = n^2 + 2n + 1
+\Leftrightarrow 2 * 2^n   \ge 2 * n^2 = n^2 + 2n + 1
 
- => n^2 = 2n + 1
+\Rightarrow n^2 = 2n + 1
 
-<=> 0 = n^2 - 2n - 1
+\Leftrightarrow 0 = n^2 - 2n - 1
 
- => n1 = 1 - sqrt(2) und n2 = 1 - sqrt(2)
+\Rightarrow n1 = 1 - sqrt(2) und n2 = 1 - sqrt(2)
 
- => n1 < 4 und n2 < 4
+\Rightarrow n1 < 4 und n2 < 4
 
- => n^2 > 2n + 1
+\Rightarrow n^2 > 2n + 1
 
- => 2 * n^2 > n^2 + 2n + 1 = (n + 1)^2
+\Rightarrow 2 * n^2 > n^2 + 2n + 1 = (n + 1)^2
 
- => 2 * 2^n > (n + 1)^2
+\Rightarrow 2 * 2^n > (n + 1)^2
 
-<=> 2^(n + 1) > (n + 1)^2
+\Leftrightarrow 2^(n + 1) > (n + 1)^2
 
 
-Damit gilt für alle n aus N mit n >= 4
+Damit gilt für alle n aus N mit n \ge 4
 
-  2^n >= n^2
+  2^n \ge n^2
 
 * Aufgabe 2
 D(f) := "Definitionsbereich von f"
 
 U(f) := "Inverse von f"
-
-(f1 . f2)(x) := f1(f2(x))
 
 ** a
 D(f1) = R
@@ -195,7 +189,7 @@ D(f1) = R
 D(f2) = R \ {-1}
 
 ** b
-  (f1 . f2)(x)
+  (f1 \circ f2)(x)
 
 = f1(f2(x))
 
@@ -204,10 +198,10 @@ D(f2) = R \ {-1}
 = 1 / (x + 1)^4 - 1
 
 
-D(f1 . f2) = R \ {-1}
+D(f1 \circ f2) = R \ {-1}
 
 
-  (f2 . f1)(x)
+  (f2 \circ f1)(x)
 
 = f2(f1(x))
 
@@ -216,7 +210,7 @@ D(f1 . f2) = R \ {-1}
 = 1 / x^4
 
 
-D(f2 . f1) = R \ {0}
+D(f2 \circ f1) = R \ {0}
 
 ** c
   U(f1)(]0, 15])
@@ -237,24 +231,24 @@ Beim Inversen von f gilt:
 
     x = (2y + 3) / (y + 2)
 
-<=> x(y + 2) = 2y + 3
+\Leftrightarrow x(y + 2) = 2y + 3
 
-<=> xy + 2x  = 2y + 3
+\Leftrightarrow xy + 2x  = 2y + 3
 
-<=> xy - 2y  = 3 - 2x
+\Leftrightarrow xy - 2y  = 3 - 2x
 
-<=> y(x - 2) = 3 - 2x
+\Leftrightarrow y(x - 2) = 3 - 2x
 
-<=> y        = (3 - 2x) / (x - 2)
+\Leftrightarrow y        = (3 - 2x) / (x - 2)
 
 
-=> U(f)(x) = y = (3 - 2x) / (x - 2), x ungleich 2
+\Rightarrow U(f)(x) = y = (3 - 2x) / (x - 2), x ungleich 2
 
 
 D(U(f)) = R \ {2}
 
 ** b
-(f . U(f))(y) = f( (3 - 2y) / (y - 2) )
+(f \circ U(f))(y) = f( (3 - 2y) / (y - 2) )
 
               = ( 2(3 - 2y) / (y - 2) + 3 ) / ( (3 - 2y) / (y - 2) + 2 )
 
@@ -283,42 +277,42 @@ Daraus folgt für den Zähler:
 
    2(-2 + h) + 3 < 0
 
-=> f(-2 + h) < 0
+\Rightarrow f(-2 + h) < 0
 
 
 Es gilt für den Zähler:
 
     2x + 3 = 0 mit x aus R
 
-<=> x = 3/2
+\Leftrightarrow x = 3/2
 
 
 Daraus folgt für den Nenner:
 
-   (3/2) + 2 != 0
+   (3/2) + 2 \neq 0
 
-=> f(3/2) = 0
+\Rightarrow f(3/2) = 0
 
-=> -2 + h < 3/2 und f(-2 + h) < f(3/2)
+\Rightarrow -2 + h < 3/2 und f(-2 + h) < f(3/2)
 
-=> f ist monoton wachsend
+\Rightarrow f ist monoton wachsend
 
 * Aufgabe 4
 ** a
-    exp(x^2 - 9) - 1 = 0
+    \exp(x^2 - 9) - 1 = 0
 
-<=> exp(x^2 - 9) = 1
+<=> \exp(x^2 - 9) = 1
 
- => x^2 - 9 = 0 nach exp(0) = 1
+ => x^2 - 9 = 0 nach \exp(0) = 1
 
 <=> x^2 = 9
 
  => x = -3 und x = 3
 
 ** b
-f2(x) = ln( (x^2 - 4x + 3) / (x^2 - 6x + 8) )
+f2(x) = \ln( (x^2 - 4x + 3) / (x^2 - 6x + 8) )
 
-      = ln( (x - 3)(x - 1) / (x - 2)(x - 4) )
+      = \ln( (x - 3)(x - 1) / (x - 2)(x - 4) )
 
 => x != 2 und x != 4
 
@@ -375,14 +369,14 @@ Für Zähler:
 
 Nenner und Zähler sind > 0:
 
-  L1 = (I1 && I4) || (I2 && I5)
+  L1 = (I1 \cap I4) \cup (I2 \cap I5)
 
-     = ]-inf, 1[ || ]4, inf[
+     = ]-inf, 1[ \cup ]4, inf[
 
 
 Nenner und Zähler sind < 0:
 
-  L2 = I3 && I6
+  L2 = I3 \cap I6
 
      = ]2, 3[
 
