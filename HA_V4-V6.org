@@ -8,10 +8,12 @@ $$\sum_{k=1}^{n} k^2 = \frac{n(n + 1)(2n + 1)}{6}$$
 
 IA:
   Es gilt
-$$\sum_{k = 1}^{1} k^2 = \frac{1(1 + 1)(2 \cdot 1 + 1)}{6}$$
-$$= \frac{1 \cdot 2 \cdot 3}{6}$$
-$$= 1$$
-$$= 1^2$$
+$$
+  \sum_{k = 1}^{1} k^2 = \frac{1(1 + 1)(2 \cdot 1 + 1)}{6}
+  = \frac{1 \cdot 2 \cdot 3}{6}
+  = 1
+  = 1^2
+$$
 
 IV:
   Es gelte für ein beliebiges n \in $\mathbb{N}$ mit n > 0
@@ -23,8 +25,10 @@ $$\sum{k = 1}^{n + 1} k^2 = \frac{(n + 1)(n + 2)(2n + 3)}{6}$$
 
 IS:
   Es gilt
-$$\sum_{k = 1}^{n + 1} k^2 = \sum_{k = 1}^{n} k^2 + (n + 1)^2$$
-$$= \frac{n(n + 1)(2n + 1)}{6} + (n + 1)^2$$
+$$
+  \sum_{k = 1}^{n + 1} k^2 = \sum_{k = 1}^{n} k^2 + (n + 1)^2
+  = \frac{n(n + 1)(2n + 1)}{6} + (n + 1)^2
+$$
 $$= \frac{n(n + 1)(2n + 1)}{6} + \frac{6(n + 1)^2}{6}$$
 $$= \frac{n(n + 1)(2n + 1) + 6(n + 1)^2}{6}$$
 $$= \frac{n(n + 1)(2n + 1) + 6(n + 1)(n + 1)}{6}$$
@@ -58,15 +62,19 @@ $$\prod_{k=2}^{n + 1} 1 - \frac{1}{k^2} = \frac{n + 2}{2(n + 1)}$$
 
 IS:
   Es gilt
-$$\prod_{k = 2}^{n + 1} 1 - \frac{1}{k^2}$$
-$$= \prod_{k = 2}^{n} 1 - \frac{1}{k^2} \cdot (1 - \frac{1}{(n + 1)^2}$$
+$$
+  \prod_{k = 2}^{n + 1} 1 - \frac{1}{k^2}
+  = \prod_{k = 2}^{n} 1 - \frac{1}{k^2} \cdot (1 - \frac{1}{(n + 1)^2}
+$$
 $$= \frac{n + 1}{2n} \cdot (1 - \frac{1}{(n + 1)^2})$$
 $$= \frac{n + 1}{2n} \cdot (\frac{(n+1)^2}{(n+1)^2} - \frac{1}{(n + 1)^2})$$
 $$= \frac{n + 1}{2n} \cdot \frac{(n+1)^2 - 1}{(n+1)^2}$$
 $$= \frac{n + 1}{2n} \cdot \frac{((n+1) - 1)((n+1) + 1)}{(n + 1)^2}$$
 $$= \frac{n + 1}{2n} \cdot \frac{n(n + 2)}{(n + 1)(n + 1)}$$
-$$= \frac{(n + 1) \cdot n(n + 2)}{2n(n + 1)(n + 1)}$$
-$$= \frac{n + 2}{2(n + 1)}$$
+$$
+  = \frac{(n + 1) \cdot n(n + 2)}{2n(n + 1)(n + 1)}
+  = \frac{n + 2}{2(n + 1)}
+$$
 
 
 Damit gilt für alle n \in $\mathbb{N}$ mit n > 1
@@ -163,13 +171,17 @@ D_{U(f)} = $\mathbb{R}$ \ {2}
 
 ** b)
 $$(f \circ U(f))(y) = f( \frac{3 - 2y}{y - 2} )$$
-$$= \frac{ \frac{2(3 - 2y)}{y - 2} + 3 }{ \frac{3 - 2y}{y - 2} + 2 }$$
-$$= \frac{ \frac{2(3 - 2y) + 3(y - 2)}{y - 2} }{ \frac{3 - 2y}{y - 2} + 2 }$$
-$$= \frac{ \frac{6 - 4y + 3y - 6}{y - 2} }{ \frac{3 - 2y}{y - 2} + 2 }$$
-$$= \frac{ \frac{-y}{y - 2} }{ \frac{3 - 2y}{y - 2} + 2 }$$
-$$= \frac{ \frac{-y}{y - 2} }{ \frac{3 - 2y + 2(y - 2)}{y - 2} }$$
-$$= \frac{ \frac{-y}{y - 2} }{ \frac{-1}{y - 2} }$$
-$$= y$$
+$$
+  = \frac{ \frac{2(3 - 2y)}{y - 2} + 3 }{ \frac{3 - 2y}{y - 2} + 2 }
+  = \frac{ \frac{2(3 - 2y) + 3(y - 2)}{y - 2} }{ \frac{3 - 2y}{y - 2} + 2 }
+  = \frac{ \frac{6 - 4y + 3y - 6}{y - 2} }{ \frac{3 - 2y}{y - 2} + 2 }
+$$
+$$
+  = \frac{ \frac{-y}{y - 2} }{ \frac{3 - 2y}{y - 2} + 2 }
+  = \frac{ \frac{-y}{y - 2} }{ \frac{3 - 2y + 2(y - 2)}{y - 2} }
+  = \frac{ \frac{-y}{y - 2} }{ \frac{-1}{y - 2} }
+  = y
+$$
 
 ** c)
 Sei h \in $\mathbb{R}$, h > 0, h ist sehr klein
