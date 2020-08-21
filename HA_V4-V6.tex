@@ -1,0 +1,355 @@
+% Created 2020-08-20 Do 22:56
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Moaz Haque, Felix Oechelhaeuser, Leo Pirker, Dennis Schulze}
+\date{\today}
+\title{Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 02}
+\hypersetup{
+ pdfauthor={Moaz Haque, Felix Oechelhaeuser, Leo Pirker, Dennis Schulze},
+ pdftitle={Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 02},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.3.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Aufgabe 1}
+\label{sec:orgd37cbcd}
+\subsection{a)}
+\label{sec:orga8586f3}
+$$\sum_{k=1}^{n} k^2 = \frac{n(n + 1)(2n + 1)}{6}$$
+
+IA:
+  Es gilt
+$$
+  \sum_{k = 1}^{1} k^2 = \frac{1(1 + 1)(2 \cdot 1 + 1)}{6}
+  = \frac{1 \cdot 2 \cdot 3}{6}
+  = 1
+  = 1^2
+$$
+
+IV:
+  Es gelte für ein beliebiges n \(\in\) \(\mathbb{N}\) mit n > 0
+$$\sum_{k = 1}^{n} k^2 = \frac{n(n + 1)(2n + 1)}{6}$$
+
+IB:
+  Dann gilt
+$$\sum{k = 1}^{n + 1} k^2 = \frac{(n + 1)(n + 2)(2n + 3)}{6}$$
+
+IS:
+  Es gilt
+$$
+  \sum_{k = 1}^{n + 1} k^2 = \sum_{k = 1}^{n} k^2 + (n + 1)^2
+  = \frac{n(n + 1)(2n + 1)}{6} + (n + 1)^2
+$$
+$$= \frac{n(n + 1)(2n + 1)}{6} + \frac{6(n + 1)^2}{6}$$
+$$= \frac{n(n + 1)(2n + 1) + 6(n + 1)^2}{6}$$
+$$= \frac{n(n + 1)(2n + 1) + 6(n + 1)(n + 1)}{6}$$
+$$= \frac{n(n + 1)(2n + 1) + 3(n + 1)(2n + 2)}{6}$$
+$$= \frac{n(n + 1)(2n + 1) + 3(n + 1)(2n + 1) + 3(n + 1)}{6}$$
+$$= \frac{(n + 2)(n + 1)(2n + 1) + (n + 1)(2n + 1) + 3(n + 1)}{6}$$
+$$= \frac{(n + 2)(n + 1)(2n + 1) + (n + 1)(2n + 4)}{6}$$
+$$= \frac{(n + 2)(n + 1)(2n + 1) + 2(n + 1)(n + 2)}{6}$$
+$$= \frac{(n + 2)(n + 1)(2n + 3)}{6}$$
+
+Damit gilt für alle n \(\in\) \(\mathbb{N}\) mit n > 0
+
+$$\sum_{k = 1}^{n} k^2 = \frac{n(n + 1)(2n + 1)}{6}$$
+
+\subsection{b)}
+\label{sec:orgf440103}
+$$\prod_{k=2}^{n} 1 - \frac{1}{k^2}) = \frac{n + 1}{2n}$$
+
+IA:
+  Es gilt
+$$\prod_{k = 2}^{2} 1 - \frac{1}{k^2} = \frac{2 + 1}{4}$$
+$$= \frac{3}{4}$$
+$$= 1 - \frac{1}{4}$$
+
+IV:
+  Es gelte für ein beliebiges n \(\in\) \(\mathbb{N}\) mit n > 1
+$$\prod_{k=2}^{n} 1 - \frac{1}{k^2} = \frac{n + 1}{2n}$$
+
+IB:
+  Dann gilt
+$$\prod_{k=2}^{n + 1} 1 - \frac{1}{k^2} = \frac{n + 2}{2(n + 1)}$$
+
+IS:
+  Es gilt
+$$
+  \prod_{k = 2}^{n + 1} 1 - \frac{1}{k^2}
+  = \prod_{k = 2}^{n} 1 - \frac{1}{k^2} \cdot (1 - \frac{1}{(n + 1)^2}
+$$
+$$= \frac{n + 1}{2n} \cdot (1 - \frac{1}{(n + 1)^2})$$
+$$= \frac{n + 1}{2n} \cdot (\frac{(n+1)^2}{(n+1)^2} - \frac{1}{(n + 1)^2})$$
+$$= \frac{n + 1}{2n} \cdot \frac{(n+1)^2 - 1}{(n+1)^2}$$
+$$= \frac{n + 1}{2n} \cdot \frac{((n+1) - 1)((n+1) + 1)}{(n + 1)^2}$$
+$$= \frac{n + 1}{2n} \cdot \frac{n(n + 2)}{(n + 1)(n + 1)}$$
+$$
+  = \frac{(n + 1) \cdot n(n + 2)}{2n(n + 1)(n + 1)}
+  = \frac{n + 2}{2(n + 1)}
+$$
+
+
+Damit gilt für alle n \(\in\) \(\mathbb{N}\) mit n > 1
+$$\prod_{k=2}^{n} 1 - \frac{1}{k^2} = \frac{n + 1}{2n}$$
+
+\subsection{c)}
+\label{sec:org064204d}
+\(\forall\) n \(\in\) \(\mathbb{N}\), n \(\ge\) 4, gilt 2\textsuperscript{n} \(\ge\) n\textsuperscript{2}
+
+IA:
+  Es gilt für n = 4
+
+$$2^4 \ge 4^2$$
+$$\Leftrightarrow 16  \ge 16$$
+
+IV:
+  Es gelte für ein beliebiges n \(\in\) \(\mathbb{N}\) mit n \(\ge\) 4
+$$2^n \ge n^2$$
+
+IB:
+  Dann gilt
+$$2^{n + 1} \ge (n + 1)^2$$
+
+IS:
+  Es gilt
+
+$$2^{n + 1} \ge (n + 1)^2$$
+$$\Leftrightarrow 2 \cdot 2^n \ge 2 \cdot n^2 = n^2 + 2n + 1$$
+$$\Rightarrow n^2 = 2n + 1$$
+$$\Leftrightarrow 0 = n^2 - 2n - 1$$
+$$\Rightarrow n_1 = 1 - \sqrt{2} \wedge n_2 = 1 - \sqrt{2}$$
+$$\Rightarrow n_1 < 4 \wedge n_2 < 4$$
+$$\Rightarrow n^2 > 2n + 1$$
+$$\Rightarrow 2 \cdot n^2 > n^2 + 2n + 1 = (n + 1)^2$$
+$$\Rightarrow 2 \cdot 2^n > (n + 1)^2$$
+$$\Leftrightarrow 2^{n + 1} > (n + 1)^2$$
+
+
+Damit gilt \(\forall\) n \(\in\) \(\mathbb{N}\) mit n \(\ge\) 4
+$$2^n \ge n^2$$
+
+\section{Aufgabe 2}
+\label{sec:org6426248}
+D(f) := "Definitionsbereich von f"
+
+U(f) := "Inverse von f"
+
+\((f_1 \circ f_2)(x) := f_2(f_1(x))\)
+
+\subsection{a)}
+\label{sec:orgc083f07}
+\(D(f_1) = \mathbb{R}\)
+
+\(D(f_2) = \mathbb{R}\) $\backslash$ \{-1\}
+
+\subsection{b)}
+\label{sec:orgc687b48}
+$$(f_1 \circ f_2)(x)$$
+$$= f_1(f_2(x))$$
+$$= f_1(\frac{1}{x + 1})$$
+$$= \frac{1}{(x + 1)^4} - 1$$
+
+\(D(f_1 \circ f_2) = \mathbb{R}\) $\backslash$ \{-1\}
+
+$$(f_2 \circ f_1)(x)$$
+$$= f_2(f_1(x))$$
+$$= f_2(x^4 - 1)$$
+$$= \frac{1}{x^4}$$
+
+\(D(f_2 \circ f_1) = \mathbb{R}\) $\backslash$ \{0\}
+
+\subsection{c)}
+\label{sec:org359d51e}
+U(f\textsubscript{1})(]0, 15])
+
+= [-2, -1[ \(\cup\) ]1, 2]
+
+\subsection{d)}
+\label{sec:org96e730a}
+f\textsubscript{1} ist nach unten beschränkt mit m = -1.
+
+f\textsubscript{1} ist nicht nach oben beschränkt.
+
+\section{Aufgabe 3}
+\label{sec:orgc41d136}
+\subsection{a)}
+\label{sec:org2087d51}
+f(x) = y = \(\frac{2x + 3}{x + 2}\)
+
+Beim Inversen von f gilt:
+$$x = \frac{2y + 3}{y + 2}$$
+$$\Leftrightarrow x(y + 2) = 2y + 3$$
+$$\Leftrightarrow xy + 2x = 2y + 3$$
+$$\Leftrightarrow xy - 2y = 3 - 2x$$
+$$\Leftrightarrow y(x - 2) = 3 - 2x$$
+$$\Leftrightarrow y = \frac{3 - 2x}{x - 2}$$
+
+\(\Rightarrow\) U(f)(x) = y = \(\frac{3 - 2x}{x - 2}\), x ungleich 2
+
+
+D\textsubscript{U(f)} = \(\mathbb{R}\) $\backslash$ \{2\}
+
+\subsection{b)}
+\label{sec:org6d0a2b2}
+$$(f \circ U(f))(y) = f( \frac{3 - 2y}{y - 2} )$$
+$$
+  = \frac{ \frac{2(3 - 2y)}{y - 2} + 3 }{ \frac{3 - 2y}{y - 2} + 2 }
+  = \frac{ \frac{2(3 - 2y) + 3(y - 2)}{y - 2} }{ \frac{3 - 2y}{y - 2} + 2 }
+  = \frac{ \frac{6 - 4y + 3y - 6}{y - 2} }{ \frac{3 - 2y}{y - 2} + 2 }
+$$
+$$
+  = \frac{ \frac{-y}{y - 2} }{ \frac{3 - 2y}{y - 2} + 2 }
+  = \frac{ \frac{-y}{y - 2} }{ \frac{3 - 2y + 2(y - 2)}{y - 2} }
+  = \frac{ \frac{-y}{y - 2} }{ \frac{-1}{y - 2} }
+  = y
+$$
+
+\subsection{c)}
+\label{sec:org58348ae}
+Sei h \(\in\) \(\mathbb{R}\), h > 0, h ist sehr klein
+
+Es gilt für den Nenner:
+$$(-2 + h) + 2 > 0$$
+
+Daraus folgt für den Zähler:
+$$2(-2 + h) + 3 < 0$$
+$$\Rightarrow f(-2 + h) < 0$$
+
+Es gilt für den Zähler:
+$$2x + 3 = 0 \text{ mit } x \in \mathbb{R}$$
+$$\Leftrightarrow x = \frac{3}{2}$$
+
+Daraus folgt für den Nenner:
+$$\frac{3}{2} + 2 \neq 0$$
+$$\Rightarrow f(\frac{3}{2}) = 0$$
+$$\Rightarrow -2 + h < \frac{3}{2} \wedge f(-2 + h) < f(\frac{3}{2})$$
+\(\Rightarrow\) f ist monoton wachsend
+
+\section{Aufgabe 4}
+\label{sec:orgecc18aa}
+\subsection{a)}
+\label{sec:org5c95cc4}
+$$\exp(x^2 - 9) - 1 = 0$$
+$$\Leftrightarrow \exp(x^2 - 9) = 1$$
+$$\Rightarrow x^2 - 9 = 0$$ nach \(\exp(0) = 1\)
+$$\Leftrightarrow x^2 = 9$$
+$$\Rightarrow x = -3 \wedge x = 3$$
+
+\subsection{b)}
+\label{sec:org5b686f4}
+$$f_2(x) = \ln{ \frac{x^2 - 4x + 3}{x^2 - 6x + 8} }$$
+$$= \ln{ \frac{(x - 3)(x - 1)}{(x - 2)(x - 4)} }$$
+$$=> x \neq 2 \wedge x \neq 4$$
+
+Im folgenden wird untersucht, wann der Funktionswerte Beträge annehmen, die
+größer als 0 sind:
+
+
+Für Nenner:
+
+Fall 1 (>0):
+$$x - 2 > 0 \wedge x - 4 > 0$$
+$$\Rightarrow x > 2 \wedge x > 4$$
+$$\Rightarrow I_1 = ]4, \infty[$$
+
+
+Fall 2 (>0):
+$$x - 2 < 0 \wedge x - 4 < 0$$
+$$\Rightarrow x < 2 \wedge x < 4$$
+$$\Rightarrow I_2 = ]-\infty, 2[$$
+
+
+Fall 3 (<0):
+$$x - 2 < 0 \vee x - 4 < 0$$
+$$\Rightarrow x < 2 \vee x < 4$$
+$$\Rightarrow I_3 = ]2, 4[$$
+
+
+Für Zähler:
+
+Fall 1 (>0):
+$$x - 3 > 0 \wedge x - 1 > 0$$
+$$\Rightarrow x > 3 \wedge x > 1$$
+$$\Rightarrow I_4 = ]3, \infty[$$
+
+
+Fall 2 (>0):
+$$x - 3 < 0 \wedge x - 1 < 0$$
+$$\Rightarrow x < 3 \wedge x < 1$$
+$$\Rightarrow I_5 = ]-\infty, 1[$$
+
+
+Fall 3 (<0):
+$$x - 3 < 0 \vee x - 1 < 0$$
+$$\Rightarrow x < 3 \vee x < 1$$
+$$\Rightarrow I_6 = ]1, 3[$$
+
+
+Nenner und Zähler sind > 0:
+$$L_1 = (I_1 \cap I_4) \cup (I_2 \cap I_5)$$
+$$= ]-\infty, 1[ \cup ]4, \infty[$$
+
+
+Nenner und Zähler sind < 0:
+$$L_2 = I_3 \cap I_6$$
+$$= ]2, 3[$$
+
+
+$$D(f_2) = L_1 \cup L_2$$
+$$= ]-\infty, 1[ \cup ]2, 3[ \cup ]4, \infty[$$
+$$= \mathbb{R} \ ([1, 2] \cup [3, 4])$$
+
+\subsection{c)}
+\label{sec:orgd1b637d}
+Sinus und Cosinus sind beschränkt auf Werte im Intervall [-1, 1]
+
+\(\Rightarrow\) der Betrag des Produkts kann auch nur höchstens 1 sein
+
+
+f3(-x)
+
+=  cos(-x) sin(-x) "Sinus ist ungerade und Cosinus ist gerade"
+
+=  cos(x) (-sin(x))
+
+= -(cos(x) sin(x))
+
+= -f3(x)
+
+\(\Rightarrow\) f3 ist ungerade
+
+\section{Aufgabe 5}
+\label{sec:org6faca73}
+\subsection{a)}
+\label{sec:org34a51c0}
+$$\sin{2x} = \sin{x + x}$$
+$$= \sin{x} \cos{x} + \cos{x} \sin{x}$$
+$$= 2 \sin{x} \cos{x}$$
+
+\subsection{b)}
+\label{sec:orgeddbc89}
+$$\cos{\frac{7\pi}{12}} = \cos{(\frac{\pi}{4} + \frac{\pi}{3})}$$
+$$= \cos{\frac{\pi}{4}} \cos{\frac{\pi}{3}} - \sin{\frac{\pi}{4}} \sin{\frac{\pi}{3}}$$
+$$= \frac{\sqrt{2}}{2} \cdot \frac{1}{2} - \frac{\sqrt{2}}{2} \cdot \frac{\sqrt{3}}{2}$$
+$$= \frac{\sqrt{2}}{4} - \frac{\sqrt{6}}{4}$$
+$$= \frac{\sqrt{2} - \sqrt{6}}{4}$$
+\end{document}

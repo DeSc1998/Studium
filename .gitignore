@@ -2,14 +2,14 @@
 test.*
 
 *~
-*.tex
 *.log
 *.out
 *.aux
 *.toc
 
 test.pdf
-  
+test.tex
+    
 Uni-Mathe/
 auto/
 Übungen/
