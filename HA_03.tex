@@ -1,4 +1,4 @@
-% Created 2020-08-21 Fr 16:53
+% Created 2020-08-22 Sa 10:40
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[latin1]{inputenc}
@@ -31,36 +31,38 @@
 
 
 \section{Aufgabe 1}
-\label{sec:orgfa1bc7f}
+\label{sec:org18de801}
 \subsection{a)}
-\label{sec:org5cf03ce}
+\label{sec:org9ea976f}
 \subsubsection{z\textsubscript{1}}
-\label{sec:org51571a3}
-$$
-  z_1 = 4e^{-\frac{\pi}{6}i}
-  = 4(\cos(-\frac{\pi}{6}) + i\sin(-\frac{\pi}{6}))
-  = 4(\frac{\sqrt{3}}{2} - \frac{1}{2}i)
-$$
-$$= 2\sqrt{3} - 2i$$
+\label{sec:org058c8f5}
+\begin{equation}
+\begin{aligned}
+z_1 &= 4e^{-\frac{\pi}{6}i}
+= 4(\cos(-\frac{\pi}{6}) + i\sin(-\frac{\pi}{6})) \\
+&= 4(\frac{\sqrt{3}}{2} - \frac{1}{2}i) \\
+&= 2\sqrt{3} - 2i
+\end{aligned}
+\end{equation}
 
 \subsubsection{z\textsubscript{2}}
-\label{sec:orgb793718}
-$$
-  z_2 = 2e^{\frac{16}{3}\pi i}
-  = 2e^{(\frac{4}{3} + 4)\pi i}
-  = 2e^{\frac{4}{3}\pi i}
-  = -2e^{\frac{1}{3}\pi i}
-$$
-$$= -2(\cos(\frac{\pi}{3}) + i\sin(\frac{\pi}{3}))$$
-$$
-  = -2(\frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}i)
-  = -\sqrt{2} - \sqrt{2}i
-$$
+\label{sec:org66ceda0}
+\begin{equation}
+\begin{aligned}
+z_2 &= 2e^{\frac{16}{3}\pi i}
+= 2e^{(\frac{4}{3} + 4)\pi i}
+= 2e^{\frac{4}{3}\pi i} \\
+&= -2e^{\frac{1}{3}\pi i} \\
+&= -2(\cos(\frac{\pi}{3}) + i\sin(\frac{\pi}{3})) \\
+&= -2(\frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}i) \\
+&= -\sqrt{2} - \sqrt{2}i
+\end{aligned}
+\end{equation}
 
 \subsection{b)}
-\label{sec:org0b96447}
+\label{sec:org3e10966}
 \subsubsection{z\textsubscript{1}}
-\label{sec:org9ef1d03}
+\label{sec:org6d017b6}
 $$r^2 = (-3)^2 + (-3)^2 = 18$$
 $$\tan(\phi) = \frac{-3}{-3}$$
 Der Nenner ist kleiner als 0:
@@ -72,7 +74,7 @@ Damit ist z\textsubscript{1} in Eulerdarstellung:
 $$z_1 = \sqrt{18}e^{\frac{5\pi}{4}i}$$
 
 \subsubsection{z\textsubscript{2}}
-\label{sec:orgcb337c9}
+\label{sec:orgbd4ebb2}
 $$r^2 = 2^2 + (\sqrt{12})^2 = 4 + 12 = 16$$
 $$\Leftrightarrow r = 4$$
 
@@ -83,94 +85,128 @@ Damit ist z\textsubscript{2} in Eulerdarstellung:
 $$z_2 = 4e^{\frac{\pi}{3}i}$$
 
 \section{Aufgabe 2}
-\label{sec:org82ec651}
+\label{sec:orgbaf7448}
 \subsection{a)}
-\label{sec:orge60f4d9}
-$$z^3 + \sqrt{2} - \sqrt{2}i = 0$$
-$$\Leftrightarrow z^3 + 2e^{\frac{-\pi}{4}i} = 0$$
-$$\Leftrightarrow z^3 = -2e^{\frac{-\pi}{4}i}$$
-$$\Leftrightarrow z = \sqrt[3]{-2}e^{\frac{-\pi}{12}i} = z_1$$
+\label{sec:org1329ceb}
+
+\begin{equation}
+\begin{aligned}
+&z^3 + \sqrt{2} - \sqrt{2}i = 0 \\
+\Leftrightarrow &z^3 + 2e^{\frac{-\pi}{4}i} = 0 \\
+\Leftrightarrow &z^3 = -2e^{\frac{-\pi}{4}i} \\
+\Leftrightarrow &z = \sqrt[3]{-2}e^{\frac{-\pi}{12}i} = z_1
+\end{aligned}
+\end{equation}
+
 Die anderen Lösungen z\textsubscript{2} und z\textsubscript{3} lassen sich finden, wenn man den Term \(\frac{2k\pi}{3}\) mit k \(\in\) \{1, 2\}
 hinzu addiert. Somit erhält man:
-$$z_k = \sqrt[3]{-2}e^{(\frac{-\pi}{12} + \frac{2k\pi}{3})i}, k \in {0, 1, 2}$$
-$$\Leftrightarrow z_k = \sqrt[3]{-2}e^{(\frac{-\pi}{12} + \frac{8k\pi}{12})i}$$
-$$\Leftrightarrow z_k = \sqrt[3]{-2}e^{\frac{(8k - 1)\pi}{12}i}$$
+
+\begin{equation}
+\begin{aligned}
+&z_k = \sqrt[3]{-2}e^{(\frac{-\pi}{12} + \frac{2k\pi}{3})i}, k \in {0, 1, 2} \\
+\Leftrightarrow &z_k = \sqrt[3]{-2}e^{(\frac{-\pi}{12} + \frac{8k\pi}{12})i} \\
+\Leftrightarrow &z_k = \sqrt[3]{-2}e^{\frac{(8k - 1)\pi}{12}i}
+\end{aligned}
+\end{equation}
 
 \subsection{b)}
-\label{sec:orga912512}
-$$z^5 = \frac{1 + i}{1 - i} \Leftrightarrow z^5 = \frac{(1 + i)^2}{2}$$
-$$\Leftrightarrow z^5 = \frac{2i}{2} \Leftrightarrow z^5 = i$$
-$$\Leftrightarrow z^5 = e^{\frac{\pi}{2}i}$$
-$$\Leftrightarrow z = e^{\frac{\pi}{10}i}$$
+\label{sec:orga235531}
+\begin{equation}
+\begin{aligned}
+z^5 = \frac{1 + i}{1 - i} &\Leftrightarrow z^5 = \frac{(1 + i)^2}{2} \\
+&\Leftrightarrow z^5 = \frac{2i}{2} \Leftrightarrow z^5 = i \\
+&\Leftrightarrow z^5 = e^{\frac{\pi}{2}i} \\
+&\Leftrightarrow z = e^{\frac{\pi}{10}i}
+\end{aligned}
+\end{equation}
+
 Analog zu 2a) erhält man die anderen Lösungen mit den Term \(\frac{2k\pi}{5}\) mit k \(\in\) \{1, 2, 3, 4\}.
 Womit man erhält:
-$$z_k = e^{(\frac{\pi}{10} + \frac{2k\pi}{5})i}, k \in {0, 1, 2, 3, 4}$$
-$$\Leftrightarrow z_k = e^{(\frac{\pi}{10} + \frac{4k\pi}{10})i}$$
-$$\Leftrightarrow z_k = e^{\frac{(1 + 4k)\pi}{10}i}$$
+
+\begin{equation}
+\begin{aligned}
+&z_k = e^{(\frac{\pi}{10} + \frac{2k\pi}{5})i}, k \in {0, 1, 2, 3, 4} \\
+\Leftrightarrow &z_k = e^{(\frac{\pi}{10} + \frac{4k\pi}{10})i} \\
+\Leftrightarrow &z_k = e^{\frac{(1 + 4k)\pi}{10}i}
+\end{aligned}
+\end{equation}
 
 \section{Aufgabe 3}
-\label{sec:orgcbf5b1c}
+\label{sec:orgb87745b}
 \subsection{a)}
-\label{sec:org35f69b0}
+\label{sec:org6eb6f1c}
 $$\deg(p(z)) = 4$$
 Die Nullstellen von p sind \{4, \(i\), -5\}, wobei \(z_2 = i\) eine zwei-fache Nullstelle ist.
 
 \subsection{b)}
-\label{sec:org56323f7}
+\label{sec:orgf149d5f}
 $$p(z) = \frac{z^5 + 4z^4 - 3z^3 + 2z^2 - z + 1}{z^2 - 3}$$
 
 Die folgenden "Gleichungen" sind nicht als solche zu betrachten.
 Sie zeigen lediglich die einzelnen Schritte der Polynomdivision.
 
-$$(z^5 + 4z^4 - 3z^3 + 2z^2 - z + 1) / (z^2 - 3) = 0$$
-$$(4z^4 - 6z^3 + 2z^2 - z + 1) / (z^2 - 3) = z^3$$
-$$(-6z^3 - 10z^2 - z + 1) / (z^2 - 3) = z^3 + 4z^2$$
-$$(-10z^2 + 17z + 1) / (z^2 - 3) = z^3 + 4z^2 - 6z$$
-$$(17z + 31) / (z^2 - 3) = z^3 + 4z^2 - 6z - 10$$
+\begin{equation}
+\begin{aligned}
+(z^5 + 4z^4 - 3z^3 + 2z^2 - z + 1) / (z^2 - 3) &= 0 \\
+(4z^4 - 6z^3 + 2z^2 - z + 1) / (z^2 - 3) &= z^3 \\
+(-6z^3 - 10z^2 - z + 1) / (z^2 - 3) &= z^3 + 4z^2 \\
+(-10z^2 + 17z + 1) / (z^2 - 3) &= z^3 + 4z^2 - 6z \\
+(17z + 31) / (z^2 - 3) &= z^3 + 4z^2 - 6z - 10
+\end{aligned}
+\end{equation}
 
 Das Polynom nach der Division:
 
 $$p(z) = z^3 + 4z^2 - 6z - 10 + \frac{17z + 31}{z^2 - 3}$$
 
 \section{Aufgabe 4}
-\label{sec:orgefac352}
+\label{sec:orga24618d}
 \subsection{a)}
-\label{sec:orga290196}
-$$p(2i) = (2i)^4 + (2i)^3 + 2(2i)^2 + 4(2i) - 8$$
-$$= 16 - 8i - 8 + 8i - 8$$
-$$= 0$$
+\label{sec:org0b6b036}
+
+\begin{equation}
+\begin{aligned}
+p(2i) &= (2i)^4 + (2i)^3 + 2(2i)^2 + 4(2i) - 8 \\
+&= 16 - 8i - 8 + 8i - 8 \\
+&= 0
+\end{aligned}
+\end{equation}
 
 \subsection{b)}
-\label{sec:org169d01f}
+\label{sec:orge56c761}
 $$\frac{p(z)}{q(z)} = \frac{z^4 + z^3 + 2z^2 + 4z - 8}{z^2 + 4}$$
 
 Wie in 3b) sind die "Gleichungen" nur repräsentativ für den Schritt, der gerade durchgeführt wird.
 
-$$(z^4 + z^3 + 2z^2 + 4z - 8) / (z^2 + 4) = 0$$
-$$(z^3 - 2z^2 + 4z - 8) / (z^2 + 4) = z^2$$
-$$(-2z^2 - 8) / (z^2 + 4) = z^2 + z$$
-$$(0) / (z^2 + 4) = z^2 + z - 2$$
+\begin{equation}
+\begin{aligned}
+(z^4 + z^3 + 2z^2 + 4z - 8) / (z^2 + 4) &= 0 \\
+(z^3 - 2z^2 + 4z - 8) / (z^2 + 4) &= z^2 \\
+(-2z^2 - 8) / (z^2 + 4) &= z^2 + z \\
+(0) / (z^2 + 4) &= z^2 + z - 2
+\end{aligned}
+\end{equation}
 
 Das Polynom ist dann nach der Division:
 
 $$\frac{p(z)}{q(z)} = z^2 + z - 2$$
 
 \subsection{c)}
-\label{sec:org38501c0}
+\label{sec:org5643cc6}
 
 \section{Aufgabe 5}
-\label{sec:orgd0bd983}
+\label{sec:org9bbdd19}
 \subsection{a)}
-\label{sec:org6bf8757}
+\label{sec:org85f34a5}
 
 \subsection{b)}
-\label{sec:orgb0f7e00}
+\label{sec:org1db73f4}
 
 \section{Aufgabe 6}
-\label{sec:orgc538ff7}
+\label{sec:org66648a2}
 \subsection{a)}
-\label{sec:org097995a}
+\label{sec:org84c36fe}
 
 \subsection{b)}
-\label{sec:orge7923c0}
+\label{sec:org4e8bd7a}
 \end{document}
