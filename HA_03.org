@@ -132,7 +132,7 @@ p(2i) &= (2i)^4 + (2i)^3 + 2(2i)^2 + 4(2i) - 8 \\
 ** b)
 $$\frac{p(z)}{q(z)} = \frac{z^4 + z^3 + 2z^2 + 4z - 8}{z^2 + 4}$$
 
-Wie in 3b) sind die "Gleichungen" nur repräsentativ für den Schritt, der gerade durchgeführt wird.
+Wie in 3b) sind die "Gleichungen" nur repräsentativ für die einzelnen Schritte der Polynomdivision.
 
 \begin{equation}
 \begin{aligned}
@@ -148,11 +148,89 @@ Das Polynom ist dann nach der Division:
 $$\frac{p(z)}{q(z)} = z^2 + z - 2$$
 
 ** c)
+Da q | p (siehe 4b) sind die Nullstellen von q auch gleichzeitig die Nullstellen von p.
+Die Nullstellen z_{1, 2} von q sind:
+
+$$q(z) = z^2 + 4 = (z + 2i)(z - 2i)$$
+$$\Rightarrow z_{1, 2} = \pm 2i$$
+
+Die anderen beiden Nullstellen von p erhält man vom Polynom $z^2 + z - 2$ aus 4b:
+
+\begin{equation}
+\begin{aligned}
+0 &= z^2 + z - 2 \\
+\Rightarrow z_{3, 4} &= \frac{-1}{2} \pm \sqrt{\frac{1}{4} + \frac{8}{4}} \\
+\Leftrightarrow z_{3, 4} &= \frac{-1}{2} \pm \frac{3}{2}
+\end{aligned}
+\end{equation}
+
+Damit kann man p jewals komplex und reell zerlegen zu
+
+\begin{equation}
+\begin{aligned}
+p(z) &= z^4 + z^3 + 2z^2 + 4z - 8 \\
+ &= (z - 2i)(z + 2i)(z + 2)(z - 1) \\
+ &= (z^2 + 4)(z + 2)(z - 1)
+\end{aligned}
+\end{equation}
+
+mit den Nullstellen z_0 \in {-2, -2i, 2i, 1}.
 
 * Aufgabe 5
 ** a)
+Bestimmen der Nullstellen des Nennerpolynoms $q(z) = z^2 + 2z + 2$:
+
+\begin{equation}
+\begin{aligned}
+0 &= z^2 + 2z + 2 \\
+\Rightarrow z_{1, 2} &= -1 \pm \sqrt{1 - 2} \\
+\Leftrightarrow z_{1, 2} &= -1 \pm i
+\end{aligned}
+\end{equation}
+
+Die Linearfaktoren von q sind dann $(z + 1 - i)$ und $(z + 1 + i)$.
+Daraus ergibt sich dann der Ansatz:
+
+\begin{equation}
+\begin{aligned}
+f(z) &= \frac{z + 7}{(z + 1 - i)(z + 1 + i)}
+ &= \frac{A}{(z + 1 - i)} + \frac{B}{(z + 1 + i)}
+\end{aligned}
+\end{equation}
+
+Durch die Zuhaltemethode erhält man dann:
+
+\begin{equation}
+\begin{aligned}
+A &= \frac{(-1 + i) + 7}{(-1 + i) + 1 + i} \\
+ &= \frac{6 + i}{2i} \\
+\Leftrightarrow A &= \frac{(6 + i)(-2i)}{2i(-2i)} = \frac{2 - 12i}{4} = \frac{1 - 6i}{2} \\
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+B &= \frac{(-1 - i) + 7}{(-1 - i) + 1 - i} \\
+ &= \frac{6 - i}{-2i} \\
+\Leftrightarrow B &= \frac{(6 - i)2i}{(-2i)2i} = \frac{2 - 12i}{4} = \frac{1 - 6i}{2}
+\end{aligned}
+\end{equation}
 
 ** b)
+Ansatz für die reelle Zerlegung:
+\begin{equation}
+\begin{aligned}
+f(x) &= \frac{2 + i}{x - (1 + 2i)} + \frac{2 - i}{x - (1 - 2i)} \\
+ &= \frac{Cx + D}{(x - (1 + 2i))(x - (1 - 2i))} = \frac{Cx + D}{x^2 - 2x + 5} = \frac{Cx + D}{(x - 1)^2 + 4} \\
+ &= \frac{(2 + i)(x - (1 - 2i)) + (2 - i)(x - (1 + 2i))}{(x - (1 + 2i))(x - (1 - 2i))} \\
+ &= \frac{(2x - (2 - 4i) + xi - (i - 2i^2)) + (2x - (2 + 4i) - xi + (i + 2i^2))}{(x - 1)^2 + 4} \\
+ &= \frac{2x - 2 + 2 + 2x - 2 - 2}{(x - 1)^2 + 4} \\
+ &= \frac{2x - 2 + 2x - 2}{(x - 1)^2 + 4} \\
+ &= \frac{4x - 4}{(x - 1)^2 + 4}
+\end{aligned}
+\end{equation}
+
+Daraus folgt $D = -4$ und $C = 4$.
 
 * Aufgabe 6
 ** a)
