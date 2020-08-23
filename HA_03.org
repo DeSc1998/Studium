@@ -22,8 +22,8 @@ z_2 &= 2e^{\frac{16}{3}\pi i}
 = 2e^{\frac{4}{3}\pi i} \\
 &= -2e^{\frac{1}{3}\pi i} \\
 &= -2(\cos(\frac{\pi}{3}) + i\sin(\frac{\pi}{3})) \\
-&= -2(\frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}i) \\
-&= -\sqrt{2} - \sqrt{2}i
+&= -2(\frac{1}{2} + \frac{\sqrt{3}}{2}i) \\
+&= -1 - \sqrt{3}i
 \end{aligned}
 \end{equation}
 
@@ -36,7 +36,7 @@ $$
   \Rightarrow \phi = \arctan(\frac{-3}{-3}) + \pi
   = \frac{\pi}{4} + \pi = \frac{5\pi}{4}
 $$
-Damit ist z_1 in Eulerdarstellung:
+Damit ist $z_1$ in Eulerdarstellung:
 $$z_1 = \sqrt{18}e^{\frac{5\pi}{4}i}$$
 
 *** z_2
@@ -44,9 +44,11 @@ $$r^2 = 2^2 + (\sqrt{12})^2 = 4 + 12 = 16$$
 $$\Leftrightarrow r = 4$$
 
 $$\tan(\phi) = \frac{\sqrt{12}}{2}$$
+
 Der Nenner ist größer 0:
 $$\Rightarrow \phi = \arctan(\frac{\sqrt{12}}{2}) = \frac{\pi}{3}$$
-Damit ist z_2 in Eulerdarstellung:
+
+Damit ist $z_2$ in Eulerdarstellung:
 $$z_2 = 4e^{\frac{\pi}{3}i}$$
 
 * Aufgabe 2
@@ -61,12 +63,12 @@ $$z_2 = 4e^{\frac{\pi}{3}i}$$
 \end{aligned}
 \end{equation}
 
-Die anderen Lösungen z_2 und z_3 lassen sich finden, wenn man den Term $\frac{2k\pi}{3}$ mit k \in {1, 2}
+Die anderen Lösungen $z_2$ und $z_3$ lassen sich finden, wenn man den Term $\frac{2k\pi}{3}$ mit $k$ \in {1, 2}
 hinzu addiert. Somit erhält man:
 
 \begin{equation}
 \begin{aligned}
-&z_k = \sqrt[3]{-2}e^{(\frac{-\pi}{12} + \frac{2k\pi}{3})i}, k \in {0, 1, 2} \\
+&z_k = \sqrt[3]{-2}e^{(\frac{-\pi}{12} + \frac{2k\pi}{3})i}, k \in \{0, 1, 2\} \\
 \Leftrightarrow &z_k = \sqrt[3]{-2}e^{(\frac{-\pi}{12} + \frac{8k\pi}{12})i} \\
 \Leftrightarrow &z_k = \sqrt[3]{-2}e^{\frac{(8k - 1)\pi}{12}i}
 \end{aligned}
@@ -82,12 +84,12 @@ z^5 = \frac{1 + i}{1 - i} &\Leftrightarrow z^5 = \frac{(1 + i)^2}{2} \\
 \end{aligned}
 \end{equation}
 
-Analog zu 2a) erhält man die anderen Lösungen mit den Term $\frac{2k\pi}{5}$ mit k \in {1, 2, 3, 4}.
+Analog zu 2a) erhält man die anderen Lösungen mit den Term $\frac{2k\pi}{5}$ mit $k$ \in {1, 2, 3, 4}.
 Womit man erhält:
 
 \begin{equation}
 \begin{aligned}
-z_k &= e^{(\frac{\pi}{10} + \frac{2k\pi}{5})i}, k \in {0, 1, 2, 3, 4} \\
+z_k &= e^{(\frac{\pi}{10} + \frac{2k\pi}{5})i}, k \in \{0, 1, 2, 3, 4\} \\
 \Leftrightarrow z_k &= e^{(\frac{\pi}{10} + \frac{4k\pi}{10})i} \\
 \Leftrightarrow z_k &= e^{\frac{(1 + 4k)\pi}{10}i}
 \end{aligned}
@@ -96,12 +98,12 @@ z_k &= e^{(\frac{\pi}{10} + \frac{2k\pi}{5})i}, k \in {0, 1, 2, 3, 4} \\
 * Aufgabe 3
 ** a)
 $$\deg(p(z)) = 4$$
-Die Nullstellen von p sind {4, $i$, -5}, wobei $z_2 = i$ eine zwei-fache Nullstelle ist.
+Die Nullstellen von $p$ sind {4, $i$, -5}, wobei $z_2 = i$ eine zwei-fache Nullstelle ist.
 
 ** b)
 $$p(z) = \frac{z^5 + 4z^4 - 3z^3 + 2z^2 - z + 1}{z^2 - 3}$$
 
-Die folgenden "Gleichungen" sind nicht als solche zu betrachten.
+_Anmerkung_: Die folgenden "Gleichungen" sind nicht als solche zu betrachten.
 Sie zeigen lediglich die einzelnen Schritte der Polynomdivision.
 
 \begin{equation}
@@ -132,7 +134,7 @@ p(2i) &= (2i)^4 + (2i)^3 + 2(2i)^2 + 4(2i) - 8 \\
 ** b)
 $$\frac{p(z)}{q(z)} = \frac{z^4 + z^3 + 2z^2 + 4z - 8}{z^2 + 4}$$
 
-Wie in 3b) sind die "Gleichungen" nur repräsentativ für die einzelnen Schritte der Polynomdivision.
+_Anmerkung_: Wie in 3b) sind die "Gleichungen" nur repräsentativ für die einzelnen Schritte der Polynomdivision.
 
 \begin{equation}
 \begin{aligned}
@@ -148,13 +150,13 @@ Das Polynom ist dann nach der Division:
 $$\frac{p(z)}{q(z)} = z^2 + z - 2$$
 
 ** c)
-Da q | p (siehe 4b) sind die Nullstellen von q auch gleichzeitig die Nullstellen von p.
-Die Nullstellen z_{1, 2} von q sind:
+Da $q$ | $p$ (siehe 4b) sind die Nullstellen von $q$ auch gleichzeitig die Nullstellen von $p$.
+Die Nullstellen $z_{1, 2}$ von $q$ sind:
 
 $$q(z) = z^2 + 4 = (z + 2i)(z - 2i)$$
 $$\Rightarrow z_{1, 2} = \pm 2i$$
 
-Die anderen beiden Nullstellen von p erhält man vom Polynom $z^2 + z - 2$ aus 4b:
+Die anderen beiden Nullstellen von $p$ erhält man vom Polynom $z^2 + z - 2$ aus 4b:
 
 \begin{equation}
 \begin{aligned}
@@ -164,7 +166,7 @@ Die anderen beiden Nullstellen von p erhält man vom Polynom $z^2 + z - 2$ aus 4b
 \end{aligned}
 \end{equation}
 
-Damit kann man p jewals komplex und reell zerlegen zu
+Damit kann man $p$ jewals komplex und reell zerlegen zu
 
 \begin{equation}
 \begin{aligned}
@@ -174,7 +176,7 @@ p(z) &= z^4 + z^3 + 2z^2 + 4z - 8 \\
 \end{aligned}
 \end{equation}
 
-mit den Nullstellen z_0 \in {-2, -2i, 2i, 1}.
+mit den Nullstellen $z_0$ \in {-2, -2$i$, 2$i$, 1}.
 
 * Aufgabe 5
 ** a)
@@ -188,12 +190,12 @@ Bestimmen der Nullstellen des Nennerpolynoms $q(z) = z^2 + 2z + 2$:
 \end{aligned}
 \end{equation}
 
-Die Linearfaktoren von q sind dann $(z + 1 - i)$ und $(z + 1 + i)$.
+Die Linearfaktoren von $q$ sind dann $(z + 1 - i)$ und $(z + 1 + i)$.
 Daraus ergibt sich dann der Ansatz:
 
 \begin{equation}
 \begin{aligned}
-f(z) &= \frac{z + 7}{(z + 1 - i)(z + 1 + i)}
+f(z) &= \frac{z + 7}{(z + 1 - i)(z + 1 + i)} \\
  &= \frac{A}{(z + 1 - i)} + \frac{B}{(z + 1 + i)}
 \end{aligned}
 \end{equation}
@@ -204,7 +206,7 @@ Durch die Zuhaltemethode erhält man dann:
 \begin{aligned}
 A &= \frac{(-1 + i) + 7}{(-1 + i) + 1 + i} \\
  &= \frac{6 + i}{2i} \\
-\Leftrightarrow A &= \frac{(6 + i)(-2i)}{2i(-2i)} = \frac{2 - 12i}{4} = \frac{1 - 6i}{2} \\
+\Leftrightarrow A &= \frac{(6 + i)(-2i)}{2i(-2i)} = \frac{2 - 12i}{4} = \frac{1 - 6i}{2}
 \end{aligned}
 \end{equation}
 
@@ -237,7 +239,8 @@ Daraus folgt $D = -4$ und $C = 4$.
 $$f(x) = \frac{p(x)}{q(x)} = \frac{x^3 - 4x^2 - 2x + 17}{x^2 - 6x + 9}$$
 
 Der Grad vom Zahlerpolynom ist größer ($\deg(p) > \deg(q)$), weshalb eine Ploynomdivision notwendig ist.
-Die folgenden "Gleichungen" sind hier wieder repräsentativ für die Schritte.
+
+_Anmerkung_: Die folgenden "Gleichungen" sind hier wieder repräsentativ für die Schritte der Division.
 
 \begin{equation}
 \begin{aligned}
@@ -247,9 +250,9 @@ Die folgenden "Gleichungen" sind hier wieder repräsentativ für die Schritte.
 \end{aligned}
 \end{equation}
 
-Es können keine weiteren Schritte durchgeführt werden, weil $deg(x - 1) < deg(q)$. Womit gilt $q \nmid p$, da ein Restpolynom übrig bleibt.
+Es können keine weiteren Schritte durchgeführt werden, weil $deg(x - 1) < deg(q)$. Somit gilt $q \nmid p$, da ein Restpolynom übrig bleibt.
 
-Bevor mit der Partialzerlegung fortgefahren werden kann, muss q in seine Linearfaktoren zerlegt werden.
+Bevor mit der Partialzerlegung fortgefahren werden kann, muss $q$ in seine Linearfaktoren zerlegt werden.
 
 \begin{equation}
 q(x) = x^2 - 6x + 9 = (x - 3)^2
@@ -264,7 +267,7 @@ Somit kann dann der folgende Ansatz gewählt werden:
 \end{aligned}
 \end{equation}
 
-Für A_2 gilt
+Für $A_2$ gilt
 
 \begin{equation}
 \begin{aligned}
@@ -275,7 +278,7 @@ Für A_2 gilt
 \end{aligned}
 \end{equation}
 
-A_1 muss über einen Koeffizientenvergleich ermittelt werden.
+$A_1$ muss über einen Koeffizientenvergleich ermittelt werden.
 
 \begin{equation}
 \begin{aligned}
@@ -286,7 +289,7 @@ A_1 muss über einen Koeffizientenvergleich ermittelt werden.
 \end{aligned}
 \end{equation}
 
-Damit gilt für die rationale Funktion f im reellen und komplexen:
+Damit gilt für die rationale Funktion $f$ im reellen und komplexen:
 
 $$f(x) = x + 2 + \frac{1}{x - 3} + \frac{2}{(x - 3)^2}$$
 
@@ -294,7 +297,7 @@ $$f(x) = x + 2 + \frac{1}{x - 3} + \frac{2}{(x - 3)^2}$$
 $$f(x) = \frac{p(x)}{q(x)} = \frac{2x^2 - 2x - 1}{x^3 + 2x}$$
 
 Da hier $deg(p) < deg(q)$ gilt, muss keine Polynomdivision durchgeführt werden.
-Für die Linearfaktoren von q gilt:
+Für die Linearfaktoren von $q$ gilt:
 
 \begin{equation}
 \begin{aligned}
@@ -313,7 +316,7 @@ f(x) &= \frac{2x^2 - 2x - 1}{x(x + \sqrt{2}i)(x - \sqrt{2}i)} \\
 \end{aligned}
 \end{equation}
 
-Für A mit $x = 0$ gilt
+Für $A$ mit $x = 0$ gilt
 
 \begin{equation}
 \begin{aligned}
@@ -322,7 +325,7 @@ A &= \frac{-1}{\sqrt{2}i(-\sqrt{2}i)} \\
 \end{aligned}
 \end{equation}
 
-Für B mit $x = -\sqrt{2}i$ gilt
+Für $B$ mit $x = -\sqrt{2}i$ gilt
 
 \begin{equation}
 \begin{aligned}
@@ -333,7 +336,7 @@ B &= \frac{2(-\sqrt{2}i)^2 - 2(-\sqrt{2}i) - 1}{(-\sqrt{2}i)((-\sqrt{2}i) - \sqr
 \end{aligned}
 \end{equation}
 
-Für C mit $x = \sqrt{2}i$ gilt
+Für $C$ mit $x = \sqrt{2}i$ gilt
 
 \begin{equation}
 \begin{aligned}
@@ -344,11 +347,11 @@ C &= \frac{2(\sqrt{2}i)^2 - 2(\sqrt{2}i) - 1}{(\sqrt{2}i)((\sqrt{2}i) + \sqrt{2}
 \end{aligned}
 \end{equation}
 
-Damit gilt für die Funktion f im komplexen:
+Damit gilt für die Funktion $f$ im komplexen:
 
 $$f(x) = \frac{\frac{-1}{2}}{x} + \frac{\frac{5 - 2\sqrt{2}i}{4}}{x + \sqrt{2}i} + \frac{\frac{5 + 2\sqrt{2}i}{4}}{x - \sqrt{2}i}$$
 
-Für die Zerlegung im reellen müssen die Koeffizienten B und C mit folgenden Ansatz umgeformt werden.
+Für die Zerlegung im reellen müssen die Koeffizienten $B$ und $C$ mit folgenden Ansatz umgeformt werden.
 
 \begin{equation}
 \begin{aligned}
@@ -363,6 +366,6 @@ Für die Zerlegung im reellen müssen die Koeffizienten B und C mit folgenden Ansa
 \end{equation}
 
 Damit sind $D = 10$ und $E = -8$.
-Und damit gilt für die Funktion f im reellen:
+Und damit gilt für die Funktion $f$ im reellen:
 
 $$f(x) = \frac{\frac{-1}{2}}{x} + \frac{10x - 8}{x^2 + 2}$$
