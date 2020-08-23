@@ -7,9 +7,6 @@ test.*
 *.aux
 *.toc
 
-test.pdf
-test.tex
-    
 Uni-Mathe/
 auto/
-Übungen/
+Uebungen/
