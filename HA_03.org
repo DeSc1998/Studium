@@ -109,16 +109,15 @@ Sie zeigen lediglich die einzelnen Schritte der Polynomdivision.
 \begin{equation}
 \begin{aligned}
 (z^5 + 4z^4 - 3z^3 + 2z^2 - z + 1) / (z^2 - 3) &= 0 \\
-(4z^4 - 6z^3 + 2z^2 - z + 1) / (z^2 - 3) &= z^3 \\
-(-6z^3 - 10z^2 - z + 1) / (z^2 - 3) &= z^3 + 4z^2 \\
-(-10z^2 + 17z + 1) / (z^2 - 3) &= z^3 + 4z^2 - 6z \\
-(17z + 31) / (z^2 - 3) &= z^3 + 4z^2 - 6z - 10
+(4z^4 + 2z^2 - z + 1) / (z^2 - 3) &= z^3 \\
+(14z^2 - z + 1) / (z^2 - 3) &= z^3 + 4z^2 \\
+(-z - 41) / (z^2 - 3) &= z^3 + 4z^2 + 14
 \end{aligned}
 \end{equation}
 
 Das Polynom nach der Division:
 
-$$p(z) = z^3 + 4z^2 - 6z - 10 + \frac{17z + 31}{z^2 - 3}$$
+$$p(z) = z^3 + 4z^2 + 14 + \frac{-z - 41}{z^2 - 3}$$
 
 * Aufgabe 4
 ** a)
@@ -166,14 +165,19 @@ Die anderen beiden Nullstellen von $p$ erhält man vom Polynom $z^2 + z - 2$ aus 
 \end{aligned}
 \end{equation}
 
-Damit kann man $p$ jewals komplex und reell zerlegen zu
+Damit kann man $p$ komplex zerlegen zu
 
 \begin{equation}
 \begin{aligned}
 p(z) &= z^4 + z^3 + 2z^2 + 4z - 8 \\
- &= (z - 2i)(z + 2i)(z + 2)(z - 1) \\
- &= (z^2 + 4)(z + 2)(z - 1)
+ &= (z - 2i)(z + 2i)(z + 2)(z - 1)
 \end{aligned}
+\end{equation}
+
+und im reellen zu
+
+\begin{equation}
+p(z) = (z^2 + 4)(z + 2)(z - 1)
 \end{equation}
 
 mit den Nullstellen $z_0$ \in {-2, -2$i$, 2$i$, 1}.
