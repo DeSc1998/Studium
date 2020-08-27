@@ -1,5 +1,5 @@
 
-#+TITLE: Analysis I und Lineare Algebra für Ingenieurwissenschaften \large @@latex: \\@@ Hausaufgabe 03 - Geuter 29
+#+TITLE: Analysis I und Lineare Algebra für Ingenieurwissenschaften \large @@latex: \\@@ Hausaufgabe 04 - Geuter 29
 #+AUTHOR: Moaz Haque, Felix Oechelhaeuser, Leo Pirker, Dennis Schulze
 
 * Aufgabe 1
