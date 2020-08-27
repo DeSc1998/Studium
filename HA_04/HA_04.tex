@@ -1,0 +1,142 @@
+% Created 2020-08-27 Do 10:48
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Moaz Haque, Felix Oechelhaeuser, Leo Pirker, Dennis Schulze}
+\date{\today}
+\title{Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 03 - Geuter 29}
+\hypersetup{
+ pdfauthor={Moaz Haque, Felix Oechelhaeuser, Leo Pirker, Dennis Schulze},
+ pdftitle={Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 03 - Geuter 29},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.3.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Aufgabe 1}
+\label{sec:orgaa0544f}
+\subsection{a)}
+\label{sec:org953fb79}
+\begin{equation*}
+\begin{aligned}
+p(z) &= z^2 + 3z - 1 + 2i \\
+ &= (z^2 - 2z) + (5z - 5) + (4 + 2i) \\
+ &= 2 T_2(z) + 5 T_1(z) + (4 + 2i) T_0(z)
+\end{aligned}
+\end{equation*}
+
+\subsection{b)}
+\label{sec:org31ab93b}
+\begin{equation*}
+\begin{aligned}
+\sin\left( x + \frac{\pi}{3} \right) &= 
+  \sin(x) \cos\left( \frac{\pi}{3}\right) + \cos(x) \sin\left( \frac{\pi}{3} \right) \\
+ &= \sin(x) \frac{1}{2} + \cos(x) \frac{ \sqrt{3} }{2}
+\end{aligned}
+\end{equation*}
+
+\section{Aufgabe 2}
+\label{sec:org6173b87}
+\subsection{a)}
+\label{sec:org6bf5f6e}
+Umformung der Regel von \(T_1\):
+
+\begin{equation*}
+\begin{aligned}
+0 &= 3x_1 - 2x_2 \\
+\Leftrightarrow 2x_2 &= 3x_1 \\
+\Leftrightarrow x_2 &= \frac{3}{2}x_1
+\end{aligned}
+\end{equation*}
+
+Damit gilt für \(T_1\):
+
+\begin{equation*}
+\begin{aligned}
+T_1 &= \left\{ \begin{bmatrix} x_1 \\ \frac{3}{2}x_1 \end{bmatrix} \in \mathbb{R}^2 \right\} \\
+ &= \text{span}\left\{ \begin{bmatrix} 1 \\ \frac{3}{2} \end{bmatrix} \right\}
+\end{aligned}
+\end{equation*}
+
+Damit gelten die Addition und Skalarmultiplikation in \(T_1\). Und daraus folgt:
+
+$$T_1 \subset \mathbb{R}^2$$
+
+Umformung der Regel von \(T_2\):
+
+\begin{equation*}
+\begin{aligned}
+1 &= x_1 x_2^3 \\
+\Leftrightarrow \frac{1}{x_1} &= x_2^3 \\
+\Leftrightarrow \frac{1}{\sqrt[3]{x_1}} &= x_2
+\end{aligned}
+\end{equation*}
+
+Damit gilt für \(T_2\):
+
+$$T_2 = \left\{ \begin{bmatrix} x_1 \\ \frac{1}{\sqrt[3]{x_1}} \end{bmatrix} \in \mathbb{R}^2 \right\}$$
+
+Daraus folgt, dass keiner der Vektoren in \(T_2\) als vielfaches eines anderen Vektors aus \(T_2\) dargestellt werden kann.
+Ebenso gibt es keine zwei Vektoren \(v, w \in T_2, v \neq -w\) für die gilt \(v + w \in T_2\).
+
+Daraus folgt:
+
+$$T_2 \not\subset \mathbb{R}^2$$
+
+\subsection{b)}
+\label{sec:orgb40de93}
+\(\forall f, g \in T\) gilt \(f + g \in T\), da alle \(f\) und \(g\) an der Stelle \(x = -2\) eine Nullstelle besitzen 
+und \(f + g\) muss dem zu folge ebenfalls bei \(x = -2\) eine Nullstelle besitzen.
+Analog gilt auch \(\forall f \in T\) mit \(\lambda \in \mathbb{R}\), dass \(\lambda f \in T\). Auch hier hat \(f\) eine Nullstelle bei \(x = -2\),
+die bei \(\lambda f\) erhalten bleibt.
+
+Also gilt:
+
+$$T \subset V$$
+
+\section{Aufgabe 3}
+\label{sec:orgf6710ad}
+\subsection{a}
+\label{sec:orgae4114c}
+\subsection{b}
+\label{sec:orgdd09506}
+\subsection{c}
+\label{sec:org1255727}
+\section{Aufgabe 4}
+\label{sec:orgb8c1749}
+\subsection{a}
+\label{sec:org40706e9}
+\subsection{b}
+\label{sec:org646f70e}
+\subsection{c}
+\label{sec:org1b15e21}
+\section{Aufgabe 5}
+\label{sec:org93df22d}
+\subsection{a}
+\label{sec:org934b3c8}
+\subsection{b}
+\label{sec:orgabfca12}
+\section{Aufgabe 6}
+\label{sec:orgdaf3809}
+\subsection{a}
+\label{sec:org51ea342}
+\subsection{b}
+\label{sec:orge07265c}
+\end{document}
