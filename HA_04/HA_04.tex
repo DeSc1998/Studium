@@ -1,4 +1,4 @@
-% Created 2020-08-27 Do 10:48
+% Created 2020-08-27 Do 11:54
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[latin1]{inputenc}
@@ -31,9 +31,9 @@
 
 
 \section{Aufgabe 1}
-\label{sec:orgaa0544f}
+\label{sec:org8b4ece8}
 \subsection{a)}
-\label{sec:org953fb79}
+\label{sec:orgc5af755}
 \begin{equation*}
 \begin{aligned}
 p(z) &= z^2 + 3z - 1 + 2i \\
@@ -43,7 +43,7 @@ p(z) &= z^2 + 3z - 1 + 2i \\
 \end{equation*}
 
 \subsection{b)}
-\label{sec:org31ab93b}
+\label{sec:org7ffe13c}
 \begin{equation*}
 \begin{aligned}
 \sin\left( x + \frac{\pi}{3} \right) &= 
@@ -53,9 +53,9 @@ p(z) &= z^2 + 3z - 1 + 2i \\
 \end{equation*}
 
 \section{Aufgabe 2}
-\label{sec:org6173b87}
+\label{sec:org1878f4c}
 \subsection{a)}
-\label{sec:org6bf5f6e}
+\label{sec:orga99615c}
 Umformung der Regel von \(T_1\):
 
 \begin{equation*}
@@ -101,7 +101,7 @@ Daraus folgt:
 $$T_2 \not\subset \mathbb{R}^2$$
 
 \subsection{b)}
-\label{sec:orgb40de93}
+\label{sec:org13e1e04}
 \(\forall f, g \in T\) gilt \(f + g \in T\), da alle \(f\) und \(g\) an der Stelle \(x = -2\) eine Nullstelle besitzen 
 und \(f + g\) muss dem zu folge ebenfalls bei \(x = -2\) eine Nullstelle besitzen.
 Analog gilt auch \(\forall f \in T\) mit \(\lambda \in \mathbb{R}\), dass \(\lambda f \in T\). Auch hier hat \(f\) eine Nullstelle bei \(x = -2\),
@@ -112,31 +112,77 @@ Also gilt:
 $$T \subset V$$
 
 \section{Aufgabe 3}
-\label{sec:orgf6710ad}
+\label{sec:org6d7e306}
 \subsection{a}
-\label{sec:orgae4114c}
+\label{sec:orgb708066}
+Ansatz zum überprüfen auf lineare Abhänigkeit:
+
+\begin{equation*}
+\begin{aligned}
+0 &= a_0 \begin{bmatrix} 3 \\ 0 \\ 2  \end{bmatrix} +
+     a_1 \begin{bmatrix} -3 \\ 5 \\ 3 \end{bmatrix} +
+     a_2 \begin{bmatrix} 0 \\ 1 \\ -1 \end{bmatrix} \\
+ &= \begin{bmatrix} 3 a_0 \\ 0 \\ 2 a_0 \end{bmatrix} +
+    \begin{bmatrix} -3 a_1 \\ 5 a_1 \\ 3 a_1 \end{bmatrix} +
+    \begin{bmatrix} 0 \\ a_2 \\ -a_2 \end{bmatrix} \\
+ &= \begin{bmatrix} 3 (a_0 - a_1) \\ 5 a_1 + a_2 \\ 2 a_0 + 3 a_1 - a_2 \end{bmatrix}
+\end{aligned}
+\end{equation*}
+
+Daraus folgt \(a_0 = a_1\) aus der ersten Komponente, \(5a_1 = -a_2\) aus der zweiten Komponente.
+Die Folgerung aus der dritte Komponente steht im widerspruch zu den ersten beiden,
+da diese immer ungleich 0 ist, wenn die ersten beiden Komponenten gleich 0 sind.
+
+Damit gilt nur die triviale Lösung \(a_0 = a_1 = a_2 = 0\) und damit sind die Vektoren linear unabhängig.
+
 \subsection{b}
-\label{sec:orgdd09506}
+\label{sec:org67515f9}
+Ansatz zum überprüfen auf lineare Abhänigkeit:
+
+\begin{equation*}
+\begin{aligned}
+0 &= a_1 p_1(z) + a_2 p_2(z) + a_3 p_3(z) + a_4 p_4(z) \\
+ &=  a_1 + a_2 (3z - 1) + a_3 (z^2 - 1) + a_4 (2z^3 - 3z^2) \\
+ &=  a_1 + 3 a_2 z - a_2 + a_3 z^2 - a_3 + 2 a_4 z^3 - 3 a_4 z^2 \\
+ &= (a_1 - a_2 - a_3) + 3 a_2 z + (a_3 - 3 a_4) z^2 + 2 a_4 z^3
+\end{aligned}
+\end{equation*}
+
+Daraus ergeben sich durch Koeffizientenvergleich die Gleichungen:
+
+\begin{equation*}
+\begin{aligned}
+\text{(I) } 0 &= a_1 - a_2 - a_3 \\
+\text{(II) } 0 &= 3 a_2 \\
+\text{(III) } 0 &= a_3 - 3 a_4 \\
+\text{(IV) } 0 &= 2 a_4
+\end{aligned}
+\end{equation*}
+
+Aus II und IV folgen jewals \(a_2 = a_4 = 0\). Damit folgt aus III \(a_3 = 0\). Und schließlich folgt dann aus I \(a_1 = 0\).
+
+Damit ist die triviale Lösung \(a_1 = a_2 = a_3 = a_4 = 0\) die einzige Lösung und damit sind die Polynome/Vektoren linear unabhängig.
+
 \subsection{c}
-\label{sec:org1255727}
+\label{sec:orgd2d745e}
 \section{Aufgabe 4}
-\label{sec:orgb8c1749}
+\label{sec:org51ecc16}
 \subsection{a}
-\label{sec:org40706e9}
+\label{sec:org3a18cda}
 \subsection{b}
-\label{sec:org646f70e}
+\label{sec:orgaafdc10}
 \subsection{c}
-\label{sec:org1b15e21}
+\label{sec:org74028af}
 \section{Aufgabe 5}
-\label{sec:org93df22d}
+\label{sec:orga0f7892}
 \subsection{a}
-\label{sec:org934b3c8}
+\label{sec:org0fb7e45}
 \subsection{b}
-\label{sec:orgabfca12}
+\label{sec:org1a9a969}
 \section{Aufgabe 6}
-\label{sec:orgdaf3809}
+\label{sec:orga3272a0}
 \subsection{a}
-\label{sec:org51ea342}
+\label{sec:orgaff179b}
 \subsection{b}
-\label{sec:orge07265c}
+\label{sec:orgb36c8de}
 \end{document}
