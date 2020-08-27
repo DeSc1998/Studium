@@ -196,12 +196,174 @@ Daraus ergeben sich die Gleichungen:
 \end{aligned}
 \end{equation*}
 
-Aus II folgt $a_2 = \frac{1}{4}$ und damit folgt aus I $a_1 = \frac{-1}{2}$.
-Der Koordinatenvektor ist damit $\begin{bmatrix} \frac{-1}{2} \\ \frac{1}{4} \end{bmatrix}$ für $E_2$.
+Aus II folgt $a_2 = \frac{1}{4}$ und damit folgt aus I $a_1 = \frac{1}{2}$.
+Der Koordinatenvektor ist damit $\begin{bmatrix} \frac{1}{2} \\ \frac{1}{4} \end{bmatrix}$ für $E_2$.
 
 * Aufgabe 5
 ** a)
+$$ A \in \mathbb{C}^{1, 2}, B \in \mathbb{R}^{2, 2}, C \in \mathbb{R}^{2, 2}, D \in \mathbb{C}^{1, 2} $$
+
+Addition $B + C$ und $A + D$ sind möglich, da diese das gleiche Format besitzen.
+
+\begin{equation*}
+\begin{aligned}
+A + D &= \begin{bmatrix} -i & 2+i \end{bmatrix}
+       + \begin{bmatrix} 12-i & -4+2i \end{bmatrix} \\
+    &= \begin{bmatrix} -i+12-i & 2+i + (-4) +2i \end{bmatrix} \\
+    &= \begin{bmatrix} 12-2i & -2+3i \end{bmatrix}
+\end{aligned}
+\end{equation*}
+
+\begin{equation*}
+\begin{aligned}
+B + C &= \begin{bmatrix} 0 & 3 \\ -1 & 0 \end{bmatrix} 
+       + \begin{bmatrix} 1 & 13 \\ -1 & 2 \end{bmatrix} \\ 
+    &= \begin{bmatrix} 1 & 16 \\ -2 & 2 \end{bmatrix}
+\end{aligned}
+\end{equation*}
+
 ** b)
+$$ A \in \mathbb{C}^{1, 2},
+B \in \mathbb{C}^{2, 2},
+C \in \mathbb{C}^{3, 2},
+D \in \mathbb{C}^{3, 3} $$
+
+Multiplikation von $A \cdot B$, $C \cdot B$ und $D \cdot C$ ist möglich,
+da die Spaltenzahl vom erst genannten mit der Zeilenanzahl vom zweiten übereinstimmt.
+
+\begin{equation*}
+\begin{aligned}
+A \cdot B &= \begin{bmatrix} 1 & -2i \end{bmatrix}
+             \begin{bmatrix}
+                1 & 1-i \\
+                i & 0
+             \end{bmatrix} \\
+  &= \begin{bmatrix} (1)(1) + (-2i)(i) & (1)(1 - i) + (-2i)(0) \end{bmatrix} \\
+  &= \begin{bmatrix} 3 & 1 - i \end{bmatrix}
+\end{aligned}
+\end{equation*}
+
+\begin{equation*}
+\begin{aligned}
+C \cdot B & = \begin{bmatrix}
+        2-i & 3i \\
+        0 & i \\
+        2+3i & 41
+    \end{bmatrix} \begin{bmatrix}
+        1 & 1-i \\
+        i & 0
+    \end{bmatrix} \\ 
+    &= \begin{bmatrix}
+        (2-i)(1) + (3i)(i) & (2-i)(1-i) + (3i)(0) \\
+        (0)(1) + (i)(i) & (0)(1-i) + (i)(0) \\
+        (2+3i)(1) + (41)(i) & (2+3i)(1-i) + (41)(0)
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        -1-i & 1 - 3i \\
+        -1 & 0 \\
+        2 + 44i & 5 + i
+    \end{bmatrix}
+\end{aligned}
+\end{equation*}
+
+\begin{equation*}
+\begin{aligned}
+D \cdot C & = \begin{bmatrix}
+        1-i & 2 & -2-3i \\
+        -1-3i & 0 & -1 \\
+        0 & 1 & 0
+    \end{bmatrix} \begin{bmatrix}
+        2-i & 3i \\
+        0 & i \\
+        2+3i & 41 \\
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        (1-i)(2-i) + (2)(0) + (-2-3i)(2+3i) & (1-i)(3i) + (2)(i) + (-2-3i)(41) \\
+        (-1-3i)(2-i) + (0)(0) + (-1)(2+3i) & (-1-3i)(3i) + (0)(i) + (-1)(41) \\
+        0 & i
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        (2 - i - 2i + 1) + 0 + (-4 - 6i - 6i + 9) & (3i + 3) + (2i) + (-82 - 123i) \\
+        (-2 + i - 6i - 3) + 0 + (-2 - 3i) & (-3i + 9) + 0 - 41 \\
+        0 & i
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        8 - 15i & -79 - 118i \\
+        -7 - 8i & -32 - 3i  \\
+        0 & i
+    \end{bmatrix}
+\end{aligned}
+\end{equation*}
+
 * Aufgabe 6
 ** a)
+
+\begin{equation*}
+\begin{aligned}
+A^2 = A \cdot A & = \begin{bmatrix}
+        0 & -1 & 2 \\
+        0 & 0 & 1 \\
+        0 & 0 & 0 \\
+    \end{bmatrix} \begin{bmatrix}
+        0 & -1 & 2 \\
+        0 & 0 & 1 \\
+        0 & 0 & 0 \\
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        0 & 0 & -1 \\
+        0 & 0 & 0 \\
+        0 & 0 & 0 \\
+    \end{bmatrix}
+\end{aligned}
+\end{equation*}
+
+\begin{equation*}
+\begin{aligned}
+    A^3 = A^2 \cdot A & = \begin{bmatrix}
+        0 & 0 & -1 \\
+        0 & 0 & 0 \\
+        0 & 0 & 0 \\
+    \end{bmatrix}
+    \begin{bmatrix}
+        0 & -1 & 2 \\
+        0 & 0 & 1 \\
+        0 & 0 & 0 \\
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        0 & 0 & 0 \\
+        0 & 0 & 0 \\
+        0 & 0 & 0 \\
+    \end{bmatrix}
+\end{aligned}
+\end{equation*}
+
 ** b)
+Alle $A_n, n > 2$ sind Nullmatritzen.
+
+\begin{equation*}
+B = \left\{
+        \begin{bmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 1 \\
+        \end{bmatrix}, 
+        \begin{bmatrix}
+            0 & 1 & 0 \\
+            0 & 0 & 0 \\
+            0 & 0 & 0 \\
+        \end{bmatrix},
+        \begin{bmatrix}
+            0 & 0 & 1 \\
+            0 & 0 & 0 \\
+            0 & 0 & 0 \\
+        \end{bmatrix}, 
+        \begin{bmatrix}
+            0 & 0 & 0 \\
+            0 & 0 & 1 \\
+            0 & 0 & 0 \\
+        \end{bmatrix}
+     \right\}
+\end{equation*}
+
+$\dim(B) = 4$
+
