@@ -77,6 +77,8 @@ Also gilt:
 
 $$T \subset V$$
 
+\pagebreak
+
 * Aufgabe 3
 ** a)
 Ansatz zum überprüfen auf lineare Abhänigkeit:
@@ -127,6 +129,20 @@ Aus II und IV folgen jewals $a_2 = a_4 = 0$. Damit folgt aus III $a_3 = 0$. Und 
 Damit ist die triviale Lösung $a_1 = a_2 = a_3 = a_4 = 0$ die einzige Lösung und damit sind die Polynome/Vektoren linear unabhängig.
 
 ** c)
+Ansatz zum überprüfen auf lineare Abhänigkeit:
+
+\begin{equation*}
+\begin{aligned}
+0 &= a_1 f_1(x) + a_2 f_2(x) \\
+ &= a_1 \sin(x) + a_2 \sin(4x)
+\end{aligned}
+\end{equation*}
+
+Es gibt neben der trivialen Lösung $a_1 = a_2 = 0$ gibt es keine weiteren Lösungen für die gilt:
+
+$$\forall x, a_1, a_2 \in \mathbb{R}, a_1 \neq 0, a_2 \neq 0, 0 = a_1 \sin(x) + a_2 \sin(4x)$$
+
+Damit sind $f_1$ und $f_2$ linear unabhängig.
 
 * Aufgabe 4
 ** a)
@@ -139,7 +155,7 @@ Man überprüfe, ob sich der Beispielvektor $\begin{bmatrix} 2 \\ 2 \end{bmatrix}$
 
 \begin{equation*}
 \begin{aligned}
-\begin{bmatrix} 2 \\ 2 \end{bmatrix} &= r \begin{bmatrix} 1 \\ -2 \end{bmatrix} \\
+\begin{bmatrix} 2 \\ 2 \end{bmatrix} &= r \begin{bmatrix} 1 \\ -2 \end{bmatrix}
  &= \begin{bmatrix} r \\ -2r \end{bmatrix} \\
 \Leftrightarrow 0 &= \begin{bmatrix} r - 2 \\ -2r - 2 \end{bmatrix}
 \end{aligned}
@@ -299,7 +315,6 @@ D \cdot C & = \begin{bmatrix}
 ** a)
 
 \begin{equation*}
-\begin{aligned}
 A^2 = A \cdot A & = \begin{bmatrix}
         0 & -1 & 2 \\
         0 & 0 & 1 \\
@@ -308,17 +323,15 @@ A^2 = A \cdot A & = \begin{bmatrix}
         0 & -1 & 2 \\
         0 & 0 & 1 \\
         0 & 0 & 0 \\
-    \end{bmatrix} \\
-    & = \begin{bmatrix}
+    \end{bmatrix}
+    = \begin{bmatrix}
         0 & 0 & -1 \\
         0 & 0 & 0 \\
         0 & 0 & 0 \\
     \end{bmatrix}
-\end{aligned}
 \end{equation*}
 
 \begin{equation*}
-\begin{aligned}
     A^3 = A^2 \cdot A & = \begin{bmatrix}
         0 & 0 & -1 \\
         0 & 0 & 0 \\
@@ -328,17 +341,16 @@ A^2 = A \cdot A & = \begin{bmatrix}
         0 & -1 & 2 \\
         0 & 0 & 1 \\
         0 & 0 & 0 \\
-    \end{bmatrix} \\
+    \end{bmatrix}
     & = \begin{bmatrix}
         0 & 0 & 0 \\
         0 & 0 & 0 \\
         0 & 0 & 0 \\
     \end{bmatrix}
-\end{aligned}
 \end{equation*}
 
 ** b)
-Alle $A_n, n > 2$ sind Nullmatritzen.
+Alle $A^n, n > 2$ sind Nullmatritzen.
 
 \begin{equation*}
 B = \left\{
