@@ -156,7 +156,7 @@ Man überprüfe, ob sich der Beispielvektor $\begin{bmatrix} 2 \\ 2 \end{bmatrix}$
 \begin{equation*}
 \begin{aligned}
 \begin{bmatrix} 2 \\ 2 \end{bmatrix} &= r \begin{bmatrix} 1 \\ -2 \end{bmatrix}
- &= \begin{bmatrix} r \\ -2r \end{bmatrix} \\
+  = \begin{bmatrix} r \\ -2r \end{bmatrix} \\
 \Leftrightarrow 0 &= \begin{bmatrix} r - 2 \\ -2r - 2 \end{bmatrix}
 \end{aligned}
 \end{equation*}
@@ -299,12 +299,12 @@ D \cdot C & = \begin{bmatrix}
         0 & i
     \end{bmatrix} \\
     & = \begin{bmatrix}
-        (2 - i - 2i + 1) + 0 + (-4 - 6i - 6i + 9) & (3i + 3) + (2i) + (-82 - 123i) \\
+        (2 - i - 2i - 1) + 0 + (-4 - 6i - 6i + 9) & (3i + 3) + (2i) + (-82 - 123i) \\
         (-2 + i - 6i - 3) + 0 + (-2 - 3i) & (-3i + 9) + 0 - 41 \\
         0 & i
     \end{bmatrix} \\
     & = \begin{bmatrix}
-        8 - 15i & -79 - 118i \\
+        6 - 15i & -79 - 118i \\
         -7 - 8i & -32 - 3i  \\
         0 & i
     \end{bmatrix}
