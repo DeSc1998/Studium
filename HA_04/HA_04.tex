@@ -1,4 +1,4 @@
-% Created 2020-08-27 Do 11:54
+% Created 2020-08-27 Do 17:51
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[latin1]{inputenc}
@@ -31,9 +31,9 @@
 
 
 \section{Aufgabe 1}
-\label{sec:org8b4ece8}
+\label{sec:org5df5cc9}
 \subsection{a)}
-\label{sec:orgc5af755}
+\label{sec:org4494bfd}
 \begin{equation*}
 \begin{aligned}
 p(z) &= z^2 + 3z - 1 + 2i \\
@@ -43,7 +43,7 @@ p(z) &= z^2 + 3z - 1 + 2i \\
 \end{equation*}
 
 \subsection{b)}
-\label{sec:org7ffe13c}
+\label{sec:org34d63c0}
 \begin{equation*}
 \begin{aligned}
 \sin\left( x + \frac{\pi}{3} \right) &= 
@@ -53,9 +53,9 @@ p(z) &= z^2 + 3z - 1 + 2i \\
 \end{equation*}
 
 \section{Aufgabe 2}
-\label{sec:org1878f4c}
+\label{sec:orge6799d8}
 \subsection{a)}
-\label{sec:orga99615c}
+\label{sec:orgdef3e84}
 Umformung der Regel von \(T_1\):
 
 \begin{equation*}
@@ -101,7 +101,7 @@ Daraus folgt:
 $$T_2 \not\subset \mathbb{R}^2$$
 
 \subsection{b)}
-\label{sec:org13e1e04}
+\label{sec:orgab8ed3e}
 \(\forall f, g \in T\) gilt \(f + g \in T\), da alle \(f\) und \(g\) an der Stelle \(x = -2\) eine Nullstelle besitzen 
 und \(f + g\) muss dem zu folge ebenfalls bei \(x = -2\) eine Nullstelle besitzen.
 Analog gilt auch \(\forall f \in T\) mit \(\lambda \in \mathbb{R}\), dass \(\lambda f \in T\). Auch hier hat \(f\) eine Nullstelle bei \(x = -2\),
@@ -112,9 +112,9 @@ Also gilt:
 $$T \subset V$$
 
 \section{Aufgabe 3}
-\label{sec:org6d7e306}
-\subsection{a}
-\label{sec:orgb708066}
+\label{sec:org03e4176}
+\subsection{a)}
+\label{sec:org8285a51}
 Ansatz zum überprüfen auf lineare Abhänigkeit:
 
 \begin{equation*}
@@ -135,8 +135,8 @@ da diese immer ungleich 0 ist, wenn die ersten beiden Komponenten gleich 0 sind.
 
 Damit gilt nur die triviale Lösung \(a_0 = a_1 = a_2 = 0\) und damit sind die Vektoren linear unabhängig.
 
-\subsection{b}
-\label{sec:org67515f9}
+\subsection{b)}
+\label{sec:org6a2a065}
 Ansatz zum überprüfen auf lineare Abhänigkeit:
 
 \begin{equation*}
@@ -163,26 +163,94 @@ Aus II und IV folgen jewals \(a_2 = a_4 = 0\). Damit folgt aus III \(a_3 = 0\). 
 
 Damit ist die triviale Lösung \(a_1 = a_2 = a_3 = a_4 = 0\) die einzige Lösung und damit sind die Polynome/Vektoren linear unabhängig.
 
-\subsection{c}
-\label{sec:orgd2d745e}
+\subsection{c)}
+\label{sec:org5b36c38}
+
 \section{Aufgabe 4}
-\label{sec:org51ecc16}
-\subsection{a}
-\label{sec:org3a18cda}
-\subsection{b}
-\label{sec:orgaafdc10}
-\subsection{c}
-\label{sec:org74028af}
+\label{sec:org41a45f1}
+\subsection{a)}
+\label{sec:org6dfde1a}
+\(\left\{ \begin{bmatrix} 1 \\ -2 \end{bmatrix} \right\}\) ist kein Erzeugendensystem von \(\mathbb{R}^2\),
+da die \(\text{span} \left\{ \begin{bmatrix} 1 \\ -2 \end{bmatrix} \right\}\) eine echte Teilmenge von \(\mathbb{R}^2\) ist.
+Man kann mit Leichtigkeit ein Element in \(\mathbb{R}^2\) finden, welches nicht in der Span enthalten ist.
+
+
+Man überprüfe, ob sich der Beispielvektor \(\begin{bmatrix} 2 \\ 2 \end{bmatrix}\) in der Span enthalten ist
+
+\begin{equation*}
+\begin{aligned}
+\begin{bmatrix} 2 \\ 2 \end{bmatrix} &= r \begin{bmatrix} 1 \\ -2 \end{bmatrix} \\
+ &= \begin{bmatrix} r \\ -2r \end{bmatrix} \\
+\Leftrightarrow 0 &= \begin{bmatrix} r - 2 \\ -2r - 2 \end{bmatrix}
+\end{aligned}
+\end{equation*}
+
+Aus der ersten Komponente würde folgen \(r = 2\) und aus der zweiten folgt \(r = -1\), was ein widerspruch ist.
+Daraus folgt \(\begin{bmatrix} 2 \\ 2 \end{bmatrix} \not\in \text{ span} \left\{ \begin{bmatrix} 1 \\ -2 \end{bmatrix} \right\}\), aber
+\(\begin{bmatrix} 2 \\ 2 \end{bmatrix} \in \mathbb{R}^2\).
+
+\subsection{b)}
+\label{sec:org375b834}
+Die Erzeugendensysteme \(E_1 = \left\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 1 \\ -2 \end{bmatrix} \right\}\) und 
+\(E_2 = \left\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} -2 \\ 4 \end{bmatrix} \right\}\) sind die einzigen Basen, bei denen
+die beiden Vektoren voneinander linear unabhängig sind.
+
+\subsection{c)}
+\label{sec:org814130c}
+Ansatz für \(E_1\):
+
+\begin{equation*}
+\begin{aligned}
+\begin{bmatrix} 0 \\ 1 \end{bmatrix} &= a_1 \begin{bmatrix} 1 \\ 0 \end{bmatrix} + a_2 \begin{bmatrix} 1 \\ -2 \end{bmatrix}
+  = \begin{bmatrix} a_1 + a_2 \\ -2 a_2 \end{bmatrix} \\
+\Leftrightarrow 0 &= \begin{bmatrix} a_1 + a_2 \\ -2 a_2 - 1 \end{bmatrix}
+\end{aligned}
+\end{equation*}
+
+Daraus ergeben sich die Gleichungen:
+
+\begin{equation*}
+\begin{aligned}
+\text{(I) } 0 &= a_1 + a_2 \\
+\text{(II) } 0 &= -2 a_2 - 1
+\end{aligned}
+\end{equation*}
+
+Aus II folgt \(a_2 = \frac{-1}{2}\) und damit folgt aus I \(a_1 = \frac{1}{2}\).
+Der Koordinatenvektor ist damit \(\begin{bmatrix} \frac{1}{2} \\ \frac{-1}{2} \end{bmatrix}\) für \(E_1\).
+
+Ansatz für \(E_2\):
+
+\begin{equation*}
+\begin{aligned}
+\begin{bmatrix} 0 \\ 1 \end{bmatrix} &= a_1 \begin{bmatrix} 1 \\ 0 \end{bmatrix} + a_2 \begin{bmatrix} -2 \\ 4 \end{bmatrix}
+ = \begin{bmatrix} a_1 - 2 a_2 \\ 4 a_2 \end{bmatrix} \\
+\Leftrightarrow 0 &= \begin{bmatrix} a_1 - 2 a_2 \\ 4 a_2 - 1 \end{bmatrix}
+\end{aligned}
+\end{equation*}
+
+Daraus ergeben sich die Gleichungen:
+
+\begin{equation*}
+\begin{aligned}
+\text{(I) } 0 &= a_1 - 2 a_2 \\
+\text{(II) } 0 &= 4 a_2 - 1
+\end{aligned}
+\end{equation*}
+
+Aus II folgt \(a_2 = \frac{1}{4}\) und damit folgt aus I \(a_1 = \frac{-1}{2}\).
+Der Koordinatenvektor ist damit \(\begin{bmatrix} \frac{-1}{2} \\ \frac{1}{4} \end{bmatrix}\) für \(E_2\).
+
 \section{Aufgabe 5}
-\label{sec:orga0f7892}
-\subsection{a}
-\label{sec:org0fb7e45}
-\subsection{b}
-\label{sec:org1a9a969}
+\label{sec:org7b0f030}
+\subsection{a)}
+\label{sec:org4805177}
+\subsection{b)}
+\label{sec:org513ac11}
 \section{Aufgabe 6}
-\label{sec:orga3272a0}
-\subsection{a}
-\label{sec:orgaff179b}
-\subsection{b}
-\label{sec:orgb36c8de}
+\label{sec:orgb388324}
+\subsection{a)}
+\label{sec:org87a8f1e}
+\subsection{b)}
+\label{sec:orgc102f63}
 \end{document}
