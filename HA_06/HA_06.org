@@ -2,10 +2,190 @@
 #+TITLE: Analysis I und Lineare Algebra für Ingenieurwissenschaften \large @@latex: \\@@ Hausaufgabe 06 - Geuter 29
 #+AUTHOR: Moaz Haque, Felix Oechelhaeuser, Leo Pirker, Dennis Schulze
 
+#+LATEX_CLASS_OPTIONS: [a4paper,11pt]
+
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usepackage{tkz-euclide}
+#+LATEX_HEADER: \usetikzlibrary{arrows.meta,arrows}
+
 * Aufgabe 1
 ** a)
+\begin{align}
+    f_{B_1,B_1} = K_{B_1}(f(K_{B_1}^{-1}(e_i))) = K_{B_1}(f(b_i)) \\
+    K_{B_1} = \mathbb{R}^3 \rightarrow \mathbb{R}^3, \begin{bmatrix}
+        a \\
+        b \\
+        c
+    \end{bmatrix} \rightarrow \begin{bmatrix}
+        \lambda_1 \\
+        \lambda_2 \\
+        \lambda_3
+    \end{bmatrix}
+    \intertext{da:}
+    \lambda_1 \begin{bmatrix}
+        1 \\
+        0 \\
+        0
+    \end{bmatrix} + \lambda_2 \begin{bmatrix}
+        0 \\
+        1 \\
+        0
+    \end{bmatrix} + \lambda_3 \begin{bmatrix}
+        0 \\
+        0 \\
+        1
+    \end{bmatrix} = \begin{bmatrix}
+        a \\
+        b \\
+        c
+    \end{bmatrix} \Leftrightarrow \left[ \begin{array}{@{}ccc|c@{}}
+        1 & 0 & 0 & a \\
+        0 & 1 & 0 & b \\
+        0 & 0 & 1 & c
+    \end{array} \right]
+    \intertext{1. Spalte:}
+    f_{B_1,B_1}(e_1) = K_{B_1}\left(f\left(\begin{bmatrix}
+        1 \\
+        0 \\
+        0
+    \end{bmatrix}\right)\right) = K_{B_1}\left(\begin{bmatrix}
+        1 \\
+        0 \\
+        2 \\
+    \end{bmatrix}\right) = \begin{bmatrix}
+        1 \\
+        0 \\
+        2 \\
+    \end{bmatrix}
+    \intertext{2. Spalte:}
+    f_{B_1,B_1}(e_2) = K_{B_1}\left(f\left(\begin{bmatrix}
+        0 \\
+        1 \\
+        0
+    \end{bmatrix}\right)\right) = K_{B_1}\left(\begin{bmatrix}
+        -2 \\
+        0 \\
+        1
+    \end{bmatrix}\right) = \begin{bmatrix}
+        -2 \\
+        0 \\
+        1
+    \end{bmatrix}
+    \intertext{3. Spalte:}
+    f_{B_1,B_1}(e_3) = K_{B_1}\left(f\left(\begin{bmatrix}
+        0 \\
+        0 \\
+        1
+    \end{bmatrix}\right)\right) = K_{B_1}\left(\begin{bmatrix}
+        -2 \\
+        1 \\
+        3
+    \end{bmatrix}\right) = \begin{bmatrix}
+        -2 \\
+        1 \\
+        3
+    \end{bmatrix}
+    \\
+    f_{B_1,B_1} = \begin{bmatrix}
+        e_1 & e_2 & e_3
+    \end{bmatrix} = \begin{bmatrix}
+        1 & -2 & -2 \\
+        0 & 0 & 1 \\
+        2 & 1 & 3
+    \end{bmatrix}
+\end{align}
+
 ** b)
+\begin{align}
+    id_{B_2,B_1} & = K_{B_1}(K_{B_2}^{-1}(e_i)) = K_{B_1}(v_i)
+    \intertext{1. Spalte:}
+    id_{B_2,B_1}(e_1) & = K_{B_1}(v_1) = K_{B_1}\left(\begin{bmatrix}
+        1 \\
+        0 \\
+        -1
+    \end{bmatrix}\right) = \begin{bmatrix}
+        1 \\
+        0 \\
+        -1
+    \end{bmatrix}
+    \intertext{2. Spalte:}
+    id_{B_2,B_1}(e_2) & = K_{B_1}(v_2) = K_{B_1}\left(\begin{bmatrix}
+        2 \\
+        1 \\
+        -1
+    \end{bmatrix}\right) = \begin{bmatrix}
+        2 \\
+        1 \\
+        -1
+    \end{bmatrix}
+    \intertext{3. Spalte:}
+    id_{B_2,B_1}(e_3) & = K_{B_1}(v_3) = K_{B_1}\left(\begin{bmatrix}
+        -2 \\
+        1 \\
+        4
+    \end{bmatrix}\right) = \begin{bmatrix}
+        -2 \\
+        1 \\
+        4
+    \end{bmatrix}
+    \\
+    \Rightarrow id_{B_2,B_1} & = \begin{bmatrix}
+        1 & 2 & -2 \\
+        0 & 1 & 1 \\
+        -1 & -1 & 4
+    \end{bmatrix}
+\end{align}
+
 ** c)
+\begin{align}
+    id_{B_1,B_2} = & (id_{B_2,B_1})^{-1} \\
+    \begin{bmatrix}
+        id_{B_2,B_1} & I_3
+    \end{bmatrix} = & \left[ \begin{array}{@{}ccc|ccc@{}}
+        1 & 2 & -2 & 1 & 0 & 0 \\
+        0 & 1 & 1 & 0 & 1 & 0 \\
+        -1 & -1 & 4 & 0 & 0 & 1
+    \end{array} \right] \xrightarrow{III+I} \left[ \begin{array}{@{}ccc|ccc@{}}
+        1 & 2 & -2 & 1 & 0 & 0 \\
+        0 & 1 & 1 & 0 & 1 & 0 \\
+        0 & 1 & 2 & 1 & 0 & 1
+    \end{array} \right] \\
+    \xrightarrow{III-II}
+    & \left[ \begin{array}{@{}ccc|ccc@{}}
+        1 & 2 & -2 & 1 & 0 & 0 \\
+        0 & 1 & 1 & 0 & 1 & 0 \\
+        0 & 0 & 1 & 1 & -1 & 1 
+    \end{array} \right]
+    \xrightarrow{II-III}
+    \left[ \begin{array}{@{}ccc|ccc@{}}
+        1 & 2 & -2 & 1 & 0 & 0 \\
+        0 & 1 & 0 & -1 & 2 & -1 \\
+        0 & 0 & 1 & 1 & -1 & 1 
+    \end{array} \right]
+    \\
+    \xrightarrow{I-2II}
+    & \left[ \begin{array}{@{}ccc|ccc@{}}
+        1 & 0 & -2 & 3 & -4 & 2 \\
+        0 & 1 & 0 & -1 & 2 & -1 \\
+        0 & 0 & 1 & 1 & -1 & 1 
+    \end{array} \right]
+    \\
+    \xrightarrow{I+2II}
+    & \left[ \begin{array}{@{}ccc|ccc@{}}
+        1 & 0 & 0 & 5 & -6 & 4 \\
+        0 & 1 & 0 & -1 & 2 & -1 \\
+        0 & 0 & 1 & 1 & -1 & 1 
+    \end{array} \right] = \begin{bmatrix}
+        I_3 & (id_{B_2,B_1})^{-1}
+    \end{bmatrix}
+    \\
+    \Rightarrow id_{B_1,B_2} = (id_{B_2,B_1})^{-1} = & \begin{bmatrix}
+        5 & -6 & 4 \\
+        -1 & 2 & -1 \\
+        1 & -1 & 1
+    \end{bmatrix}
+\end{align}
+
 ** d)
 
 * Aufgabe 2
@@ -136,7 +316,7 @@ was umgeschrieben werden kann zu
   \left[A|e\right] = &\left[ \begin{array}{@{}cc|c@{}}
     -1 & 3 & c \\
     1 & 2 & d
-  \end{array} \right] \\
+  \end{array} \right]\\
 \xrightarrow{\text{II} + \text{I}}
   &\left[ \begin{array}{@{}cc|c@{}}
     -1 & 3 & c \\
@@ -192,7 +372,7 @@ f_{B_1, B_2} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
 \end{equation*}
 
 * Aufgabe 3
-Behautung: \\
+Behauptung: \\
 Die Zahlenfolgt $(x_n)_n$ konvergiert gegen 0, wenn $n$ gegen \infty strebt. \\
 \\
 _zu zeigen_: \forall \epsilon > 0 gibt es ein $N_{\epsilon} \in \mathbb{N}$, so dass gilt
@@ -257,7 +437,7 @@ und nun muss noch gezeigt werden, dass der Term $\frac{3}{n + 2}$ konvergiert.
 
 \pagebreak
 
-_Behautung_:
+_Behauptung_:
 $$\lim_{n \rightarrow \infty} \frac{3}{n + 2} = 0$$
 
 Sei $\epsilon > 0$ beliebig. \\
@@ -273,7 +453,7 @@ Dann gilt
 Man wählt nun ein $N_{\epsilon} \in \mathbb{N}$ mit $N_{\epsilon} > \frac{3}{\epsilon} - 2$. \\
 Dann gilt
 
-$$ \left| \frac{3}{n + 2} - 0 \right| &= \frac{3}{n + 2} \leq \frac{3}{N_{\epsilon} + 2} < \epsilon $$
+$$ \left| \frac{3}{n + 2} - 0 \right| = \frac{3}{n + 2} \leq \frac{3}{N_{\epsilon} + 2} < \epsilon $$
 
 und damit gilt
 
@@ -283,11 +463,144 @@ und damit gilt
 
 * Aufgabe 5
 ** a)
+Untersuchung von $a_n$: \\
+Es gilt
+
+\begin{equation*}
+\begin{aligned}
+a_n &= \frac{42n^2 - 7n + 3}{n^2 + 2n + 10} \\
+ &= \frac{n^2}{n^2} \cdot \frac{42 - \frac{7}{n} + \frac{3}{n^2}}{1 + \frac{2}{n} + \frac{10}{n^2}} \\
+ &= \frac{42 - \frac{7}{n} + \frac{3}{n^2}}{1 + \frac{2}{n} + \frac{10}{n^2}}
+\end{aligned}
+\end{equation*}
+
+Dann gilt für den Grenzwert von $a_n$
+
+\begin{equation*}
+\begin{aligned}
+  \lim_{n \rightarrow \infty} a_n &= \lim_{n \rightarrow \infty} \left( \frac{42 - \frac{7}{n} + \frac{3}{n^2}}{1 + \frac{2}{n} + \frac{10}{n^2}} \right) \\
+ &= \frac{ \lim_{n \rightarrow \infty} 42 - 7\lim_{n \rightarrow \infty} \frac{1}{n} + 3\lim_{n \rightarrow \infty} \frac{1}{n^2} }
+         { \lim_{n \rightarrow \infty} 1 + 2\lim_{n \rightarrow \infty} \frac{1}{n} + 10\lim_{n \rightarrow \infty} \frac{1}{n^2} } \\
+ &= \frac{42 - 7 \cdot 0 + 3 \cdot 0 \cdot 0}{1 + 2 \cdot 0 + 10 \cdot 0 \cdot 0} \\
+ &= \frac{42}{1} = 42
+\end{aligned}
+\end{equation*}
+
+
+Untersuchung von $b_n$: \\
+Es gilt $\forall r \in \mathbb{R}$
+
+$$\left| \sin(r) \right| \leq 1 \text{ und ist divergent, wenn } r \rightarrow \pm \infty$$
+
+daraus folgt
+
+\begin{equation*}
+\begin{aligned}
+  \lim_{n \rightarrow \infty} b_n &= \lim_{n \rightarrow \infty} \left( \frac{1}{n^2} \sin\left( \frac{n \pi^2}{3} \right) \right) \\
+  &= \lim_{n \rightarrow \infty} \frac{1}{n^2} \cdot \lim_{n \rightarrow \infty} \sin\left( \frac{n \pi^2}{3} \right) \\
+  &= 0
+\end{aligned}
+\end{equation*}
+
+
+Untersuchung von $c_n$: \\
+
 ** b)
+Untersuchung der Folge $x_n$: \\
+Es gilt
+
+\begin{equation*}
+\begin{aligned}
+\lim_{n \rightarrow \infty} \frac{2n - 1}{n} &= \lim_{n \rightarrow \infty} \frac{n}{n} \cdot (2 - \frac{1}{n}}) \\
+ &= \lim_{n \rightarrow \infty} (2 - \frac{1}{n}})
+ &= 2 - 0 = 2
+\end{aligned}
+\end{equation*}
+
+und es gilt
+
+\begin{equation*}
+\begin{aligned}
+\lim_{n \rightarrow \infty} \frac{2n + 2}{n} &= \lim_{n \rightarrow \infty} \frac{n}{n} \cdot (2 + \frac{2}{n}}) \\
+ &= \lim_{n \rightarrow \infty} (2 + \frac{2}{n}})
+ &= 2 - 0 = 2
+\end{aligned}
+\end{equation*}
+
+damit gilt
+
+\begin{equation*}
+\lim_{n \rightarrow \infty} x_n = 2
+\end{equation*}
+
+
+Untersuchung von Folge $y_n$: \\
+Es gilt für $\sqrt{x}, x \in \mathbb{R}, x \geq 0$, wenn
+
+$$ x_1 < x_2 \text{ dann ist } \sqrt{x_1} < \sqrt{x_2} \text{ mit } x_1 \geq 0, x_2 > 0 $$
+
+daruas folgt, dass $\sqrt{n}$ streng monoton steigend ist, woraus folgt, dass sie bestimmt divergent ist. \\
+Damit ist auch die Folge $y_n$ bestimmt divergent, da gilt
+
+$$ \sqrt{n} < y_n $$
+
 ** c)
+Es gilt
+
+\begin{equation*}
+\begin{aligned}
+\lim_{n \rightarrow \infty} a_n &= \lim_{n \rightarrow \infty} \left( 3 \left( \frac{2}{3} - \frac{1}{n+1} \right) + \left( \frac{1}{3} \right)^n \right) \\
+ &= \lim_{n \rightarrow \infty} \left( 2 - \frac{3}{n+1} + \left( \frac{1}{3} \right)^n \right) \\
+ &= \lim_{n \rightarrow \infty} \left( 2 - \frac{n}{n} \cdot \frac{\frac{3}{n}}{1+\frac{1}{n}} + \left( \frac{1}{3} \right)^n \right) \\
+ &= \lim_{n \rightarrow \infty} 2 - \lim_{n \rightarrow \infty} \frac{\frac{3}{n}}{1+\frac{1}{n}} + \lim_{n \rightarrow \infty} \left( \frac{1}{3} \right)^n \\
+ &= 2 - 0 + 0 = 2
+\end{aligned}
+\end{equation*}
 
 * Aufgabe 6
 ** a)
+\begin{align*}
+    \intertext{Induktionsanfang:}
+    x_0 = 1 < 4
+    \intertext{Induktionsvoraussetzung:}
+    x_n < 4
+    \intertext{Induktionsbehauptung:}
+    x_n + 1 < 4
+    \intertext{Induktionsschluss:}
+    x_n < 4 \Leftrightarrow \frac{x}{4} < 1 \Leftrightarrow 4 > \frac{x}{4} + 3 = x_{n+1}
+    \intertext{Aus $4 > \frac{x}{4} + 3$ folgt, dass jedes beliebiges $x_{n+1} < 4$ ist,
+    womit die Bahauptung $x_n < 4$ bewiesen ist.}
+\end{align*}
+
 ** b)
+\begin{align*}
+    x_n < 4 
+    \Leftrightarrow x_n -4 < 0
+    \Leftrightarrow 3x_n - 12 < 0
+    \Leftrightarrow 4x_n - 12 < 1x_n
+    \\
+    \Leftrightarrow x_n - 3 < \frac{x_n}{4}
+    \Leftrightarrow x_n < \frac{x_n}{4} + 3 = x_{n+1}
+    \\
+    \Rightarrow \intertext{Da $x_n < x_{n+1}$ ist die Folge $x_n$ streng monoton wachsend}
+\end{align*}
+
 ** c)
+\begin{align*}
+    \intertext{$x_n$ ist konvergent, da die Folge beschränkt ist (aus Aufgabe 6.a folgt: $x_{n+1} < 4$) 
+    und die Monotonie folgt aus 6.b.}
+\end{align*}
+
 ** d)
+\begin{align*}
+    x & = \lim \limits_{n \rightarrow \infty} x_{n+1}
+    = \lim \limits_{n \rightarrow \infty} \frac{x_n}{4} + 3
+    = \frac{x}{4} + 3
+    \\
+    \Rightarrow x & = \frac{x}{4} + 3
+    \Leftrightarrow \frac{3x}{4} = 3
+    \Leftrightarrow 3x = 12
+    \Leftrightarrow x = 4
+    \intertext{Der Grenzwert der Folge $x_n$ ist 4}
+\end{align*}
+
