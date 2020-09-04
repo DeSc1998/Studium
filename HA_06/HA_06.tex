@@ -1,4 +1,4 @@
-% Created 2020-09-04 Fr 23:39
+% Created 2020-09-04 Fr 23:56
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,11pt]{article}
 \usepackage[latin1]{inputenc}
@@ -34,9 +34,9 @@
 
 
 \section{Aufgabe 1}
-\label{sec:orgb02f0ac}
+\label{sec:orgadce55f}
 \subsection{a)}
-\label{sec:org40d1cc7}
+\label{sec:org34c381a}
 \begin{align}
     f_{B_1,B_1} = K_{B_1}(f(K_{B_1}^{-1}(e_i))) = K_{B_1}(f(b_i)) \\
     K_{B_1} = \mathbb{R}^3 \rightarrow \mathbb{R}^3, \begin{bmatrix}
@@ -123,7 +123,7 @@
 \end{align}
 
 \subsection{b)}
-\label{sec:org4a63a26}
+\label{sec:org190778a}
 \begin{align}
     id_{B_2,B_1} & = K_{B_1}(K_{B_2}^{-1}(e_i)) = K_{B_1}(v_i)
     \intertext{1. Spalte:}
@@ -165,7 +165,7 @@
 \end{align}
 
 \subsection{c)}
-\label{sec:org7ac4e34}
+\label{sec:orge9e216e}
 \begin{align}
     id_{B_1,B_2} = & (id_{B_2,B_1})^{-1} \\
     \begin{bmatrix}
@@ -216,12 +216,60 @@
 \end{align}
 
 \subsection{d)}
-\label{sec:org976b8e6}
+\label{sec:orgba945d3}
+\begin{align*}
+    f_{B_2,B_2} &= id_{B_1,B_2} f_{B_1,B_1}(id_{B_1,B_2})^{-1} \\
+    & = id_{B_1,B_2} f_{B_1,B_1}id_{B_2,B_1} \\
+    & \begin{bmatrix}
+        5 & -6 & 4 \\
+        -1 & 2 & -1 \\
+        1 & -1 & 1
+    \end{bmatrix} \begin{bmatrix}
+        1 & -2 & -2 \\
+        0 & 0 & 1 \\
+        -2 & 1 & 3 
+    \end{bmatrix} \begin{bmatrix}
+        1 & 2 & -2 \\
+        0 & 1 & 1 \\
+        -1 & -1 & 4
+    \end{bmatrix}
+    \\
+    & = \begin{bmatrix}
+        5 & -6 & 4 \\
+        -1 & 2 & -1 \\
+        1 & -1 & 1
+    \end{bmatrix} \begin{bmatrix}
+        1+2 & 2-2+2 & -2-2-8 \\
+        -1 & -1 & 4 \\
+        -2-3 & -4+1-3 & 4+1+12
+    \end{bmatrix}
+    \\
+    & = \begin{bmatrix}
+        5 & -6 & 4 \\
+        -1 & 2 & -1 \\
+        1 & -1 & 1
+    \end{bmatrix} \begin{bmatrix}
+        3 & 2 & -12 \\
+        -1 & -1 & 4 \\
+        -5 & -5 & 17
+    \end{bmatrix}
+    \\
+    & = \begin{bmatrix}
+        15+6-20 & 10+6-24 & -60-24+68 \\
+        -3-2+5 & -2-2+6 & 12+8-17 \\
+        3+1-5 & 2+1-6 & -12-4+17
+    \end{bmatrix}
+    = \begin{bmatrix}
+        1 & -8 & -16 \\
+        0 & 2 & 3 \\
+        -1 & -3 & 1
+    \end{bmatrix}
+\end{align*}
 
 \section{Aufgabe 2}
-\label{sec:org10d024b}
+\label{sec:org9042c32}
 \subsection{a)}
-\label{sec:org6b02705}
+\label{sec:orge1eb92a}
 Da \(f\) eine lineare Abbildung ist, gelten
 
 $$f(x + y) = f(x) + f(y) \text{ und } f(\lambda x) = \lambda f(x)$$
@@ -238,7 +286,7 @@ f(4x) &= 2 f(2x + 3) - 3 f(2) \\
 \end{equation*}
 
 \subsection{b)}
-\label{sec:org9529c2b}
+\label{sec:orgd3d0f36}
 Ansatz für \(\text{Bild}(f)\):
 
 \begin{equation*}
@@ -278,7 +326,7 @@ linear unabhängig.
 Damit gilt \(\text{Bild}(f) = \text{span}\{f(1), f(x)\}\), woraus folgt \(\dim(\text{Bild}(f)) = 2\).
 
 \subsection{c)}
-\label{sec:org1edcef7}
+\label{sec:org91d4671}
 Es gelten \(\dim(\text{Bild}(f)) = 2\) und \(\dim(\mathbb{R}[x]_{\leq 1}) = 2\). \\
 Damit ergibt sich aus der Dimensionsformel
 
@@ -294,7 +342,7 @@ Damit gilt für die Basis \(B_K\) vom Kern(\(f\))
 $$ B_K = \{ \} $$
 
 \subsection{d)}
-\label{sec:orgcd883be}
+\label{sec:org43d722d}
 Bestimmen von \(K_{B_1}\) mit a, b, \(\lambda\)\textsubscript{1}, \(\lambda\)\textsubscript{2} \(\in\) \(\mathbb{R}\):
 
 \begin{equation*}
@@ -390,7 +438,6 @@ f_{B_1, B_2}(e_n) &= K_{B_2}(f(K_{B_1}^{-1}(e_n))) \text{ mit } n \in \left\{ 1,
 \end{aligned}
 \end{equation*}
 
-\pagebreak
 Einsetzen der basen:
 
 \begin{equation*}
@@ -407,13 +454,15 @@ f_{B_1, B_2} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
 \end{equation*}
 
 \section{Aufgabe 3}
-\label{sec:org02fcd32}
+\label{sec:org1d35fca}
 Behauptung: \\
 Die Zahlenfolgt \((x_n)_n\) konvergiert gegen 0, wenn \(n\) gegen \(\infty\) strebt. \\
 
 \uline{zu zeigen}: \(\forall\) \(\epsilon\) > 0 gibt es ein \(N_{\epsilon} \in \mathbb{N}\), so dass gilt
 
 $$|x_n - 0| = \left| \frac{2}{n + 1} - 0 \right| < \epsilon, \forall n \geq N_{\epsilon}$$
+
+\pagebreak
 
 Es gilt
 
@@ -431,8 +480,6 @@ Dann gilt \(\forall\) \(n\) \(\ge\) \(N_{\epsilon}\):
 
 $$\left| \frac{2}{n + 1} - 0 \right| = \frac{2}{n + 1} \leq \frac{2}{N_{\epsilon} + 1} < \epsilon$$
 
-\pagebreak
-
 Als Beispiel:
 
 \begin{equation*}
@@ -444,7 +491,7 @@ Als Beispiel:
 \end{equation*}
 
 \section{Aufgabe 4}
-\label{sec:org3b71e02}
+\label{sec:org815ef01}
 Ansatz für PBZ mit \(A\), \(B\) \(\in\) \(\mathbb{R}\):
 
 \begin{equation*}
@@ -472,8 +519,6 @@ Dann gilt mit \(n \in \mathbb{N}\)
 
 und nun muss noch gezeigt werden, dass der Term \(\frac{3}{n + 2}\) konvergiert.
 
-\pagebreak
-
 \uline{Behauptung}:
 $$\lim_{n \rightarrow \infty} \frac{3}{n + 2} = 0$$
 
@@ -499,9 +544,9 @@ und damit gilt
 \end{equation*}
 
 \section{Aufgabe 5}
-\label{sec:org50c92be}
+\label{sec:orga2305c7}
 \subsection{a)}
-\label{sec:orge077658}
+\label{sec:org90777a9}
 Untersuchung von \(a_n\): \\
 Es gilt
 
@@ -512,6 +557,8 @@ a_n &= \frac{42n^2 - 7n + 3}{n^2 + 2n + 10} \\
  &= \frac{42 - \frac{7}{n} + \frac{3}{n^2}}{1 + \frac{2}{n} + \frac{10}{n^2}}
 \end{aligned}
 \end{equation*}
+
+\pagebreak
 
 Dann gilt für den Grenzwert von \(a_n\)
 
@@ -545,7 +592,7 @@ daraus folgt
 Untersuchung von \(c_n\): \\
 
 \subsection{b)}
-\label{sec:orga680414}
+\label{sec:org0d679f0}
 Untersuchung der Folge \(x_n\): \\
 Es gilt
 
@@ -585,7 +632,7 @@ Damit ist auch die Folge \(y_n\) bestimmt divergent, da gilt
 $$ \sqrt{n} < y_n $$
 
 \subsection{c)}
-\label{sec:orgbc9fc53}
+\label{sec:org022014f}
 Es gilt
 
 \begin{equation*}
@@ -599,9 +646,9 @@ Es gilt
 \end{equation*}
 
 \section{Aufgabe 6}
-\label{sec:org5f61299}
+\label{sec:orgec8d39a}
 \subsection{a)}
-\label{sec:org26b2b2c}
+\label{sec:orga25ac70}
 \begin{align*}
     \intertext{Induktionsanfang:}
     x_0 = 1 < 4
@@ -616,7 +663,7 @@ Es gilt
 \end{align*}
 
 \subsection{b)}
-\label{sec:orgd0af614}
+\label{sec:orgc9f6914}
 \begin{align*}
     x_n < 4 
     \Leftrightarrow x_n -4 < 0
@@ -630,14 +677,14 @@ Es gilt
 \end{align*}
 
 \subsection{c)}
-\label{sec:org02a62c2}
+\label{sec:org1a27b84}
 \begin{align*}
     \intertext{$x_n$ ist konvergent, da die Folge beschränkt ist (aus Aufgabe 6.a folgt: $x_{n+1} < 4$) 
     und die Monotonie folgt aus 6.b.}
 \end{align*}
 
 \subsection{d)}
-\label{sec:orgce446ef}
+\label{sec:orgf7de911}
 \begin{align*}
     x & = \lim \limits_{n \rightarrow \infty} x_{n+1}
     = \lim \limits_{n \rightarrow \infty} \frac{x_n}{4} + 3

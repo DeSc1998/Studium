@@ -187,6 +187,54 @@
 \end{align}
 
 ** d)
+\begin{align*}
+    f_{B_2,B_2} &= id_{B_1,B_2} f_{B_1,B_1}(id_{B_1,B_2})^{-1} \\
+    & = id_{B_1,B_2} f_{B_1,B_1}id_{B_2,B_1} \\
+    & \begin{bmatrix}
+        5 & -6 & 4 \\
+        -1 & 2 & -1 \\
+        1 & -1 & 1
+    \end{bmatrix} \begin{bmatrix}
+        1 & -2 & -2 \\
+        0 & 0 & 1 \\
+        -2 & 1 & 3 
+    \end{bmatrix} \begin{bmatrix}
+        1 & 2 & -2 \\
+        0 & 1 & 1 \\
+        -1 & -1 & 4
+    \end{bmatrix}
+    \\
+    & = \begin{bmatrix}
+        5 & -6 & 4 \\
+        -1 & 2 & -1 \\
+        1 & -1 & 1
+    \end{bmatrix} \begin{bmatrix}
+        1+2 & 2-2+2 & -2-2-8 \\
+        -1 & -1 & 4 \\
+        -2-3 & -4+1-3 & 4+1+12
+    \end{bmatrix}
+    \\
+    & = \begin{bmatrix}
+        5 & -6 & 4 \\
+        -1 & 2 & -1 \\
+        1 & -1 & 1
+    \end{bmatrix} \begin{bmatrix}
+        3 & 2 & -12 \\
+        -1 & -1 & 4 \\
+        -5 & -5 & 17
+    \end{bmatrix}
+    \\
+    & = \begin{bmatrix}
+        15+6-20 & 10+6-24 & -60-24+68 \\
+        -3-2+5 & -2-2+6 & 12+8-17 \\
+        3+1-5 & 2+1-6 & -12-4+17
+    \end{bmatrix}
+    = \begin{bmatrix}
+        1 & -8 & -16 \\
+        0 & 2 & 3 \\
+        -1 & -3 & 1
+    \end{bmatrix}
+\end{align*}
 
 * Aufgabe 2
 ** a)
@@ -355,7 +403,6 @@ f_{B_1, B_2}(e_n) &= K_{B_2}(f(K_{B_1}^{-1}(e_n))) \text{ mit } n \in \left\{ 1,
 \end{aligned}
 \end{equation*}
 
-\pagebreak
 Einsetzen der basen:
 
 \begin{equation*}
@@ -379,6 +426,8 @@ _zu zeigen_: \forall \epsilon > 0 gibt es ein $N_{\epsilon} \in \mathbb{N}$, so 
 
 $$|x_n - 0| = \left| \frac{2}{n + 1} - 0 \right| < \epsilon, \forall n \geq N_{\epsilon}$$
 
+\pagebreak
+
 Es gilt
 
 \begin{equation*}
@@ -394,8 +443,6 @@ Man wählt nun ein $N_{\epsilon} \in \mathbb{N}$ mit $N_{\epsilon} > \frac{2}{\ep
 Dann gilt \forall $n$ \geq $N_{\epsilon}$:
 
 $$\left| \frac{2}{n + 1} - 0 \right| = \frac{2}{n + 1} \leq \frac{2}{N_{\epsilon} + 1} < \epsilon$$
-
-\pagebreak
 
 Als Beispiel:
 
@@ -435,8 +482,6 @@ Dann gilt mit $n \in \mathbb{N}$
 
 und nun muss noch gezeigt werden, dass der Term $\frac{3}{n + 2}$ konvergiert.
 
-\pagebreak
-
 _Behauptung_:
 $$\lim_{n \rightarrow \infty} \frac{3}{n + 2} = 0$$
 
@@ -473,6 +518,8 @@ a_n &= \frac{42n^2 - 7n + 3}{n^2 + 2n + 10} \\
  &= \frac{42 - \frac{7}{n} + \frac{3}{n^2}}{1 + \frac{2}{n} + \frac{10}{n^2}}
 \end{aligned}
 \end{equation*}
+
+\pagebreak
 
 Dann gilt für den Grenzwert von $a_n$
 
