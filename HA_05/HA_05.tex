@@ -1,0 +1,318 @@
+% Created 2020-09-01 Di 21:20
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Moaz Haque, Felix Oechelhaeuser, Leo Pirker, Dennis Schulze}
+\date{\today}
+\title{Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 05 - Geuter 29}
+\hypersetup{
+ pdfauthor={Moaz Haque, Felix Oechelhaeuser, Leo Pirker, Dennis Schulze},
+ pdftitle={Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 05 - Geuter 29},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.3.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+
+\section{Aufagbe 1}
+\label{sec:org079493a}
+\begin{equation*}
+  \begin{bmatrix}
+    0 & 3 & -2 \\
+    1 & 1 & 0 \\
+    2 & 0 & 1
+  \end{bmatrix}
+  \begin{bmatrix}
+    x_1 \\
+    x_2 \\
+    x_3
+  \end{bmatrix} =
+  \begin{bmatrix}
+    8 \\
+    4 \\
+    3 
+  \end{bmatrix}
+\Leftrightarrow
+  \left[ \begin{array}{@{}ccc|c@{}}
+    0 & 3 & -2 & 8 \\
+    1 & 1 & 0 & 4 \\
+    2 & 0 & 1 & 3
+  \end{array} \right]
+\end{equation*}
+
+\begin{equation*}
+\begin{aligned}
+  \xrightarrow{\text{I} \leftrightarrow \text{II}}
+  & \left[ \begin{array}{@{}ccc|c@{}}
+    1 & 1 & 0 & 4 \\
+    0 & 3 & -2 & 8 \\
+    2 & 0 & 1 & 3
+  \end{array} \right] \\
+  \xrightarrow{\text{III} - 2\text{II}}
+  & \left[ \begin{array}{@{}ccc|c@{}}
+    1 & 1 & 0 & 4 \\
+    0 & 3 & -2 & 8 \\
+    0 & -2 & 1 & -5
+  \end{array} \right] \\
+  \xrightarrow{2\text{II}, 3\text{III}}
+  & \left[ \begin{array}{@{}ccc|c@{}}
+    1 & 1 & 0 & 4 \\
+    0 & 6 & -4 & 16 \\
+    0 & -6 & 3 & -15
+  \end{array} \right] \\
+  \xrightarrow{\text{III} + \text{II}}
+  & \left[ \begin{array}{@{}ccc|c@{}}
+    1 & 1 & 0 & 4 \\
+    0 & 6 & -4 & 16 \\
+    0 & 0 & -1 & 1
+  \end{array} \right] \\
+  \xrightarrow{-\text{III}, \frac{1}{6}\text{II}}
+  & \left[ \begin{array}{@{}ccc|c@{}}
+    1 & 1 & 0 & 4 \\
+    0 & 1 & \frac{-4}{6} & \frac{16}{6} \\
+    0 & 0 & 1 & -1
+  \end{array} \right] \\
+  \xrightarrow{\text{II} + \frac{4}{6}\text{III}}
+  & \left[ \begin{array}{@{}ccc|c@{}}
+    1 & 1 & 0 & 4 \\
+    0 & 1 & 0 & 2 \\
+    0 & 0 & 1 & -1
+  \end{array} \right] \\
+  \xrightarrow{\text{I} - \text{II}}
+  & \left[ \begin{array}{@{}ccc|c@{}}
+    1 & 0 & 0 & 2 \\
+    0 & 1 & 0 & 2 \\
+    0 & 0 & 1 & -1
+  \end{array} \right]
+\end{aligned}
+\end{equation*}
+
+Daraus folgt \(x_1 = 2\), \(x_2 = 2\) und \(x_3 = -1\).
+
+\pagebreak
+
+\section{Aufgabe 2}
+\label{sec:orgb242b2c}
+\subsection{a)}
+\label{sec:orgce35ed5}
+\begin{equation*}
+  \begin{bmatrix}
+    -2 & 2i & 0 & 2 & 0 \\
+    -4 & 4i & -i & 7 & -2 \\
+    1 & i & 2 & -1 & 2
+  \end{bmatrix}
+  \begin{bmatrix}
+    x_1 \\
+    x_2 \\
+    x_3 \\
+    x_4 \\
+    x_5
+  \end{bmatrix} =
+  \begin{bmatrix}
+    -4 \\
+    -8 \\
+    4
+  \end{bmatrix}
+\Leftrightarrow
+  \left[ \begin{array}{@{}ccccc|c@{}}
+    -2 & 2i & 0 & 2 & 0 & -4 \\    
+    -4 & 4i & -i & 7 & -2 & -8 \\
+    1 & i & 2 & -1 & 2 & 4
+  \end{array} \right]
+\end{equation*}
+
+\begin{equation*}
+\begin{aligned}
+  \xrightarrow{-\frac{1}{2}\text{I}}
+  & \left[ \begin{array}{@{}ccccc|c@{}}
+    1 & -i & 0 & -1 & 0 & 2 \\    
+    -4 & 4i & -i & 7 & -2 & -8 \\
+    1 & i & 2 & -1 & 2 & 4
+  \end{array} \right] \\
+  \xrightarrow{\text{III} - \text{I}}
+  & \left[ \begin{array}{@{}ccccc|c@{}}
+    1 & -i & 0 & -1 & 0 & 2 \\    
+    -4 & 4i & -i & 7 & -2 & -8 \\
+    0 & 2i & 2 & 0 & 2 & 2
+  \end{array} \right] \\
+  \xrightarrow{\text{II} + 4\text{I}}
+  & \left[ \begin{array}{@{}ccccc|c@{}}
+    1 & -i & 0 & -1 & 0 & 2 \\    
+    0 & 0 & -i & 3 & -2 & 0 \\
+    0 & 2i & 2 & 0 & 2 & 2
+  \end{array} \right] \\
+  \xrightarrow{\text{III} \leftrightarrow \text{II}}
+  & \left[ \begin{array}{@{}ccccc|c@{}}
+    1 & -i & 0 & -1 & 0 & 2 \\    
+    0 & 2i & 2 & 0 & 2 & 2 \\
+    0 & 0 & -i & 3 & -2 & 0
+  \end{array} \right] \\
+  \xrightarrow{\frac{-i}{2}\text{II}, i\text{III}}
+  & \left[ \begin{array}{@{}ccccc|c@{}}
+    1 & -i & 0 & -1 & 0 & 2 \\    
+    0 & 1 & -i & 0 & -i & -i \\
+    0 & 0 & 1 & 3i & -2i & 0
+  \end{array} \right] \\
+  \xrightarrow{\text{II} + i\text{III}}
+  & \left[ \begin{array}{@{}ccccc|c@{}}
+    1 & -i & 0 & -1 & 0 & 2 \\    
+    0 & 1 & 0 & -3 & 2-i & -i \\
+    0 & 0 & 1 & 3i & -2i & 0
+  \end{array} \right] \\
+  \xrightarrow{\text{I} + i\text{II}}
+  & \left[ \begin{array}{@{}ccccc|c@{}}
+    1 & 0 & 0 & -1-3i & 1+2i & 3 \\    
+    0 & 1 & 0 & -3 & 2-i    & -i \\
+    0 & 0 & 1 & 3i & -2i    & 0
+  \end{array} \right] \\
+\end{aligned}
+\end{equation*}
+
+\subsection{b)}
+\label{sec:orge4f33dc}
+Aus dem LGS
+
+\begin{equation*}
+  \left[ \begin{array}{@{}ccccc|c@{}}
+    1 & 0 & 0 & -1-3i & 1+2i & 0 \\    
+    0 & 1 & 0 & -3 & 2-i & 0 \\
+    0 & 0 & 1 & 3i & -2i & 0
+  \end{array} \right]
+\end{equation*}
+
+ergeben sich folgende Gleichungen:
+
+\begin{equation*}
+\begin{aligned}
+\text{(I)  } 0 &= x_1 + (-1-3i)x_4 + (1+2i)x_5 \\
+\text{(II)  } 0 &= x_2 - 3 x_4 + (2-i)x_5 \\
+\text{(III)  } 0 &= x_2 + 3i x_4 - 2i x_5
+\end{aligned}
+\end{equation*}
+
+\subsection{c)}
+\label{sec:org5e53843}
+Zum überprüfen werden die die beiden Vektoren in das hergeleitete System aus 2a) eingesetzt. \\
+Für den ersten der Vektor ergibt sich die Gleichung
+
+\begin{equation*}
+  \begin{bmatrix}
+    1 & 0 & 0 & -1-3i & 1+2i \\
+    0 & 1 & 0 & -3 & 2-i \\
+    0 & 0 & 1 & 3i & -2i
+  \end{bmatrix}
+  \begin{bmatrix}
+    3 \\ -i \\ 0 \\ 0 \\ 0
+  \end{bmatrix} =
+  \begin{bmatrix}
+    3 \\
+    -i \\
+    0
+  \end{bmatrix}
+\end{equation*}
+
+bei der erkennbar ist, dass sie wahr ist.
+Damit ist der erste Vektor eine Lösung des LGS.
+
+Für den zweiten Vektor ergibt sich die Gleichung
+
+\begin{equation*}
+\begin{aligned}
+  \begin{bmatrix}
+    3 \\
+    -i \\
+    0
+  \end{bmatrix} &\neq
+  \begin{bmatrix}
+    1 & 0 & 0 & -1-3i & 1+2i \\
+    0 & 1 & 0 & -3 & 2-i \\
+    0 & 0 & 1 & 3i & -2i
+  \end{bmatrix}
+  \begin{bmatrix}
+    2 \\ 0 \\ 1 \\ 0 \\ i
+  \end{bmatrix} \\
+&= \begin{bmatrix}
+     i \\
+     1+2i \\
+     3
+   \end{bmatrix}
+\end{aligned}
+\end{equation*}
+
+bei der nach Umformung erkennbar wird, dass sie nicht gleich sein kann.
+Damit ist der zweite Vektor keine Lösung des LGS.
+
+\subsection{d)}
+\label{sec:org6825b18}
+
+\section{Aufgabe 3}
+\label{sec:org0c270d5}
+\subsection{a)}
+\label{sec:orga01a2d9}
+Für \(A_1\): \\
+Nur die Spalten 1 und 2 sind voneinander linear abhängig, womit gilt \(\text{Rang}(A_1) = 2\). \\
+
+Für \(A_2\): \\
+3 Zeilen der Matrix sind ungleich 0. Die 3. \uline{oder} 4. Spalte kann
+als Linearkombination der anderen Spalten dargestellt werden. 
+Damit gilt \(\text{Rang}(A_2) = 3\). \\
+
+Für \(A_3\): \\
+Nur 2 Zeilen sind ungleich 0 und beide Spalten sind linear unabhängig voneinander.
+Damit gilt \(\text{Rang}(A_3) = 2\). \\
+
+Für \(A_4\): \\
+Die beiden Spalten sind linear unabhängig voneinander und es gilt damit \(\text{Rang}(A_4) = 2\).
+
+\subsection{b)}
+\label{sec:orgc83649d}
+Für \(A_1\): \\
+Zwei der Spalten sind linear abhängig (\(\begin{bmatrix} -2 \\ 0 \end{bmatrix} = \lambda \begin{bmatrix} 4 \\ 0 \end{bmatrix}\)),
+womit sie keine Basis von Bild(\(A_1\)) ist. \\
+
+Für \(A_2\): \\
+
+
+\subsection{c)}
+\label{sec:org3bc50de}
+
+\subsection{d)}
+\label{sec:org74a8195}
+
+\subsection{e)}
+\label{sec:org8779f0b}
+
+\section{Aufgabe 4}
+\label{sec:org2e666a6}
+
+\section{Aufgabe 5}
+\label{sec:org760d188}
+\subsection{a)}
+\label{sec:orgb19037d}
+
+\subsection{b)}
+\label{sec:org8ce4494}
+
+\subsection{c)}
+\label{sec:org9b0adbe}
+
+\subsection{d)}
+\label{sec:org35d5d1d}
+\end{document}
