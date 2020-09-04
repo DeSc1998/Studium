@@ -1,4 +1,4 @@
-% Created 2020-09-04 Fr 17:24
+% Created 2020-09-04 Fr 19:57
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[latin1]{inputenc}
@@ -31,20 +31,20 @@
 
 
 \section{Aufgabe 1}
-\label{sec:org8962227}
+\label{sec:orgfcf1742}
 \subsection{a)}
-\label{sec:org3ec2347}
+\label{sec:org1ba6ec9}
 \subsection{b)}
-\label{sec:org9b44a73}
+\label{sec:orgaed8876}
 \subsection{c)}
-\label{sec:org0993c59}
+\label{sec:org3e49f59}
 \subsection{d)}
-\label{sec:orgf3c271f}
+\label{sec:org9deacaf}
 
 \section{Aufgabe 2}
-\label{sec:orga27a2a6}
+\label{sec:org33a4550}
 \subsection{a)}
-\label{sec:orgfa4f4b1}
+\label{sec:org76d13f6}
 Da \(f\) eine lineare Abbildung ist, gelten
 
 $$f(x + y) = f(x) + f(y) \text{ und } f(\lambda x) = \lambda f(x)$$
@@ -61,7 +61,7 @@ f(4x) &= 2 f(2x + 3) - 3 f(2) \\
 \end{equation*}
 
 \subsection{b)}
-\label{sec:orgcf1336f}
+\label{sec:org3730807}
 Ansatz für \(\text{Bild}(f)\):
 
 \begin{equation*}
@@ -101,7 +101,7 @@ linear unabhängig.
 Damit gilt \(\text{Bild}(f) = \text{span}\{f(1), f(x)\}\), woraus folgt \(\dim(\text{Bild}(f)) = 2\).
 
 \subsection{c)}
-\label{sec:org296cfcb}
+\label{sec:orgf5ebb5c}
 Es gelten \(\dim(\text{Bild}(f)) = 2\) und \(\dim(\mathbb{R}[x]_{\leq 1}) = 2\). \\
 Damit ergibt sich aus der Dimensionsformel
 
@@ -117,7 +117,7 @@ Damit gilt für die Basis \(B_K\) vom Kern(\(f\))
 $$ B_K = \{ \} $$
 
 \subsection{d)}
-\label{sec:org007cc90}
+\label{sec:org1c8770f}
 Bestimmen von \(K_{B_1}\) mit a, b, \(\lambda\)\textsubscript{1}, \(\lambda\)\textsubscript{2} \(\in\) \(\mathbb{R}\):
 
 \begin{equation*}
@@ -230,28 +230,114 @@ f_{B_1, B_2} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
 \end{equation*}
 
 \section{Aufgabe 3}
-\label{sec:org7a2c910}
+\label{sec:org4ec783e}
+Behautung: \\
+Die Zahlenfolgt \((x_n)_n\) konvergiert gegen 0, wenn \(n\) gegen \(\infty\) strebt. \\
+
+\uline{zu zeigen}: \(\forall\) \(\epsilon\) > 0 gibt es ein \(N_{\epsilon} \in \mathbb{N}\), so dass gilt
+
+$$|x_n - 0| = \left| \frac{2}{n + 1} - 0 \right| < \epsilon, \forall n \geq N_{\epsilon}$$
+
+Es gilt
+
+\begin{equation*}
+\begin{aligned}
+\left| \frac{2}{n + 1} - 0 \right| &< \epsilon \\
+\Leftrightarrow \frac{2}{n + 1} &< \epsilon \\
+\Leftrightarrow \frac{2}{\epsilon} &< n + 1 \\
+\Leftrightarrow \frac{2}{\epsilon} - 1 &< n
+\end{aligned}
+\end{equation*}
+
+Man wählt nun ein \(N_{\epsilon} \in \mathbb{N}\) mit \(N_{\epsilon} > \frac{2}{\epsilon} - 1\).
+Dann gilt \(\forall\) \(n\) \(\ge\) \(N_{\epsilon}\):
+
+$$\left| \frac{2}{n + 1} - 0 \right| = \frac{2}{n + 1} \leq \frac{2}{N_{\epsilon} + 1} < \epsilon$$
+
+\pagebreak
+
+Als Beispiel:
+
+\begin{equation*}
+\begin{aligned}
+\epsilon = \frac{1}{100} \Leftrightarrow \frac{1}{\epsilon} &= 100 \\
+\Rightarrow N_{\epsilon} &> \frac{2}{\epsilon} - 1 = 199 \\
+\Rightarrow N_{\epsilon} &= 200
+\end{aligned}
+\end{equation*}
 
 \section{Aufgabe 4}
-\label{sec:orgdbb0cbc}
+\label{sec:orgc6fb326}
+Ansatz für PBZ mit \(A\), \(B\) \(\in\) \(\mathbb{R}\):
+
+\begin{equation*}
+\frac{3}{(k + 1)(k + 2)} = \frac{A}{k + 1} + \frac{B}{k + 2}
+\end{equation*}
+
+Umgeformt nach \(A\) mit \(k = -1\):
+
+$$ A = \frac{3}{(-1) + 2} = 3 $$
+
+
+Umgeformt nach \(B\) mit \(k = -2\):
+
+$$ B = \frac{3}{(-2) + 1} = -3 $$
+
+Dann gilt mit \(n \in \mathbb{N}\)
+
+\begin{equation*}
+\begin{aligned}
+\sum_{k=0}^{n} \frac{3}{(k + 1)(k + 2)} &= \sum_{k=0}^{n} \left( \frac{3}{k + 1} + \frac{-3}{k + 2} \right) \\
+ &= \sum_{k=0}^{n} \frac{3}{k + 1} - \sum_{k=0}^{n} \frac{3}{k + 2} \\
+ &= 3 + \frac{3}{n + 2}
+\end{aligned}
+\end{equation*}
+
+und nun muss noch gezeigt werden, dass der Term \(\frac{3}{n + 2}\) konvergiert.
+
+\pagebreak
+
+\uline{Behautung}:
+$$\lim_{n \rightarrow \infty} \frac{3}{n + 2} = 0$$
+
+Sei \(\epsilon > 0\) beliebig. \\
+Dann gilt
+
+\begin{equation*}
+\begin{aligned}
+  \left| \frac{3}{n + 2} - 0 \right| &= \frac{3}{n + 2} < \epsilon \\
+\Leftrightarrow \frac{3}{\epsilon} &< n + 2 \Leftrightarrow \frac{3}{\epsilon} - 2 < n
+\end{aligned}
+\end{equation*}
+
+Man wählt nun ein \(N_{\epsilon} \in \mathbb{N}\) mit \(N_{\epsilon} > \frac{3}{\epsilon} - 2\). \\
+Dann gilt
+
+$$ \left| \frac{3}{n + 2} - 0 \right| &= \frac{3}{n + 2} \leq \frac{3}{N_{\epsilon} + 2} < \epsilon $$
+
+und damit gilt
+
+\begin{equation*}
+\lim_{n \rightarrow \infty} \left( \sum_{k=0}^{n} \frac{3}{(k + 1)(k + 2)} \right) = 3
+\end{equation*}
 
 \section{Aufgabe 5}
-\label{sec:org69cfe45}
+\label{sec:orgb999249}
 \subsection{a)}
-\label{sec:orga3bf058}
+\label{sec:orgeec9611}
 \subsection{b)}
-\label{sec:org5dbdb8c}
+\label{sec:orge984a37}
 \subsection{c)}
-\label{sec:org9efe323}
+\label{sec:org2ec4d91}
 
 \section{Aufgabe 6}
-\label{sec:org0f73aae}
+\label{sec:orgd0b4602}
 \subsection{a)}
-\label{sec:org0b9efca}
+\label{sec:org15e147c}
 \subsection{b)}
-\label{sec:orgb4c4581}
+\label{sec:orgdac9caf}
 \subsection{c)}
-\label{sec:org0ed6fbc}
+\label{sec:orgaf95c77}
 \subsection{d)}
-\label{sec:org1b55b77}
+\label{sec:org7da5633}
 \end{document}

@@ -192,8 +192,94 @@ f_{B_1, B_2} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
 \end{equation*}
 
 * Aufgabe 3
+Behautung: \\
+Die Zahlenfolgt $(x_n)_n$ konvergiert gegen 0, wenn $n$ gegen \infty strebt. \\
+\\
+_zu zeigen_: \forall \epsilon > 0 gibt es ein $N_{\epsilon} \in \mathbb{N}$, so dass gilt
+
+$$|x_n - 0| = \left| \frac{2}{n + 1} - 0 \right| < \epsilon, \forall n \geq N_{\epsilon}$$
+
+Es gilt
+
+\begin{equation*}
+\begin{aligned}
+\left| \frac{2}{n + 1} - 0 \right| &< \epsilon \\
+\Leftrightarrow \frac{2}{n + 1} &< \epsilon \\
+\Leftrightarrow \frac{2}{\epsilon} &< n + 1 \\
+\Leftrightarrow \frac{2}{\epsilon} - 1 &< n
+\end{aligned}
+\end{equation*}
+
+Man wählt nun ein $N_{\epsilon} \in \mathbb{N}$ mit $N_{\epsilon} > \frac{2}{\epsilon} - 1$.
+Dann gilt \forall $n$ \geq $N_{\epsilon}$:
+
+$$\left| \frac{2}{n + 1} - 0 \right| = \frac{2}{n + 1} \leq \frac{2}{N_{\epsilon} + 1} < \epsilon$$
+
+\pagebreak
+
+Als Beispiel:
+
+\begin{equation*}
+\begin{aligned}
+\epsilon = \frac{1}{100} \Leftrightarrow \frac{1}{\epsilon} &= 100 \\
+\Rightarrow N_{\epsilon} &> \frac{2}{\epsilon} - 1 = 199 \\
+\Rightarrow N_{\epsilon} &= 200
+\end{aligned}
+\end{equation*}
 
 * Aufgabe 4
+Ansatz für PBZ mit $A$, $B$ \in $\mathbb{R}$:
+
+\begin{equation*}
+\frac{3}{(k + 1)(k + 2)} = \frac{A}{k + 1} + \frac{B}{k + 2}
+\end{equation*}
+
+Umgeformt nach $A$ mit $k = -1$:
+
+$$ A = \frac{3}{(-1) + 2} = 3 $$
+
+
+Umgeformt nach $B$ mit $k = -2$:
+
+$$ B = \frac{3}{(-2) + 1} = -3 $$
+
+Dann gilt mit $n \in \mathbb{N}$
+
+\begin{equation*}
+\begin{aligned}
+\sum_{k=0}^{n} \frac{3}{(k + 1)(k + 2)} &= \sum_{k=0}^{n} \left( \frac{3}{k + 1} + \frac{-3}{k + 2} \right) \\
+ &= \sum_{k=0}^{n} \frac{3}{k + 1} - \sum_{k=0}^{n} \frac{3}{k + 2} \\
+ &= 3 + \frac{3}{n + 2}
+\end{aligned}
+\end{equation*}
+
+und nun muss noch gezeigt werden, dass der Term $\frac{3}{n + 2}$ konvergiert.
+
+\pagebreak
+
+_Behautung_:
+$$\lim_{n \rightarrow \infty} \frac{3}{n + 2} = 0$$
+
+Sei $\epsilon > 0$ beliebig. \\
+Dann gilt
+
+\begin{equation*}
+\begin{aligned}
+  \left| \frac{3}{n + 2} - 0 \right| &= \frac{3}{n + 2} < \epsilon \\
+\Leftrightarrow \frac{3}{\epsilon} &< n + 2 \Leftrightarrow \frac{3}{\epsilon} - 2 < n
+\end{aligned}
+\end{equation*}
+
+Man wählt nun ein $N_{\epsilon} \in \mathbb{N}$ mit $N_{\epsilon} > \frac{3}{\epsilon} - 2$. \\
+Dann gilt
+
+$$ \left| \frac{3}{n + 2} - 0 \right| &= \frac{3}{n + 2} \leq \frac{3}{N_{\epsilon} + 2} < \epsilon $$
+
+und damit gilt
+
+\begin{equation*}
+\lim_{n \rightarrow \infty} \left( \sum_{k=0}^{n} \frac{3}{(k + 1)(k + 2)} \right) = 3
+\end{equation*}
 
 * Aufgabe 5
 ** a)
