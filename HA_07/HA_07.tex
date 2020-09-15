@@ -1,0 +1,101 @@
+% Created 2020-09-15 Di 19:31
+% Intended LaTeX compiler: pdflatex
+\documentclass[a4paper,11pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Moaz Haque, Felix Oechelhaeuser, Leo Pirker, Dennis Schulze}
+\date{\today}
+\title{Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 07 - Geuter 29}
+\hypersetup{
+ pdfauthor={Moaz Haque, Felix Oechelhaeuser, Leo Pirker, Dennis Schulze},
+ pdftitle={Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 07 - Geuter 29},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.3.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\pagebreak
+
+\section{Aufgabe 1}
+\label{sec:org42095c7}
+\subsection{a)}
+\label{sec:org626a67d}
+Es gilt
+
+\begin{align*}
+  \frac{1}{b} + \frac{1}{g} &= \frac{1}{f} \\
+  \Leftrightarrow \frac{1}{b} &= \frac{g - f}{fg} \\
+  \Leftrightarrow b &= \frac{fg}{g - f}
+\end{align*}
+
+Damit ist b betrachtet als Funktion
+
+$$ b(g) = \frac{fg}{g - f} $$
+
+\subsection{b)}
+\label{sec:org1551f1f}
+Da der Bruch nur für alle \(g \neq f\) definiert ist, \\
+ist b nur auf \(\mathbb{R}\) $\backslash$ \{\(f\)\} stetig.
+
+\subsection{c)}
+\label{sec:orgc9ddaa3}
+Es gilt für den ersten Term
+
+\begin{align*}
+  \lim_{g \rightarrow \infty} b(g) &= \lim_{g \rightarrow \infty} \frac{fg}{g - f} \\
+  &= \lim_{g \rightarrow \infty} \frac{f}{1 - \frac{f}{g}} \\
+  &= \frac{f}{1 - 0} \\
+  &= f
+\end{align*}
+
+Es gilt für den zweiten Term
+
+\begin{align*}
+  \lim_{g \rightarrow f} b(g) &= \lim_{g \rightarrow f} \frac{fg}{g - f} \\
+  &= \frac{\lim_{g \rightarrow f} fg}{\lim_{g \rightarrow f} (g - f)} \\
+  &= \frac{f^2}{f - f} \\
+  &\Rightarrow \lim_{g \rightarrow f} b(g) = \infty
+\end{align*}
+
+\section{Aufgabe 2}
+\label{sec:orgbbd6495}
+\subsection{a)}
+\label{sec:org3d251e4}
+\subsection{b)}
+\label{sec:org20fa916}
+\section{Aufgabe 3}
+\label{sec:org37fd289}
+\subsection{a)}
+\label{sec:orgaf8fe37}
+\subsection{b)}
+\label{sec:org4abf784}
+\section{Aufgabe 4}
+\label{sec:org3b8543a}
+\subsection{a)}
+\label{sec:org01ebe1f}
+\subsection{b)}
+\label{sec:orge9e9ec8}
+\section{Aufgabe 5}
+\label{sec:org4297757}
+\section{Aufgabe 6}
+\label{sec:orgafc5df6}
+\subsection{a)}
+\label{sec:orgd909f71}
+\subsection{b)}
+\label{sec:orgdff701f}
+\end{document}

@@ -1,0 +1,58 @@
+
+#+TITLE: Analysis I und Lineare Algebra für Ingenieurwissenschaften \large @@latex: \\@@ Hausaufgabe 07 - Geuter 29
+#+AUTHOR: Moaz Haque, Felix Oechelhaeuser, Leo Pirker, Dennis Schulze
+
+#+LATEX_CLASS_OPTIONS: [a4paper,11pt]
+
+\pagebreak
+
+* Aufgabe 1
+** a)
+Es gilt
+
+\begin{align*}
+  \frac{1}{b} + \frac{1}{g} &= \frac{1}{f} \\
+  \Leftrightarrow \frac{1}{b} &= \frac{g - f}{fg} \\
+  \Leftrightarrow b &= \frac{fg}{g - f}
+\end{align*}
+
+Damit ist b betrachtet als Funktion
+
+$$ b(g) = \frac{fg}{g - f} $$
+
+** b)
+Da der Bruch nur für alle $g \neq f$ definiert ist, \\
+ist b nur auf $\mathbb{R}$ \ {$f$} stetig.
+
+** c)
+Es gilt für den ersten Term
+
+\begin{align*}
+  \lim_{g \rightarrow \infty} b(g) &= \lim_{g \rightarrow \infty} \frac{fg}{g - f} \\
+  &= \lim_{g \rightarrow \infty} \frac{f}{1 - \frac{f}{g}} \\
+  &= \frac{f}{1 - 0} \\
+  &= f
+\end{align*}
+
+Es gilt für den zweiten Term
+
+\begin{align*}
+  \lim_{g \rightarrow f} b(g) &= \lim_{g \rightarrow f} \frac{fg}{g - f} \\
+  &= \frac{\lim_{g \rightarrow f} fg}{\lim_{g \rightarrow f} (g - f)} \\
+  &= \frac{f^2}{f - f} \\
+  &\Rightarrow \lim_{g \rightarrow f} b(g) = \infty
+\end{align*}
+
+* Aufgabe 2
+** a)
+** b)
+* Aufgabe 3
+** a)
+** b)
+* Aufgabe 4
+** a)
+** b)
+* Aufgabe 5
+* Aufgabe 6
+** a)
+** b)
