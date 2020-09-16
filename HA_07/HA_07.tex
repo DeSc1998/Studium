@@ -1,4 +1,4 @@
-% Created 2020-09-15 Di 19:31
+% Created 2020-09-16 Mi 20:28
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,11pt]{article}
 \usepackage[latin1]{inputenc}
@@ -14,6 +14,7 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
+\usepackage{pgfplots}
 \author{Moaz Haque, Felix Oechelhaeuser, Leo Pirker, Dennis Schulze}
 \date{\today}
 \title{Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 07 - Geuter 29}
@@ -32,9 +33,9 @@
 \pagebreak
 
 \section{Aufgabe 1}
-\label{sec:org42095c7}
+\label{sec:org51b6dca}
 \subsection{a)}
-\label{sec:org626a67d}
+\label{sec:org0f46703}
 Es gilt
 
 \begin{align*}
@@ -48,12 +49,12 @@ Damit ist b betrachtet als Funktion
 $$ b(g) = \frac{fg}{g - f} $$
 
 \subsection{b)}
-\label{sec:org1551f1f}
+\label{sec:org9ef8c25}
 Da der Bruch nur für alle \(g \neq f\) definiert ist, \\
 ist b nur auf \(\mathbb{R}\) $\backslash$ \{\(f\)\} stetig.
 
 \subsection{c)}
-\label{sec:orgc9ddaa3}
+\label{sec:org0558c2b}
 Es gilt für den ersten Term
 
 \begin{align*}
@@ -73,29 +74,116 @@ Es gilt für den zweiten Term
 \end{align*}
 
 \section{Aufgabe 2}
-\label{sec:orgbbd6495}
+\label{sec:org0b84461}
 \subsection{a)}
-\label{sec:org3d251e4}
+\label{sec:org27a602b}
+Es gilt für \(\lim_{x \rightarrow 1^-} f(x)\)
+
+\begin{align*}
+  \lim_{x \rightarrow 1^-} f(x) &= \lim_{x \rightarrow 1^-} (\cos(\pi x) + 3) \\
+  &= \cos(\pi) + 3 = -1 + 3 = 2
+\end{align*}
+
+und es gilt für \(\lim_{x \rightarrow 1^+} f(x)\)
+
+\begin{align*}
+  \lim_{x \rightarrow 1^+} f(x) &= \lim_{x \rightarrow 1^+} \frac{x^2 + 1}{x + 1} \\
+  &= \frac{1^2 + 1}{1 + 1} = \frac{2}{2} = 1
+\end{align*}
+
+daraus folgt, dass \(f\) an der Stelle \(x = 1\) nicht stetig ist. \\
+
+\ldots{} \\
+
+Damit ist \(f\) auf \(\mathbb{R}\) $\backslash$ \{1\} stetig.
+
 \subsection{b)}
-\label{sec:org20fa916}
+\label{sec:org0a41091}
+\begin{itemize}
+\item Punkte an Intevallgrenzen (P\textsubscript{1}(-1, -1) und P\textsubscript{2}(2, ln(2)))
+\item einsetzten in \(s(x) = y_1 + \frac{y_2 - y_1}{x_2 - x_1}x\)
+\end{itemize}
+
 \section{Aufgabe 3}
-\label{sec:org37fd289}
+\label{sec:org3eda6d7}
 \subsection{a)}
-\label{sec:orgaf8fe37}
+\label{sec:org8f18cc1}
+\begin{itemize}
+\item Intevallgrenzen einsetzten in f
+\item f ist stetig und differenzierbar
+\item Folgerung: Nullstelle
+\end{itemize}
+
 \subsection{b)}
-\label{sec:org4abf784}
+\label{sec:orge39c759}
 \section{Aufgabe 4}
-\label{sec:org3b8543a}
+\label{sec:org49de035}
 \subsection{a)}
-\label{sec:org01ebe1f}
+\label{sec:org28a828c}
 \subsection{b)}
-\label{sec:orge9e9ec8}
+\label{sec:org5e04caa}
+\subsubsection{a}
+\label{sec:org0529144}
+$$ (5x^3 - 2\sin(3x))' = 15x^2 - 6\cos(3x) $$
+
+\subsubsection{b}
+\label{sec:org42b239c}
+$$ (\cos(x) e^x)' = \cos(x)e^x - \sin(x)e^x $$
+
+\subsubsection{c}
+\label{sec:org1fc60c4}
+$$ (e^{2x^2+11} + 7)' = 4x e^{2x^2+11} $$
+
+\subsubsection{d}
+\label{sec:orga81bad5}
+$$ \left( \frac{\sin(x^2 - 2\pi)}{\cos(3\pi - x^2)} \right)' = \frac{-2x}{\cos^2(3\pi - x^2)} $$
+
 \section{Aufgabe 5}
-\label{sec:org4297757}
+\label{sec:orgcc775e9}
+Für die 1. Ableitung von \(f\) gilt
+
+$$ f'(x) = -\frac{2}{(x-2)^2} $$
+
+dann gilt für eine beliebige Tangente \(t(x) = ax + b\) am Graphen von \(f\)
+
+\begin{align*}
+  a &= f'(x_0) = -\frac{2}{(x_0-2)^2} \\
+  b &= f(x_0) - f'(x_0) \cdot x_0 = \frac{2}{x_0-2} + 2 + \frac{2 x_0}{(x_0-2)^2}
+\end{align*}
+
+mit der Anforderung, dass \(a = -\frac{1}{2}\) sein muss. Damit gilt
+
+\begin{align*}
+  a = -\frac{2}{(x_0-2)^2} &= -\frac{1}{2} \\
+  \Leftrightarrow \frac{(x_0-2)^2}{2} &= 2 \\
+  \Leftrightarrow (x_0-2)^2 &= 4 \\
+  \Leftarrow x_0 - 2 &= \pm 2
+\end{align*}
+
+daraus ergeben sich die beiden Stellen \(x_1 = 0\) und \(x_2 = 4\). Daraus folgen dann die beiden Tangenten
+
+\begin{align*}
+  t_1(x) &= -\frac{1}{2}x + 1 \\
+  t_2(x) &= -\frac{1}{2}x + 5
+\end{align*}
+
+\begin{tikzpicture}
+  \begin{axis}[xlabel = $x$, ylabel = {$f(x)$}, ymin=-3, ymax=9]
+  \addplot[samples=100, color=black, domain=-2:1.99]{2/(x-2) + 2};
+  \addplot[samples=100, color=black, domain=2.01:6]{2/(x-2) + 2};
+  \addlegendentry{$f$}
+  \addlegendentry{$f$}
+  \addplot[color=blue, domain=-2:6]{-1/2 * x + 1};
+  \addlegendentry{$t_1$}
+  \addplot[color=green, domain=-2:6]{-1/2 * x + 5};
+  \addlegendentry{$t_2$}
+  \end{axis}
+\end{tikzpicture}
+
 \section{Aufgabe 6}
-\label{sec:orgafc5df6}
+\label{sec:org6bce14b}
 \subsection{a)}
-\label{sec:orgd909f71}
+\label{sec:org0427af6}
 \subsection{b)}
-\label{sec:orgdff701f}
+\label{sec:org7e9bb79}
 \end{document}
