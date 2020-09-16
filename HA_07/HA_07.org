@@ -239,4 +239,8 @@ daraus ergeben sich die beiden Stellen $x_1 = 0$ und $x_2 = 4$. Daraus folgen da
 
 * Aufgabe 6
 ** a)
+
+
 ** b)
+
+
