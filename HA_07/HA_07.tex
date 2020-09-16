@@ -1,4 +1,4 @@
-% Created 2020-09-16 Mi 20:28
+% Created 2020-09-16 Mi 23:10
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,11pt]{article}
 \usepackage[latin1]{inputenc}
@@ -33,9 +33,9 @@
 \pagebreak
 
 \section{Aufgabe 1}
-\label{sec:org51b6dca}
+\label{sec:org1de58a0}
 \subsection{a)}
-\label{sec:org0f46703}
+\label{sec:org1da3fa4}
 Es gilt
 
 \begin{align*}
@@ -49,12 +49,19 @@ Damit ist b betrachtet als Funktion
 $$ b(g) = \frac{fg}{g - f} $$
 
 \subsection{b)}
-\label{sec:org9ef8c25}
-Da der Bruch nur für alle \(g \neq f\) definiert ist, \\
-ist b nur auf \(\mathbb{R}\) $\backslash$ \{\(f\)\} stetig.
+\label{sec:org766eec6}
+Wenn \(\lim_{n \rightarrow \infty} x_n = a\) und \(x_n \neq a\) gilt, dann gilt
+
+\begin{align*}
+    \lim_{n \rightarrow \infty} b(x_n)
+    = \frac{\lim_{n \rightarrow \infty}x_n \cdot f}{\lim_{n \rightarrow \infty}x_n-f}
+    = \frac{af}{a-f} = b(a)
+\end{align*}
+
+daraus folgt \(b(g)\) ist stetig auf \(D(b) = \mathbb{R}\) $\backslash$ \{\(f\)\}.
 
 \subsection{c)}
-\label{sec:org0558c2b}
+\label{sec:org2f0c443}
 Es gilt für den ersten Term
 
 \begin{align*}
@@ -63,6 +70,8 @@ Es gilt für den ersten Term
   &= \frac{f}{1 - 0} \\
   &= f
 \end{align*}
+
+\pagebreak
 
 Es gilt für den zweiten Term
 
@@ -74,9 +83,34 @@ Es gilt für den zweiten Term
 \end{align*}
 
 \section{Aufgabe 2}
-\label{sec:org0b84461}
+\label{sec:org93e1725}
 \subsection{a)}
-\label{sec:org27a602b}
+\label{sec:org306a0a9}
+Wenn \(\lim_{n \rightarrow \infty}x_n = a\) und \(x_n \neq a\) gelten, \\
+dann gilt für \(x < 1\)
+
+\begin{align*}
+  \lim_{n \rightarrow \infty}(f(x_n))
+  &= \lim_{n \rightarrow \infty}(\cos(x_n\pi)+3) \\
+  &= \cos(\lim_{n \rightarrow \infty}(x_n)\pi)+3 \\
+  &= \cos(a\pi) + 3 = f(a)
+\end{align*}
+
+\(\Rightarrow\) \(f\) stetig auf \(\left] -\infty, 1 \right[\) \\
+
+und für \(x > 1\)
+
+\begin{align*}
+  \lim_{n \rightarrow \infty}(f(x_n))
+  &= \lim_{n \rightarrow \infty}(\frac{x_n^2+1}{x_n+1}) \\
+  &= \frac{\lim_{n \rightarrow \infty}(x_n)^2+1}{\lim_{n \rightarrow \infty}(x_n)+1} \\
+  &= \frac{a^2+1}{a+1} = f(a)
+\end{align*}
+
+\(\Rightarrow\) \(f\) stetig auf \(\left] 1, \infty \right[\) \\
+
+Zu überprüfen ist noch die Stelle \(x = 1\) \\
+
 Es gilt für \(\lim_{x \rightarrow 1^-} f(x)\)
 
 \begin{align*}
@@ -93,53 +127,118 @@ und es gilt für \(\lim_{x \rightarrow 1^+} f(x)\)
 
 daraus folgt, dass \(f\) an der Stelle \(x = 1\) nicht stetig ist. \\
 
-\ldots{} \\
-
 Damit ist \(f\) auf \(\mathbb{R}\) $\backslash$ \{1\} stetig.
 
 \subsection{b)}
-\label{sec:org0a41091}
-\begin{itemize}
-\item Punkte an Intevallgrenzen (P\textsubscript{1}(-1, -1) und P\textsubscript{2}(2, ln(2)))
-\item einsetzten in \(s(x) = y_1 + \frac{y_2 - y_1}{x_2 - x_1}x\)
-\end{itemize}
+\label{sec:org487827b}
+Der linearaffine Anteil von \(f\) muss die anderen Terme an den jeweiligen Grenzen berühren. \\
+Daraus ergebt sich
+
+\begin{align*}
+  f(-1) &= \frac{1}{-1} = -1 \\
+  f(2) &= \ln(2)
+\end{align*}
+
+dann die folgenden Punkte P\textsubscript{1}(-1, -1) und P\textsubscript{2}(2, \(\ln(2)\)). \\
+Daraus ergeben sich dann folgende Gleichungen
+
+\begin{align*}
+  a &= \frac{\ln(2) - (-1)}{2 - (-1)} = \frac{\ln(2) + 1}{3} \\
+  b &= f(-1) - a (-1) = \frac{\ln(2) + 1}{3} - 1
+\end{align*}
+
+\(f\) ist dann auf \(\mathbb{R}\) stetig, wenn der linearaffine Anteil dem folgenden Term entspricht
+
+$$ \frac{\ln(2) + 1}{3}x + \frac{\ln(2) + 1}{3} - 1 $$
+
+\pagebreak
 
 \section{Aufgabe 3}
-\label{sec:org3eda6d7}
+\label{sec:org66afb29}
 \subsection{a)}
-\label{sec:org8f18cc1}
-\begin{itemize}
-\item Intevallgrenzen einsetzten in f
-\item f ist stetig und differenzierbar
-\item Folgerung: Nullstelle
-\end{itemize}
+\label{sec:org8d865e1}
+Es gelten
+
+\begin{align*}
+  f(1) &= 1^6-1-1 = -1 \text{ und} \\
+  f(2) &= 2^6-2-1 = 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 -2 -1 \\
+    &= 64-2-1 = 61
+\end{align*}
+
+Da \(f\) stetig ist und \(f(1) < 0\) und \(f(2) > 0\) gelten, muss \(f\) auf
+dem Intervall \(\left[1,2\right]\) eine Nullstelle besitzen.
 
 \subsection{b)}
-\label{sec:orge39c759}
+\label{sec:org113b979}
+\begin{align*}
+  a_0 = 1, \hspace*{3} b_0 = 2 \\
+  x_k &= \frac{a+b}{2} \\
+  x_0 &= \frac{1+2}{2} = \frac{3}{2} \\
+  f\left( \frac{3}{2}\right) &= \frac{3}{2} \cdot \frac{3}{2} \cdot \frac{3}{2} 
+  \cdot \frac{3}{2} \cdot \frac{3}{2} \cdot \frac{3}{2} -\frac{3}{2} - 1 \\
+  &= \frac{729}{64} -\frac{3}{2} -1 > 0 \\
+  \Rightarrow a_1 = 1, \hspace*{3} b_1 = \frac{3}{2} \\
+  \vdots
+  \\
+  a_6 = \frac{9}{8} = 1,125; \hspace*{3} b_6 = \frac{73}{64} = 1,1406
+\end{align*}
+
+Das Intervall ist dann [1,125; 1,1406].
+
 \section{Aufgabe 4}
-\label{sec:org49de035}
+\label{sec:org595eb68}
 \subsection{a)}
-\label{sec:org28a828c}
-\subsection{b)}
-\label{sec:org5e04caa}
-\subsubsection{a}
-\label{sec:org0529144}
-$$ (5x^3 - 2\sin(3x))' = 15x^2 - 6\cos(3x) $$
+\label{sec:org0b6c86d}
+Es gilt
 
-\subsubsection{b}
-\label{sec:org42b239c}
+\begin{align*}
+  \frac{f(x) - f(x_0)}{x-x_0} &= \frac{\sqrt{x}-\sqrt{x_0}}{x-x_0} \\
+  &= \frac{x-x_0}{(\sqrt{x}+\sqrt{x_0})(x-x_0)} \\
+  &= \frac{1}{\sqrt{x}+\sqrt{x_0}}
+\end{align*}
+
+damit gilt
+
+\begin{align*}
+  \lim_{x \rightarrow x_0} \frac{f(x) - f(x_0)}{x-x_0} &= \lim_{x \rightarrow x_0} \frac{\sqrt{x}-\sqrt{x_0}}{x-x_0} \\
+  &= \lim_{x \rightarrow x_0} \frac{1}{\sqrt{x}+\sqrt{x_0}} \\
+  &= \frac{1}{2\sqrt{x_0}}
+\end{align*}
+
+daraus folgt
+
+$$ \left( \sqrt{x} \right)' = \frac{1}{2\sqrt{x}} $$
+
+\subsection{b)}
+\label{sec:org6db50f0}
+\subsubsection{(a)}
+\label{sec:org1ce9f62}
+\begin{align*}
+  (5x^3 - 2\sin(3x))' &= (5x^3)' - (2\sin(3x))' \\
+    &= 15x^2 - 6\cos(3x)
+\end{align*}
+
+\subsubsection{(b)}
+\label{sec:orgee2cbfc}
 $$ (\cos(x) e^x)' = \cos(x)e^x - \sin(x)e^x $$
 
-\subsubsection{c}
-\label{sec:org1fc60c4}
-$$ (e^{2x^2+11} + 7)' = 4x e^{2x^2+11} $$
+\subsubsection{(c)}
+\label{sec:org1ef6b74}
+$$ (e^{2x^2+11} + 7)' &= e^{2x^2+11} (4x) $$
 
-\subsubsection{d}
-\label{sec:orga81bad5}
-$$ \left( \frac{\sin(x^2 - 2\pi)}{\cos(3\pi - x^2)} \right)' = \frac{-2x}{\cos^2(3\pi - x^2)} $$
+\subsubsection{(d)}
+\label{sec:org2ea4816}
+\begin{align*}
+  \left( \frac{\sin(x^2 - 2\pi)}{\cos(3\pi - x^2)} \right)' &= 
+      \frac{2x\cos(x^2 - 2\pi) \cos(3\pi - x^2) - \sin(x^2 - 2\pi)(-\sin(3\pi - x^2) (-2x))}{\cos^2(3\pi - x^2)} \\
+    &= \frac{2x(\cos(x^2 - 2\pi)\cos(3\pi - x^2) - \sin(x^2 - 2\pi)\sin(3\pi - x^2))}{\cos^2(3\pi - x^2)} \\
+    &= \frac{2x\cos((x^2 - 2\pi) + (3\pi - x^2))}{\cos^2(3\pi - x^2)} \\
+    &= \frac{2x\cos(\pi)}{\cos^2(3\pi - x^2)} \\
+    &= \frac{-2x}{\cos^2(\pi - x^2)}
+\end{align*}
 
 \section{Aufgabe 5}
-\label{sec:orgcc775e9}
+\label{sec:org66d5c6a}
 Für die 1. Ableitung von \(f\) gilt
 
 $$ f'(x) = -\frac{2}{(x-2)^2} $$
@@ -181,9 +280,9 @@ daraus ergeben sich die beiden Stellen \(x_1 = 0\) und \(x_2 = 4\). Daraus folge
 \end{tikzpicture}
 
 \section{Aufgabe 6}
-\label{sec:org6bce14b}
+\label{sec:org18ac982}
 \subsection{a)}
-\label{sec:org0427af6}
+\label{sec:orgb9d2c74}
 \subsection{b)}
-\label{sec:org7e9bb79}
+\label{sec:org6ce9cb2}
 \end{document}
