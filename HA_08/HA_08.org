@@ -33,11 +33,62 @@ Es gilt
 Damit existiert dessen Grenzwert nach zweifacher Anwendung der Regel.
    
 * Aufgabe 2
-** a)
+** a) und c)
+\begin{align*}
+    x_1 & = \underline{1},2 \\
+    x_2 & = \underline{1,1}43575834 \\
+    x_3 & = \underline{1,134}909462 \\
+    x_4 & = \underline{1,134724}221 \\
+    x_5 & = \underline{1,134724138} \\
+    x_6 & = \underline{1,134724138} \\
+\end{align*}
+   
 ** b)
-** c)
+\begin{align*}
+    \intertext{aus HA07-3: $a_6 = \frac{9}{8}$ $b_6 = \frac{73}{64}$}
+    \\
+    y_6 & = \frac{a_6 + b_6}{2} = \frac{\frac{9}{8}+\frac{73}{64}}{2} = \frac{145}{128} = 1,1328125
+    \\
+    x_6 & = 1,134724138 > 1,1328125 = y_6
+    \\
+    \intertext{Das Bisektionsverfahren liefert mit 1,132 einen kleineren Funktionswert,
+    als das Newton-Verfahren mit 1,134}
+\end{align*}
+
 * Aufgabe 3
+\begin{align*}
+    \intertext{Mittelwertsatz: $\frac{f(x) - f(y)}{x - y} = f'(\xi)$ wenn $y < x$}
+    f'(\xi) = \tan'(\xi)
+    & = \frac{\sin'(\xi)}{\cos'(\xi)}
+    = \frac{\cos^2(\xi)+\sin^2(\xi)}{cos^2(\xi)}
+    = \frac{1}{cos^2(\xi)}
+    \intertext{Da sich der Nenner des Bruchs zwischen $\left]0,1\right]$ bewegt, gilt: $\frac{1}{cos^2(\xi)} \geq 1$}
+    \frac{\tan(x) - \tan(0)}{x - 0} 
+    = \frac{\tan(x)}{x} 
+    & = \frac{1}{cos^2(\xi)} \geq 1
+    \\
+    | \tan(x) | & \geq |x|
+    \intertext{Analog dazu muss also auch $| \tan(y) | \geq |y|$ sein,
+    wodurch auch $| \tan(x) + \tan(y) | \geq | x + y |$ gelten muss.}
+\end{align*}
+  
 * Aufgabe 4
+\begin{align*}
+    f(x) & = \frac{x-2}{(3-x)^2} \\
+    f'(x) & = \frac{(3-x)^2 - (x-2)(2x-6)}{((3-x)^2)^2}
+    = \frac{(9+x^2-6x)-(2x^2-6x-4x+12)}{(3-x)^4}
+    \\
+    & = \frac{-x^2+4x-3}{(3-x)^4} = \frac{(3-x)(x-1)}{(3-x)^4} = \frac{x-1}{(3-x)^2}
+    \intertext{Kanidaten: $x_1 = 0$ (Randpunkt), $x_2 = 1$ (Nullstelle von $f'(x)$),
+    $x_3 = 3$ (Randpunkt)}
+    f(0) & = \frac{0-2}{(3-0)^2} = -\frac{2}{9} \\
+    f(1) & = \frac{1-2}{(3-1)^2} = -\frac{1}{4} \\
+    \intertext{$f(3)$ ist aus dem Definitionsbereich ausgeschlossen (und nicht definiert), also mit dem Grenzwert annähern:}
+    f(3) & = \lim_{x \rightarrow 3} \frac{x-2}{(3-x)^2} = \frac{1}{0} = \infty
+    \intertext{Also befindet sich das globale Maximum bei $x_3 = 3$,
+    bei $x_1 = 0$ ein lokales Maximum und bei $x_2 = 1$ ein globales Minimum.}
+\end{align*}
+  
 * Aufgabe 5
 ** a)
 Es gilt für die Ableitung von $g$
@@ -88,5 +139,98 @@ Was in 5a) gezeigt wurde, kann analog für $h$ gezeigt werden. Damit gilt
 
 was *eine* Lösung der ursprünglichen Differenzialgleichung ist.
 
+\pagebreak
+
 * Aufgabe 6
+Es gelten für die nötigen Ableitungen von $f$
+
+\begin{align*}
+  f'(x) &= \left( e^x \cos(x) \right)' \\
+   &= e^x \cos(x) + e^x (-\sin(x)) \\
+   &= e^x (\cos(x) - \sin(x)) \\
+  \\
+  f''(x) &= \left( e^x (\cos(x) - \sin(x)) \right)' \\
+   &= e^x (\cos(x) - \sin(x)) + e^x (-\sin(x) - \cos(x)) \\
+   &= -2 e^x \sin(x) \\
+  \\
+  f'''(x) &= \left( -2 e^x \sin(x) \right)' \\
+   &= -2 ( e^x \sin(x) + e^x \cos(x) ) \\
+   &= -2 e^x ( \sin(x) + \cos(x) ) \\
+  \\
+  f''''(x) &= \left( -2 e^x ( \sin(x) + \cos(x) ) \right)' \\
+   &= -2 ( e^x ( \sin(x) + \cos(x) ) + e^x ( \cos(x) - \sin(x) ) ) \\
+   &= -4 e^x \cos(x)
+\end{align*}
+
+und die nötigen Funktionswerte bei $x_0 = 0$ für $T_3$
+
+\begin{align*}
+  f(0) &= e^0 \cos(0) = 1\\
+  f'(0) &= e^0 (\cos(0) - \sin(0)) = 1 \\
+  f''(0) &= -2 e^0 \sin(0) = 0 \\
+  f'''(0) &= -2 e^0 ( \sin(0) + \cos(0) ) = -2
+\end{align*}
+
+Dann gilt für die Aproximation von $f$ bei $x_0 = 0$ mit $T_3$
+
+\begin{align*}
+  T_3(x) &= \sum_{k = 0}^{3} \frac{f^{(k)}(0)}{k!}x^k \\
+   &= \frac{f(0)}{0!}x^0 + \frac{f'(0)}{1!}x^1 + \frac{f''(0)}{2!}x^2 + \frac{f'''(0)}{3!}x^3 \\
+   &= \frac{1}{0!} + \frac{1}{1!}x + \frac{0}{2!}x^2 + \frac{-2}{3!}x^3 \\
+   &= 1 + x - \frac{1}{3}x^3
+\end{align*}
+
+Da $f$ n+1-mal ableitbar ist, gilt für das Restglied mit Abschätzung
+
+\begin{align*}
+  R_3(x) &= \frac{f^{(4)}(\xi)}{4!}x^4 = \frac{-4 e^{\xi} \cos(\xi)}{24}x^4 \\
+   &\geq \frac{-4 x^4}{24}
+\end{align*}
+
+Es soll gelten
+
+$$ |f(x) - T_3(x)| = |R_3(x)| \leq 10^{-8} $$
+
+mit der Abschätzung gilt dann
+
+\begin{align*}
+  \left| \frac{-4 x^4}{24} \right| &\leq 10^{-8}, \forall x \in \left[ -\frac{1}{100}, \frac{1}{100} \right] \\
+\Leftrightarrow \frac{4 x^4}{24} &\leq 10^{-8} \\
+\Leftrightarrow x^4 &\leq 6 \cdot 10^{-8} \\
+\Leftrightarrow x &\leq \sqrt[4]{6} 10^{-2}
+\end{align*}
+
 * Aufgabe 7
+Es gelten für die nötigen Ableitungen von $f$
+
+\begin{align*}
+  f'(x) &= (\ln(1 + x))' = \frac{1}{1 + x} \\
+  f''(x) &= (\frac{1}{1 + x})' = \frac{-1}{(1 + x)^2} \\
+  f'''(x) &= (\frac{-1}{(1 + x)^2})' = \frac{2}{(1 + x)^3}
+\end{align*}
+
+und die nötigen Funktionswerte bei $x = 0$
+
+\begin{align*}
+  f(0) &= \ln(1) = 0 \\
+  f'(0) &= \frac{1}{1 + 0} = 1 \\
+  f''(0) &= \frac{-1}{(1 + 0)^2} = -1 \\
+  f'''(0) &= \frac{2}{(1 + 0)^3} = 2
+\end{align*}
+
+Für die Approximation $T_1$ gilt dann
+
+$$ T_1(x) = \frac{f(0)}{0!}x^0 + \frac{f'(0)}{1!}x^1 = 0 + x = x $$
+
+mit dessen Restglied $R_1$
+
+$$ R_1(x) = \frac{f''(\xi)}{2!}x^2 = \frac{-x^2}{2(1 + \xi)^2} $$
+
+und für die Approximation $T_2$ gilt dann
+
+$$ T_2(x) = \frac{f(0)}{0!}x^0 + \frac{f'(0)}{1!}x^1 + \frac{f''(0)}{2!}x^2 = 0 + x - \frac{x^2}{2} = x - \frac{x^2}{2} $$
+
+mit dessen Restglied $R_2$
+
+$$ R_2(x) = \frac{f'''(\xi)}{3!}x^3 = \frac{x^3}{3(1 + \xi)^3} $$
+
