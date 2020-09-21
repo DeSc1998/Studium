@@ -1,0 +1,132 @@
+% Created 2020-09-21 Mo 18:58
+% Intended LaTeX compiler: pdflatex
+\documentclass[a4paper,11pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Moaz Haque, Felix Oechelhaeuser, Leo Pirker, Dennis Schulze}
+\date{\today}
+\title{Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 08 - Geuter 29}
+\hypersetup{
+ pdfauthor={Moaz Haque, Felix Oechelhaeuser, Leo Pirker, Dennis Schulze},
+ pdftitle={Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 08 - Geuter 29},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\pagebreak
+
+\section{Aufgabe 1}
+\label{sec:orgac0c2a1}
+\subsection{a)}
+\label{sec:org843efd6}
+Da der Grenzwert des Terms bei direktem Einsetzten nicht definiert ist ("\(\frac{0}{0}\)"),
+muss die Regel von de l'Hospital angewand werden. Also gilt
+
+\begin{align*}
+  \lim_{x \rightarrow 0} \frac{e^x - 1}{\sin(2x)} &= \lim_{x \rightarrow 0} \frac{e^x}{2\cos(2x)} \\
+  &= \frac{\lim_{x \rightarrow 0}  e^x}{\lim_{x \rightarrow 0}  2\cos(2x)} \\
+  &= \frac{1}{2}
+\end{align*}
+
+Damit existiert dessen Grenzwert.
+
+\subsection{b)}
+\label{sec:orgc085f5f}
+Siehe a) \\
+Es gilt
+
+\begin{align*}
+  \lim_{x \rightarrow 0} \frac{\cos(x) - 1}{x^2} &= \lim_{x \rightarrow 0} \frac{-\sin(x)}{2x)} \\
+  &= \lim_{x \rightarrow 0} \frac{-\cos(x)}{2} \\
+  &= \frac{\lim_{x \rightarrow 0}  -\cos(x)}{\lim_{x \rightarrow 0} 2} \\
+  &= \frac{-1}{2}
+\end{align*}
+
+Damit existiert dessen Grenzwert nach zweifacher Anwendung der Regel.
+
+\section{Aufgabe 2}
+\label{sec:orgbe702ff}
+\subsection{a)}
+\label{sec:orgcfd441e}
+\subsection{b)}
+\label{sec:org6784b16}
+\subsection{c)}
+\label{sec:orgb8b75fa}
+\section{Aufgabe 3}
+\label{sec:org28c6f10}
+\section{Aufgabe 4}
+\label{sec:org3b78abe}
+\section{Aufgabe 5}
+\label{sec:org4af11d4}
+\subsection{a)}
+\label{sec:org60d1e8c}
+Es gilt für die Ableitung von \(g\)
+
+\begin{align*}
+  g'(t) &= \left( (s'(t))^2 + (\omega s(t))^2 \right)' \\
+   &= ((s'(t))^2)' + ((\omega s(t))^2)' \\
+   &= 2 s'(t) s''(t) + 2 (\omega s(t)) (\omega s'(t)) \\
+   &= 2 s'(t) s''(t) + 2 \omega^2 s(t) s'(t) \\
+   &= 2 s'(t) (s''(t) + \omega^2 s(t))
+\end{align*}
+
+Da \(s''(t) = -\omega^2 s(t)\) gilt, folgt daraus
+
+\begin{align*}
+  g'(t) &= 2 s'(t) ((-\omega^2 s(t)) + \omega^2 s(t)) \\
+   &= 2 s'(t) \cdot 0 = 0
+\end{align*}
+
+Da \(g'(t) \geq 0\) und \(g'(t) \leq 0\) mit \(t \in \mathbb{R}\) gelten, folgt daraus,
+dass \(g(t) = c\), mit \(c \in \mathbb{R}\) und für alle \(t \in \mathbb{R}\). \\
+Daraus folgt, dass \((s'(t))^2 + (\omega s(t))^2\) ebenfalls konstant sein muss.
+Daraus folgt wiederum, dass \((s'(t))^2\) und \((\omega s(t))^2\) konstant sind.
+Daraus folgt dann, dass \(\omega s(t)\) konstant ist und damit gilt \(s'(t) = 0\) für alle \(t \in \mathbb{R}\),
+woraus wiederum aus der ursprüngilchen Annahme folgt \(s(t) = 0\) für alle \(t \in \mathbb{R}\).
+Damit gilt dann für auch \(g(t) = 0\), für alle \(t \in \mathbb{R}\).
+
+\subsection{b)}
+\label{sec:org4117870}
+Es gilt für die erste und zweite Ableitung von \(h\)
+
+\begin{align*}
+  h'(t) &= \left( s(t) - s(0)\cos(\omega t) - \frac{s'(0)}{\omega}\sin(\omega t) \right)' \\
+   &= s'(t) + s(0)\omega \sin(\omega t) - s'(0) \cos(\omega t) \\
+  \\
+  h''(t) &= \left( s'(t) + s(0)\omega \sin(\omega t) - s'(0) \cos(\omega t) \right)' \\
+   &= s''(t) + s(0)\omega^2 \cos(\omega t) + s'(0)\omega \sin(\omega t) \\
+   &= -\omega^2 s(t) + s(0)\omega^2 \cos(\omega t) + s'(0)\omega \sin(\omega t) \\
+   &= -\omega^2 \left( s(t) - s(0)\cos(\omega t) - \frac{s'(0)}{\omega}\sin(\omega t) \right) \\
+   &= -\omega^2 h(t)
+\end{align*}
+
+Was in 5a) gezeigt wurde, kann analog für \(h\) gezeigt werden. Damit gilt
+
+\begin{align*}
+  h(t) = 0 &= s(t) - s(0)\cos(\omega t) - \frac{s'(0)}{\omega}\sin(\omega t) \\
+\Leftrightarrow s(t) &= s(0)\cos(\omega t) + \frac{s'(0)}{\omega}\sin(\omega t)
+\end{align*}
+
+was \textbf{eine} Lösung der ursprünglichen Differenzialgleichung ist.
+
+\section{Aufgabe 6}
+\label{sec:org0453766}
+\section{Aufgabe 7}
+\label{sec:org0a5f378}
+\end{document}

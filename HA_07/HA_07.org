@@ -237,10 +237,3 @@ daraus ergeben sich die beiden Stellen $x_1 = 0$ und $x_2 = 4$. Daraus folgen da
   \end{axis}
 \end{tikzpicture}
 
-* Aufgabe 6
-** a)
-
-
-** b)
-
-
