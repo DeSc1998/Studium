@@ -114,7 +114,7 @@ Daraus folgt, dass $(s'(t))^2 + (\omega s(t))^2$ ebenfalls konstant sein muss.
 Daraus folgt wiederum, dass $(s'(t))^2$ und $(\omega s(t))^2$ konstant sind.
 Daraus folgt dann, dass $\omega s(t)$ konstant ist und damit gilt $s'(t) = 0$ für alle $t \in \mathbb{R}$,
 woraus wiederum aus der ursprüngilchen Annahme folgt $s(t) = 0$ für alle $t \in \mathbb{R}$.
-Damit gilt dann für auch $g(t) = 0$, für alle $t \in \mathbb{R}$.
+Damit gilt dann auch $g(t) = 0$, für alle $t \in \mathbb{R}$.
 
 ** b)
 Es gilt für die erste und zweite Ableitung von $h$
@@ -197,7 +197,7 @@ mit der Abschätzung gilt dann
   \left| \frac{-4 x^4}{24} \right| &\leq 10^{-8}, \forall x \in \left[ -\frac{1}{100}, \frac{1}{100} \right] \\
 \Leftrightarrow \frac{4 x^4}{24} &\leq 10^{-8} \\
 \Leftrightarrow x^4 &\leq 6 \cdot 10^{-8} \\
-\Leftrightarrow x &\leq \sqrt[4]{6} 10^{-2}
+\Leftrightarrow x &\leq \sqrt[4]{6} \cdot 10^{-2}
 \end{align*}
 
 * Aufgabe 7
@@ -212,11 +212,13 @@ Es gelten für die nötigen Ableitungen von $f$
 und die nötigen Funktionswerte bei $x = 0$
 
 \begin{align*}
-  f(0) &= \ln(1) = 0 \\
+  f(0) &= \ln(1 + 0) = 0 \\
   f'(0) &= \frac{1}{1 + 0} = 1 \\
   f''(0) &= \frac{-1}{(1 + 0)^2} = -1 \\
   f'''(0) &= \frac{2}{(1 + 0)^3} = 2
 \end{align*}
+
+\pagebreak
 
 Für die Approximation $T_1$ gilt dann
 
@@ -224,7 +226,7 @@ $$ T_1(x) = \frac{f(0)}{0!}x^0 + \frac{f'(0)}{1!}x^1 = 0 + x = x $$
 
 mit dessen Restglied $R_1$
 
-$$ R_1(x) = \frac{f''(\xi)}{2!}x^2 = \frac{-x^2}{2(1 + \xi)^2} $$
+$$ f(x) - T_1(x) = R_1(x) = \frac{f''(\xi)}{2!}x^2 = \frac{-x^2}{2(1 + \xi)^2} $$
 
 und für die Approximation $T_2$ gilt dann
 
@@ -232,5 +234,24 @@ $$ T_2(x) = \frac{f(0)}{0!}x^0 + \frac{f'(0)}{1!}x^1 + \frac{f''(0)}{2!}x^2 = 0 
 
 mit dessen Restglied $R_2$
 
-$$ R_2(x) = \frac{f'''(\xi)}{3!}x^3 = \frac{x^3}{3(1 + \xi)^3} $$
+$$ f(x) - T_2(x) = R_2(x) = \frac{f'''(\xi)}{3!}x^3 = \frac{x^3}{3(1 + \xi)^3} $$
 
+
+Für das Restglied $R_1$ gilt
+
+$$ R_1(x) > 0, \forall x \in ]0, \infty[ \text{ mit } \xi = 0 $$
+
+Daraus folgt $T_1(x) > f(x)$ für alle $x$ \in ]0, \infty[.
+
+und es gilt für das Restglied $R_2$
+
+$$ R_2(x) < 0, \forall x \in ]0, \infty[ \text{ mit } \xi = 0 $$
+
+daraus folgt wiederum $T_2(x) < f(x)$ für alle $x$ \in ]0, \infty[.
+
+Damit gilt
+
+\begin{align*}
+  & T_1(x) > f(x) > T_2(x) \\
+\Leftrightarrow & x > \ln(1 + x) > x - \frac{x^2}{2}, \text{ für } x \in ]0, \infty[
+\end{align*}

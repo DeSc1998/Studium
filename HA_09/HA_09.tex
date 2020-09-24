@@ -1,0 +1,213 @@
+% Created 2020-09-24 Do 21:26
+% Intended LaTeX compiler: pdflatex
+\documentclass[a4paper,11pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\author{Moaz Haque, Felix Oechelhaeuser, Leo Pirker, Dennis Schulze}
+\date{\today}
+\title{Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 09 - Geuter 29}
+\hypersetup{
+ pdfauthor={Moaz Haque, Felix Oechelhaeuser, Leo Pirker, Dennis Schulze},
+ pdftitle={Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 09 - Geuter 29},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\pagebreak
+
+\section{Aufgabe 1}
+\label{sec:orga6276fa}
+\section{Aufgabe 2}
+\label{sec:orgc37955b}
+\subsection{a)}
+\label{sec:org6e86aa6}
+Zu zeigen ist
+
+$$ f^{(n)}(x) = n! \left( \frac{1}{(3-x)^{n+1}} + (-1)^n \frac{1}{(3+x)^{n+1}} \right) $$
+
+für alle \(n \in \mathbb{N}\).
+
+IA: \\
+Es gilt
+
+\begin{align*}
+  f^{(0)} &= 0! \left( \frac{1}{(3-x)^{0+1}} + (-1)^0 \frac{1}{(3+x)^{0+1}} \right) \\
+   &= \frac{1}{3-x} + \frac{1}{3+x} \\
+   &= \frac{(3+x) + (3-x)}{(3+x)(3-x)} \\
+   &= \frac{6}{9 - x^2} = f(x)
+\end{align*}
+
+IV: \\
+Es gelte für ein beliebiges, festes \(n \in \mathbb{N}\)
+
+$$ f^{(n)}(x) = n! \left( \frac{1}{(3-x)^{n+1}} + (-1)^n \frac{1}{(3+x)^{n+1}} \right) $$
+
+IS: \\
+Dann gilt
+
+\begin{align*}
+  f^{(n+1)}(x) &= (f^{(n)}(x))' \\
+   &= \left( n! \left( \frac{1}{(3-x)^{n+1}} + (-1)^n \frac{1}{(3+x)^{n+1}} \right) \right)' \\
+   &= n! \left( \left( \frac{1}{(3-x)^{n+1}} \right)' + (-1)^n \left( \frac{1}{(3+x)^{n+1}} \right)' \right) \\
+   &= n! \left( \left( (3-x)^{-(n+1)} \right)' + (-1)^n \left( (3+x)^{-(n+1)} \right)' \right) \\
+   &= n! \left( \left( -(n+1) (3-x)^{-(n+2)} (-1) \right) + (-1)^n \left( -(n+1) (3+x)^{-(n+2)} \right) \right) \\
+   &= n! (n+1) \left( (-1) (3-x)^{-(n+2)} (-1) + (-1)^n (-1) (3+x)^{-(n+2)} \right) \\
+   &= (n+1)! \left( (3-x)^{-(n+2)} + (-1)^{n+1} (3+x)^{-(n+2)} \right) \\
+   &= (n+1)! \left( \frac{1}{(3-x)^{n+2}}  + (-1)^{n+1} \frac{1}{(3+x)^{n+2}} \right)
+\end{align*}
+
+Damit gilt
+
+$$ f^{(n)}(x) = n! \left( \frac{1}{(3-x)^{n+1}} + (-1)^n \frac{1}{(3+x)^{n+1}} \right) $$
+
+\subsection{b)}
+\label{sec:org09bef65}
+Es gilt für alle \(n \in \mathbb{N}\)
+
+\begin{align*}
+  f^{(n)}(0) &= n! \left( \frac{1}{3^{n+1}} + (-1)^n \frac{1}{3^{n+1}} \right) \\
+   &= n! \left( \frac{1}{3^{n+1}} + \frac{(-1)^n}{3^{n+1}} \right) \\
+   &= n! \left( \frac{3^{n+1}}{3^{n+1} 3^{n+1}} + \frac{(-1)^n 3^{n+1}}{3^{n+1} 3^{n+1}} \right) \\
+   &= n! \left( \frac{3^{n+1} + (-1)^n 3^{n+1}}{3^{2n+2}} \right) \\
+\end{align*}
+
+dann gilt für ungerade \(n\)
+
+$$ f^{(n)}(0) = n! \left( \frac{3^{n+1} - 3^{n+1}}{3^{2n+2}} \right) = 0 $$
+
+und für gerade \(n\) gilt
+
+\begin{align*}
+  f^{(n)}(0) &= n! \left( \frac{2 \cdot 3^{n+1}}{3^{2n+2}} \right) \\
+   &= \frac{2 n!}{3^{n+1}}
+\end{align*}
+
+Seien \(n, n_e, n_o \in \mathbb{N}\) mit \(n_o = \floor{\frac{n}{2}}\) und \(n_e = \ceil{\frac{n}{2}}\). \\
+Dann gilt für \(T_n\) mit \(x_0 = 0\)
+
+\begin{align*}
+  T_n(x) &= \sum_{k = 0}^{n} \frac{f^{(k)}(0)}{k!} x^k \\
+   &= \sum_{k = 0}^{n_e} \frac{f^{(2k)}(0)}{(2k)!} x^{2k} + \sum_{k = 0}^{n_o} \frac{f^{(2k+1)}(0)}{(2k+1)!} x^{2k+1} \\
+   &= \sum_{k = 0}^{n_e} \frac{f^{(2k)}(0)}{(2k)!} x^{2k} + 0 \\
+   &= \sum_{k = 0}^{n_e} \frac{2 (2k)!}{(2k)! 3^{2k+1}} x^{2k} \\
+   &= \sum_{k = 0}^{n_e} \frac{2 x^{2k}}{3^{2k+1}}
+\end{align*}
+
+mit dem jeweils entsprechenden Restglied
+
+\begin{align*}
+  R_n(x) &= \frac{f^{(n+1)}(\xi)}{(n+1)!} x^{n+1} \\
+   &= \frac{ n! \left( \frac{(3+\xi)^{n+1} + (-1)^n (3-\xi)^{n+1}}{(3-\xi)^{n+1} (3+\xi)^{n+1}} \right) }{(n+1)!} x^{n+1} \\
+   &= \frac{ (3+\xi)^{n+1} + (-1)^n (3-\xi)^{n+1} }{(n+1) (3-\xi)^{n+1} (3+\xi)^{n+1}} x^{n+1}
+\end{align*}
+
+\subsection{c)}
+\label{sec:orga71f3f9}
+Zu zeigen ist für \(x \in ]-1, 1[\)
+
+$$ \lim_{n \rightarrow \infty} R_n(x) = 0 $$
+
+Es gilt
+
+\begin{align*}
+  \lim_{n \rightarrow \infty} R_n(x) &= \lim_{n \rightarrow \infty} \frac{ (3+\xi)^{n+1} + (-1)^n (3-\xi)^{n+1} }{(n+1) (3-\xi)^{n+1} (3+\xi)^{n+1}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ 4^{n+1} + (-1)^n 2^{n+1} }{(n+1) 2^{n+1} 4^{n+1}} x^{n+1}, \xi = 1 \\
+   &= \lim_{n \rightarrow \infty} \frac{ 4^{n+1} + (-1)^n 2^{n+1} }{(n+1) 2^{n+1} 4^{n+1}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ 2^{2n+2} + (-1)^n 2^{n+1} }{(n+1) 2^{n+1} 2^{2n+2}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ 2^{n+1} (2^{n+1} + (-1)^n) }{(n+1) 2^{3(n+1)}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ 2^{n+1} + (-1)^n }{(n+1) 2^{2(n+1)}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ 2^{n+1}}{(n+1) 2^{2(n+1)}} x^{n+1} + \lim_{n \rightarrow \infty} \frac{(-1)^n }{(n+1) 2^{2(n+1)}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{1}{(n+1) 2^{n+1}} x^{n+1} + \lim_{n \rightarrow \infty} \frac{(-1)^n }{(n+1) 2^{2(n+1)}} x^{n+1} \\
+   &= 0 + \lim_{n \rightarrow \infty} \frac{(-1)^n }{(n+1) 2^{2(n+1)}} x^{n+1} \\
+\end{align*}
+
+Der Betrag des Zählers ändert sich nicht. Somit gilt
+
+$$ \lim_{n \rightarrow \infty} \frac{(-1)^n }{(n+1) 2^{2(n+1)}} x^{n+1} = 0 $$
+
+Damit gilt für \(x \in ]-1, 1[\)
+
+$$ \lim_{n \rightarrow \infty} R_n(x) = 0 $$
+
+\section{Aufgabe 3}
+\label{sec:orgb100f62}
+Für die n-te Ableitung von \(f\) gilt
+
+\begin{align*}
+  f^{(n)}(x) &= \frac{d^n}{dx^n} 5^x = \ln(5) \cdot \frac{d^{n-1}}{dx^{n-1}} 5^x \\
+   &= (\ln(5))^n 5^x
+\end{align*}
+
+damit gilt für dessen Taylorreihe \(T_n\) mit \(x_0 = 0\)
+
+\begin{align*}
+  T_n(x) &= 1 + \frac{\ln(5) x}{1!} + \frac{(\ln(5) x)^2}{2!} + \frac{(\ln(5) x)^3}{3!} + \dots + \frac{(\ln(5) x)^n}{n!}
+   &= \sum_{k = 0}^{n} \frac{(\ln(5) x)^k}{k!}
+\end{align*}
+
+\section{Aufgabe 4}
+\label{sec:orgb41696d}
+\subsection{a)}
+\label{sec:org218b107}
+\begin{align*}
+  \sqrt{4^{3(x-2)}} &= 16^{1-x} \\
+\Leftrightarrow 4^{\frac{3}{2}(x-2)} &= (4^2)^{1-x} \\
+\Leftrightarrow 4^{\frac{3}{2}(x-2)} &= 4^{2(1-x)} \\
+\Leftrightarrow \frac{3}{2}(x-2) &= 2(1-x) \\
+\Leftrightarrow 3(x-2) &= 4(1-x) \\
+\Leftrightarrow 3x - 6 &= 4 - 4x \\
+\Leftrightarrow 7x &= 10 \\
+\Leftrightarrow x &= \frac{10}{7}
+\end{align*}
+
+\subsection{b)}
+\label{sec:orgb74a655}
+\begin{align*}
+  e^{ix - \ln(2)} + \frac{1}{e^{ix + \ln(2)}} &= 1 \\
+\Leftrightarrow e^{ix - \ln(2)} + e^{-ix - \ln(2)} &= 1 \\
+\Leftrightarrow e^{ix} e^{-\ln(2)} + e^{-ix} e^{-\ln(2)} &= 1 \\
+\Leftrightarrow \frac{e^{ix}}{2} + \frac{e^{-ix}}{2} &= 1 \\
+\Leftrightarrow \frac{e^{ix} + e^{-ix}}{2} &= 1 \\
+\Leftrightarrow \frac{(\cos(x) + i \sin(x)) + (\cos(-x) + i \sin(-x))}{2} &= 1 \\
+\Leftrightarrow \cos(x) &= 1 \\
+\Rightarrow x = 2k\pi, k \in \mathbb{Z}
+\end{align*}
+
+\section{Aufgabe 5}
+\label{sec:org3378143}
+\subsection{a)}
+\label{sec:orga1f9d9e}
+\subsection{b)}
+\label{sec:org3893ff0}
+\section{Aufgabe 6}
+\label{sec:org890c66f}
+\subsection{a)}
+\label{sec:org1c2dd76}
+\subsection{b)}
+\label{sec:orgbaaec08}
+\section{Aufgabe 7}
+\label{sec:org0eba136}
+\subsection{a)}
+\label{sec:org69b917c}
+\subsection{b)}
+\label{sec:org7aec3b3}
+\end{document}
