@@ -23,7 +23,7 @@ IA: \\
 Es gilt
 
 \begin{align*}
-  f^{(0)} &= 0! \left( \frac{1}{(3-x)^{0+1}} + (-1)^0 \frac{1}{(3+x)^{0+1}} \right) \\
+  f^{(0)}(x) &= 0! \left( \frac{1}{(3-x)^{0+1}} + (-1)^0 \frac{1}{(3+x)^{0+1}} \right) \\
    &= \frac{1}{3-x} + \frac{1}{3+x} \\
    &= \frac{(3+x) + (3-x)}{(3+x)(3-x)} \\
    &= \frac{6}{9 - x^2} = f(x)
@@ -88,8 +88,9 @@ mit dem jeweils entsprechenden Restglied
 
 \begin{align*}
   R_n(x) &= \frac{f^{(n+1)}(\xi)}{(n+1)!} x^{n+1} \\
-   &= \frac{ n! \left( \frac{(3+\xi)^{n+1} + (-1)^n (3-\xi)^{n+1}}{(3-\xi)^{n+1} (3+\xi)^{n+1}} \right) }{(n+1)!} x^{n+1} \\
-   &= \frac{ (3+\xi)^{n+1} + (-1)^n (3-\xi)^{n+1} }{(n+1) (3-\xi)^{n+1} (3+\xi)^{n+1}} x^{n+1}
+   &= \frac{ (n+1)! \left( \frac{1}{(3-\xi)^{n+2}} + (-1)^{n+1} \frac{1}{(3+\xi)^{n+2}} \right) }{(n+1)!} x^{n+1} \\
+   &= \frac{ (n+1)! \left( \frac{(3+\xi)^{n+2} + (-1)^{n+1} (3-\xi)^{n+1}}{(3-\xi)^{n+2} (3+\xi)^{n+2}} \right) }{(n+1)!} x^{n+1} \\
+   &= \frac{ (3+\xi)^{n+2} + (-1)^n (3-\xi)^{n+2} }{(3-\xi)^{n+2} (3+\xi)^{n+2}} x^{n+1}
 \end{align*}
 
 ** c)
@@ -100,21 +101,18 @@ $$ \lim_{n \rightarrow \infty} R_n(x) = 0 $$
 Es gilt
 
 \begin{align*}
-  \lim_{n \rightarrow \infty} R_n(x) &= \lim_{n \rightarrow \infty} \frac{ (3+\xi)^{n+1} + (-1)^n (3-\xi)^{n+1} }{(n+1) (3-\xi)^{n+1} (3+\xi)^{n+1}} x^{n+1} \\
-   &= \lim_{n \rightarrow \infty} \frac{ 4^{n+1} + (-1)^n 2^{n+1} }{(n+1) 2^{n+1} 4^{n+1}} x^{n+1}, \xi = 1 \\
-   &= \lim_{n \rightarrow \infty} \frac{ 4^{n+1} + (-1)^n 2^{n+1} }{(n+1) 2^{n+1} 4^{n+1}} x^{n+1} \\
-   &= \lim_{n \rightarrow \infty} \frac{ 2^{2n+2} + (-1)^n 2^{n+1} }{(n+1) 2^{n+1} 2^{2n+2}} x^{n+1} \\
-   &= \lim_{n \rightarrow \infty} \frac{ 2^{n+1} (2^{n+1} + (-1)^n) }{(n+1) 2^{3(n+1)}} x^{n+1} \\
-   &= \lim_{n \rightarrow \infty} \frac{ 2^{n+1} + (-1)^n }{(n+1) 2^{2(n+1)}} x^{n+1} \\
-   &= \lim_{n \rightarrow \infty} \frac{ 2^{n+1}}{(n+1) 2^{2(n+1)}} x^{n+1} + \lim_{n \rightarrow \infty} \frac{(-1)^n }{(n+1) 2^{2(n+1)}} x^{n+1} \\
-   &= \lim_{n \rightarrow \infty} \frac{1}{(n+1) 2^{n+1}} x^{n+1} + \lim_{n \rightarrow \infty} \frac{(-1)^n }{(n+1) 2^{2(n+1)}} x^{n+1} \\
-   &= 0 + \lim_{n \rightarrow \infty} \frac{(-1)^n }{(n+1) 2^{2(n+1)}} x^{n+1} \\
+  \lim_{n \rightarrow \infty} R_n(x) &= \lim_{n \rightarrow \infty} \frac{ (3+\xi)^{n+2} + (-1)^{n+1} (3-\xi)^{n+2} }{(3-\xi)^{n+2} (3+\xi)^{n+2}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ 4^{n+2} + (-1)^{n+1} 2^{n+2} }{ 2^{n+2} 4^{n+2}} x^{n+1}, \xi = 1 \\
+   &= \lim_{n \rightarrow \infty} \frac{ 4^{n+2} + (-1)^{n+1} 2^{n+2} }{ 2^{n+2} 4^{n+2}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ 2^{2n+4} + (-1)^{n+1} 2^{n+2} }{ 2^{n+2} 2^{2n+4}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ 2^{n+2} (2^{n+2} + (-1)^{n+2}) }{ 2^{3(n+2)}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ 2^{n+2} + (-1)^n }{2^{2(n+2)}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ 2^{n+2}}{2^{2(n+1)}} x^{n+1} + \lim_{n \rightarrow \infty} \frac{(-1)^n }{2^{2(n+2)}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ x^{n+1} }{2^{n+2}} + \lim_{n \rightarrow \infty} \frac{(-1)^{n+1} x^{n+1}}{2^{2(n+2)}} \\
+   &= 0 + 0 = 0 \\
 \end{align*}
 
-Der Betrag des Zählers ändert sich nicht. Somit gilt
-
-$$ \lim_{n \rightarrow \infty} \frac{(-1)^n }{(n+1) 2^{2(n+1)}} x^{n+1} = 0 $$
-
+nach $n+2$ -maliger Anwendung der Regel von de l'Hospital. \\
 Damit gilt für $x \in ]-1, 1[$
 
 $$ \lim_{n \rightarrow \infty} R_n(x) = 0 $$
@@ -130,9 +128,27 @@ Für die n-te Ableitung von $f$ gilt
 damit gilt für dessen Taylorreihe $T_n$ mit $x_0 = 0$
 
 \begin{align*}
-  T_n(x) &= 1 + \frac{\ln(5) x}{1!} + \frac{(\ln(5) x)^2}{2!} + \frac{(\ln(5) x)^3}{3!} + \dots + \frac{(\ln(5) x)^n}{n!}
+  T_n(x) &= 1 + \frac{\ln(5) x}{1!} + \frac{(\ln(5) x)^2}{2!} + \frac{(\ln(5) x)^3}{3!} + \dots + \frac{(\ln(5) x)^n}{n!} \\
    &= \sum_{k = 0}^{n} \frac{(\ln(5) x)^k}{k!}
 \end{align*}
+
+mit dessen Restglied
+
+\begin{align*}
+  R_n(x) &= \frac{f^{(n+1)}(\xi)}{(n+1)!}x^{n+1} \\
+   &= \frac{ (\ln(5))^{n+1} 5^{\xi} }{(n+1)!} x^{n+1} \\
+   &= \frac{ (\ln(5))^{n+1} 5^{\xi} x^{n+1} }{(n+1)!} \\
+   &= \frac{ (x \ln(5))^{n+1} 5^{\xi} }{(n+1)!} \\
+\end{align*}
+
+Es gilt
+
+$$ \lim_{n \rightarrow \infty} R_n(x) &= \frac{ (x \ln(5))^{n+1} 5^{\xi} }{(n+1)!} $$
+
+Wenn man die Fakultät für alle $n > 1$ betrachtet, wächst diese schneller als jede Exponentialfunktion.
+Deshalb sollte gelten
+
+$$ \lim_{n \rightarrow \infty} R_n(x) = 0 $$
 
 * Aufgabe 4
 ** a)
@@ -155,6 +171,7 @@ damit gilt für dessen Taylorreihe $T_n$ mit $x_0 = 0$
 \Leftrightarrow \frac{e^{ix}}{2} + \frac{e^{-ix}}{2} &= 1 \\
 \Leftrightarrow \frac{e^{ix} + e^{-ix}}{2} &= 1 \\
 \Leftrightarrow \frac{(\cos(x) + i \sin(x)) + (\cos(-x) + i \sin(-x))}{2} &= 1 \\
+\Leftrightarrow \frac{(\cos(x) + i \sin(x)) + (\cos(x) - i \sin(x))}{2} &= 1 \\
 \Leftrightarrow \cos(x) &= 1 \\
 \Rightarrow x = 2k\pi, k \in \mathbb{Z}
 \end{align*}

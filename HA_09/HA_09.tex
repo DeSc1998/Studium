@@ -1,4 +1,4 @@
-% Created 2020-09-24 Do 21:26
+% Created 2020-09-24 Do 22:18
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,11pt]{article}
 \usepackage[latin1]{inputenc}
@@ -35,11 +35,11 @@
 \pagebreak
 
 \section{Aufgabe 1}
-\label{sec:orga6276fa}
+\label{sec:org32274b3}
 \section{Aufgabe 2}
-\label{sec:orgc37955b}
+\label{sec:org4356d5c}
 \subsection{a)}
-\label{sec:org6e86aa6}
+\label{sec:org4b0f815}
 Zu zeigen ist
 
 $$ f^{(n)}(x) = n! \left( \frac{1}{(3-x)^{n+1}} + (-1)^n \frac{1}{(3+x)^{n+1}} \right) $$
@@ -50,7 +50,7 @@ IA: \\
 Es gilt
 
 \begin{align*}
-  f^{(0)} &= 0! \left( \frac{1}{(3-x)^{0+1}} + (-1)^0 \frac{1}{(3+x)^{0+1}} \right) \\
+  f^{(0)}(x) &= 0! \left( \frac{1}{(3-x)^{0+1}} + (-1)^0 \frac{1}{(3+x)^{0+1}} \right) \\
    &= \frac{1}{3-x} + \frac{1}{3+x} \\
    &= \frac{(3+x) + (3-x)}{(3+x)(3-x)} \\
    &= \frac{6}{9 - x^2} = f(x)
@@ -80,7 +80,7 @@ Damit gilt
 $$ f^{(n)}(x) = n! \left( \frac{1}{(3-x)^{n+1}} + (-1)^n \frac{1}{(3+x)^{n+1}} \right) $$
 
 \subsection{b)}
-\label{sec:org09bef65}
+\label{sec:orgf9bb922}
 Es gilt für alle \(n \in \mathbb{N}\)
 
 \begin{align*}
@@ -116,12 +116,13 @@ mit dem jeweils entsprechenden Restglied
 
 \begin{align*}
   R_n(x) &= \frac{f^{(n+1)}(\xi)}{(n+1)!} x^{n+1} \\
-   &= \frac{ n! \left( \frac{(3+\xi)^{n+1} + (-1)^n (3-\xi)^{n+1}}{(3-\xi)^{n+1} (3+\xi)^{n+1}} \right) }{(n+1)!} x^{n+1} \\
-   &= \frac{ (3+\xi)^{n+1} + (-1)^n (3-\xi)^{n+1} }{(n+1) (3-\xi)^{n+1} (3+\xi)^{n+1}} x^{n+1}
+   &= \frac{ (n+1)! \left( \frac{1}{(3-\xi)^{n+2}} + (-1)^{n+1} \frac{1}{(3+\xi)^{n+2}} \right) }{(n+1)!} x^{n+1} \\
+   &= \frac{ (n+1)! \left( \frac{(3+\xi)^{n+2} + (-1)^{n+1} (3-\xi)^{n+1}}{(3-\xi)^{n+2} (3+\xi)^{n+2}} \right) }{(n+1)!} x^{n+1} \\
+   &= \frac{ (3+\xi)^{n+2} + (-1)^n (3-\xi)^{n+2} }{(3-\xi)^{n+2} (3+\xi)^{n+2}} x^{n+1}
 \end{align*}
 
 \subsection{c)}
-\label{sec:orga71f3f9}
+\label{sec:org74b61ed}
 Zu zeigen ist für \(x \in ]-1, 1[\)
 
 $$ \lim_{n \rightarrow \infty} R_n(x) = 0 $$
@@ -129,27 +130,24 @@ $$ \lim_{n \rightarrow \infty} R_n(x) = 0 $$
 Es gilt
 
 \begin{align*}
-  \lim_{n \rightarrow \infty} R_n(x) &= \lim_{n \rightarrow \infty} \frac{ (3+\xi)^{n+1} + (-1)^n (3-\xi)^{n+1} }{(n+1) (3-\xi)^{n+1} (3+\xi)^{n+1}} x^{n+1} \\
-   &= \lim_{n \rightarrow \infty} \frac{ 4^{n+1} + (-1)^n 2^{n+1} }{(n+1) 2^{n+1} 4^{n+1}} x^{n+1}, \xi = 1 \\
-   &= \lim_{n \rightarrow \infty} \frac{ 4^{n+1} + (-1)^n 2^{n+1} }{(n+1) 2^{n+1} 4^{n+1}} x^{n+1} \\
-   &= \lim_{n \rightarrow \infty} \frac{ 2^{2n+2} + (-1)^n 2^{n+1} }{(n+1) 2^{n+1} 2^{2n+2}} x^{n+1} \\
-   &= \lim_{n \rightarrow \infty} \frac{ 2^{n+1} (2^{n+1} + (-1)^n) }{(n+1) 2^{3(n+1)}} x^{n+1} \\
-   &= \lim_{n \rightarrow \infty} \frac{ 2^{n+1} + (-1)^n }{(n+1) 2^{2(n+1)}} x^{n+1} \\
-   &= \lim_{n \rightarrow \infty} \frac{ 2^{n+1}}{(n+1) 2^{2(n+1)}} x^{n+1} + \lim_{n \rightarrow \infty} \frac{(-1)^n }{(n+1) 2^{2(n+1)}} x^{n+1} \\
-   &= \lim_{n \rightarrow \infty} \frac{1}{(n+1) 2^{n+1}} x^{n+1} + \lim_{n \rightarrow \infty} \frac{(-1)^n }{(n+1) 2^{2(n+1)}} x^{n+1} \\
-   &= 0 + \lim_{n \rightarrow \infty} \frac{(-1)^n }{(n+1) 2^{2(n+1)}} x^{n+1} \\
+  \lim_{n \rightarrow \infty} R_n(x) &= \lim_{n \rightarrow \infty} \frac{ (3+\xi)^{n+2} + (-1)^{n+1} (3-\xi)^{n+2} }{(3-\xi)^{n+2} (3+\xi)^{n+2}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ 4^{n+2} + (-1)^{n+1} 2^{n+2} }{ 2^{n+2} 4^{n+2}} x^{n+1}, \xi = 1 \\
+   &= \lim_{n \rightarrow \infty} \frac{ 4^{n+2} + (-1)^{n+1} 2^{n+2} }{ 2^{n+2} 4^{n+2}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ 2^{2n+4} + (-1)^{n+1} 2^{n+2} }{ 2^{n+2} 2^{2n+4}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ 2^{n+2} (2^{n+2} + (-1)^{n+2}) }{ 2^{3(n+2)}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ 2^{n+2} + (-1)^n }{2^{2(n+2)}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ 2^{n+2}}{2^{2(n+1)}} x^{n+1} + \lim_{n \rightarrow \infty} \frac{(-1)^n }{2^{2(n+2)}} x^{n+1} \\
+   &= \lim_{n \rightarrow \infty} \frac{ x^{n+1} }{2^{n+2}} + \lim_{n \rightarrow \infty} \frac{(-1)^{n+1} x^{n+1}}{2^{2(n+2)}} \\
+   &= 0 + 0 = 0 \\
 \end{align*}
 
-Der Betrag des Zählers ändert sich nicht. Somit gilt
-
-$$ \lim_{n \rightarrow \infty} \frac{(-1)^n }{(n+1) 2^{2(n+1)}} x^{n+1} = 0 $$
-
+nach \(n+2\) -maliger Anwendung der Regel von de l'Hospital. \\
 Damit gilt für \(x \in ]-1, 1[\)
 
 $$ \lim_{n \rightarrow \infty} R_n(x) = 0 $$
 
 \section{Aufgabe 3}
-\label{sec:orgb100f62}
+\label{sec:orgb5459d1}
 Für die n-te Ableitung von \(f\) gilt
 
 \begin{align*}
@@ -160,14 +158,32 @@ Für die n-te Ableitung von \(f\) gilt
 damit gilt für dessen Taylorreihe \(T_n\) mit \(x_0 = 0\)
 
 \begin{align*}
-  T_n(x) &= 1 + \frac{\ln(5) x}{1!} + \frac{(\ln(5) x)^2}{2!} + \frac{(\ln(5) x)^3}{3!} + \dots + \frac{(\ln(5) x)^n}{n!}
+  T_n(x) &= 1 + \frac{\ln(5) x}{1!} + \frac{(\ln(5) x)^2}{2!} + \frac{(\ln(5) x)^3}{3!} + \dots + \frac{(\ln(5) x)^n}{n!} \\
    &= \sum_{k = 0}^{n} \frac{(\ln(5) x)^k}{k!}
 \end{align*}
 
+mit dessen Restglied
+
+\begin{align*}
+  R_n(x) &= \frac{f^{(n+1)}(\xi)}{(n+1)!}x^{n+1} \\
+   &= \frac{ (\ln(5))^{n+1} 5^{\xi} }{(n+1)!} x^{n+1} \\
+   &= \frac{ (\ln(5))^{n+1} 5^{\xi} x^{n+1} }{(n+1)!} \\
+   &= \frac{ (x \ln(5))^{n+1} 5^{\xi} }{(n+1)!} \\
+\end{align*}
+
+Es gilt
+
+$$ \lim_{n \rightarrow \infty} R_n(x) &= \frac{ (x \ln(5))^{n+1} 5^{\xi} }{(n+1)!} $$
+
+Wenn man die Fakultät für alle \(n > 1\) betrachtet, wächst diese schneller als jede Exponentialfunktion.
+Deshalb sollte gelten
+
+$$ \lim_{n \rightarrow \infty} R_n(x) = 0 $$
+
 \section{Aufgabe 4}
-\label{sec:orgb41696d}
+\label{sec:org1c97458}
 \subsection{a)}
-\label{sec:org218b107}
+\label{sec:org663dec6}
 \begin{align*}
   \sqrt{4^{3(x-2)}} &= 16^{1-x} \\
 \Leftrightarrow 4^{\frac{3}{2}(x-2)} &= (4^2)^{1-x} \\
@@ -180,7 +196,7 @@ damit gilt für dessen Taylorreihe \(T_n\) mit \(x_0 = 0\)
 \end{align*}
 
 \subsection{b)}
-\label{sec:orgb74a655}
+\label{sec:org8826b4b}
 \begin{align*}
   e^{ix - \ln(2)} + \frac{1}{e^{ix + \ln(2)}} &= 1 \\
 \Leftrightarrow e^{ix - \ln(2)} + e^{-ix - \ln(2)} &= 1 \\
@@ -188,26 +204,27 @@ damit gilt für dessen Taylorreihe \(T_n\) mit \(x_0 = 0\)
 \Leftrightarrow \frac{e^{ix}}{2} + \frac{e^{-ix}}{2} &= 1 \\
 \Leftrightarrow \frac{e^{ix} + e^{-ix}}{2} &= 1 \\
 \Leftrightarrow \frac{(\cos(x) + i \sin(x)) + (\cos(-x) + i \sin(-x))}{2} &= 1 \\
+\Leftrightarrow \frac{(\cos(x) + i \sin(x)) + (\cos(x) - i \sin(x))}{2} &= 1 \\
 \Leftrightarrow \cos(x) &= 1 \\
 \Rightarrow x = 2k\pi, k \in \mathbb{Z}
 \end{align*}
 
 \section{Aufgabe 5}
-\label{sec:org3378143}
+\label{sec:org07b0cd1}
 \subsection{a)}
-\label{sec:orga1f9d9e}
+\label{sec:org31d9101}
 \subsection{b)}
-\label{sec:org3893ff0}
+\label{sec:org209fa88}
 \section{Aufgabe 6}
-\label{sec:org890c66f}
+\label{sec:orgf73c344}
 \subsection{a)}
-\label{sec:org1c2dd76}
+\label{sec:org9943966}
 \subsection{b)}
-\label{sec:orgbaaec08}
+\label{sec:org50ee310}
 \section{Aufgabe 7}
-\label{sec:org0eba136}
+\label{sec:org93945c3}
 \subsection{a)}
-\label{sec:org69b917c}
+\label{sec:org8793747}
 \subsection{b)}
-\label{sec:org7aec3b3}
+\label{sec:org8a851d1}
 \end{document}
