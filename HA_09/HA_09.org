@@ -218,6 +218,17 @@ $$ \lim_{n \rightarrow \infty} R_n(x) = 0 $$
 
 * Aufgabe 5
 ** a)
+\begin{align*}
+    \intertext{Für $x,y > 0, x,y,\in \mathbb{R}$ gilt:}
+    0 \leq (x-y)^2 \\
+    \Leftrightarrow 0 \leq x^2 -2xy+y^2 \\
+    \Leftrightarrow 4xy \leq x^2 + 2xy + y^2 \\
+    \Leftrightarrow xy \leq \frac{x^2+2xy+y^2}{4} = \frac{(x+y)^2}{4} \\
+    \Leftrightarrow (xy)^{\frac{1}{2}} \leq \frac{x+y}{2} \\
+    \Leftrightarrow \ln(xy^{\frac{1}{2}}) \leq \ln\left(\frac{x+y}{2}\right) \\
+    \Leftrightarrow \frac{\ln(xy)}{2} = \frac{\ln(x) + \ln(y)}{2} \leq \ln\left(\frac{x+y}{2}\right)
+\end{align*}
+
 ** b)
 * Aufgabe 6
 ** a)
