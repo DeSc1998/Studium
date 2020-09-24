@@ -1,4 +1,4 @@
-% Created 2020-09-24 Do 22:18
+% Created 2020-09-24 Do 23:23
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,11pt]{article}
 \usepackage[latin1]{inputenc}
@@ -35,11 +35,51 @@
 \pagebreak
 
 \section{Aufgabe 1}
-\label{sec:org32274b3}
+\label{sec:orgcb0a343}
+\begin{align*}
+    f(x) = \sqrt{x} = x^{\frac{1}{2}} \\
+    f'(x) = \frac{1}{2}x^{-\frac{1}{2}} \\
+    f''(x) = -\frac{1}{4}x^{-\frac{3}{2}} \\
+    f'''(x) = \frac{3}{8}x^{-\frac{5}{2}} \\
+    f^{(4)}(x) = -\frac{15}{16}x^{-\frac{7}{2}} \\
+    f^{(5)}(x) = \frac{105}{32}x^{-\frac{9}{2}} \\
+    T_2(x) = \frac{f(1)}{0!}(x-1)^0 + \frac{f'(1)}{1!}(x-1)^{1} + \frac{f''(1)}{2!}(x-1)^{2} \\
+    = 1 + \frac{1}{2}(x-1) - \frac{1}{8}(x-1)^2 \\
+    \intertext{$\xi$ muss zwischen dem Entwicklungspunkt $f(0)$ und x liegen, also: $\xi \in \left]1,x\right[ \cup \left]x,1\right[$} \\
+    R_2(x) = \frac{f'''(\xi)}{3!}(x-1)^3 = \frac{1}{16}\xi^{-\frac{5}{2}}(x-1)^3 \\
+    T_4(x) =
+    \frac{f(1)}{0!}(x-1)^0
+    + \frac{f'(1)}{1!}(x-1)^{1}
+    + \frac{f''(1)}{2!}(x-1)^{2}
+    + \frac{f'''(1)}{3!}(x-1)^{3}
+    + \frac{f^{4}(1)}{3!}(x-1)^{4} \\
+    = 1 + \frac{1}{2}(x-1) - \frac{1}{8}(x-1)^2 + \frac{3}{48}(x-1)^3 -\frac{5}{128}(x-1)^4 \\
+    \intertext{Für $x$ gilt:}
+    | x - 1 | \leq \frac{1}{2}
+    \intertext{Für $x - 1 \geq 0 \Leftrightarrow x \geq 1$}
+    x - 1 \leq \frac{1}{2}
+    \Leftrightarrow x \leq \frac{3}{2}
+    \intertext{Für $x - 1 < 0 \Leftrightarrow x < 1$}
+    x - 1 \geq \frac{1}{2}
+    \Leftrightarrow x \geq \frac{1}{2} \\
+    \Rightarrow L = \left[1,\frac{3}{2}\right]
+    \intertext{Den Maximalen Fehler des Restglieds von $T_2$, abschätzen. $x \in \left[1,\frac{3}{2}\right]$ und $\xi \in \left]1,\frac{3}{2}\right[$}
+    R_2\left(\frac{3}{2}\right)
+    = \frac{1}{16}\xi^{-\frac{5}{2}}\left(\frac{3}{2}-1\right)^3
+    = \frac{1}{128}\xi^{-\frac{5}{2}}
+    = \frac{1}{128 \sqrt{\xi^5}}
+    \leq \frac{1}{128 \sqrt{1^5}}
+    = \frac{1}{128} = 0,0078125 \\
+    T_2(1,1) = 1,04875 \\
+    T_4(1,1) = 1.048808594 \\
+    \intertext{Taschenrechner $\sqrt{1,1} = 1,048808848$}
+    \intertext{$T_4$ lieftert eine genauere Approximation von $\sqrt{1,1}$, nämlich auf sechs Nachkommastellen genau, anstatt nur drei bei $T_2$}
+\end{align*}
+
 \section{Aufgabe 2}
-\label{sec:org4356d5c}
+\label{sec:orgd232184}
 \subsection{a)}
-\label{sec:org4b0f815}
+\label{sec:org11175f7}
 Zu zeigen ist
 
 $$ f^{(n)}(x) = n! \left( \frac{1}{(3-x)^{n+1}} + (-1)^n \frac{1}{(3+x)^{n+1}} \right) $$
@@ -80,7 +120,7 @@ Damit gilt
 $$ f^{(n)}(x) = n! \left( \frac{1}{(3-x)^{n+1}} + (-1)^n \frac{1}{(3+x)^{n+1}} \right) $$
 
 \subsection{b)}
-\label{sec:orgf9bb922}
+\label{sec:org731cf17}
 Es gilt für alle \(n \in \mathbb{N}\)
 
 \begin{align*}
@@ -122,7 +162,7 @@ mit dem jeweils entsprechenden Restglied
 \end{align*}
 
 \subsection{c)}
-\label{sec:org74b61ed}
+\label{sec:orge31d8e7}
 Zu zeigen ist für \(x \in ]-1, 1[\)
 
 $$ \lim_{n \rightarrow \infty} R_n(x) = 0 $$
@@ -147,7 +187,7 @@ Damit gilt für \(x \in ]-1, 1[\)
 $$ \lim_{n \rightarrow \infty} R_n(x) = 0 $$
 
 \section{Aufgabe 3}
-\label{sec:orgb5459d1}
+\label{sec:org4427ba2}
 Für die n-te Ableitung von \(f\) gilt
 
 \begin{align*}
@@ -173,7 +213,7 @@ mit dessen Restglied
 
 Es gilt
 
-$$ \lim_{n \rightarrow \infty} R_n(x) &= \frac{ (x \ln(5))^{n+1} 5^{\xi} }{(n+1)!} $$
+$$ \lim_{n \rightarrow \infty} R_n(x) = \frac{ (x \ln(5))^{n+1} 5^{\xi} }{(n+1)!} $$
 
 Wenn man die Fakultät für alle \(n > 1\) betrachtet, wächst diese schneller als jede Exponentialfunktion.
 Deshalb sollte gelten
@@ -181,9 +221,9 @@ Deshalb sollte gelten
 $$ \lim_{n \rightarrow \infty} R_n(x) = 0 $$
 
 \section{Aufgabe 4}
-\label{sec:org1c97458}
+\label{sec:orgfca0bec}
 \subsection{a)}
-\label{sec:org663dec6}
+\label{sec:org962de50}
 \begin{align*}
   \sqrt{4^{3(x-2)}} &= 16^{1-x} \\
 \Leftrightarrow 4^{\frac{3}{2}(x-2)} &= (4^2)^{1-x} \\
@@ -196,7 +236,7 @@ $$ \lim_{n \rightarrow \infty} R_n(x) = 0 $$
 \end{align*}
 
 \subsection{b)}
-\label{sec:org8826b4b}
+\label{sec:orgb5b0f02}
 \begin{align*}
   e^{ix - \ln(2)} + \frac{1}{e^{ix + \ln(2)}} &= 1 \\
 \Leftrightarrow e^{ix - \ln(2)} + e^{-ix - \ln(2)} &= 1 \\
@@ -210,21 +250,77 @@ $$ \lim_{n \rightarrow \infty} R_n(x) = 0 $$
 \end{align*}
 
 \section{Aufgabe 5}
-\label{sec:org07b0cd1}
+\label{sec:orgac4a29a}
 \subsection{a)}
-\label{sec:org31d9101}
+\label{sec:org2880918}
 \subsection{b)}
-\label{sec:org209fa88}
+\label{sec:org8cc0cdb}
 \section{Aufgabe 6}
-\label{sec:orgf73c344}
+\label{sec:org00bb8a5}
 \subsection{a)}
-\label{sec:org9943966}
+\label{sec:org1ba5c35}
+Es gilt
+
+$$ \lim_{x \rightarrow \infty} \frac{\frac{\pi}{2} - \arctan(x)}{e^{-x}} = \frac{\frac{\pi}{2} - \frac{\pi}{2}}{0} = \frac{0}{0} $$
+
+damit ist die Regel von de l'Hospital anwendbar und es gilt
+
+\begin{align*}
+  \lim_{x \rightarrow \infty} \frac{\frac{\pi}{2} - \arctan(x)}{e^{-x}} &= \lim_{x \rightarrow \infty} \frac{-\frac{1}{1 + x^2}}{-e^{-x}} \\
+   &= \lim_{x \rightarrow \infty} -\frac{1}{(1 + x^2) (-e^{-x})} \\
+   &= 0
+\end{align*}
+
+Damit existiert dessen Grenzwert.
+
 \subsection{b)}
-\label{sec:org50ee310}
+\label{sec:org73f1e3d}
+Es gilt
+
+\begin{align*}
+  \lim_{x \rightarrow 0} (1 + \arctan(x))^{\frac{1}{x}} &= \lim_{x \rightarrow 0} (1 + \arctan(x))^{x^{-1}} \\
+   &= \lim_{x \rightarrow 0} e^{x^{-1} \ln(1 + \arctan(x))}
+\end{align*}
+
+und besitzt einen Grenzwert genau dann, wenn der Exponent einen Grenzwert besitzt. Also gilt
+
+$$ \lim_{x \rightarrow 0} x^{-1} \ln(1 + \arctan(x)) = \lim_{x \rightarrow 0} \frac{\ln(1 + \arctan(x))}{x} = \frac{0}{0} $$
+
+wo die bedingung für die Regel von de l'Hospital erfüllt ist. Damit gilt 
+
+\begin{align*}
+  \lim_{x \rightarrow 0} x^{-1} \ln(1 + \arctan(x)) &= \lim_{x \rightarrow 0} \frac{\frac{1}{1 + \arctan(x)} \frac{1}{1 + x^2}}{1} \\
+   &= \lim_{x \rightarrow 0} \frac{1}{(1 + \arctan(x))(1 + x^2)} = 1
+\end{align*}
+
+Da dieser Grenzwert existiert, existiert auch der andere. Damit gilt
+
+\begin{align*}
+  \lim_{x \rightarrow 0} (1 + \arctan(x))^{\frac{1}{x}} = e
+\end{align*}
+
+mit \(e\) der Eulerschen Zahl.
+
 \section{Aufgabe 7}
-\label{sec:org93945c3}
+\label{sec:orgdd5cf92}
 \subsection{a)}
-\label{sec:org8793747}
+\label{sec:orgf81749b}
+\begin{align*}
+    v(t) = s'(t) = \left(\frac{v^2}{g} \ln\left(\cosh\left(\frac{gt}{v}\right)\right)\right)'
+    = \frac{v^2 g \sinh(\frac{gt}{v})}{vg \cosh(\frac{gt}{v})}
+    = v \tanh\left(\frac{gt}{v}\right) \\
+    a(t) = s'(t) = \left(v \tanh\left(\frac{gt}{v}\right)\right)'
+    = v \cdot \frac{g}{\cosh(\frac{gt}{v})^2v}
+    = \frac{g}{\cosh(\frac{gt}{v})^2}
+\end{align*}
+
 \subsection{b)}
-\label{sec:org8a851d1}
+\label{sec:org5601831}
+\begin{align*}
+    s(5) = \frac{50^2 m/s}{9,81m/s^2} \ln\left(\cosh\left(\frac{9,81m/s^2 \cdot 5s}{50m/s}\right)\right)
+    = 283,52m \\
+    \Delta s = s'(t) \cdot \Delta t
+    = 50m/s \cdot \tanh\left(\frac{9,81m/s^2 \cdot 5s}{50m/s}\right) \cdot \frac{1}{2} = \pm 18,84m \\
+    |\Delta s| = 18,84m
+\end{align*}
 \end{document}
