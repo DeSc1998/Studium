@@ -1,0 +1,145 @@
+% Created 2020-11-08 So 00:08
+% Intended LaTeX compiler: pdflatex
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{braket}
+\author{Daniel Geinets (), Christopher Neumann (), Dennis Schulze ()}
+\date{\today}
+\title{Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 01 - Al-Maweri 13}
+\hypersetup{
+ pdfauthor={Daniel Geinets (), Christopher Neumann (), Dennis Schulze ()},
+ pdftitle={Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 01 - Al-Maweri 13},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\setcounter{secnumdepth}{0}
+
+\pagebreak
+
+\section{Aufgabe 2}
+\label{sec:orgd802e2e}
+\subsection{a)}
+\label{sec:org78630fa}
+\begin{align*}
+    & 9x^4 + 12zyx^2 + 4z^2y^2 \\
+    \Leftrightarrow & (3x^2 + 2yz)^2
+\end{align*}
+
+\subsection{b)}
+\label{sec:orga7b34b0}
+\begin{align*}
+    & x^{-2} - 36y^6 \\
+    \Leftrightarrow & (x^{-1} + 6y^3)(x^{-1} - 6y^3)
+\end{align*}
+
+\subsection{c)}
+\label{sec:org48d3a9d}
+\begin{align*}
+    & y^{-2} - 2 + y^2 \\
+    \Leftrightarrow & (y^{-1} - y)^2
+\end{align*}
+
+\section{Aufgabe 3}
+\label{sec:orgfdb89d7}
+\subsection{a)}
+\label{sec:orgc11eb5f}
+\begin{align*}
+    & ( \set{x, y}  \times \set{blau, rot, gelb}) \setminus \set{(x, y, z), z, x, (y, rot), (x, blau, rot), (gelb, y)} \\
+    \Leftrightarrow & (\set{x, y} \times \set{blau, rot, gelb}) \setminus \set{(y, rot)} \\
+    \Leftrightarrow & \set{(x, blau), (x, rot), (x, gelb), (y, blau), (y, gelb)}
+\end{align*}
+
+\subsection{b)}
+\label{sec:orgc2bab99}
+\begin{align*}
+    & [6, 11] \setminus ([4, 6] \setminus [5, 7]) \\
+    \Leftrightarrow & [6, 11] \setminus [4, 5[ \\
+    \Leftrightarrow & [6, 11]
+\end{align*}
+
+\subsection{c)}
+\label{sec:org1eba889}
+\begin{align*}
+    & ([6, 11] \setminus [4, 6]) \setminus [5, 7] \\
+    \Leftrightarrow & ]6, 11] \setminus [5, 7] \\
+    \Leftrightarrow & ]7, 11]
+\end{align*}
+
+\subsection{d)}
+\label{sec:orgf5fdbf0}
+\begin{align*}
+    & \set{x \in \mathbb{R} | x^6 > 1} \cap \set{x \in \mathbb{R} | x \leq 0} \\
+    \Leftrightarrow & (\mathbb{R} \setminus [-1, 1]) \cap ]-\infty, 0] \\
+    \Leftrightarrow & ]-\infty, -1[
+\end{align*}
+
+\section{Aufgabe 4}
+\label{sec:org54a0d59}
+\subsection{a)}
+\label{sec:org5358c36}
+
+\subsection{b)}
+\label{sec:org3e66e7d}
+
+\subsection{c)}
+\label{sec:org46b8302}
+
+\section{Aufgabe 5}
+\label{sec:orgead7469}
+\subsection{a)}
+\label{sec:org87b63a3}
+\subsubsection{a}
+\label{sec:orgc298413}
+\begin{align*}
+    & \sum_{k = 4}^{7} 2(k - 3)^2 \\
+    \Leftrightarrow & \sum_{k = 1}^{4} 2k^2 \\
+    \Leftrightarrow & 2 + 8 + 18 + 32 \\
+    \Leftrightarrow & 60
+\end{align*}
+
+\subsubsection{b}
+\label{sec:org2dba92a}
+\begin{align*}
+    & \prod_{k = 0}^{3} k! \\
+    \Leftrightarrow & 0! \cdot 1! \cdot 2! \cdot 3! \\
+    \Leftrightarrow & 1 \cdot 1 \cdot 2 \cdot 6 \\
+    \Leftrightarrow & 12
+\end{align*}
+
+\subsection{b)}
+\label{sec:org00aeee4}
+\subsubsection{a}
+\label{sec:org24eb924}
+\begin{align*}
+    & \sum_{k = 0}^{n} 2 \cdot 2^k \\
+    \Leftrightarrow & 2 \sum_{k = 0}^{n} 2^k \\
+    \Leftrightarrow & 2 \cdot \frac{1 - 2^{n + 1}}{1 - 2} \\
+    \Leftrightarrow & 2^{n + 2} - 2
+\end{align*}
+
+\subsubsection{b}
+\label{sec:org75afc03}
+\begin{align*}
+    & \sum_{k = 0}^{n} (-\frac{1}{5})^k \\
+    \Leftrightarrow & \frac{1 - (-\frac{1}{5})^{n + 1}}{1 + \frac{1}{5}} \\
+    \Leftrightarrow & \frac{1 - (-\frac{1}{5})^{n + 1}}{\frac{6}{5}}
+\end{align*}
+\end{document}
