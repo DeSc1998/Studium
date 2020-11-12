@@ -1,6 +1,6 @@
 
 #+TITLE: Analysis I und Lineare Algebra für Ingenieurwissenschaften \large @@latex: \\@@ Hausaufgabe 01 - Al-Maweri 13
-#+AUTHOR: Daniel Geinets (), Christopher Neumann (), Dennis Schulze ()
+#+AUTHOR: Daniel Geinets (), Christopher Neumann (), Dennis Schulze (458415)
 
 #+LATEX_CLASS_OPTIONS: [a4paper, 11pt]
 
@@ -60,41 +60,138 @@
 
 * Aufgabe 4
 ** a)
+$$ \frac{3x}{x-5} < 2, x \neq 5 $$
+
+Fall 1: $x - 5 > 0$ \Rightarrow $x > 5$
+
+\begin{align*}
+    \frac{3x}{x-5} &< 2 \\
+    \Leftrightarrow 3x &< 2(x-5) \\
+    \Leftrightarrow 3x &< 2x-10 \\
+    \Leftrightarrow x &< -10
+\end{align*}
+
+Widerspruch zwischen $x < -10$ und $x > 5$.
+
+Fall 2: $x - 5 < 0$ \Rightarrow $x < 5$
+
+\begin{align*}
+    \frac{3x}{x-5} &< 2 \\
+    \Leftrightarrow 3x &> 2(x-5) \\
+    \Leftrightarrow 3x &> 2x-10 \\
+    \Leftrightarrow x &> -10 \\
+\end{align*}
+
+Damit gilt für die Lösungsmenge $L$
+
+$$ L = ]-10, 5[ $$
+
+\pagebreak
 
 ** b)
+$$ \frac{x^2 - 1}{6x - 9} \geq 1, x \neq \frac{3}{2} $$
+
+Fall 1: $6x - 9 > 0$ \Rightarrow $x > \frac{3}{2}$
+
+\begin{align*}
+     \frac{x^2 - 1}{6x - 9} &\geq 1 \\
+    \Leftrightarrow x^2 - 1 &\geq 6x - 9 \\
+    \Leftrightarrow x^2 - 6x + 8 &\geq 0 \\
+    \Leftrightarrow (x - 2)(x - 4) &\geq 0 \\
+\end{align*}
+
+Subfall 1: $x - 2 \geq 0$ und $x - 4 \geq 0$ \Rightarrow $x \geq 4$ \\
+Subfall 2: $x - 2 < 0$ und $x - 4 < 0$ \Rightarrow $x < 2$ \\
+\\
+Damit gilt für die Lösungsmenge $L_1$ dieses Falls
+
+$$ L_1 = ]\frac{3}{2}, 2[ $$
+
+Fall 2: $6x - 9 < 0$ \Rightarrow $x < \frac{3}{2}$
+
+\begin{align*}
+    \frac{x^2 - 1}{6x - 9} &\geq 1 \\
+    \Leftrightarrow x^2 - 1 &\leq 6x - 9 \\
+    \Leftrightarrow x^2 - 6x + 8 &\leq 0 \\
+    \Leftrightarrow (x - 2)(x - 4) &\leq 0 \\
+\end{align*}
+
+Subfall 1:  $x - 2 \leq 0$ und $x - 4 \leq 0$ \Rightarrow $x \leq 2$ \\
+Subfall 2:  $x - 2 > 0$ und $x - 4 > 0$ \Rightarrow $x > 4$ \\
+\\
+Damit gilt für die Lösungsmenge $L_2$ dieses Falls
+
+$$ L_2 = ]-\infty, \frac{3}{2}[ $$
+
+Dann gilt für die Lösungsmenge $L$
+
+$$ L = ]-\infty, \frac{3}{2}[ \cup ]\frac{3}{2}, 2[ $$
 
 ** c)
+$$ |2x + 3| \leq 5x - 3 $$
+
+Fall 1: $2x + 3 \geq 0$ \Rightarrow $x \geq \frac{-3}{2}$
+
+\begin{align*}
+    |2x + 3| &\leq 5x - 3 \\
+    \Leftrightarrow 2x + 3 &\leq 5x - 3 \\
+    \Leftrightarrow 6 &\leq 3x \\
+    \Leftrightarrow 2 &\leq x \\
+\end{align*}
+
+Daraus folgt
+
+$$ L_1 = [2, \infty[ $$
+
+Fall 2:  $2x + 3 < 0$ \Rightarrow $x < \frac{-3}{2}$
+
+\begin{align*}
+    |2x + 3| &\leq 5x - 3 \\
+    \Leftrightarrow -(2x + 3) &\leq 5x - 3 \\
+    \Leftrightarrow -2x - 3 &\leq 5x - 3 \\
+    \Leftrightarrow 0 &\leq 7x \\
+    \Leftrightarrow 0 &\leq x \\
+\end{align*}
+
+Daraus folgt
+
+$$ L_2 = \{\} $$
+
+Damit gilt für die Lösungsmenge $L$
+
+$$ L = L_1 \cup L_2 = [2, \infty[ $$
 
 * Aufgabe 5
 ** a)
 *** a
 \begin{align*}
-    & \sum_{k = 4}^{7} 2(k - 3)^2 \\
-    \Leftrightarrow & \sum_{k = 1}^{4} 2k^2 \\
-    \Leftrightarrow & 2 + 8 + 18 + 32 \\
-    \Leftrightarrow & 60
+    \sum_{k = 4}^{7} 2(k - 3)^2
+    \Leftrightarrow& \sum_{k = 1}^{4} 2k^2 \\
+    \Leftrightarrow 2 + 8 + 18 + 32
+    \Leftrightarrow& 60
 \end{align*}
 
 *** b
 \begin{align*}
-    & \prod_{k = 0}^{3} k! \\
-    \Leftrightarrow & 0! \cdot 1! \cdot 2! \cdot 3! \\
-    \Leftrightarrow & 1 \cdot 1 \cdot 2 \cdot 6 \\
-    \Leftrightarrow & 12
+    \prod_{k = 0}^{3} k!
+    \Leftrightarrow& 0! \cdot 1! \cdot 2! \cdot 3! \\
+    \Leftrightarrow 1 \cdot 1 \cdot 2 \cdot 6
+    \Leftrightarrow& 12
 \end{align*}
 
 ** b)
 *** a
 \begin{align*}
-    & \sum_{k = 0}^{n} 2 \cdot 2^k \\
-    \Leftrightarrow & 2 \sum_{k = 0}^{n} 2^k \\
-    \Leftrightarrow & 2 \cdot \frac{1 - 2^{n + 1}}{1 - 2} \\
-    \Leftrightarrow & 2^{n + 2} - 2
+    \sum_{k = 0}^{n} 2 \cdot 2^k
+    \Leftrightarrow& 2 \sum_{k = 0}^{n} 2^k \\
+    \Leftrightarrow 2 \cdot \frac{1 - 2^{n + 1}}{1 - 2}
+    \Leftrightarrow& 2^{n + 2} - 2
 \end{align*}
 
 *** b
 \begin{align*}
-    & \sum_{k = 0}^{n} (-\frac{1}{5})^k \\
-    \Leftrightarrow & \frac{1 - (-\frac{1}{5})^{n + 1}}{1 + \frac{1}{5}} \\
-    \Leftrightarrow & \frac{1 - (-\frac{1}{5})^{n + 1}}{\frac{6}{5}}
+    \sum_{k = 0}^{n} (-\frac{1}{5})^k
+    \Leftrightarrow \frac{1 - (-\frac{1}{5})^{n + 1}}{1 + \frac{1}{5}}
+    \Leftrightarrow \frac{1 - (-\frac{1}{5})^{n + 1}}{\frac{6}{5}}
+    \Leftrightarrow \frac{5 + (-\frac{1}{5})^n}{6}
 \end{align*}

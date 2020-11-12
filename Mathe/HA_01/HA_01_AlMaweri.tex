@@ -1,4 +1,4 @@
-% Created 2020-11-08 So 00:08
+% Created 2020-11-12 Do 18:06
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper, 11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -15,11 +15,11 @@
 \usepackage{capt-of}
 \usepackage{hyperref}
 \usepackage{braket}
-\author{Daniel Geinets (), Christopher Neumann (), Dennis Schulze ()}
+\author{Daniel Geinets (), Christopher Neumann (), Dennis Schulze (458415)}
 \date{\today}
 \title{Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 01 - Al-Maweri 13}
 \hypersetup{
- pdfauthor={Daniel Geinets (), Christopher Neumann (), Dennis Schulze ()},
+ pdfauthor={Daniel Geinets (), Christopher Neumann (), Dennis Schulze (458415)},
  pdftitle={Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 01 - Al-Maweri 13},
  pdfkeywords={},
  pdfsubject={},
@@ -35,32 +35,32 @@
 \pagebreak
 
 \section{Aufgabe 2}
-\label{sec:orgd802e2e}
+\label{sec:orgd60c41c}
 \subsection{a)}
-\label{sec:org78630fa}
+\label{sec:org47c5779}
 \begin{align*}
     & 9x^4 + 12zyx^2 + 4z^2y^2 \\
     \Leftrightarrow & (3x^2 + 2yz)^2
 \end{align*}
 
 \subsection{b)}
-\label{sec:orga7b34b0}
+\label{sec:org80016e0}
 \begin{align*}
     & x^{-2} - 36y^6 \\
     \Leftrightarrow & (x^{-1} + 6y^3)(x^{-1} - 6y^3)
 \end{align*}
 
 \subsection{c)}
-\label{sec:org48d3a9d}
+\label{sec:org01b6c89}
 \begin{align*}
     & y^{-2} - 2 + y^2 \\
     \Leftrightarrow & (y^{-1} - y)^2
 \end{align*}
 
 \section{Aufgabe 3}
-\label{sec:orgfdb89d7}
+\label{sec:orgaef7c49}
 \subsection{a)}
-\label{sec:orgc11eb5f}
+\label{sec:org191efbb}
 \begin{align*}
     & ( \set{x, y}  \times \set{blau, rot, gelb}) \setminus \set{(x, y, z), z, x, (y, rot), (x, blau, rot), (gelb, y)} \\
     \Leftrightarrow & (\set{x, y} \times \set{blau, rot, gelb}) \setminus \set{(y, rot)} \\
@@ -68,7 +68,7 @@
 \end{align*}
 
 \subsection{b)}
-\label{sec:orgc2bab99}
+\label{sec:org1041c24}
 \begin{align*}
     & [6, 11] \setminus ([4, 6] \setminus [5, 7]) \\
     \Leftrightarrow & [6, 11] \setminus [4, 5[ \\
@@ -76,7 +76,7 @@
 \end{align*}
 
 \subsection{c)}
-\label{sec:org1eba889}
+\label{sec:org28889b7}
 \begin{align*}
     & ([6, 11] \setminus [4, 6]) \setminus [5, 7] \\
     \Leftrightarrow & ]6, 11] \setminus [5, 7] \\
@@ -84,7 +84,7 @@
 \end{align*}
 
 \subsection{d)}
-\label{sec:orgf5fdbf0}
+\label{sec:org1805737}
 \begin{align*}
     & \set{x \in \mathbb{R} | x^6 > 1} \cap \set{x \in \mathbb{R} | x \leq 0} \\
     \Leftrightarrow & (\mathbb{R} \setminus [-1, 1]) \cap ]-\infty, 0] \\
@@ -92,54 +92,151 @@
 \end{align*}
 
 \section{Aufgabe 4}
-\label{sec:org54a0d59}
+\label{sec:org01966d7}
 \subsection{a)}
-\label{sec:org5358c36}
+\label{sec:org06a9b21}
+$$ \frac{3x}{x-5} < 2, x \neq 5 $$
+
+Fall 1: \(x - 5 > 0\) \(\Rightarrow\) \(x > 5\)
+
+\begin{align*}
+    \frac{3x}{x-5} &< 2 \\
+    \Leftrightarrow 3x &< 2(x-5) \\
+    \Leftrightarrow 3x &< 2x-10 \\
+    \Leftrightarrow x &< -10
+\end{align*}
+
+Widerspruch zwischen \(x < -10\) und \(x > 5\).
+
+Fall 2: \(x - 5 < 0\) \(\Rightarrow\) \(x < 5\)
+
+\begin{align*}
+    \frac{3x}{x-5} &< 2 \\
+    \Leftrightarrow 3x &> 2(x-5) \\
+    \Leftrightarrow 3x &> 2x-10 \\
+    \Leftrightarrow x &> -10 \\
+\end{align*}
+
+Damit gilt für die Lösungsmenge \(L\)
+
+$$ L = ]-10, 5[ $$
+
+\pagebreak
 
 \subsection{b)}
-\label{sec:org3e66e7d}
+\label{sec:org8e03fce}
+$$ \frac{x^2 - 1}{6x - 9} \geq 1, x \neq \frac{3}{2} $$
+
+Fall 1: \(6x - 9 > 0\) \(\Rightarrow\) \(x > \frac{3}{2}\)
+
+\begin{align*}
+     \frac{x^2 - 1}{6x - 9} &\geq 1 \\
+    \Leftrightarrow x^2 - 1 &\geq 6x - 9 \\
+    \Leftrightarrow x^2 - 6x + 8 &\geq 0 \\
+    \Leftrightarrow (x - 2)(x - 4) &\geq 0 \\
+\end{align*}
+
+Subfall 1: \(x - 2 \geq 0\) und \(x - 4 \geq 0\) \(\Rightarrow\) \(x \geq 4\) \\
+Subfall 2: \(x - 2 < 0\) und \(x - 4 < 0\) \(\Rightarrow\) \(x < 2\) \\
+
+Damit gilt für die Lösungsmenge \(L_1\) dieses Falls
+
+$$ L_1 = ]\frac{3}{2}, 2[ $$
+
+Fall 2: \(6x - 9 < 0\) \(\Rightarrow\) \(x < \frac{3}{2}\)
+
+\begin{align*}
+    \frac{x^2 - 1}{6x - 9} &\geq 1 \\
+    \Leftrightarrow x^2 - 1 &\leq 6x - 9 \\
+    \Leftrightarrow x^2 - 6x + 8 &\leq 0 \\
+    \Leftrightarrow (x - 2)(x - 4) &\leq 0 \\
+\end{align*}
+
+Subfall 1:  \(x - 2 \leq 0\) und \(x - 4 \leq 0\) \(\Rightarrow\) \(x \leq 2\) \\
+Subfall 2:  \(x - 2 > 0\) und \(x - 4 > 0\) \(\Rightarrow\) \(x > 4\) \\
+
+Damit gilt für die Lösungsmenge \(L_2\) dieses Falls
+
+$$ L_2 = ]-\infty, \frac{3}{2}[ $$
+
+Dann gilt für die Lösungsmenge \(L\)
+
+$$ L = ]-\infty, \frac{3}{2}[ \cup ]\frac{3}{2}, 2[ $$
 
 \subsection{c)}
-\label{sec:org46b8302}
+\label{sec:org0f8d3b7}
+$$ |2x + 3| \leq 5x - 3 $$
+
+Fall 1: \(2x + 3 \geq 0\) \(\Rightarrow\) \(x \geq \frac{-3}{2}\)
+
+\begin{align*}
+    |2x + 3| &\leq 5x - 3 \\
+    \Leftrightarrow 2x + 3 &\leq 5x - 3 \\
+    \Leftrightarrow 6 &\leq 3x \\
+    \Leftrightarrow 2 &\leq x \\
+\end{align*}
+
+Daraus folgt
+
+$$ L_1 = [2, \infty[ $$
+
+Fall 2:  \(2x + 3 < 0\) \(\Rightarrow\) \(x < \frac{-3}{2}\)
+
+\begin{align*}
+    |2x + 3| &\leq 5x - 3 \\
+    \Leftrightarrow -(2x + 3) &\leq 5x - 3 \\
+    \Leftrightarrow -2x - 3 &\leq 5x - 3 \\
+    \Leftrightarrow 0 &\leq 7x \\
+    \Leftrightarrow 0 &\leq x \\
+\end{align*}
+
+Daraus folgt
+
+$$ L_2 = \{\} $$
+
+Damit gilt für die Lösungsmenge \(L\)
+
+$$ L = L_1 \cup L_2 = [2, \infty[ $$
 
 \section{Aufgabe 5}
-\label{sec:orgead7469}
+\label{sec:orgc8da0a0}
 \subsection{a)}
-\label{sec:org87b63a3}
+\label{sec:org06a524a}
 \subsubsection{a}
-\label{sec:orgc298413}
+\label{sec:org3802544}
 \begin{align*}
-    & \sum_{k = 4}^{7} 2(k - 3)^2 \\
-    \Leftrightarrow & \sum_{k = 1}^{4} 2k^2 \\
-    \Leftrightarrow & 2 + 8 + 18 + 32 \\
-    \Leftrightarrow & 60
+    \sum_{k = 4}^{7} 2(k - 3)^2
+    \Leftrightarrow& \sum_{k = 1}^{4} 2k^2 \\
+    \Leftrightarrow 2 + 8 + 18 + 32
+    \Leftrightarrow& 60
 \end{align*}
 
 \subsubsection{b}
-\label{sec:org2dba92a}
+\label{sec:orgeae9e6c}
 \begin{align*}
-    & \prod_{k = 0}^{3} k! \\
-    \Leftrightarrow & 0! \cdot 1! \cdot 2! \cdot 3! \\
-    \Leftrightarrow & 1 \cdot 1 \cdot 2 \cdot 6 \\
-    \Leftrightarrow & 12
+    \prod_{k = 0}^{3} k!
+    \Leftrightarrow& 0! \cdot 1! \cdot 2! \cdot 3! \\
+    \Leftrightarrow 1 \cdot 1 \cdot 2 \cdot 6
+    \Leftrightarrow& 12
 \end{align*}
 
 \subsection{b)}
-\label{sec:org00aeee4}
+\label{sec:orgbab1f97}
 \subsubsection{a}
-\label{sec:org24eb924}
+\label{sec:orgbb9efce}
 \begin{align*}
-    & \sum_{k = 0}^{n} 2 \cdot 2^k \\
-    \Leftrightarrow & 2 \sum_{k = 0}^{n} 2^k \\
-    \Leftrightarrow & 2 \cdot \frac{1 - 2^{n + 1}}{1 - 2} \\
-    \Leftrightarrow & 2^{n + 2} - 2
+    \sum_{k = 0}^{n} 2 \cdot 2^k
+    \Leftrightarrow& 2 \sum_{k = 0}^{n} 2^k \\
+    \Leftrightarrow 2 \cdot \frac{1 - 2^{n + 1}}{1 - 2}
+    \Leftrightarrow& 2^{n + 2} - 2
 \end{align*}
 
 \subsubsection{b}
-\label{sec:org75afc03}
+\label{sec:orgd714993}
 \begin{align*}
-    & \sum_{k = 0}^{n} (-\frac{1}{5})^k \\
-    \Leftrightarrow & \frac{1 - (-\frac{1}{5})^{n + 1}}{1 + \frac{1}{5}} \\
-    \Leftrightarrow & \frac{1 - (-\frac{1}{5})^{n + 1}}{\frac{6}{5}}
+    \sum_{k = 0}^{n} (-\frac{1}{5})^k
+    \Leftrightarrow \frac{1 - (-\frac{1}{5})^{n + 1}}{1 + \frac{1}{5}}
+    \Leftrightarrow \frac{1 - (-\frac{1}{5})^{n + 1}}{\frac{6}{5}}
+    \Leftrightarrow \frac{5 + (-\frac{1}{5})^n}{6}
 \end{align*}
 \end{document}
