@@ -1,0 +1,139 @@
+
+#+TITLE: Analysis I und Lineare Algebra für Ingenieurwissenschaften \large @@latex: \\@@ Hausaufgabe 02 - Al-Maweri 13
+#+AUTHOR: Daniel Geinets (), Christopher Neumann (), Dennis Schulze (458415)
+
+#+LATEX_CLASS_OPTIONS: [a4paper, 11pt]
+
+#+LATEX_HEADER: \usepackage{braket}
+
+#+LATEX: \setcounter{secnumdepth}{0}
+#+LATEX: \newcommand{\tuple}[1]{\left(#1\right)}
+#+LATEX: \newcommand{\R}{\mathbb{R}}
+#+LATEX: \newcommand{\Q}{\mathbb{Q}}
+#+LATEX: \newcommand{\N}{\mathbb{N}}
+#+LATEX: \newcommand{\C}{\mathbb{C}}
+
+\pagebreak
+
+* Aufgabe 1
+** a)
+Zu zeigen ist
+$$ \forall n \in \N, n \geq 1, \sum_{k=1}^{n} \tuple{2k - 1} = n^2 $$
+
+IA:
+    Es gilt für $n = 1$
+
+$$ \sum_{k=1}^{1} \tuple{2k - 1} = (2(1) - 1) = 1 = (1)^2 $$
+
+IB:
+    Es gelte für ein beliebiges $n \in \N$ mit $n \geq 1$
+
+$$ \sum_{k=1}^{n} \tuple{2k - 1} = n^2 $$
+
+IV:
+    Damit gilt dann
+
+$$ \sum_{k=1}^{n+1} \tuple{2k - 1} = (n + 1)^2 $$
+
+IS:
+    Es gilt
+
+\begin{align*}
+    \sum_{k=1}^{n+1} \tuple{2k - 1} &= \sum_{k=1}^{n} \tuple{2k - 1} + 2(n + 1) - 1 \\
+    &= n^2 + 2(n + 1) - 1 = n^2 + 2n + 1 = (n + 1)^2
+\end{align*}
+
+Folglich gilt dann für alle $n \in \N$ mit $n \geq 1$
+
+$$ \sum_{k=1}^{n} \tuple{2k - 1} = n^2 $$
+    
+** b)
+$$ \prod_{k=2}^{n} \tuple{1 - \frac{1}{k^2}} = \frac{n + 1}{2n}, n \in \N, n \geq 2 $$
+
+IA:
+  Es gilt
+
+\begin{align*}
+    \prod_{k = 2}^{2} \tuple{1 - \frac{1}{k^2}} = \frac{2 + 1}{4}
+    = \frac{3}{4}
+    = 1 - \frac{1}{4}
+\end{align*}
+
+IV:
+  Es gelte für ein beliebiges n \in $\N$ mit n > 1
+$$ \prod_{k=2}^{n} \tuple{1 - \frac{1}{k^2}} = \frac{n + 1}{2n} $$
+
+IB:
+  Dann gilt
+$$ \prod_{k=2}^{n + 1} \tuple{1 - \frac{1}{k^2}} = \frac{n + 2}{2(n + 1)} $$
+
+IS:
+  Es gilt
+
+\begin{align*}
+    \prod_{k = 2}^{n + 1} \tuple{1 - \frac{1}{k^2}} &= \prod_{k = 2}^{n} \tuple{1 - \frac{1}{k^2}} \cdot \tuple{1 - \frac{1}{(n + 1)^2}} \\
+    &= \frac{n + 1}{2n} \cdot \tuple{1 - \frac{1}{(n + 1)^2}} \\
+    &= \frac{n + 1}{2n} \cdot \tuple{\frac{(n+1)^2}{(n+1)^2} - \frac{1}{(n + 1)^2}} \\
+    &= \frac{n + 1}{2n} \cdot \frac{(n+1)^2 - 1}{(n+1)^2} \\
+    &= \frac{n + 1}{2n} \cdot \frac{((n+1) - 1)((n+1) + 1)}{(n + 1)^2} \\
+    &= \frac{n + 1}{2n} \cdot \frac{n(n + 2)}{(n + 1)(n + 1)} \\
+    &= \frac{(n + 1) \cdot n(n + 2)}{2n(n + 1)(n + 1)}
+    = \frac{n + 2}{2(n + 1)}
+\end{align*}
+
+
+
+Damit gilt für alle n \in $\N$ mit n > 1
+$$ \prod_{k=2}^{n} \tuple{1 - \frac{1}{k^2}} = \frac{n + 1}{2n} $$
+
+** c)
+$$ \forall n \in \N, n \geq 4, \text{ gilt } 2^n \geq n^2 $$
+
+IA:
+  Es gilt für n = 4
+
+\begin{align*}
+    2^4 &\geq 4^2 \\
+    \Leftrightarrow 16 &\geq 16
+\end{align*}
+
+IV:
+  Es gelte für ein beliebiges $n \in \N$ mit n \geq 4
+$$ 2^n \geq n^2 $$
+
+IB:
+  Dann gilt
+$$ 2^{n + 1} \geq (n + 1)^2 $$
+
+IS:
+  Es gilt
+
+\begin{align*}
+    2^{n + 1} &\geq (n + 1)^2 \\
+    \Leftrightarrow 2 \cdot 2^n &\geq 2 \cdot n^2 = n^2 + 2n + 1 \\
+    \Rightarrow n^2 &= 2n + 1 \\
+    \Leftrightarrow 0 &= n^2 - 2n - 1 \\
+    \Rightarrow n_1 &= 1 - \sqrt{2} \text{ und } n_2 = 1 + \sqrt{2}, n_i \in \R \\
+    \Rightarrow n_1 &< 4 \text{ und } n_2 < 4 \text{ (siehe IV.)} \\
+    \Rightarrow n^2 &> 2n + 1 \\
+    \Rightarrow 2 \cdot n^2 &> n^2 + 2n + 1 = (n + 1)^2 \\
+    \Rightarrow 2 \cdot 2^n &> (n + 1)^2 \\
+    \Leftrightarrow 2^{n + 1} &> (n + 1)^2 \\
+\end{align*}
+
+
+Damit gilt für alle $n \in \N$ mit n \geq 4
+$$ 2^n \geq n^2 $$
+
+* Aufgabe 2
+** a)
+** b)
+* Aufgabe 3
+** a)
+** b)
+** c)
+** d)
+* Aufgabe 4
+** a)
+** b)
+** c)

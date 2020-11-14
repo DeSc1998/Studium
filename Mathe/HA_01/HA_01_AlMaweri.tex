@@ -1,4 +1,4 @@
-% Created 2020-11-12 Do 18:06
+% Created 2020-11-13 Fr 19:46
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper, 11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -35,32 +35,32 @@
 \pagebreak
 
 \section{Aufgabe 2}
-\label{sec:orgd60c41c}
+\label{sec:orga4ea61f}
 \subsection{a)}
-\label{sec:org47c5779}
+\label{sec:orga16b81e}
 \begin{align*}
     & 9x^4 + 12zyx^2 + 4z^2y^2 \\
     \Leftrightarrow & (3x^2 + 2yz)^2
 \end{align*}
 
 \subsection{b)}
-\label{sec:org80016e0}
+\label{sec:orgfa65ac7}
 \begin{align*}
     & x^{-2} - 36y^6 \\
     \Leftrightarrow & (x^{-1} + 6y^3)(x^{-1} - 6y^3)
 \end{align*}
 
 \subsection{c)}
-\label{sec:org01b6c89}
+\label{sec:orgba6eb2f}
 \begin{align*}
     & y^{-2} - 2 + y^2 \\
     \Leftrightarrow & (y^{-1} - y)^2
 \end{align*}
 
 \section{Aufgabe 3}
-\label{sec:orgaef7c49}
+\label{sec:orged56921}
 \subsection{a)}
-\label{sec:org191efbb}
+\label{sec:org7122508}
 \begin{align*}
     & ( \set{x, y}  \times \set{blau, rot, gelb}) \setminus \set{(x, y, z), z, x, (y, rot), (x, blau, rot), (gelb, y)} \\
     \Leftrightarrow & (\set{x, y} \times \set{blau, rot, gelb}) \setminus \set{(y, rot)} \\
@@ -68,7 +68,7 @@
 \end{align*}
 
 \subsection{b)}
-\label{sec:org1041c24}
+\label{sec:org8e8dbc8}
 \begin{align*}
     & [6, 11] \setminus ([4, 6] \setminus [5, 7]) \\
     \Leftrightarrow & [6, 11] \setminus [4, 5[ \\
@@ -76,7 +76,7 @@
 \end{align*}
 
 \subsection{c)}
-\label{sec:org28889b7}
+\label{sec:org7379552}
 \begin{align*}
     & ([6, 11] \setminus [4, 6]) \setminus [5, 7] \\
     \Leftrightarrow & ]6, 11] \setminus [5, 7] \\
@@ -84,7 +84,7 @@
 \end{align*}
 
 \subsection{d)}
-\label{sec:org1805737}
+\label{sec:org6f178c6}
 \begin{align*}
     & \set{x \in \mathbb{R} | x^6 > 1} \cap \set{x \in \mathbb{R} | x \leq 0} \\
     \Leftrightarrow & (\mathbb{R} \setminus [-1, 1]) \cap ]-\infty, 0] \\
@@ -92,9 +92,9 @@
 \end{align*}
 
 \section{Aufgabe 4}
-\label{sec:org01966d7}
+\label{sec:orgd777c1c}
 \subsection{a)}
-\label{sec:org06a9b21}
+\label{sec:org8eb68b9}
 $$ \frac{3x}{x-5} < 2, x \neq 5 $$
 
 Fall 1: \(x - 5 > 0\) \(\Rightarrow\) \(x > 5\)
@@ -124,7 +124,7 @@ $$ L = ]-10, 5[ $$
 \pagebreak
 
 \subsection{b)}
-\label{sec:org8e03fce}
+\label{sec:org7f8df0d}
 $$ \frac{x^2 - 1}{6x - 9} \geq 1, x \neq \frac{3}{2} $$
 
 Fall 1: \(6x - 9 > 0\) \(\Rightarrow\) \(x > \frac{3}{2}\)
@@ -137,11 +137,11 @@ Fall 1: \(6x - 9 > 0\) \(\Rightarrow\) \(x > \frac{3}{2}\)
 \end{align*}
 
 Subfall 1: \(x - 2 \geq 0\) und \(x - 4 \geq 0\) \(\Rightarrow\) \(x \geq 4\) \\
-Subfall 2: \(x - 2 < 0\) und \(x - 4 < 0\) \(\Rightarrow\) \(x < 2\) \\
+Subfall 2: \(x - 2 \leq 0\) und \(x - 4 \leq 0\) \(\Rightarrow\) \(x \leq 2\) \\
 
 Damit gilt für die Lösungsmenge \(L_1\) dieses Falls
 
-$$ L_1 = ]\frac{3}{2}, 2[ $$
+$$ L_1 = ]\frac{3}{2}, 2] \cup [4, \infty[ $$
 
 Fall 2: \(6x - 9 < 0\) \(\Rightarrow\) \(x < \frac{3}{2}\)
 
@@ -152,19 +152,19 @@ Fall 2: \(6x - 9 < 0\) \(\Rightarrow\) \(x < \frac{3}{2}\)
     \Leftrightarrow (x - 2)(x - 4) &\leq 0 \\
 \end{align*}
 
-Subfall 1:  \(x - 2 \leq 0\) und \(x - 4 \leq 0\) \(\Rightarrow\) \(x \leq 2\) \\
-Subfall 2:  \(x - 2 > 0\) und \(x - 4 > 0\) \(\Rightarrow\) \(x > 4\) \\
+Subfall 1:  \(x - 2 \leq 0\) und \(x - 4 \geq 0\) \(\Rightarrow\) \(x \leq 2\) und \(x \geq 4\) (Widerspruch) \\
+Subfall 2:  \(x - 2 \geq 0\) und \(x - 4 \leq 0\) \(\Rightarrow\) \(x \geq 2\) und \(x \leq 4\) (Widerspruch zur Annahme) \\
 
 Damit gilt für die Lösungsmenge \(L_2\) dieses Falls
 
-$$ L_2 = ]-\infty, \frac{3}{2}[ $$
+$$ L_2 = \{\} $$
 
 Dann gilt für die Lösungsmenge \(L\)
 
-$$ L = ]-\infty, \frac{3}{2}[ \cup ]\frac{3}{2}, 2[ $$
+$$ L = ]\frac{3}{2}, 2] \cup [4, \infty[ $$
 
 \subsection{c)}
-\label{sec:org0f8d3b7}
+\label{sec:org2e1cb5b}
 $$ |2x + 3| \leq 5x - 3 $$
 
 Fall 1: \(2x + 3 \geq 0\) \(\Rightarrow\) \(x \geq \frac{-3}{2}\)
@@ -199,11 +199,11 @@ Damit gilt für die Lösungsmenge \(L\)
 $$ L = L_1 \cup L_2 = [2, \infty[ $$
 
 \section{Aufgabe 5}
-\label{sec:orgc8da0a0}
+\label{sec:org608a1a8}
 \subsection{a)}
-\label{sec:org06a524a}
+\label{sec:org7987192}
 \subsubsection{a}
-\label{sec:org3802544}
+\label{sec:orgf348a33}
 \begin{align*}
     \sum_{k = 4}^{7} 2(k - 3)^2
     \Leftrightarrow& \sum_{k = 1}^{4} 2k^2 \\
@@ -212,7 +212,7 @@ $$ L = L_1 \cup L_2 = [2, \infty[ $$
 \end{align*}
 
 \subsubsection{b}
-\label{sec:orgeae9e6c}
+\label{sec:org99ea825}
 \begin{align*}
     \prod_{k = 0}^{3} k!
     \Leftrightarrow& 0! \cdot 1! \cdot 2! \cdot 3! \\
@@ -221,9 +221,9 @@ $$ L = L_1 \cup L_2 = [2, \infty[ $$
 \end{align*}
 
 \subsection{b)}
-\label{sec:orgbab1f97}
+\label{sec:orgd979fbc}
 \subsubsection{a}
-\label{sec:orgbb9efce}
+\label{sec:org0622e7f}
 \begin{align*}
     \sum_{k = 0}^{n} 2 \cdot 2^k
     \Leftrightarrow& 2 \sum_{k = 0}^{n} 2^k \\
@@ -232,7 +232,7 @@ $$ L = L_1 \cup L_2 = [2, \infty[ $$
 \end{align*}
 
 \subsubsection{b}
-\label{sec:orgd714993}
+\label{sec:orgd5c0914}
 \begin{align*}
     \sum_{k = 0}^{n} (-\frac{1}{5})^k
     \Leftrightarrow \frac{1 - (-\frac{1}{5})^{n + 1}}{1 + \frac{1}{5}}

@@ -101,11 +101,11 @@ Fall 1: $6x - 9 > 0$ \Rightarrow $x > \frac{3}{2}$
 \end{align*}
 
 Subfall 1: $x - 2 \geq 0$ und $x - 4 \geq 0$ \Rightarrow $x \geq 4$ \\
-Subfall 2: $x - 2 < 0$ und $x - 4 < 0$ \Rightarrow $x < 2$ \\
+Subfall 2: $x - 2 \leq 0$ und $x - 4 \leq 0$ \Rightarrow $x \leq 2$ \\
 \\
 Damit gilt für die Lösungsmenge $L_1$ dieses Falls
 
-$$ L_1 = ]\frac{3}{2}, 2[ $$
+$$ L_1 = ]\frac{3}{2}, 2] \cup [4, \infty[ $$
 
 Fall 2: $6x - 9 < 0$ \Rightarrow $x < \frac{3}{2}$
 
@@ -116,16 +116,16 @@ Fall 2: $6x - 9 < 0$ \Rightarrow $x < \frac{3}{2}$
     \Leftrightarrow (x - 2)(x - 4) &\leq 0 \\
 \end{align*}
 
-Subfall 1:  $x - 2 \leq 0$ und $x - 4 \leq 0$ \Rightarrow $x \leq 2$ \\
-Subfall 2:  $x - 2 > 0$ und $x - 4 > 0$ \Rightarrow $x > 4$ \\
+Subfall 1:  $x - 2 \leq 0$ und $x - 4 \geq 0$ \Rightarrow $x \leq 2$ und $x \geq 4$ (Widerspruch) \\
+Subfall 2:  $x - 2 \geq 0$ und $x - 4 \leq 0$ \Rightarrow $x \geq 2$ und $x \leq 4$ (Widerspruch zur Annahme) \\
 \\
 Damit gilt für die Lösungsmenge $L_2$ dieses Falls
 
-$$ L_2 = ]-\infty, \frac{3}{2}[ $$
+$$ L_2 = \{\} $$
 
 Dann gilt für die Lösungsmenge $L$
 
-$$ L = ]-\infty, \frac{3}{2}[ \cup ]\frac{3}{2}, 2[ $$
+$$ L = ]\frac{3}{2}, 2] \cup [4, \infty[ $$
 
 ** c)
 $$ |2x + 3| \leq 5x - 3 $$
