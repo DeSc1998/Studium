@@ -14,48 +14,48 @@
 ** a)
 \begin{align*}
     & 9x^4 + 12zyx^2 + 4z^2y^2 \\
-    \Leftrightarrow & (3x^2 + 2yz)^2
+    = & (3x^2 + 2yz)^2
 \end{align*}
 
 ** b)
 \begin{align*}
     & x^{-2} - 36y^6 \\
-    \Leftrightarrow & (x^{-1} + 6y^3)(x^{-1} - 6y^3)
+    = & (x^{-1} + 6y^3)(x^{-1} - 6y^3)
 \end{align*}
 
 ** c)
 \begin{align*}
     & y^{-2} - 2 + y^2 \\
-    \Leftrightarrow & (y^{-1} - y)^2
+    = & (y^{-1} - y)^2
 \end{align*}
 
 * Aufgabe 3
 ** a)
 \begin{align*}
     & ( \set{x, y}  \times \set{blau, rot, gelb}) \setminus \set{(x, y, z), z, x, (y, rot), (x, blau, rot), (gelb, y)} \\
-    \Leftrightarrow & (\set{x, y} \times \set{blau, rot, gelb}) \setminus \set{(y, rot)} \\
-    \Leftrightarrow & \set{(x, blau), (x, rot), (x, gelb), (y, blau), (y, gelb)}
+    =& (\set{x, y} \times \set{blau, rot, gelb}) \setminus \set{(y, rot)} \\
+    =& \set{(x, blau), (x, rot), (x, gelb), (y, blau), (y, gelb)}
 \end{align*}
 
 ** b)
 \begin{align*}
     & [6, 11] \setminus ([4, 6] \setminus [5, 7]) \\
-    \Leftrightarrow & [6, 11] \setminus [4, 5[ \\
-    \Leftrightarrow & [6, 11]
+    =& [6, 11] \setminus [4, 5[ \\
+    =& [6, 11]
 \end{align*}
 
 ** c)
 \begin{align*}
-    & ([6, 11] \setminus [4, 6]) \setminus [5, 7] \\
-    \Leftrightarrow & ]6, 11] \setminus [5, 7] \\
-    \Leftrightarrow & ]7, 11]
+    & ([5, 10] \setminus [4, 6]) \setminus [5, 7] \\
+    =& ]6, 10] \setminus [5, 7] \\
+    =& ]7, 10]
 \end{align*}
 
 ** d)
 \begin{align*}
     & \set{x \in \mathbb{R} | x^6 > 1} \cap \set{x \in \mathbb{R} | x \leq 0} \\
-    \Leftrightarrow & (\mathbb{R} \setminus [-1, 1]) \cap ]-\infty, 0] \\
-    \Leftrightarrow & ]-\infty, -1[
+    =& (\mathbb{R} \setminus [-1, 1]) \cap ]-\infty, 0] \\
+    =& ]-\infty, -1[
 \end{align*}
 
 * Aufgabe 4
@@ -166,32 +166,32 @@ $$ L = L_1 \cup L_2 = [2, \infty[ $$
 *** a
 \begin{align*}
     \sum_{k = 4}^{7} 2(k - 3)^2
-    \Leftrightarrow& \sum_{k = 1}^{4} 2k^2 \\
-    \Leftrightarrow 2 + 8 + 18 + 32
-    \Leftrightarrow& 60
+    =& \sum_{k = 1}^{4} 2k^2 \\
+    = 2 + 8 + 18 + 32
+    =& 60
 \end{align*}
 
 *** b
 \begin{align*}
     \prod_{k = 0}^{3} k!
-    \Leftrightarrow& 0! \cdot 1! \cdot 2! \cdot 3! \\
-    \Leftrightarrow 1 \cdot 1 \cdot 2 \cdot 6
-    \Leftrightarrow& 12
+    =& 0! \cdot 1! \cdot 2! \cdot 3! \\
+    = 1 \cdot 1 \cdot 2 \cdot 6
+    =& 12
 \end{align*}
 
 ** b)
 *** a
 \begin{align*}
     \sum_{k = 0}^{n} 2 \cdot 2^k
-    \Leftrightarrow& 2 \sum_{k = 0}^{n} 2^k \\
-    \Leftrightarrow 2 \cdot \frac{1 - 2^{n + 1}}{1 - 2}
-    \Leftrightarrow& 2^{n + 2} - 2
+    =& 2 \sum_{k = 0}^{n} 2^k \\
+    = 2 \cdot \frac{1 - 2^{n + 1}}{1 - 2}
+    =& 2^{n + 2} - 2
 \end{align*}
 
 *** b
 \begin{align*}
     \sum_{k = 0}^{n} (-\frac{1}{5})^k
-    \Leftrightarrow \frac{1 - (-\frac{1}{5})^{n + 1}}{1 + \frac{1}{5}}
-    \Leftrightarrow \frac{1 - (-\frac{1}{5})^{n + 1}}{\frac{6}{5}}
-    \Leftrightarrow \frac{5 + (-\frac{1}{5})^n}{6}
+    = \frac{1 - (-\frac{1}{5})^{n + 1}}{1 + \frac{1}{5}}
+    = \frac{1 - (-\frac{1}{5})^{n + 1}}{\frac{6}{5}}
+    = \frac{5 + (-\frac{1}{5})^n}{6}
 \end{align*}
