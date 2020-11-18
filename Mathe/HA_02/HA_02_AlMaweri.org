@@ -1,6 +1,6 @@
 
 #+TITLE: Analysis I und Lineare Algebra für Ingenieurwissenschaften \large @@latex: \\@@ Hausaufgabe 02 - Al-Maweri 13
-#+AUTHOR: Daniel Geinets (), Christopher Neumann (), Dennis Schulze (458415)
+#+AUTHOR: Daniel Geinets (453843), Christopher Neumann (409098), Dennis Schulze (458415)
 
 #+LATEX_CLASS_OPTIONS: [a4paper, 11pt]
 
@@ -127,19 +127,19 @@ $$ 2^n \geq n^2 $$
 
 * Aufgabe 2
 ** a)
-die Exponentialfunktion ist nicht surjektiv => eine komposition mit $\exp$ ist nicht surjektiv
-
-die Exponentialfunktion ist injektiv => eine komposition mit $\exp$ ist injektiv, wenn die andere funktion injektiv ist
-
+die Exponentialfunktion ist nicht surjektiv => eine komposition mit $\exp$ ist nicht surjektiv \\
+\\
+die Exponentialfunktion ist injektiv => eine komposition mit $\exp$ ist injektiv, wenn die andere funktion injektiv ist \\
+\\
 => $f$ ist nur injektiv
 ** b)
-die Betragsfunktion ist weder injektiv noch surjektiv => eine komposition mit der Betragsfunktion ist weder injektiv noch surjektiv
-
+die Betragsfunktion ist weder injektiv noch surjektiv => eine komposition mit der Betragsfunktion ist weder injektiv noch surjektiv \\
+\\
 => $g$ ist weder injektiv noch surjektiv
 
 * Aufgabe 3
 ** a)
-$$ D_f_3 = \R \setminus \set{x \in \R | \cos(x) \neq 0} $$
+$$ D_{f_3} = \R \setminus \set{x \in \R | \cos(x) \neq 0} $$
 
 ** b)
 \begin{align*}

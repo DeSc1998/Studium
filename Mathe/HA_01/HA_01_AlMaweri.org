@@ -1,6 +1,6 @@
 
 #+TITLE: Analysis I und Lineare Algebra für Ingenieurwissenschaften \large @@latex: \\@@ Hausaufgabe 01 - Al-Maweri 13
-#+AUTHOR: Daniel Geinets (), Christopher Neumann (), Dennis Schulze (458415)
+#+AUTHOR: Daniel Geinets (453843), Christopher Neumann (409098), Dennis Schulze (458415)
 
 #+LATEX_CLASS_OPTIONS: [a4paper, 11pt]
 

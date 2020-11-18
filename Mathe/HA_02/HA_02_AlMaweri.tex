@@ -1,4 +1,4 @@
-% Created 2020-11-14 Sa 15:43
+% Created 2020-11-18 Mi 11:21
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper, 11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -40,11 +40,41 @@
 \pagebreak
 
 \section{Aufgabe 1}
-\label{sec:org0ae6b3c}
+\label{sec:org172840d}
 \subsection{a)}
-\label{sec:org2c1632a}
+\label{sec:org8f22a02}
+Zu zeigen ist
+$$ \forall n \in \N, n \geq 1, \sum_{k=1}^{n} \tuple{2k - 1} = n^2 $$
+
+IA:
+    Es gilt für \(n = 1\)
+
+$$ \sum_{k=1}^{1} \tuple{2k - 1} = (2(1) - 1) = 1 = (1)^2 $$
+
+IB:
+    Es gelte für ein beliebiges \(n \in \N\) mit \(n \geq 1\)
+
+$$ \sum_{k=1}^{n} \tuple{2k - 1} = n^2 $$
+
+IV:
+    Damit gilt dann
+
+$$ \sum_{k=1}^{n+1} \tuple{2k - 1} = (n + 1)^2 $$
+
+IS:
+    Es gilt
+
+\begin{align*}
+    \sum_{k=1}^{n+1} \tuple{2k - 1} &= \sum_{k=1}^{n} \tuple{2k - 1} + 2(n + 1) - 1 \\
+    &= n^2 + 2(n + 1) - 1 = n^2 + 2n + 1 = (n + 1)^2
+\end{align*}
+
+Folglich gilt dann für alle \(n \in \N\) mit \(n \geq 1\)
+
+$$ \sum_{k=1}^{n} \tuple{2k - 1} = n^2 $$
+
 \subsection{b)}
-\label{sec:org168152a}
+\label{sec:org2c2a4ac}
 $$ \prod_{k=2}^{n} \tuple{1 - \frac{1}{k^2}} = \frac{n + 1}{2n}, n \in \N, n \geq 2 $$
 
 IA:
@@ -84,7 +114,7 @@ Damit gilt für alle n \(\in\) \(\N\) mit n > 1
 $$ \prod_{k=2}^{n} \tuple{1 - \frac{1}{k^2}} = \frac{n + 1}{2n} $$
 
 \subsection{c)}
-\label{sec:org462334e}
+\label{sec:org575ed46}
 $$ \forall n \in \N, n \geq 4, \text{ gilt } 2^n \geq n^2 $$
 
 IA:
@@ -111,7 +141,7 @@ IS:
     \Leftrightarrow 2 \cdot 2^n &\geq 2 \cdot n^2 = n^2 + 2n + 1 \\
     \Rightarrow n^2 &= 2n + 1 \\
     \Leftrightarrow 0 &= n^2 - 2n - 1 \\
-    \Rightarrow n_1 &= 1 - \sqrt{2} \text{ und } n_2 = 1 + \sqrt{2} \\
+    \Rightarrow n_1 &= 1 - \sqrt{2} \text{ und } n_2 = 1 + \sqrt{2}, n_i \in \R \\
     \Rightarrow n_1 &< 4 \text{ und } n_2 < 4 \text{ (siehe IV.)} \\
     \Rightarrow n^2 &> 2n + 1 \\
     \Rightarrow 2 \cdot n^2 &> n^2 + 2n + 1 = (n + 1)^2 \\
@@ -124,27 +154,75 @@ Damit gilt für alle \(n \in \N\) mit n \(\ge\) 4
 $$ 2^n \geq n^2 $$
 
 \section{Aufgabe 2}
-\label{sec:orgf8f8866}
+\label{sec:org261e9f9}
 \subsection{a)}
-\label{sec:org37ae618}
+\label{sec:org6c660de}
+die Exponentialfunktion ist nicht surjektiv => eine komposition mit \(\exp\) ist nicht surjektiv \\
+
+die Exponentialfunktion ist injektiv => eine komposition mit \(\exp\) ist injektiv, wenn die andere funktion injektiv ist \\
+
+=> \(f\) ist nur injektiv
 \subsection{b)}
-\label{sec:orgd9eeabf}
+\label{sec:org19ec063}
+die Betragsfunktion ist weder injektiv noch surjektiv => eine komposition mit der Betragsfunktion ist weder injektiv noch surjektiv \\
+
+=> \(g\) ist weder injektiv noch surjektiv
+
 \section{Aufgabe 3}
-\label{sec:orgc855dac}
+\label{sec:org409fc0a}
 \subsection{a)}
-\label{sec:org966af4f}
+\label{sec:orga21d949}
+$$ D_{f_3} = \R \setminus \set{x \in \R | \cos(x) \neq 0} $$
+
 \subsection{b)}
-\label{sec:org571a5d9}
+\label{sec:org4385dcc}
+\begin{align*}
+    (f_1 \circ f_2)(x) &= \tuple{\frac{1}{x^3}}^2 - 4 \\
+    &= \frac{1}{x^6} - 4
+\end{align*}
+
+$$ D_{f_1 \circ f_2} = \R \setminus \{0\} $$
+
+\begin{align*}
+    (f_2 \circ f_1)(x) &= \frac{1}{(x^2 - 4)^3} \\
+    &= \frac{1}{((x - 2)(x + 2))^3}
+\end{align*}
+
+$$ D_{f_2 \circ f_1} = \R \setminus \{-2, 2\} $$
+
 \subsection{c)}
-\label{sec:orgb3ff4f5}
+\label{sec:orgd131fc5}
+$$ f_{1}^{-1}([0, 12]) = [2, 4] $$
+
 \subsection{d)}
-\label{sec:org203563a}
+\label{sec:orga793ef1}
 \section{Aufgabe 4}
-\label{sec:org6060963}
+\label{sec:org58b0703}
 \subsection{a)}
-\label{sec:orgbba321e}
+\label{sec:org7a5f744}
+\begin{align*}
+    y &= \frac{x+3}{x+1} \\
+    \Leftrightarrow y(x+1) &= x+3 \\
+    \Leftrightarrow yx+y &= x+3 \\
+    \Leftrightarrow (y-1)x+y &= 3 \\
+    \Leftrightarrow x &= \frac{3-y}{y-1}, y \neq 1 \\
+\end{align*}
+
+Damit gilt
+
+$$ f^{-1}(y) = \frac{3-y}{y-1} $$
+$$ D_{f^{-1}} = \R \setminus \{1\} $$
+
 \subsection{b)}
-\label{sec:orgad293ef}
+\label{sec:orga3f8882}
+\begin{align*}
+    (f \circ f^{-1})(y) &= \frac{\tuple{\frac{3-y}{y-1}}+3}{\tuple{\frac{3-y}{y-1}}+1} \\
+    &= \frac{\tuple{\frac{3-y + 3y-3}{y-1}}}{\tuple{\frac{3-y + y-1}{y-1}}} \\
+    &= \frac{\frac{2y}{y-1}}{\frac{2}{y-1}} \\
+    &= \frac{2y}{y-1} \cdot \frac{y-1}{2} \\
+    &= y \\
+\end{align*}
+
 \subsection{c)}
-\label{sec:orgba9b438}
+\label{sec:org9a3aa74}
 \end{document}
