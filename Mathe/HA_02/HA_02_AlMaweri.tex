@@ -1,4 +1,4 @@
-% Created 2020-11-18 Mi 13:16
+% Created 2020-11-24 Di 14:01
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper, 11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -34,6 +34,7 @@
 \setcounter{secnumdepth}{0}
 \newcommand{\tuple}[1]{\left(#1\right)}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\C}{\mathbb{C}}
@@ -41,9 +42,9 @@
 \pagebreak
 
 \section{Aufgabe 1}
-\label{sec:org468d180}
+\label{sec:org6458a62}
 \subsection{a)}
-\label{sec:org17b0e07}
+\label{sec:org515a28e}
 Zu zeigen ist
 $$ \forall n \in \N, n \geq 1, \sum_{k=1}^{n} \tuple{2k - 1} = n^2 $$
 
@@ -75,7 +76,7 @@ Folglich gilt dann für alle \(n \in \N\) mit \(n \geq 1\)
 $$ \sum_{k=1}^{n} \tuple{2k - 1} = n^2 $$
 
 \subsection{b)}
-\label{sec:org8c0a185}
+\label{sec:org9c95b06}
 $$ \prod_{k=2}^{n} \tuple{1 - \frac{1}{k^2}} = \frac{n + 1}{2n}, n \in \N, n \geq 2 $$
 
 IA:
@@ -115,7 +116,7 @@ Damit gilt für alle n \(\in\) \(\N\) mit n > 1
 $$ \prod_{k=2}^{n} \tuple{1 - \frac{1}{k^2}} = \frac{n + 1}{2n} $$
 
 \subsection{c)}
-\label{sec:org9eb132f}
+\label{sec:org7fdfafc}
 $$ \forall n \in \N, n \geq 4, \text{ gilt } 2^n \geq n^2 $$
 
 IA:
@@ -155,28 +156,31 @@ Damit gilt für alle \(n \in \N\) mit n \(\ge\) 4
 $$ 2^n \geq n^2 $$
 
 \section{Aufgabe 2}
-\label{sec:orgadff005}
+\label{sec:orgc4691e1}
 \subsection{a)}
-\label{sec:orgd3bae54}
+\label{sec:orgc375393}
 die Exponentialfunktion ist nicht surjektiv => eine komposition mit \(\exp\) ist nicht surjektiv \\
 
 die Exponentialfunktion ist injektiv => eine komposition mit \(\exp\) ist injektiv, wenn die andere funktion injektiv ist \\
 
 => \(f\) ist nur injektiv
 \subsection{b)}
-\label{sec:orgbc7bf44}
+\label{sec:org8ee6282}
 die Betragsfunktion ist weder injektiv noch surjektiv => eine komposition mit der Betragsfunktion ist weder injektiv noch surjektiv \\
 
 => \(g\) ist weder injektiv noch surjektiv
 
 \section{Aufgabe 3}
-\label{sec:orgf674e10}
+\label{sec:org5fa72f6}
 \subsection{a)}
-\label{sec:orgf708129}
-$$ D_{f_3} = \R \setminus \set{x \in \R | \cos(x) \neq 0} $$
+\label{sec:orgf29f16b}
+\begin{align*}
+    D_{f_3} &= \R \setminus \set{x \in \R | \cos(x) \neq 0} \\
+    &= \R \setminus \set{\frac{\pi}{2} + k\pi | k \in \Z}
+\end{align*}
 
 \subsection{b)}
-\label{sec:org0ef0291}
+\label{sec:org0d819c1}
 \begin{align*}
     (f_1 \circ f_2)(x) &= \tuple{\frac{1}{x^3}}^2 - 4 \\
     &= \frac{1}{x^6} - 4
@@ -192,15 +196,44 @@ $$ D_{f_1 \circ f_2} = \R \setminus \{0\} $$
 $$ D_{f_2 \circ f_1} = \R \setminus \{-2, 2\} $$
 
 \subsection{c)}
-\label{sec:org659bbbf}
+\label{sec:org433063b}
 $$ f_{1}^{-1}([0, 12]) = [2, 4] $$
 
 \subsection{d)}
-\label{sec:orgac0a33c}
+\label{sec:org99afbb5}
+Behauptung 1: \(f_1\) ist gerade \\
+
+Zu zeigen ist: \(f_1(-x) = f_1(x)\) \\
+Es gilt
+
+\begin{align*}
+    f_1(-x) &= (-x)^2 - 4 \\
+    &= (-1)^2 x^2 - 4 \\
+    &= x^2 - 4 = f_1(x)
+\end{align*}
+
+Damit ist \(f_1\) gerade. \\
+
+
+Behauptung 2: \(f_3\) ist gerade \\
+
+Zu zeigen ist: \(f_3(-x) = f_3(x)\) \\
+Es gilt
+
+\begin{align*}
+    f_3(-x) &= \frac{\sin((-x)^2)}{\cos(-x)} \\
+    &= \frac{\sin((-1)^2 x^2)}{\cos(x)} \\
+    &= \frac{\sin(x^2)}{\cos(x)} = f_3(x) \\
+\end{align*}
+
+Damit ist auch \(f_3\) gerade.
+
 \section{Aufgabe 4}
-\label{sec:org0116150}
+\label{sec:org66e092a}
 \subsection{a)}
-\label{sec:org122635b}
+\label{sec:orga18eb4d}
+Es gilt
+
 \begin{align*}
     y &= \frac{x+3}{x+1} \\
     \Leftrightarrow y(x+1) &= x+3 \\
@@ -215,7 +248,7 @@ $$ f^{-1}(y) = \frac{3-y}{y-1} $$
 $$ D_{f^{-1}} = \R \setminus \{1\} $$
 
 \subsection{b)}
-\label{sec:orga2f4312}
+\label{sec:orge5d7299}
 \begin{align*}
     (f \circ f^{-1})(y) &= \frac{\tuple{\frac{3-y}{y-1}}+3}{\tuple{\frac{3-y}{y-1}}+1} \\
     &= \frac{\tuple{\frac{3-y + 3y-3}{y-1}}}{\tuple{\frac{3-y + y-1}{y-1}}} \\
@@ -225,5 +258,24 @@ $$ D_{f^{-1}} = \R \setminus \{1\} $$
 \end{align*}
 
 \subsection{c)}
-\label{sec:orga7b5116}
+\label{sec:org7a8420c}
+Behauptung: \(f\) ist auf \(]-1, \infty[\) monoton fallend \\
+
+Zu zeigen ist \(f(x_1) > f(x_2)\) für \(x_1, x_2 \in ]-1, \infty[\) mit \(x_1 < x_2\) \\
+
+Es gelte \(f(x_1) > f(x_2)\) für \(x_1, x_2 \in ]-1, \infty[\)
+
+dann gilt
+
+\begin{align*}
+    \frac{x_1 + 3}{x_1 + 1} &> \frac{x_2 + 3}{x_2 + 1} \\
+    \Leftrightarrow (x_1 + 3)(x_2 + 1) &> (x_2 + 3)(x_1 + 1) \\
+    \Leftrightarrow x_1 x_2 + x_1 + 3 x_2 + 3 &> x_1 x_2 + x_2 + 3 x_1 + 3 \\
+    \Leftrightarrow x_1 + 3 x_2 &> x_2 + 3 x_1 \\
+    \Leftrightarrow 2 x_2 &> 2 x_1 \\
+    \Leftrightarrow x_2 &> x_1 \Leftrightarrow x_1 < x_2 \\
+\end{align*}
+
+da gilt \(x_1 < x_2\) und es gilt \(f(x_1) > f(x_2)\), woraus folgt, \\
+dass \(f\) auf \(]-1, \infty[\) monoton fallend ist.
 \end{document}

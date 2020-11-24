@@ -12,6 +12,7 @@
 #+LATEX: \setcounter{secnumdepth}{0}
 #+LATEX: \newcommand{\tuple}[1]{\left(#1\right)}
 #+LATEX: \newcommand{\R}{\mathbb{R}}
+#+LATEX: \newcommand{\Z}{\mathbb{Z}}
 #+LATEX: \newcommand{\Q}{\mathbb{Q}}
 #+LATEX: \newcommand{\N}{\mathbb{N}}
 #+LATEX: \newcommand{\C}{\mathbb{C}}
@@ -142,7 +143,10 @@ die Betragsfunktion ist weder injektiv noch surjektiv => eine komposition mit de
 
 * Aufgabe 3
 ** a)
-$$ D_{f_3} = \R \setminus \set{x \in \R | \cos(x) \neq 0} $$
+\begin{align*}
+    D_{f_3} &= \R \setminus \set{x \in \R | \cos(x) \neq 0} \\
+    &= \R \setminus \set{\frac{\pi}{2} + k\pi | k \in \Z}
+\end{align*}
 
 ** b)
 \begin{align*}
@@ -163,8 +167,37 @@ $$ D_{f_2 \circ f_1} = \R \setminus \{-2, 2\} $$
 $$ f_{1}^{-1}([0, 12]) = [2, 4] $$
 
 ** d)
+Behauptung 1: $f_1$ ist gerade \\
+\\
+Zu zeigen ist: $f_1(-x) = f_1(x)$ \\
+Es gilt
+
+\begin{align*}
+    f_1(-x) &= (-x)^2 - 4 \\
+    &= (-1)^2 x^2 - 4 \\
+    &= x^2 - 4 = f_1(x)
+\end{align*}
+
+Damit ist $f_1$ gerade. \\
+\\
+\\
+Behauptung 2: $f_3$ ist gerade \\
+\\
+Zu zeigen ist: $f_3(-x) = f_3(x)$ \\
+Es gilt
+
+\begin{align*}
+    f_3(-x) &= \frac{\sin((-x)^2)}{\cos(-x)} \\
+    &= \frac{\sin((-1)^2 x^2)}{\cos(x)} \\
+    &= \frac{\sin(x^2)}{\cos(x)} = f_3(x) \\
+\end{align*}
+
+Damit ist auch $f_3$ gerade.
+
 * Aufgabe 4
 ** a)
+Es gilt
+
 \begin{align*}
     y &= \frac{x+3}{x+1} \\
     \Leftrightarrow y(x+1) &= x+3 \\
@@ -188,3 +221,22 @@ $$ D_{f^{-1}} = \R \setminus \{1\} $$
 \end{align*}
 
 ** c)
+Behauptung: $f$ ist auf $]-1, \infty[$ monoton fallend \\
+\\
+Zu zeigen ist $f(x_1) > f(x_2)$ für $x_1, x_2 \in ]-1, \infty[$ mit $x_1 < x_2$ \\
+
+Es gelte $f(x_1) > f(x_2)$ für $x_1, x_2 \in ]-1, \infty[$
+
+dann gilt
+
+\begin{align*}
+    \frac{x_1 + 3}{x_1 + 1} &> \frac{x_2 + 3}{x_2 + 1} \\
+    \Leftrightarrow (x_1 + 3)(x_2 + 1) &> (x_2 + 3)(x_1 + 1) \\
+    \Leftrightarrow x_1 x_2 + x_1 + 3 x_2 + 3 &> x_1 x_2 + x_2 + 3 x_1 + 3 \\
+    \Leftrightarrow x_1 + 3 x_2 &> x_2 + 3 x_1 \\
+    \Leftrightarrow 2 x_2 &> 2 x_1 \\
+    \Leftrightarrow x_2 &> x_1 \Leftrightarrow x_1 < x_2 \\
+\end{align*}
+
+da gilt $x_1 < x_2$ und es gilt $f(x_1) > f(x_2)$, woraus folgt, \\
+dass $f$ auf $]-1, \infty[$ monoton fallend ist.
