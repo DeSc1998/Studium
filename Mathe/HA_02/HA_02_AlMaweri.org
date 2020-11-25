@@ -29,12 +29,12 @@ IA:
 
 $$ \sum_{k=1}^{1} \tuple{2k - 1} = (2(1) - 1) = 1 = (1)^2 $$
 
-IB:
+IV:
     Es gelte für ein beliebiges $n \in \N$ mit $n \geq 1$
 
 $$ \sum_{k=1}^{n} \tuple{2k - 1} = n^2 $$
 
-IV:
+IB:
     Damit gilt dann
 
 $$ \sum_{k=1}^{n+1} \tuple{2k - 1} = (n + 1)^2 $$
@@ -63,11 +63,11 @@ IA:
     = 1 - \frac{1}{4}
 \end{align*}
 
-IB:
+IV:
   Es gelte für ein beliebiges n \in $\N$ mit n > 1
 $$ \prod_{k=2}^{n} \tuple{1 - \frac{1}{k^2}} = \frac{n + 1}{2n} $$
 
-IV:
+IB:
   Dann gilt
 $$ \prod_{k=2}^{n + 1} \tuple{1 - \frac{1}{k^2}} = \frac{n + 2}{2(n + 1)} $$
 
@@ -147,8 +147,8 @@ $\exp$ nur injektiv auf $\R$, ($\exp : \R \rightarrow ]0, \infty[, x \mapsto e^x
 
 ** b)
 Da gilt $|-x|^5 = |x|^5$, folgt daraus, dass $g$ nicht injektiv ist. \\
-Des weiteren ist $g$ nach unten beschränkt ($g(x) \geq 0$ für alle $x \in \R$), daraus folgt,
-dass $g$ nicht surjektiv. \\
+Des weiteren ist $g$ nach unten beschränkt ($g(x) \geq 0$ für alle $x \in \R$), \\
+daraus folgt, dass $g$ nicht surjektiv. \\
 Damit ist $g$ weder injektiv noch surjektiv.
 
 * Aufgabe 3
