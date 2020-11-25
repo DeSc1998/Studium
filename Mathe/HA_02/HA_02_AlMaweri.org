@@ -63,11 +63,11 @@ IA:
     = 1 - \frac{1}{4}
 \end{align*}
 
-IV:
+IB:
   Es gelte für ein beliebiges n \in $\N$ mit n > 1
 $$ \prod_{k=2}^{n} \tuple{1 - \frac{1}{k^2}} = \frac{n + 1}{2n} $$
 
-IB:
+IV:
   Dann gilt
 $$ \prod_{k=2}^{n + 1} \tuple{1 - \frac{1}{k^2}} = \frac{n + 2}{2(n + 1)} $$
 
@@ -84,7 +84,6 @@ IS:
     &= \frac{(n + 1) \cdot n(n + 2)}{2n(n + 1)(n + 1)}
     = \frac{n + 2}{2(n + 1)}
 \end{align*}
-
 
 
 Damit gilt für alle n \in $\N$ mit n > 1
@@ -122,30 +121,41 @@ IS:
     \Rightarrow n^2 &> 2n + 1 \\
     \Rightarrow 2 \cdot n^2 &> n^2 + 2n + 1 = (n + 1)^2 \\
     \Rightarrow 2 \cdot 2^n &> (n + 1)^2 \\
-    \Leftrightarrow 2^{n + 1} &> (n + 1)^2 \\
+    \Leftrightarrow 2^{n + 1} &> (n + 1)^2
 \end{align*}
 
 
 Damit gilt für alle $n \in \N$ mit n \geq 4
 $$ 2^n \geq n^2 $$
 
+Für $n = 0, 1, 2, 3$ gilt jewals
+
+\begin{align*}
+    2^0 &> (0)^2 \Leftrightarrow 1 > 0 \\
+    2^1 &> (1)^2 \Leftrightarrow 2 > 1 \\
+    2^2 &= (2)^2 \Leftrightarrow 4 = 4 \\
+    2^3 &< (3)^2 \Leftrightarrow 8 < 9
+\end{align*}
+
 * Aufgabe 2
 ** a)
-die Exponentialfunktion ist nicht surjektiv => eine komposition mit $\exp$ ist nicht surjektiv \\
+$f$ ist streng monoton fallend \\
+\Rightarrow $f$ ist injektiv \\
 \\
-die Exponentialfunktion ist injektiv => eine komposition mit $\exp$ ist injektiv, wenn die andere funktion injektiv ist \\
-\\
-=> $f$ ist nur injektiv
+$\exp$ nur injektiv auf $\R$, ($\exp : \R \rightarrow ]0, \infty[, x \mapsto e^x$)\\
+\Rightarrow $f$ ist nur injektiv
+
 ** b)
-die Betragsfunktion ist weder injektiv noch surjektiv => eine komposition mit der Betragsfunktion ist weder injektiv noch surjektiv \\
-\\
-=> $g$ ist weder injektiv noch surjektiv
+Da gilt $|-x|^5 = |x|^5$, folgt daraus, dass $g$ nicht injektiv ist. \\
+Des weiteren ist $g$ nach unten beschränkt ($g(x) \geq 0$ für alle $x \in \R$), daraus folgt,
+dass $g$ nicht surjektiv. \\
+Damit ist $g$ weder injektiv noch surjektiv.
 
 * Aufgabe 3
 ** a)
 \begin{align*}
     D_{f_3} &= \R \setminus \set{x \in \R | \cos(x) \neq 0} \\
-    &= \R \setminus \set{\frac{\pi}{2} + k\pi | k \in \Z}
+    &= \R \setminus \left\{ \frac{\pi}{2} + k\pi \text{ | } k \in \Z \right\}
 \end{align*}
 
 ** b)

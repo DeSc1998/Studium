@@ -1,4 +1,4 @@
-% Created 2020-11-24 Di 14:01
+% Created 2020-11-25 Mi 12:51
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper, 11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -42,9 +42,9 @@
 \pagebreak
 
 \section{Aufgabe 1}
-\label{sec:org6458a62}
+\label{sec:org2ae5876}
 \subsection{a)}
-\label{sec:org515a28e}
+\label{sec:orgf42c7a8}
 Zu zeigen ist
 $$ \forall n \in \N, n \geq 1, \sum_{k=1}^{n} \tuple{2k - 1} = n^2 $$
 
@@ -76,7 +76,7 @@ Folglich gilt dann für alle \(n \in \N\) mit \(n \geq 1\)
 $$ \sum_{k=1}^{n} \tuple{2k - 1} = n^2 $$
 
 \subsection{b)}
-\label{sec:org9c95b06}
+\label{sec:org5e9d4d7}
 $$ \prod_{k=2}^{n} \tuple{1 - \frac{1}{k^2}} = \frac{n + 1}{2n}, n \in \N, n \geq 2 $$
 
 IA:
@@ -88,11 +88,11 @@ IA:
     = 1 - \frac{1}{4}
 \end{align*}
 
-IV:
+IB:
   Es gelte für ein beliebiges n \(\in\) \(\N\) mit n > 1
 $$ \prod_{k=2}^{n} \tuple{1 - \frac{1}{k^2}} = \frac{n + 1}{2n} $$
 
-IB:
+IV:
   Dann gilt
 $$ \prod_{k=2}^{n + 1} \tuple{1 - \frac{1}{k^2}} = \frac{n + 2}{2(n + 1)} $$
 
@@ -111,12 +111,11 @@ IS:
 \end{align*}
 
 
-
 Damit gilt für alle n \(\in\) \(\N\) mit n > 1
 $$ \prod_{k=2}^{n} \tuple{1 - \frac{1}{k^2}} = \frac{n + 1}{2n} $$
 
 \subsection{c)}
-\label{sec:org7fdfafc}
+\label{sec:org84a5b7a}
 $$ \forall n \in \N, n \geq 4, \text{ gilt } 2^n \geq n^2 $$
 
 IA:
@@ -148,39 +147,50 @@ IS:
     \Rightarrow n^2 &> 2n + 1 \\
     \Rightarrow 2 \cdot n^2 &> n^2 + 2n + 1 = (n + 1)^2 \\
     \Rightarrow 2 \cdot 2^n &> (n + 1)^2 \\
-    \Leftrightarrow 2^{n + 1} &> (n + 1)^2 \\
+    \Leftrightarrow 2^{n + 1} &> (n + 1)^2
 \end{align*}
 
 
 Damit gilt für alle \(n \in \N\) mit n \(\ge\) 4
 $$ 2^n \geq n^2 $$
 
+Für \(n = 0, 1, 2, 3\) gilt jewals
+
+\begin{align*}
+    2^0 &> (0)^2 \Leftrightarrow 1 > 0 \\
+    2^1 &> (1)^2 \Leftrightarrow 2 > 1 \\
+    2^2 &= (2)^2 \Leftrightarrow 4 = 4 \\
+    2^3 &< (3)^2 \Leftrightarrow 8 < 9
+\end{align*}
+
 \section{Aufgabe 2}
-\label{sec:orgc4691e1}
+\label{sec:org3f2716f}
 \subsection{a)}
-\label{sec:orgc375393}
-die Exponentialfunktion ist nicht surjektiv => eine komposition mit \(\exp\) ist nicht surjektiv \\
+\label{sec:orgea7be82}
+\(f\) ist streng monoton fallend \\
+\(\Rightarrow\) \(f\) ist injektiv \\
 
-die Exponentialfunktion ist injektiv => eine komposition mit \(\exp\) ist injektiv, wenn die andere funktion injektiv ist \\
+\(\exp\) nur injektiv auf \(\R\), (\(\exp : \R \rightarrow ]0, \infty[, x \mapsto e^x\))\\
+\(\Rightarrow\) \(f\) ist nur injektiv
 
-=> \(f\) ist nur injektiv
 \subsection{b)}
-\label{sec:org8ee6282}
-die Betragsfunktion ist weder injektiv noch surjektiv => eine komposition mit der Betragsfunktion ist weder injektiv noch surjektiv \\
-
-=> \(g\) ist weder injektiv noch surjektiv
+\label{sec:orga03fc0c}
+Da gilt \(|-x|^5 = |x|^5\), folgt daraus, dass \(g\) nicht injektiv ist. \\
+Des weiteren ist \(g\) nach unten beschränkt (\(g(x) \geq 0\) für alle \(x \in \R\)), daraus folgt,
+dass \(g\) nicht surjektiv. \\
+Damit ist \(g\) weder injektiv noch surjektiv.
 
 \section{Aufgabe 3}
-\label{sec:org5fa72f6}
+\label{sec:orgf42f9b5}
 \subsection{a)}
-\label{sec:orgf29f16b}
+\label{sec:org88d5b04}
 \begin{align*}
     D_{f_3} &= \R \setminus \set{x \in \R | \cos(x) \neq 0} \\
-    &= \R \setminus \set{\frac{\pi}{2} + k\pi | k \in \Z}
+    &= \R \setminus \left\{ \frac{\pi}{2} + k\pi \text{ | } k \in \Z \right\}
 \end{align*}
 
 \subsection{b)}
-\label{sec:org0d819c1}
+\label{sec:org733bf64}
 \begin{align*}
     (f_1 \circ f_2)(x) &= \tuple{\frac{1}{x^3}}^2 - 4 \\
     &= \frac{1}{x^6} - 4
@@ -196,11 +206,11 @@ $$ D_{f_1 \circ f_2} = \R \setminus \{0\} $$
 $$ D_{f_2 \circ f_1} = \R \setminus \{-2, 2\} $$
 
 \subsection{c)}
-\label{sec:org433063b}
+\label{sec:org2acd02a}
 $$ f_{1}^{-1}([0, 12]) = [2, 4] $$
 
 \subsection{d)}
-\label{sec:org99afbb5}
+\label{sec:org1e45f01}
 Behauptung 1: \(f_1\) ist gerade \\
 
 Zu zeigen ist: \(f_1(-x) = f_1(x)\) \\
@@ -229,9 +239,9 @@ Es gilt
 Damit ist auch \(f_3\) gerade.
 
 \section{Aufgabe 4}
-\label{sec:org66e092a}
+\label{sec:org9f3baed}
 \subsection{a)}
-\label{sec:orga18eb4d}
+\label{sec:orgfb7aac8}
 Es gilt
 
 \begin{align*}
@@ -248,7 +258,7 @@ $$ f^{-1}(y) = \frac{3-y}{y-1} $$
 $$ D_{f^{-1}} = \R \setminus \{1\} $$
 
 \subsection{b)}
-\label{sec:orge5d7299}
+\label{sec:org4522c6d}
 \begin{align*}
     (f \circ f^{-1})(y) &= \frac{\tuple{\frac{3-y}{y-1}}+3}{\tuple{\frac{3-y}{y-1}}+1} \\
     &= \frac{\tuple{\frac{3-y + 3y-3}{y-1}}}{\tuple{\frac{3-y + y-1}{y-1}}} \\
@@ -258,7 +268,7 @@ $$ D_{f^{-1}} = \R \setminus \{1\} $$
 \end{align*}
 
 \subsection{c)}
-\label{sec:org7a8420c}
+\label{sec:orgce8603f}
 Behauptung: \(f\) ist auf \(]-1, \infty[\) monoton fallend \\
 
 Zu zeigen ist \(f(x_1) > f(x_2)\) für \(x_1, x_2 \in ]-1, \infty[\) mit \(x_1 < x_2\) \\
