@@ -1,0 +1,123 @@
+
+#+TITLE: Analysis I und Lineare Algebra für Ingenieurwissenschaften \large @@latex: \\@@ Hausaufgabe 03 - Al-Maweri 13
+#+AUTHOR: Daniel Geinets (453843), Christopher Neumann (409098), Dennis Schulze (458415)
+
+#+LATEX_CLASS_OPTIONS: [a4paper, 11pt]
+
+#+LATEX_HEADER: \usepackage{braket}
+#+LATEX_HEADER: \usepackage[AUTO]{babel}
+
+#+LANGUAGE: de
+
+#+LATEX: \setcounter{secnumdepth}{0}
+#+LATEX: \newcommand{\tuple}[1]{\left(#1\right)}
+#+LATEX: \renewcommand{\cfrac}[3]{#1 \tuple{\frac{#2}{#3}}}
+#+LATEX: \newcommand{\R}{\mathbb{R}}
+#+LATEX: \newcommand{\Z}{\mathbb{Z}}
+#+LATEX: \newcommand{\Q}{\mathbb{Q}}
+#+LATEX: \newcommand{\N}{\mathbb{N}}
+#+LATEX: \newcommand{\C}{\mathbb{C}}
+
+\pagebreak
+
+* Aufgabe 1
+** a)
+*** i)
+$$ z^3 = -27i = 27 e^{-\frac{\pi}{2}i} $$
+
+Es gilt für den Betrag $r$ und das Argument $\phi_n$ mit $n \in \set{0, 1, 2}$
+von $z$
+
+\begin{align*}
+    r &= \sqrt[3]{27} = 3 \\
+    \phi_n &= -\frac{\pi}{2 \cdot 3} + \frac{2n\pi}{3} \\
+    &= \frac{-\pi + 4n \pi}{6} = \frac{\pi(4n - 1)}{6}
+\end{align*}
+
+Dann gilt
+
+$$ z = 3 e^{\frac{\pi(4n - 1)}{6}i} \text{ mit } n = 0, 1, 2 $$
+
+*** ii)
+$$ 2z^4 + 4(\sqrt{12} - 2i)z^2 + 16 - 8\sqrt{12}i = 0 $$
+
+Es gilt für den ersten Koeffizienten mit $r, \phi \in \R$
+
+\begin{align*}
+    r &= \sqrt{12 + (-2)^2} = 4 \\
+    \tan(\phi) &= \frac{-2}{\sqrt{12}} = \frac{-1}{\sqrt{3}} \\
+    &= \frac{-1}{\sqrt{3}} \\
+    \Leftrightarrow \phi &= \arctan \tuple{\frac{-1}{\sqrt{3}}} = -\frac{\pi}{6}
+\end{align*}
+
+damit gilt
+
+$$ \sqrt{12} - 2i = 4 e^{-\frac{\pi}{6}i} $$
+
+analog gilt dann für den zweiten Koeffizienten
+
+$$ 16 - 8\sqrt{12}i = 32 e^{-\frac{\pi}{3}i} $$
+
+dann gilt
+
+\begin{align*}
+    2z^4 + 4(\sqrt{12} - 2i)z^2 + 16 - 8\sqrt{12}i &= 0 \\
+    \Leftrightarrow 2z^4 + 16 e^{-\frac{\pi}{6}i}z^2 + 32 e^{-\frac{\pi}{3}i} &= 0 \\
+    \Leftrightarrow z^4 + 8 e^{-\frac{\pi}{6}i}z^2 + 16 e^{-\frac{\pi}{3}i} &= 0 \\
+    \Leftrightarrow (z^2 + 4 e^{-\frac{\pi}{6}i})^2 &= 0 \\
+\end{align*}
+
+daraus folgt dann die Gleichung
+
+$$ z^2 = -4 e^{-\frac{\pi}{6}i} = 4 e^{\frac{5\pi}{6}i} $$
+
+für $z$ gilt dann mit $s, \phi_k \in \R$
+
+\begin{align*}
+    s &= \sqrt{4} = 2 \\
+    \phi_k &= \tuple{\frac{5 \pi}{6} + 2k\pi} \frac{1}{2} \text{ mit } k = 0, 1 \\
+    &= \tuple{\frac{5 \pi}{6} + \frac{12k\pi}{6}} \frac{1}{2}
+    = \tuple{\frac{\pi (5 + 12k)}{6}} \frac{1}{2} \\
+    &= \frac{\pi (5 + 12k)}{12}
+\end{align*}
+
+damit gilt
+
+$$ z = 2 e^{\frac{\pi (5 + 12k)}{12}i} \text{ mit } k = 0, 1 $$
+
+*_NOTE:_* In diesem Fall sind das beides doppelte Nullstellen.
+
+** b)
+Es gilt
+
+\begin{align*}
+    i e^{\frac{5\pi}{12}i} &= i e^{\frac{2\pi + 3\pi}{4 \cdot 3}i} \\
+    &= i e^{\frac{\pi}{4}i + \frac{\pi}{6}i} \\
+    &= i \tuple{\cfrac{\cos}{\pi}{4}\cfrac{\cos}{\pi}{6} + i \cfrac{\cos}{\pi}{4}\cfrac{\sin}{\pi}{6}
+    +i \cfrac{\sin}{\pi}{4}\cfrac{\cos}{\pi}{6} - \cfrac{\sin}{\pi}{4}\cfrac{\sin}{\pi}{6}} \\
+    &= i \tuple{\frac{\sqrt{3}}{2\sqrt{2}} + \frac{1}{2\sqrt{2}}i +
+    \frac{\sqrt{3}}{2\sqrt{2}} - \frac{1}{2\sqrt{2}}} \\
+    &= \frac{-1 - \sqrt{3}}{2\sqrt{2}} + \frac{\sqrt{3} - 1}{2\sqrt{2}}i
+\end{align*}
+
+* Aufgabe 2
+** a)
+$$ p(i) = (i)^4 - 1 = 1 - 1 = 0 $$
+
+** b)
+** c)
+** d)
+* Aufgabe 3
+** a)
+Für den Nenner $p$ gilt
+
+\begin{align*}
+    p(x) &= x^2 - 2x + 5 \\
+    &= (x - 1)^2 + 4
+\end{align*}
+
+** b)
+* Aufgabe 4
+** a)
+** b)
+
