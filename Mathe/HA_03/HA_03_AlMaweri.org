@@ -143,5 +143,74 @@ Für den Nenner $p$ gilt
 ** b)
 * Aufgabe 4
 ** a)
-** b)
+Sei $p$ das Zahlerpolynom und $q$ das Nennerpolynom.
 
+Für den $p$ gilt
+
+$$ p(x) = x^2 - 6x + 9 = (x - 3)^2 $$
+
+Es muss eine Polynomdivision durchgeführt werden, da gilt $\deg(p) > \deg(q)$.
+Es folgt eine Polynomdivision:
+
+\begin{align*}
+    (x^3 - 6x^2 + 10x - 1) / (x^2 - 6x + 9) &= \\
+    (x - 1) / (x^2 - 6x + 9) &= x 
+\end{align*}
+
+damit gilt
+
+$$ \frac{p(x)}{q(x)} = x + \frac{x - 1}{(x - 3)^2} $$
+
+daraus ergibt sich der komplexe Ansatz der Zerlegung mit $A, B \in \C$
+
+$$ \frac{x - 1}{(x - 3)^2} = \frac{A}{x - 3} + \frac{B}{(x - 3)^2} $$
+
+damit gilt für $B$ mit $x = 3$
+
+$$ (3) - 1 = 2 = B $$
+
+und für $A$ gilt
+
+$$ x - 1 = Ax - 3A + 2 \Leftrightarrow x - 1 = Ax - 3A + 2 $$
+
+daraus ergeben sich
+
+\begin{align*}
+    1 &= A \\
+    -1 &= -3A + 2 \\
+    \\
+    \Rightarrow A &= 1
+\end{align*}
+
+Da $A$ und $B$ Elemente der reellen und komplexen Zahlen sind, ist die folgende Zerlegung
+sowohl reel als auch komplex
+
+$$ \frac{p(x)}{q(x)} = x + \frac{1}{x - 3} + \frac{2}{(x - 3)^2} $$
+
+** b)
+Sei $p$ das Zahlerpolynom und $q$ das Nennerpolynom.
+
+Da $\deg(p) < \deg(q)$ gilt, muss keine Polynomdivision durchgeführt werden. \\
+Für $q$ gilt
+
+
+\begin{align*}
+    q(x) = x^3 + 2x = x(x^2 + 2) = x(x + \sqrt{2}i)(x - \sqrt{2}i)
+\end{align*}
+
+daraus ergibt sich dann folgender Ansatz mit $A, B, C \in \C$
+
+$$ \frac{2x^2 - 2x - 1}{x(x + \sqrt{2}i)(x - \sqrt{2}i)} = \frac{A}{x} +
+    \frac{B}{x + \sqrt{2}i} + \frac{C}{x - \sqrt{2}i} $$
+
+damit gilt für $A$ mit $x = 0$
+
+$$ \frac{-1}{2} = A $$
+
+und es gilt für $B$ mit $x = -\sqrt{2}i$
+
+$$ \frac{-4 + 2\sqrt{2}i - 1}{(-\sqrt{2}i)(-2\sqrt{2}i)} = B = \frac{5 - 2\sqrt{2}i}{4} $$
+
+und es gilt für $C$ mit $x = \sqrt{2}i$
+
+$$ \frac{-4 - 2\sqrt{2}i - 1}{(\sqrt{2}i)(2\sqrt{2}i)} = C = \frac{5 + 2\sqrt{2}i}{4} $$

@@ -1,4 +1,4 @@
-% Created 2020-12-01 Di 19:51
+% Created 2020-12-01 Di 21:47
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper, 11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -43,11 +43,11 @@
 \pagebreak
 
 \section{Aufgabe 1}
-\label{sec:orgf4d313c}
+\label{sec:orgaccbdf6}
 \subsection{a)}
-\label{sec:orgc498b6c}
+\label{sec:orgd2b18a1}
 \subsubsection{i)}
-\label{sec:orge12e258}
+\label{sec:org145299b}
 $$ z^3 = -27i = 27 e^{-\frac{\pi}{2}i} $$
 
 Es gilt für den Betrag \(r\) und das Argument \(\phi_n\) mit \(n \in \set{0, 1, 2}\)
@@ -64,7 +64,7 @@ Dann gilt
 $$ z = 3 e^{\frac{\pi(4n - 1)}{6}i} \text{ mit } n = 0, 1, 2 $$
 
 \subsubsection{ii)}
-\label{sec:orgb353d4d}
+\label{sec:orgf41d7ac}
 $$ 2z^4 + 4(\sqrt{12} - 2i)z^2 + 16 - 8\sqrt{12}i = 0 $$
 
 Es gilt für den ersten Koeffizienten mit \(r, \phi \in \R\)
@@ -114,7 +114,7 @@ $$ z = 2 e^{\frac{\pi (5 + 12k)}{12}i} \text{ mit } k = 0, 1 $$
 \textbf{\uline{NOTE:}} In diesem Fall sind das beides doppelte Nullstellen.
 
 \subsection{b)}
-\label{sec:orge0204d3}
+\label{sec:orgf629f43}
 Es gilt
 
 \begin{align*}
@@ -128,19 +128,19 @@ Es gilt
 \end{align*}
 
 \section{Aufgabe 2}
-\label{sec:orgcfd6450}
+\label{sec:org46c9491}
 \subsection{a)}
-\label{sec:org96c0ce9}
+\label{sec:org0899e82}
 $$ p(i) = (i)^4 - 1 = 1 - 1 = 0 $$
 
 \subsection{b)}
-\label{sec:orgb75fe93}
+\label{sec:orgb030cde}
 Polynomdivision:
 
 \begin{align*}
     (z^4 - 1) / (z^2 + 1) &= \\
     (-z^2 - 1) / (z^2 + 1) &= z^2 \\
-    (0) / (z^2 + 1) &= z^2 - 1 
+    (0) / (z^2 + 1) &= z^2 - 1
 \end{align*}
 
 demnach gilt
@@ -148,7 +148,7 @@ demnach gilt
 $$ \frac{p(z)}{q(z)} = z^2 - 1 $$
 
 \subsection{c)}
-\label{sec:org894e187}
+\label{sec:org9411866}
 \(p\) lässt sich im Komplexen wie folgt zerlegen
 
 \begin{align*}
@@ -158,15 +158,15 @@ $$ \frac{p(z)}{q(z)} = z^2 - 1 $$
 \end{align*}
 
 \subsection{d)}
-\label{sec:org0dff2c6}
+\label{sec:org95b1a46}
 \(p\) lässt sich im Reellen wie folgt zerlegen
 
 $$ p(z) = z^4 - 1 = (z^2 + 1)(z + 1)(z - 1) $$
 
 \section{Aufgabe 3}
-\label{sec:orgc229687}
+\label{sec:org9b2e33c}
 \subsection{a)}
-\label{sec:orgfe3f041}
+\label{sec:orgfea44ae}
 Für den Nenner \(p\) gilt
 
 \begin{align*}
@@ -175,11 +175,81 @@ Für den Nenner \(p\) gilt
 \end{align*}
 
 \subsection{b)}
-\label{sec:orgb44cc2d}
+\label{sec:orgcd6afdf}
 \section{Aufgabe 4}
-\label{sec:org54962eb}
+\label{sec:orgc8553fa}
 \subsection{a)}
-\label{sec:org75abdbd}
+\label{sec:org97e4fed}
+Sei \(p\) das Zahlerpolynom und \(q\) das Nennerpolynom.
+
+Für den \(p\) gilt
+
+$$ p(x) = x^2 - 6x + 9 = (x - 3)^2 $$
+
+Es muss eine Polynomdivision durchgeführt werden, da gilt \(\deg(p) > \deg(q)\).
+Es folgt eine Polynomdivision:
+
+\begin{align*}
+    (x^3 - 6x^2 + 10x - 1) / (x^2 - 6x + 9) &= \\
+    (x - 1) / (x^2 - 6x + 9) &= x 
+\end{align*}
+
+damit gilt
+
+$$ \frac{p(x)}{q(x)} = x + \frac{x - 1}{(x - 3)^2} $$
+
+daraus ergibt sich der komplexe Ansatz der Zerlegung mit \(A, B \in \C\)
+
+$$ \frac{x - 1}{(x - 3)^2} = \frac{A}{x - 3} + \frac{B}{(x - 3)^2} $$
+
+damit gilt für \(B\) mit \(x = 3\)
+
+$$ (3) - 1 = 2 = B $$
+
+und für \(A\) gilt
+
+$$ x - 1 = Ax - 3A + 2 \Leftrightarrow x - 1 = Ax - 3A + 2 $$
+
+daraus ergeben sich
+
+\begin{align*}
+    1 &= A \\
+    -1 &= -3A + 2 \\
+    \\
+    \Rightarrow A &= 1
+\end{align*}
+
+Da \(A\) und \(B\) Elemente der reellen und komplexen Zahlen sind, ist die folgende Zerlegung
+sowohl reel als auch komplex
+
+$$ \frac{p(x)}{q(x)} = x + \frac{1}{x - 3} + \frac{2}{(x - 3)^2} $$
+
 \subsection{b)}
-\label{sec:org303bfd9}
+\label{sec:orgf8f8396}
+Sei \(p\) das Zahlerpolynom und \(q\) das Nennerpolynom.
+
+Da \(\deg(p) < \deg(q)\) gilt, muss keine Polynomdivision durchgeführt werden. \\
+Für \(q\) gilt
+
+
+\begin{align*}
+    q(x) = x^3 + 2x = x(x^2 + 2) = x(x + \sqrt{2}i)(x - \sqrt{2}i)
+\end{align*}
+
+daraus ergibt sich dann folgender Ansatz mit \(A, B, C \in \C\)
+
+$$ \frac{2x^2 - 2x - 1}{x(x + \sqrt{2}i)(x - \sqrt{2}i)} = \frac{A}{x} +
+    \frac{B}{x + \sqrt{2}i} + \frac{C}{x - \sqrt{2}i} $$
+
+damit gilt für \(A\) mit \(x = 0\)
+
+$$ \frac{-1}{2} = A $$
+
+und es gilt für \(B\) mit \(x = -\sqrt{2}i\)
+
+$$ \frac{-4 + 2\sqrt{2}i - 1}{(-\sqrt{2}i)(-2\sqrt{2}i)} = B = \frac{5 - 2\sqrt{2}i}{4} $$
+
+und es gilt für \(C\) mit \(x = \sqrt{2}i\)
+
+$$ \frac{-4 - 2\sqrt{2}i - 1}{(\sqrt{2}i)(2\sqrt{2}i)} = C = \frac{5 + 2\sqrt{2}i}{4} $$
 \end{document}
