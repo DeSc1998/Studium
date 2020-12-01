@@ -1,4 +1,4 @@
-% Created 2020-12-01 Di 19:27
+% Created 2020-12-01 Di 19:51
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper, 11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -43,11 +43,11 @@
 \pagebreak
 
 \section{Aufgabe 1}
-\label{sec:org4443fdf}
+\label{sec:orgf4d313c}
 \subsection{a)}
-\label{sec:org09b5b63}
+\label{sec:orgc498b6c}
 \subsubsection{i)}
-\label{sec:org66d1702}
+\label{sec:orge12e258}
 $$ z^3 = -27i = 27 e^{-\frac{\pi}{2}i} $$
 
 Es gilt für den Betrag \(r\) und das Argument \(\phi_n\) mit \(n \in \set{0, 1, 2}\)
@@ -64,7 +64,7 @@ Dann gilt
 $$ z = 3 e^{\frac{\pi(4n - 1)}{6}i} \text{ mit } n = 0, 1, 2 $$
 
 \subsubsection{ii)}
-\label{sec:orga896887}
+\label{sec:orgb353d4d}
 $$ 2z^4 + 4(\sqrt{12} - 2i)z^2 + 16 - 8\sqrt{12}i = 0 $$
 
 Es gilt für den ersten Koeffizienten mit \(r, \phi \in \R\)
@@ -114,7 +114,7 @@ $$ z = 2 e^{\frac{\pi (5 + 12k)}{12}i} \text{ mit } k = 0, 1 $$
 \textbf{\uline{NOTE:}} In diesem Fall sind das beides doppelte Nullstellen.
 
 \subsection{b)}
-\label{sec:org416afd4}
+\label{sec:orge0204d3}
 Es gilt
 
 \begin{align*}
@@ -128,21 +128,45 @@ Es gilt
 \end{align*}
 
 \section{Aufgabe 2}
-\label{sec:org6c29b4d}
+\label{sec:orgcfd6450}
 \subsection{a)}
-\label{sec:orgfdda429}
+\label{sec:org96c0ce9}
 $$ p(i) = (i)^4 - 1 = 1 - 1 = 0 $$
 
 \subsection{b)}
-\label{sec:org3399f55}
+\label{sec:orgb75fe93}
+Polynomdivision:
+
+\begin{align*}
+    (z^4 - 1) / (z^2 + 1) &= \\
+    (-z^2 - 1) / (z^2 + 1) &= z^2 \\
+    (0) / (z^2 + 1) &= z^2 - 1 
+\end{align*}
+
+demnach gilt
+
+$$ \frac{p(z)}{q(z)} = z^2 - 1 $$
+
 \subsection{c)}
-\label{sec:org8afed2c}
+\label{sec:org894e187}
+\(p\) lässt sich im Komplexen wie folgt zerlegen
+
+\begin{align*}
+    p(z) = z^4 - 1 &= (z^2 + 1)(z^2 - 1) \\
+    &= (z^2 + 1)(z + 1)(z - 1) \\
+    &= (z + i)(z - i)(z + 1)(z - 1) \\
+\end{align*}
+
 \subsection{d)}
-\label{sec:org7aca756}
+\label{sec:org0dff2c6}
+\(p\) lässt sich im Reellen wie folgt zerlegen
+
+$$ p(z) = z^4 - 1 = (z^2 + 1)(z + 1)(z - 1) $$
+
 \section{Aufgabe 3}
-\label{sec:orgfc378cb}
+\label{sec:orgc229687}
 \subsection{a)}
-\label{sec:orgb618ef2}
+\label{sec:orgfe3f041}
 Für den Nenner \(p\) gilt
 
 \begin{align*}
@@ -151,11 +175,11 @@ Für den Nenner \(p\) gilt
 \end{align*}
 
 \subsection{b)}
-\label{sec:org99d67d4}
+\label{sec:orgb44cc2d}
 \section{Aufgabe 4}
-\label{sec:orgc010df0}
+\label{sec:org54962eb}
 \subsection{a)}
-\label{sec:orgdcdcd08}
+\label{sec:org75abdbd}
 \subsection{b)}
-\label{sec:org161f3f9}
+\label{sec:org303bfd9}
 \end{document}

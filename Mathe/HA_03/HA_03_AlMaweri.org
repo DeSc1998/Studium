@@ -105,8 +105,32 @@ Es gilt
 $$ p(i) = (i)^4 - 1 = 1 - 1 = 0 $$
 
 ** b)
+Polynomdivision:
+
+\begin{align*}
+    (z^4 - 1) / (z^2 + 1) &= \\
+    (-z^2 - 1) / (z^2 + 1) &= z^2 \\
+    (0) / (z^2 + 1) &= z^2 - 1
+\end{align*}
+
+demnach gilt
+
+$$ \frac{p(z)}{q(z)} = z^2 - 1 $$
+
 ** c)
+$p$ lässt sich im Komplexen wie folgt zerlegen
+
+\begin{align*}
+    p(z) = z^4 - 1 &= (z^2 + 1)(z^2 - 1) \\
+    &= (z^2 + 1)(z + 1)(z - 1) \\
+    &= (z + i)(z - i)(z + 1)(z - 1) \\
+\end{align*}
+
 ** d)
+$p$ lässt sich im Reellen wie folgt zerlegen
+
+$$ p(z) = z^4 - 1 = (z^2 + 1)(z + 1)(z - 1) $$
+
 * Aufgabe 3
 ** a)
 Für den Nenner $p$ gilt
