@@ -1,0 +1,178 @@
+% Created 2020-12-09 Mi 13:10
+% Intended LaTeX compiler: pdflatex
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{braket}
+\usepackage[germanb]{babel}
+\author{Daniel Geinets (453843), Christopher Neumann (409098), Dennis Schulze (458415)}
+\date{\today}
+\title{Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 04 - Al-Maweri 13}
+\hypersetup{
+ pdfauthor={Daniel Geinets (453843), Christopher Neumann (409098), Dennis Schulze (458415)},
+ pdftitle={Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 04 - Al-Maweri 13},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.4)}, 
+ pdflang={Germanb}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\setcounter{secnumdepth}{0}
+\newcommand{\tuple}[1]{\left(#1\right)}
+\renewcommand{\cfrac}[3]{#1 \tuple{\frac{#2}{#3}}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
+
+\pagebreak
+
+\section{Aufgabe 1}
+\label{sec:org7eb57be}
+Es gilt
+
+$$ x^3 + 3x^2 + 3x + 1 = (x + 1)^3 $$
+
+daruas folgt dann der Ansatz mit \(A, B, C \in \C\)
+
+$$ \frac{1}{(x + 1)^3} = \frac{A}{x+1} + \frac{B}{(x+1)^2} + \frac{C}{(x+1)^3} $$
+
+wo für \(C\) mit \(x = -1\) gilt
+
+$$ 1 = C $$
+
+damit gilt
+
+\begin{align*}
+    \frac{1}{(x + 1)^3} &= \frac{A}{x+1} + \frac{B}{(x+1)^2} + \frac{1}{(x+1)^3} \\
+    &= \frac{A(x+1)^2}{(x+1)^3} + \frac{B(x+1)}{(x+1)^3} + \frac{1}{(x+1)^3} \\
+    &= \frac{Ax^2 + 2Ax + A + Bx + B + 1}{(x+1)^3}
+\end{align*}
+
+daraus ergibt sich das Gleichungssystem
+
+\begin{align*}
+    1 &= A + B + 1 \Rightarrow A = -B \\
+    0 &= 2A + B \\
+    0 &= A \Rightarrow B = 0
+\end{align*}
+
+daraus folgt, dass der Ausgangsterm seine eigene Partialbruchzerlegung ist sowohl
+im reellen als auch im komplexen.
+
+\pagebreak
+
+\section{Aufgabe 2}
+\label{sec:orgbcbe81c}
+\subsection{a)}
+\label{sec:org8a715b9}
+Es gilt
+
+\begin{align*}
+    T_1 &= \left\{ \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} \in \R^2 \Big| 2 x_1 = x_2 \right\} \\
+    &= \left\{ \begin{bmatrix} x \\ 2x \end{bmatrix} \Big| x \in \R \right\} \\
+    &= \left\{ x \begin{bmatrix} 1 \\ 2 \end{bmatrix} \Big| x \in \R \right\} \\
+    &= \text{span} \left\{ \begin{bmatrix} 1 \\ 2 \end{bmatrix} \right\} \\
+\end{align*}
+
+dann gilt mit \(v, w \in T_1\) und \(r, x, y, a, b \in \R\)
+
+\begin{align*}
+    0 \begin{bmatrix} 1 \\ 2 \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \end{bmatrix} \in T_1 \\
+    r v &= r \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} rx \\ ry \end{bmatrix} \\
+    &= \begin{bmatrix} rx \\ 2rx \end{bmatrix} \in T_1 \\
+    v + w &= \begin{bmatrix} x \\ y \end{bmatrix} + \begin{bmatrix} a \\ b \end{bmatrix}
+    = \begin{bmatrix} x \\ 2x \end{bmatrix} + \begin{bmatrix} a \\ 2a \end{bmatrix}
+    = \begin{bmatrix} x + a \\ 2(x + a) \end{bmatrix} \in T_1
+\end{align*}
+
+daraus folgt
+
+$$ T_1 \subseteq \R^2 $$
+
+\pagebreak
+
+Bei \(T_2\) gilt mit \(v, w \in T_1\) und \(r, x, y, a, b \in \R\)
+
+\begin{align*}
+    0 \begin{bmatrix} x \\ y \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \end{bmatrix} \in T_2 \\
+    r v &= r \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} rx \\ ry \end{bmatrix} \not\in T_2 \\
+    \text{gilt, weil es für } 2 \begin{bmatrix} 1 \\ 0 \end{bmatrix} &= \begin{bmatrix} 2 \\ 0 \end{bmatrix} \text{ zum beispiel nicht erfüllt ist. } \\
+    v + w &= \begin{bmatrix} x \\ y \end{bmatrix} + \begin{bmatrix} a \\ b \end{bmatrix}
+    = \begin{bmatrix} x \\ 2x \end{bmatrix} + \begin{bmatrix} a \\ 2a \end{bmatrix}
+    = \begin{bmatrix} x + a \\ 2(x + a) \end{bmatrix} \not\in T_2 \\
+    \text{gilt, weil es für } \begin{bmatrix} 1 \\ 0 \end{bmatrix} + \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+    &= \begin{bmatrix} 2 \\ 0 \end{bmatrix} \text{ zum beispiel nicht erfüllt ist. }
+\end{align*}
+
+daraus folgt
+
+$$ T_2 \not\subseteq \R^2 $$
+
+Die Menge \(T_3\) ist keine Teilmenge von \(\R^2\),
+da \(T_3 = T_1 \cap T_2\) gilt und \(T_2\) keine Teilmenge von \(\R^2\) ist.
+
+\subsection{b)}
+\label{sec:org41719d4}
+Es gilt für \(f, g \in T\) und \(r, x \in \R\)
+
+\begin{align*}
+    0 \cdot f(x) &= 0 \in T \\
+    r \cdot f(1) &= r \cdot 0 = 0 \Rightarrow r \cdot f \in T \\
+    f(1) + g(1) &= 0 + 0 = 0 \Rightarrow f + g \in T
+\end{align*}
+
+damit gilt
+
+$$ T \subseteq V $$
+
+\section{Aufgabe 3}
+\label{sec:orgadeda94}
+\subsection{a)}
+\label{sec:orgfdad9e6}
+$$ \overrightarrow{v} = \begin{bmatrix} 1 \\ 0 \\ -1\end{bmatrix} = \overrightarrow{v_1} + \overrightarrow{v_2} - \overrightarrow{v_3} =
+\begin{bmatrix} 1 \\ 0 \\ 0\end{bmatrix} + \begin{bmatrix} 0 \\ 1 \\ 2\end{bmatrix} - \begin{bmatrix} 0 \\ 1 \\ 3\end{bmatrix} =  \begin{bmatrix} 1 \\ 0 \\ -1\end{bmatrix} $$
+
+\subsection{b)}
+\label{sec:org7ac08d5}
+\begin{align*}
+    p(z) &= z^2 + 2z + 1 + i \\
+    &= 0,5(2z^2 - 1) + 2z + 1,5 + i \\
+    &= 0,5T_2(z) + 2T_1(z) + (1,5 + i)T_0(z)
+\end{align*}
+
+\subsection{c)}
+\label{sec:orgd7e906d}
+$$ \cos(x + \pi) = \cos(x)\cos(\pi) - \sin(x)\sin(\pi) = -\cos(x) $$
+
+\section{Aufgabe 4}
+\label{sec:org25f4c60}
+\subsection{a)}
+\label{sec:orge55b814}
+Nein, denn
+$$ \lambda_1\begin{bmatrix} 1 \\ 0\end{bmatrix} + \lambda_2\begin{bmatrix} 2 \\ 0\end{bmatrix} \ne \begin{bmatrix} 0 \\ 1\end{bmatrix} \in \mathbb{R}^2 \text{ mit } \lambda_1, \lambda_2 \in \R $$
+
+\subsection{b)}
+\label{sec:orgf4eaaec}
+$$ \text{Basis}(\mathbb{R}^2 ) = \left\{ \begin{bmatrix} 1 \\ 0\end{bmatrix}, \begin{bmatrix} 0 \\ 1\end{bmatrix} \right\}
+\text{ mit } \begin{bmatrix} 1 \\ 0\end{bmatrix} =
+\begin{bmatrix} 1 \\ 1\end{bmatrix} - \begin{bmatrix} 0 \\ 1\end{bmatrix}, \begin{bmatrix} 0 \\ 1\end{bmatrix} = \begin{bmatrix} 0 \\ 1\end{bmatrix} $$
+\subsection{c)}
+\label{sec:org21afae1}
+$$ \left\{ \begin{bmatrix} 1 \\ 1\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \end{bmatrix} \right\} \text{ ist EZS von } \R^2 $$
+\end{document}
