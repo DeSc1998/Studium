@@ -1,0 +1,270 @@
+
+
+#+TITLE: Analysis I und Lineare Algebra für Ingenieurwissenschaften \large @@latex: \\@@ Hausaufgabe 05 - Al-Maweri 13
+#+AUTHOR: Daniel Geinets (453843), Christopher Neumann (409098), Dennis Schulze (458415)
+
+#+LATEX_CLASS_OPTIONS: [a4paper, 11pt]
+
+#+LATEX_HEADER: \usepackage{braket}
+#+LATEX_HEADER: \usepackage[AUTO]{babel}
+
+#+LANGUAGE: de
+
+#+LATEX: \setcounter{secnumdepth}{0}
+#+LATEX: \newcommand{\tuple}[1]{\left(#1\right)}
+#+LATEX: \renewcommand{\cfrac}[3]{#1 \tuple{\frac{#2}{#3}}}
+#+LATEX: \newcommand{\R}{\mathbb{R}}
+#+LATEX: \newcommand{\Z}{\mathbb{Z}}
+#+LATEX: \newcommand{\Q}{\mathbb{Q}}
+#+LATEX: \newcommand{\N}{\mathbb{N}}
+#+LATEX: \newcommand{\C}{\mathbb{C}}
+
+#+LATEX: \makeatletter
+#+LATEX: \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+#+LATEX:   \hskip -\arraycolsep
+#+LATEX:   \let\@ifnextchar\new@ifnextchar
+#+LATEX:   \array{#1}}
+#+LATEX: \makeatother
+
+\pagebreak
+
+* Aufgabe 1
+** a)
+Es gilt
+
+\begin{align*}
+    [A|b] = 
+    & \left[ \begin{array}{@{}cccc|c@{}}
+        -2 & 2i & 0 & 2 & -4 \\
+        -4 & 4i & -i & 7 & -8 \\
+        1 & i & 2 & -1 & 4
+    \end{array} \right] \\
+    \xrightarrow{\text{II} - 2\text{I}}
+    & \left[ \begin{array}{@{}cccc|c@{}}
+        -2 & 2i & 0 & 2 & -4 \\
+        0 & 0 & -i & 3 & 0 \\
+        1 & i & 2 & -1 & 4
+    \end{array} \right] \\
+    \xrightarrow{2\text{III} + \text{I}}
+    & \left[ \begin{array}{@{}cccc|c@{}}
+        -2 & 2i & 0 & 2 & -4 \\
+        0 & 0 & -i & 3 & 0 \\
+        0 & 4i & 4 & 0 & 4
+    \end{array} \right] \\
+    \xrightarrow{\text{II} \leftrightarrow \text{III}}
+    & \left[ \begin{array}{@{}cccc|c@{}}
+        -2 & 2i & 0 & 2 & -4 \\
+        0 & 4i & 4 & 0 & 4 \\
+        0 & 0 & -i & 3 & 0
+    \end{array} \right] \\
+    \xrightarrow{\text{II} - 4i\text{III}}
+    & \left[ \begin{array}{@{}cccc|c@{}}
+        -2 & 2i & 0 & 2 & -4 \\
+        0 & 4i & 0 & -12i & 4 \\
+        0 & 0 & -i & 3 & 0
+    \end{array} \right] \\
+    \xrightarrow{\text{I} - \frac{1}{2}\text{II}}
+    & \left[ \begin{array}{@{}cccc|c@{}}
+        -2 & 0 & 0 & 2+6i & -6 \\
+        0 & 2i & 0 & -6i & 2 \\
+        0 & 0 & -i & 3 & 0
+    \end{array} \right] \\
+    \xrightarrow{\frac{-1}{2}\text{I}, \frac{-i}{2}\text{II}, i\text{II}}
+    & \left[ \begin{array}{@{}cccc|c@{}}
+        1 & 0 & 0 & -1-3i & -3 \\
+        0 & 1 & 0 & -3 & i \\
+        0 & 0 & 1 & 3i & 0
+    \end{array} \right] \\
+\end{align*}
+
+** b)
+Aus dem LGS aus a) folgt mit $x_1, x_2, x_3, x_4 \in \C$
+
+\begin{align*}
+    \text{(I)  } 0 &= x_1 + (-1 - 3i)x_4 \Rightarrow x_1 = (1 + 3i)x_4 \\
+    \text{(II)  } 0 &= x_2 - 3 x_4 \Rightarrow             x_2 = 3 x_4 \\
+    \text{(III)  } 0 &= x_3 + 3i x_4 \Rightarrow         x_3 = -3i x_4 \\
+\end{align*}
+
+damit gilt dann für den Kern($A$)
+
+\begin{align*}
+    \text{Kern}(A) &= \left\{ \begin{bmatrix} (1 + 3i)z \\ 3 z \\ -3i z \\ z \end{bmatrix} \Bigg| z \in \C \right\} \\
+    &= \text{span} \left\{ \begin{bmatrix} 1 + 3i \\ 3 \\ -3i \\ 1 \end{bmatrix} \right\} \\
+    &= \mathbb{L}(A, 0)
+\end{align*} 
+            
+** c)
+Es gilt
+
+\begin{align*}
+    \begin{bmatrix}
+        1 & 0 & 0 & -1-3i \\
+        0 & 1 & 0 & -3 \\
+        0 & 0 & 1 & 3i
+    \end{bmatrix} \cdot
+    \begin{bmatrix}
+        3 \\
+        -i \\
+        0 \\
+        0
+    \end{bmatrix} = \begin{bmatrix} 3 \\ -i \\ 0 \end{bmatrix}
+\end{align*}
+
+Vergleiche mit dem LGS aus a)
+
+$$ \begin{bmatrix} 3 \\ -i \\ 0 \\ 0 \end{bmatrix} \in \mathbb{L}(A, b) $$
+
+desweiteren gilt
+
+\begin{align*}
+    \begin{bmatrix}
+        1 & 0 & 0 & -1-3i \\
+        0 & 1 & 0 & -3 \\
+        0 & 0 & 1 & 3i
+    \end{bmatrix} \cdot
+    \begin{bmatrix}
+        1 \\
+        0 \\
+        1 \\
+        0
+    \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix} \neq \begin{bmatrix} 3 \\ -i \\ 0 \end{bmatrix}
+\end{align*}
+
+Vergleiche mit dem LGS aus a)
+
+$$ \begin{bmatrix} 1 \\ 0 \\ 1 \\ 0 \end{bmatrix} \not\in \mathbb{L}(A, b) $$
+
+** d)
+aus b):
+$$\mathbb{L} = \left\{\begin{bmatrix} (1 + 3i)t \\ 3t \\ 3it \\ t\end{bmatrix}, t \in \mathbb{C}\right\}$$
+\newline
+aus c):
+$$\mathbb{L}(A, b) = \begin{bmatrix} 3 \\ -i \\ 0 \\ 0\end{bmatrix} + \mathbb{L}(A, 0)$$
+
+* Aufgabe 2
+** a)
+Rang($A_1$) = 3, Rang($A_2$) = 3, Rang($A_3$) = 2, Rang($A_4$) = 2
+
+** b)
+
+\begin{equation*}
+    A_1: \text{span} \left\{ \begin{bmatrix} 2 \\ 0 \\ 0\end{bmatrix}, \begin{bmatrix} 1 \\ 1 \\ 0\end{bmatrix}, \begin{bmatrix} 2 \\ 0 \\ 1\end{bmatrix}\\
+    \begin{bmatrix} -2 \\ 4 \\ 3\end{bmatrix} \right\} \neq B(A_1)
+\end{equation*}
+
+
+da:
+
+\begin{equation*}
+    \begin{bmatrix} -2 \\ 4 \\ 3\end{bmatrix} = 4\begin{bmatrix} 1 \\ 1 \\ 0\end{bmatrix} +
+    3\begin{bmatrix} 2 \\ 0 \\ 1\end{bmatrix} - 6\begin{bmatrix} 2 \\ 0 \\ 0\end{bmatrix}
+\end{equation*}
+
+$$A_2: \text{span}\left\{\begin{bmatrix} 1 \\ 0 \\ 0 \\ 0\end{bmatrix}, \begin{bmatrix} 2 \\ 4 \\ 0 \\ 0\end{bmatrix}, \\
+\begin{bmatrix} 3 \\ 5 \\ 6 \\ 0\end{bmatrix}\right\} = B(A_2)$$
+
+
+da:
+
+$$\lambda_1\begin{bmatrix} 1 \\ 0 \\ 0 \\ 0\end{bmatrix} \neq \lambda_2\begin{bmatrix} 2 \\ 4 \\ 0 \\ 0\end{bmatrix} \neq \\
+\lambda_3\begin{bmatrix} 3 \\ 5 \\ 6 \\ 0\end{bmatrix}$$
+
+$$A_3: \text{span}\left\{\begin{bmatrix} 11 \\ 0\end{bmatrix}, \begin{bmatrix} 12 \\ 0\end{bmatrix}, \begin{bmatrix} 0 \\ 2\end{bmatrix}\right\} \\
+\neq B(A_3)$$
+
+
+da:
+
+$$\begin{bmatrix} 12 \\ 0\end{bmatrix} = \frac{12}{11}\begin{bmatrix} 11 \\ 0\end{bmatrix}$$
+
+$$A_4: \text{span} \left\{\begin{bmatrix} 3 \\ 0\end{bmatrix}, \begin{bmatrix} 4 \\
+2\end{bmatrix}\right\} = B(A_3)$$
+
+da:
+
+$$\lambda_1\begin{bmatrix} 3 \\ 0\end{bmatrix} \neq \lambda_2\begin{bmatrix} 4 \\ 2\end{bmatrix}$$
+
+** c)
+allg: $\dim(\text{Kern}(A)) = n - r = n - \text{Rang}(A)$
+$$ \dim(\text{Kern}(A_1)) = 4 - 3 = 1 $$
+$$ \dim(\text{Kern}(A_2)) = 3 - 3 = 0 $$
+
+** d)
+
+\begin{equation*}
+    \begin{bmatrix} 3 & 4 \\ 0 & 2\end{bmatrix} = 3\begin{bmatrix} 1 & 0 \\ 0 & -2\end{bmatrix} +
+    2\begin{bmatrix} 0 & 2 \\ 0 & 1\end{bmatrix} + 6\begin{bmatrix} 0 & 0 \\ 0 & 1\end{bmatrix} +
+    0\begin{bmatrix} 0 & 0 \\ 1 & 0\end{bmatrix}
+\end{equation*}
+
+
+\begin{equation*}
+    \Rightarrow K_B(A_4) = \begin{bmatrix} 6 \\ 2 \\ 3 \\ 0\end{bmatrix}
+\end{equation*}
+
+* Aufgabe 3
+Gegeben seien
+$$f: \mathbb{C}^3 \rightarrow \mathbb{C}^2, \begin{bmatrix} a \\ b \\ c\end{bmatrix} \mapsto \begin{bmatrix} ia + b \\ 2ic\end{bmatrix}, \\
+g: \mathbb{C}^3 \rightarrow \mathbb{C}^2, \begin{bmatrix} a \\ b \\ c\end{bmatrix} \mapsto \begin{bmatrix} a \\ c + 1\end{bmatrix}$$
+
+** a)
+f:
+$$\overrightarrow{v} + \overrightarrow{w} \in \mathbb{C}^3, \overrightarrow{v} =   \begin{bmatrix} a_1 \\ b_ 1\\ c_1\end{bmatrix}, \\
+\overrightarrow{w} = \begin{bmatrix} a_2 \\ b_2 \\ c_2\end{bmatrix}$$
+
+\begin{align*}
+    f(\overrightarrow{v} + \overrightarrow{w}) &= f \left( \begin{bmatrix} a_1 + a_2 \\ b_ 1 + b_2\\ c_1 + c_2\end{bmatrix} \right) \\
+    &= \begin{bmatrix} i(a_1 + a_2) + b_1 + b_2 \\ 2i(c_ 1 + c_2)\end{bmatrix} =
+    \begin{bmatrix} ia_1 + b_1 \\ 2ic_1 \end{bmatrix} + \begin{bmatrix} ia_2 + b_2 \\ 2ic_2 \end{bmatrix} \\
+    &= f(\overrightarrow{v}) + f(\overrightarrow{w})
+\end{align*}
+
+$$\Rightarrow\text{f ist geschlossen in Addition}$$
+
+\begin{align*}
+    \lambda \in \mathbb{R}, f(\lambda\overrightarrow{v}) &= f \left( \lambda\begin{bmatrix} a_1 \\ b_ 1\\ c_1\end{bmatrix} \right) \\
+    &= \begin{bmatrix} \lambda ia_1 + \lambda b_1 \\ \lambda 2ic_ 1 \end{bmatrix} = \begin{bmatrix} \lambda(ia_1 + b_1) \\ \lambda 2ic_ 1 \end{bmatrix} \\
+    &= \lambda f(\overrightarrow{v})
+\end{align*}
+
+$$\Rightarrow\text{f ist homogen}$$
+$$\Rightarrow\text{f ist additiv und homogen}\Rightarrow\text{f ist linear}$$
+
+g:
+$$\lambda \in \mathbb{R}, g(\lambda\overrightarrow{v}) = g \left( \lambda\begin{bmatrix} a_1 \\ b_ 1\\ c_1\end{bmatrix} \right)  \\
+= \begin{bmatrix} \lambda a_1 \\ \lambda c_1 + 1\end{bmatrix} \neq \begin{bmatrix} \lambda a_1 \\ \lambda(c_1 + 1)\end{bmatrix} = \\
+\lambda\begin{bmatrix} a_1 \\ c_1 + 1\end{bmatrix} =
+\lambda g(\overrightarrow{v})$$
+$$\Rightarrow\text{nicht homogen}$$
+$$\Rightarrow\text{g ist nicht linear}$$
+
+
+** b)
+$$f\left(\begin{bmatrix} a \\ b \\ c\end{bmatrix}\right) = A\begin{bmatrix} a \\ b \\ c\end{bmatrix} \text{für alle} \begin{bmatrix} a \\ b \\ c\end{bmatrix} \in \mathbb{C}^3$$
+$$f: \begin{bmatrix} a \\ b \\ c\end{bmatrix} \mapsto \begin{bmatrix} ia + b\\ 2ic\end{bmatrix} \Rightarrow \lambda_1 = i, \lambda_2 = 1, \lambda_3 = 2i$$
+$$\Rightarrow A = \begin{bmatrix} i & 1 & 0 \\ 0 & 0 & 2i\end{bmatrix}$$
+
+** c)
+Kern(f) = Kern(A)
+Also:
+$$\text{Kern}(A): A\overrightarrow{x} = \overrightarrow{0}$$
+$$\Rightarrow \begin{bmatrix}[ccc|c] i & 1 & 0 & 0\\ 0 & 0 & 2i & 0\end{bmatrix} \xrightarrow{-i\text{I}} \\
+\begin{bmatrix}[ccc|c] 1 & -i & 0 & 0\\ 0 & 0 & 2i & 0\end{bmatrix}  \xrightarrow{-\frac{1}{2}i\text{II}} \\
+\begin{bmatrix}[ccc|c] 1 & -i & 0 & 0\\ 0 & 0 & 1 & 0\end{bmatrix}$$
+$$\Rightarrow x_1 = it, x_2 = t, x_3 = 0$$
+$$\text{Kern}(A) = \text{span}\left\{\begin{bmatrix} it \\ t\\ 0\end{bmatrix}\right\}$$
+Für $x_2 = t = 1$:
+$$\Rightarrow \begin{bmatrix} i \\ 1\\ 0\end{bmatrix} \Rightarrow \left\{\begin{bmatrix} i \\ 1\\ 0\end{bmatrix}\right\} = \text{B}(\text{Kern}(f))$$
+$\left\{\begin{bmatrix} i \\ 1\\ 0\end{bmatrix}\right\}$ ist eine Basis von Kern(f)
+
+
+** d)
+Ist f injektiv/surjektiv?
+\newline
+\newline
+f ist nicht injektiv, da: 
+$$\dim(\text{Kern}(f)) = 1 \neq 0$$
+f ist surjektiv, da: 
+$$\dim(\C^3) - \dim(\text{Kern}(f)) = 3 -1 = 2 = \dim(\text{Bild}(f)) = \dim(\C^2)$$
+
