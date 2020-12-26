@@ -1,0 +1,57 @@
+
+
+#+TITLE: Analysis I und Lineare Algebra für Ingenieurwissenschaften \large @@latex: \\@@ Hausaufgabe 05 - Al-Maweri 13
+#+AUTHOR: Daniel Geinets (453843), Christopher Neumann (409098), Dennis Schulze (458415)
+
+#+LATEX_CLASS_OPTIONS: [a4paper, 11pt]
+
+#+LATEX_HEADER: \usepackage{braket}
+#+LATEX_HEADER: \usepackage[AUTO]{babel}
+
+#+LANGUAGE: de
+
+#+LATEX: \setcounter{secnumdepth}{0}
+#+LATEX: \newcommand{\tuple}[1]{\left(#1\right)}
+#+LATEX: \renewcommand{\cfrac}[3]{#1 \tuple{\frac{#2}{#3}}}
+#+LATEX: \newcommand{\R}{\mathbb{R}}
+#+LATEX: \newcommand{\Z}{\mathbb{Z}}
+#+LATEX: \newcommand{\Q}{\mathbb{Q}}
+#+LATEX: \newcommand{\N}{\mathbb{N}}
+#+LATEX: \newcommand{\C}{\mathbb{C}}
+
+#+LATEX: \makeatletter
+#+LATEX: \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+#+LATEX:   \hskip -\arraycolsep
+#+LATEX:   \let\@ifnextchar\new@ifnextchar
+#+LATEX:   \array{#1}}
+#+LATEX: \makeatother
+
+\pagebreak
+
+* Aufgabe 1
+** a)
+
+** b)
+
+** c)
+
+** d)
+
+* Aufgabe 2
+** a)
+
+** b)
+
+** c)
+
+** d)
+
+* Aufgabe 3
+
+** a)
+
+** b)
+
+** c)
+
+** d)
