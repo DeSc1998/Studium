@@ -1,4 +1,4 @@
-% Created 2020-12-26 Sa 18:45
+% Created 2021-01-06 Mi 14:56
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper, 11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -24,7 +24,7 @@
  pdftitle={Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 05 - Al-Maweri 13},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 26.3 (Org mode 9.4)}, 
+ pdfcreator={Emacs 27.1 (Org mode 9.5)}, 
  pdflang={Germanb}}
 \begin{document}
 
@@ -50,45 +50,231 @@
 \pagebreak
 
 \section{Aufgabe 1}
-\label{sec:orgd29aaba}
+\label{sec:orga0c3e2d}
 \subsection{a)}
-\label{sec:org0ef9314}
+\label{sec:org3fcda91}
 
 \subsection{b)}
-\label{sec:orgaafb8b8}
+\label{sec:orga68695b}
 
 \subsection{c)}
-\label{sec:org1f5aa9e}
+\label{sec:orge885b6b}
 
 \subsection{d)}
-\label{sec:orgc5c753e}
+\label{sec:org4efad33}
 
 \section{Aufgabe 2}
-\label{sec:orgf6977bf}
+\label{sec:org6df848f}
 \subsection{a)}
-\label{sec:org022020c}
+\label{sec:org0dbd1ab}
+Da \(f\) linear ist gelten \(f(x+y) = f(x) + f(y)\) und
+\(f(r \cdot x) = r \cdot f(x)\). Damit gilt
+
+\begin{align*}
+    f(2x) &= 2f(x + 3) - 6 f(1) \\
+    &= 2(-2x + 1) - 6(x + 2) \\
+    &= -4x + 2 - 6x - 12 \\
+    &= -10x - 10
+\end{align*}
 
 \subsection{b)}
-\label{sec:org6a93f7b}
+\label{sec:orgab012ee}
+\begin{align*}
+    f(1) &= x + 2 \\
+    f(x) &= -5x -5
+\end{align*}
+
+Seien \(a, b \in \R\), dann gilt
+
+\begin{align*}
+    f(ax + b) &= f(ax) + f(b) = a f(x) + b f(1) \\
+    &= a(-5x - 5) + b(x + 2) \\
+    &= -5ax - 5a + bx + 2b \\
+    &= (b - 5a)x + (2b - 5a)
+\end{align*}
+
+also gilt
+
+$$ f: \begin{bmatrix} a \\ b \end{bmatrix} \mapsto
+    \begin{bmatrix} b - 5a \\ 2b - 5a \end{bmatrix} $$
+
+\(f\) lässt als Matrix wie folgt darstellen
+
+$$ f = \begin{bmatrix} -5 & 1 \\ -5 & 2 \end{bmatrix} $$
+
+linear abhängig? mit \(r_1, r_2 \in \R\)
+
+$$ \begin{bmatrix} 0 \\ 0 \end{bmatrix} =
+    r_1 \begin{bmatrix} a \\ b \end{bmatrix} +
+    r_2 \begin{bmatrix} a \\ b \end{bmatrix} $$
+
+daraus ergibt sich ein LGS, dass zu einem Widerspruch führt
+
+\begin{align*}
+    \text{(I) } 0 &= r_2 - 5r_1 \\
+    \text{(II) } 0 &= 2r_2 - 5r_1 \\
+\end{align*}
+
+daraus folgt, dass die Spalten linear unabhängig sind, Woraus folgt
+
+$$ \dim(\text{Bild}(f)) = 2 $$
 
 \subsection{c)}
-\label{sec:orga18b023}
+\label{sec:org0fd53e0}
+Überführen der Matrix
+
+\begin{align*}
+    \begin{bmatrix}[cc|c]
+        -5 & 1 & 0 \\
+        -5 & 2 & 0
+    \end{bmatrix}
+    &\xrightarrow{\text{II} - \text{I}}
+    \begin{bmatrix}[cc|c]
+        -5 & 1 & 0 \\
+        0 & 1 & 0
+    \end{bmatrix} \\
+    \xrightarrow{\text{I} - \text{II}}
+    \begin{bmatrix}[cc|c]
+        -5 & 0 & 0 \\
+        0 & 1 & 0
+    \end{bmatrix}
+    &\xrightarrow{ \frac{-1}{5}\text{I}}
+    \begin{bmatrix}[cc|c]
+        1 & 0 & 0 \\
+        0 & 1 & 0
+    \end{bmatrix}
+\end{align*}
+
+Für Kern(\(f\)) gibt es also nur eine Lösung
+
+$$ \text{Kern}(f) = \left\{ \begin{bmatrix} 0 \\ 0 \end{bmatrix} \right\} $$
+
+daraus folgt
+
+$$ B_{\text{Kern}(f)} = \{\} $$
 
 \subsection{d)}
-\label{sec:org3ee73b7}
+\label{sec:org5eab8cf}
 
 \section{Aufgabe 3}
-\label{sec:org2f659c7}
+\label{sec:org47d8294}
+Es gilt
 
+$$ (3k + 1)(3k + 4) =
+    9 \tuple{k + \frac{1}{3}} \tuple{k + \frac{4}{3}} $$
+
+daraus ergibt sich dann der folgende Ansatz
+
+$$ \frac{3}{(3k + 1)(3k + 4)} =
+    \frac{A}{k + \frac{1}{3}} +
+    \frac{B}{k + \frac{4}{3}} $$
+
+für \(A\) mit \(k = -\frac{1}{3}\)
+
+$$ \frac{1}{3} \cdot \frac{1}{-\frac{1}{3} + \frac{4}{3}} = A = \frac{1}{3} $$
+
+und für \(B\) mit \(k = -\frac{4}{3}\)
+
+$$ \frac{1}{3} \cdot \frac{1}{-\frac{4}{3} + \frac{1}{3}} = A = -\frac{1}{3} $$
+
+daraus folgt
+
+\begin{align*}
+    \sum_{k = 0}^{n} \frac{3}{(3k + 1)(3k + 4)} &=
+        \sum_{k = 0}^{n} \tuple{ \frac{1}{3(k + \frac{1}{3})} -
+            \frac{1}{3(k + \frac{4}{3})} } \\
+    &= \sum_{k = 0}^{n} \tuple{ \frac{1}{3k + 1} - \frac{1}{3k + 4} } \\
+    &= \tuple{\frac{1}{1} - \frac{1}{4}} +
+        \tuple{\frac{1}{4} - \frac{1}{7}} +
+        \tuple{\frac{1}{7} - \frac{1}{10}} + \dots + \\
+       & \tuple{ \frac{1}{3n - 2} - \frac{1}{3n + 1} } +
+        \tuple{ \frac{1}{3n + 1} - \frac{1}{3n + 4} } \\
+    &= 1 + \frac{1}{3n + 4}
+\end{align*}
+
+\section{Aufgabe 4}
+\label{sec:org74c5541}
 \subsection{a)}
-\label{sec:orgf9a5f2b}
+\label{sec:org2f74de0}
+IA: Es gilt
+
+$$ x_0 = 1 < \frac{4}{3} $$
+
+IV: Es gelte für ein beliebiges \(n \in \N\)
+
+$$ x_n < \frac{4}{3} $$
+
+IB: Damit gilt dann
+
+$$ x_{n+1} < \frac{4}{3} $$
+
+IS: Es gilt
+
+\begin{align*}
+    x_{n+1} &< \frac{4}{3} \\
+    \Leftrightarrow \frac{x_n}{4} + 1 &< \frac{4}{3} \\
+    \Leftrightarrow \frac{x_n}{4} &< \frac{1}{3} \\
+    \Leftrightarrow x_n &< \frac{4}{3} \\
+\end{align*}
+
+Folglich gilt dann für alle \(n \in \N\)
+
+$$ x_n < \frac{4}{3} $$
 
 \subsection{b)}
-\label{sec:orgb4d02dc}
+\label{sec:org1c47c2f}
+Es gelte \(x_n < x_{n+1}\). \\
+Dann gilt
+
+\begin{align*}
+    x_n &< x_{n+1} \\
+    \Leftrightarrow \frac{x_{n-1}}{4} + 1 &< \frac{x_n}{4} + 1 \\
+    \Leftrightarrow \frac{x_{n-1}}{4} &< \frac{x_n}{4} \\
+    \Leftrightarrow x_{n-1} &< x_n \\
+\end{align*}
+
+Diese Umformung kann \$k\$-mal wiederholt werden bis \(k = n\) gilt. \\
+Daraus folgt dann, dass die Folge \(x_n\) streng monoton wachsend.
 
 \subsection{c)}
-\label{sec:org2d37f43}
+\label{sec:org79a4571}
+Die Folge \(x_n\) ist nach oben beschränkt mit \(M = \frac{4}{3}\) (siehe a) \\
+
+Die Folge \(x_n\) ist streng monoton wachsend (siehe b) \\
+
+Daraus folgt die Folge \(x_n\) konvergiert.
 
 \subsection{d)}
-\label{sec:org128a473}
+\label{sec:org4cadb5b}
+Es gilt für die ersten Folgeglieder
+
+\begin{align*}
+    x_0 &= 1 \\
+    x_1 &= \frac{x_0}{4} + 1 = \frac{1}{4} + 1 \\
+    x_2 &= \frac{x_1}{4} + 1 = \frac{1}{16} + \frac{1}{4} + 1 \\
+    \vdots
+\end{align*}
+
+Man kann die Folge also auch wie folgt schreiben
+
+$$ x_n = \sum_{k = 0}^{n} \frac{1}{4^k} $$
+
+dann gilt
+
+\begin{align*}
+    x_n &= \sum_{k = 0}^{n} \frac{1}{4^k}
+    = \sum_{k = 0}^{n} \tuple{\frac{1}{4}}^k \\
+    &= \frac{1 - \tuple{\frac{1}{4}}^{n+1}}{1 - \frac{1}{4}}
+    = \frac{4 - \tuple{\frac{1}{4}}^n}{3}
+\end{align*}
+
+dann gilt für den Grenzwert
+
+\begin{align*}
+    \lim_{n \rightarrow \infty} \frac{4 - \tuple{\frac{1}{4}}^n}{3} &=
+        \lim_{n \rightarrow \infty} \frac{4}{3} -
+        \lim_{n \rightarrow \infty} \frac{\tuple{\frac{1}{4}}^n}{3} \\
+    &= \frac{4}{3} - \lim_{n \rightarrow \infty} \frac{1}{3 \cdot 4^n} \\
+    &= \frac{4}{3} - 0 = \frac{4}{3}
+\end{align*}
 \end{document}
