@@ -30,12 +30,88 @@
 
 * Aufgabe 1
 ** a)
+$$f_{B_1,B_1} = \left[\text{K}_{B_1}(f(b_1)), \text{K}_{B_1}(f(b_2)), \text{K}_{B_1}(f(b_3))\right]$$
+1.Spalte:
+$$\text{K}_{B_1}(f(b_1)) = \text{K}_{B_1}\left(\begin{bmatrix} 2 \\ 0 \\ -2 \end{bmatrix}\right) = 2 \cdot e_1 + 0 \cdot e_2 - 2 \cdot e_3
+= \begin{bmatrix} 2 \\ 0 \\ -2 \end{bmatrix} = v_1$$
+
+2.Spalte:
+$$\text{K}_{B_1}(f(b_2)) = \text{K}_{B_1}\left(\begin{bmatrix} -4 \\ -2 \\ 2 \end{bmatrix}\right) = - 4 \cdot e_1 - 2 \cdot e_2 + 2 \cdot e_3
+= \begin{bmatrix} -4 \\ -2 \\ 2 \end{bmatrix}$$
+
+3.Spalte(siehe 1.Spalte):
+$$\text{K}_{B_1}(f(b_1)) = \text{K}_{B_1}\left(\begin{bmatrix} -2 \\ 1 \\ 4 \end{bmatrix}\right) = v_3$$
+
+ $$f_{B_1,B_1} = \begin{bmatrix} 2 & -4 & -2 \\ 0 & -2 & 1 \\ -2 & 2 & 4 \end{bmatrix}$$
 
 ** b)
+allg:
+$$\text{id}_{B_2,B_1} = \text{K}_{B_1} \circ \text{K}_{B_2}^{-1} = \text{K}_{B_1}(\text{K}_{B_2}^{-1}(e_i)) = \text{K}_{B_1}(v_j)$$
+
+1.Spalte:
+$$\text{K}_{B_1}(\text{K}_{B_2}^{-1}(e_1)) =  \text{K}_{B_1}(v_1) =  \text{K}_{B_1}\left(\begin{bmatrix} 2 \\ 0 \\ -2 \end{bmatrix}\right) = \text{K}_{B_1}(2 \cdot e_1 + 0 \cdot e_2 + (-2) \cdot e_3)$$
+$$\Rightarrow \begin{bmatrix} 2 \\ 0 \\ -2 \end{bmatrix} = v_1$$
+
+2.Spalte:
+$$\text{K}_{B_1}(\text{K}_{B_2}^{-1}(e_2)) =  \text{K}_{B_1}(v_2) = \begin{bmatrix} 4 \\ 2 \\ -2 \end{bmatrix} = v_2$$
+
+3.Spalte:
+$$\text{K}_{B_1}(\text{K}_{B_2}^{-1}(e_3)) =  \text{K}_{B_1}(v_3) = \begin{bmatrix} -2 \\ 1 \\ 4 \end{bmatrix} = v_3$$
+
+$$\text{id}_{B_2,B_1} = \begin{bmatrix} 2 & 4 & -2 \\ 0 & 2 & 1 \\ -2 & -2 & 4 \end{bmatrix}$$
 
 ** c)
+allg:
+$$\text{id}_{B_1,B_2} = \text{K}_{B_2} \circ \text{K}_{B_1}^{-1} = \text{K}_{B_2}(\text{K}_{B_1}^{-1}(e_i)) = \text{K}_{B_2}(b_j)$$
+
+1.Spalte:
+$$ \text{K}_{B_2}(b_1) =  \text{K}_{B_2}\left(\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}\right)
+= \text{K}_{B_2}\left(\lambda_1\begin{bmatrix} 2 \\ 0 \\ -2 \end{bmatrix} +
+    \lambda_2\begin{bmatrix} 4 \\ 2 \\ -2 \end{bmatrix} +
+    \lambda_3\begin{bmatrix} -2 \\ 1 \\ 4 \end{bmatrix}\right) $$
+
+LGS:
+$$\text{I: } 1 = 2\lambda_1 + 4\lambda_2 - 2\lambda_3 $$
+$$\text{II: } 0 = 0\lambda_1 + 2\lambda_2 + \lambda_3 \Leftrightarrow \lambda_3 = -2\lambda_2 $$
+$$\text{III: } 0 = -2\lambda_1 - 2\lambda_2 + 4\lambda_3 $$
+Also:
+$$\text{III: } 0 = -2\lambda_1 - 2\lambda_2 - 8\lambda_2 \Leftrightarrow \lambda_1 = -5\lambda-2$$
+$$\Rightarrow \text{I: } 1 = -10\lambda_2 + 4\lambda_2 + 4\lambda_2$$
+$$2\lambda_2 = -1 \Leftrightarrow \lambda_2 = -\frac{1}{2} \Rightarrow \lambda_1 = \frac{5}{2} \Rightarrow \lambda_3 = 1$$
+$$\Rightarrow \text{K}_{B_2}\left(\frac{5}{2}\begin{bmatrix} 2 \\ 0 \\ -2   \end{bmatrix} -
+    \frac{1}{2}\begin{bmatrix} 4 \\ 2 \\ -2 \end{bmatrix} +
+    1\begin{bmatrix} -2 \\ 1 \\ 4 \end{bmatrix}\right) =
+\begin{bmatrix} \frac{5}{2} \\ -\frac{1}{2} \\ 1 \end{bmatrix}$$
+
+2.Spalte (auf die selbe Weise, wie 1.Spalte):
+$$\lambda_1 = -3, \lambda_2 = 1, \lambda_3 = -1$$
+$$\Rightarrow \text{K}_{B_2}\left(\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}\right) =
+\text{K}_{B_2}\left(- 3\begin{bmatrix} 2 \\ 0 \\ -2 \end{bmatrix} +
+    1\begin{bmatrix} 4 \\ 2 \\ -2 \end{bmatrix} -
+    1\begin{bmatrix} -2 \\ 1 \\ 4 \end{bmatrix}\right) =
+    \begin{bmatrix} -3 \\ 1 \\ -1 \end{bmatrix}$$
+
+\pagebreak
+
+3.Spalte (siehe 1.Spalte):
+$$\lambda_1 = 2, \lambda_2 = -\frac{1}{2}, \lambda_3 = 1$$
+$$\Rightarrow \text{K}_{B_2}\left(\begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}\right) =
+\text{K}_{B_2}\left(2\begin{bmatrix} 2 \\ 0 \\ -2 \end{bmatrix} -
+\frac{1}{2}\begin{bmatrix} 4 \\ 2 \\ -2 \end{bmatrix} +
+1\begin{bmatrix} -2 \\ 1 \\ 4 \end{bmatrix}\right)
+= \begin{bmatrix} 2 \\ -\frac{1}{2} \\ 1 \end{bmatrix}$$
+
+$$\text{id}_{B_1,B_2} = \begin{bmatrix} \frac{5}{2} & -3 & 2 \\ -\frac{1}{2} & 1 & -\frac{1}{2} \\ 1 & -1 & 1 \end{bmatrix}$$
 
 ** d)
+\begin{align*}
+f_{B_2,B_2} &= \text{id}_{B_1, B_2} \cdot f_{B_1,B_1} \cdot \text{id}_{B_2, B_1} \\
+&= \begin{bmatrix} \frac{5}{2} & -3 & 2 \\ -\frac{1}{2} & 1 & -\frac{1}{2} \\ 1 & -1 & 1 \end{bmatrix} \cdot \begin{bmatrix} 2 & -4 & -2 \\ 0 & -2 & 1 \\ -2 & 2 & 4 \end{bmatrix} \cdot \begin{bmatrix} 2 & 4 & -2 \\ 0 & 2 & 1 \\ -2 & -2 & 4 \end{bmatrix} \\
+&= \begin{bmatrix} 1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 1 \end{bmatrix} \cdot
+\begin{bmatrix} 2 & 4 & -2 \\ 0 & 2 & 1 \\ -2 & -2 & 4 \end{bmatrix}
+= \begin{bmatrix} 2 & 4 & -2 \\ 0 & -2 & -1 \\ -2 & -2 & 4 \end{bmatrix}
+= f_{B_2,B_2}
+\end{align*}
 
 * Aufgabe 2
 ** a)
@@ -55,6 +131,8 @@ $f(r \cdot x) = r \cdot f(x)$. Damit gilt
     f(x) &= -5x -5
 \end{align*}
 
+\pagebreak
+
 Seien $a, b \in \R$, dann gilt
 
 \begin{align*}
@@ -73,11 +151,11 @@ $f$ lässt als Matrix wie folgt darstellen
 
 $$ f = \begin{bmatrix} -5 & 1 \\ -5 & 2 \end{bmatrix} $$
 
-linear abhängig? mit $r_1, r_2 \in \R$
+Überprüfung auf lineare Abhängigkeit mit $r_1, r_2 \in \R$
 
 $$ \begin{bmatrix} 0 \\ 0 \end{bmatrix} =
-    r_1 \begin{bmatrix} a \\ b \end{bmatrix} +
-    r_2 \begin{bmatrix} a \\ b \end{bmatrix} $$
+    r_1 \begin{bmatrix} -5 \\ -5 \end{bmatrix} +
+    r_2 \begin{bmatrix} 1 \\ 2 \end{bmatrix} $$
 
 daraus ergibt sich ein LGS, dass zu einem Widerspruch führt
 
@@ -115,7 +193,7 @@ $$ \dim(\text{Bild}(f)) = 2 $$
     \end{bmatrix}
 \end{align*}
 
-Für Kern($f$) gibt es also nur eine Lösung
+Für Kern($f$) gibt es also nur eine Lösung, weshalb gilt
 
 $$ \text{Kern}(f) = \left\{ \begin{bmatrix} 0 \\ 0 \end{bmatrix} \right\} $$
 
@@ -124,6 +202,15 @@ daraus folgt
 $$ B_{\text{Kern}(f)} = \{\} $$
 
 ** d)
+$$ f_{B_1,B_2} = \left[\text{K}_{B_2}(f(b_1)), \text{K}_{B_2}(f(b_2))\right]$$
+
+1.Spalte:
+$$ \text{K}_{B_2}(f(b_1)) = \text{K}_{B_2}(- 2x + 1) = 1 \cdot b_{2_1} + 0 \cdot b_{2_0} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$$
+
+2.Spalte:
+$$ \text{K}_{B_2}(f(b_2)) = \text{K}_{B_2}(x + 2) = 0 \cdot b_{2_1} + 1 \cdot b_{2_0} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$$
+
+$$ f_{B_1,B_2} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$$
 
 * Aufgabe 3
 Es gilt
@@ -133,17 +220,19 @@ $$ (3k + 1)(3k + 4) =
 
 daraus ergibt sich dann der folgende Ansatz
 
-$$ \frac{3}{(3k + 1)(3k + 4)} =
+$$ \frac{\frac{1}{3}}{(k + \frac{1}{3})(k + \frac{4}{3})} =
     \frac{A}{k + \frac{1}{3}} +
     \frac{B}{k + \frac{4}{3}} $$
 
-für $A$ mit $k = -\frac{1}{3}$
+für $A$ mit $k = -\frac{1}{3}$ gilt
 
 $$ \frac{1}{3} \cdot \frac{1}{-\frac{1}{3} + \frac{4}{3}} = A = \frac{1}{3} $$
 
-und für $B$ mit $k = -\frac{4}{3}$
+und für $B$ mit $k = -\frac{4}{3}$ gilt
 
-$$ \frac{1}{3} \cdot \frac{1}{-\frac{4}{3} + \frac{1}{3}} = A = -\frac{1}{3} $$
+$$ \frac{1}{3} \cdot \frac{1}{-\frac{4}{3} + \frac{1}{3}} = B = -\frac{1}{3} $$
+
+\pagebreak
 
 daraus folgt
 
@@ -154,11 +243,26 @@ daraus folgt
     &= \sum_{k = 0}^{n} \tuple{ \frac{1}{3k + 1} - \frac{1}{3k + 4} } \\
     &= \tuple{\frac{1}{1} - \frac{1}{4}} +
         \tuple{\frac{1}{4} - \frac{1}{7}} +
-        \tuple{\frac{1}{7} - \frac{1}{10}} + \dots + \\
-       & \tuple{ \frac{1}{3n - 2} - \frac{1}{3n + 1} } +
+        \tuple{\frac{1}{7} - \frac{1}{10}} + \dots \\
+        &+ \tuple{ \frac{1}{3n - 2} - \frac{1}{3n + 1} } +
         \tuple{ \frac{1}{3n + 1} - \frac{1}{3n + 4} } \\
-    &= 1 + \frac{1}{3n + 4}
+    &= 1 - \frac{1}{3n + 4}
 \end{align*}
+
+Für den Grenzwert gilt dann
+
+\begin{align*}
+    \lim_{n \Leftrightarrow \infty} \tuple{1 - \frac{1}{3n + 4}} &=
+        \lim_{n \rightarrow \infty} 1 -
+            \lim_{n \rightarrow \infty} \frac{1}{3n + 4} \\
+    &= 1 - \frac{\lim_{n \rightarrow \infty} 1}{\lim_{n \rightarrow \infty} 3n +
+            \lim_{n \rightarrow \infty} 4} \\
+    &= 1 - \frac{1}{\infty + 4} \overset{\text{GWS}}{=} 1 - 0 = 1
+\end{align*}
+
+damit gilt
+
+$$ \lim_{n \rightarrow \infty} \sum_{k = 0}^{n} \frac{3}{(3k + 1)(3k + 4)} = 1 $$
 
 * Aufgabe 4
 ** a)
@@ -188,23 +292,45 @@ Folglich gilt dann für alle $n \in \N$
 $$ x_n < \frac{4}{3} $$
 
 ** b)
-Es gelte $x_n < x_{n+1}$. \\
-Dann gilt
+Zu Zeigen ist für alle $n \in \N$
+
+$$ x_n < x_{n+1} $$
+
+IA: Es gilt
+
+$$ x_0 = 1 < x_1 = \frac{1}{4} + 1 = \frac{5}{4} $$
+
+IV: Es gelte für ein beliebiges $n \in \N$
+
+$$ x_n < x_{n+1} $$
+
+IB: Damit gilt dann
+
+$$ x_{n+1} < x_{n+2} $$
+
+IS: Es gilt
 
 \begin{align*}
-    x_n &< x_{n+1} \\
-    \Leftrightarrow \frac{x_{n-1}}{4} + 1 &< \frac{x_n}{4} + 1 \\
-    \Leftrightarrow \frac{x_{n-1}}{4} &< \frac{x_n}{4} \\
-    \Leftrightarrow x_{n-1} &< x_n \\
+    x_{n+1} &< x_{n+2} \\
+    \Leftrightarrow \frac{x_n}{4} + 1 &< \frac{x_{n+1}}{4} + 1 \\
+    \Leftrightarrow \frac{x_n}{4} &< \frac{x_{n+1}}{4} \\
+    \Leftrightarrow x_n &< x_{n+1} \\
 \end{align*}
 
-Diese Umformung kann $k$-mal wiederholt werden bis $k = n$ gilt. \\
-Daraus folgt dann, dass die Folge $x_n$ streng monoton wachsend.
+\pagebreak
+
+Damit gilt für alle $n \in \N$
+
+$$ x_n < x_{n+1} $$
+
+Damit ist die Folge $x_n$ streng monoton wachsend.
 
 ** c)
 Die Folge $x_n$ ist nach oben beschränkt mit $M = \frac{4}{3}$ (siehe a) \\
 \\
 Die Folge $x_n$ ist streng monoton wachsend (siehe b) \\
+\\
+Daraus folgt, dass die Folge $x_n$ auch nach unten beschränkt ist mit $m = 1$ \\
 \\
 Daraus folgt die Folge $x_n$ konvergiert.
 
@@ -231,6 +357,8 @@ dann gilt
     = \frac{4 - \tuple{\frac{1}{4}}^n}{3}
 \end{align*}
 
+\pagebreak
+
 dann gilt für den Grenzwert
 
 \begin{align*}
@@ -238,5 +366,5 @@ dann gilt für den Grenzwert
         \lim_{n \rightarrow \infty} \frac{4}{3} -
         \lim_{n \rightarrow \infty} \frac{\tuple{\frac{1}{4}}^n}{3} \\
     &= \frac{4}{3} - \lim_{n \rightarrow \infty} \frac{1}{3 \cdot 4^n} \\
-    &= \frac{4}{3} - 0 = \frac{4}{3}
+    & \overset{\text{GWS}}{=} \frac{4}{3} - 0 = \frac{4}{3}
 \end{align*}
