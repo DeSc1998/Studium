@@ -19,7 +19,6 @@
 
 #+LATEX: \setcounter{secnumdepth}{0}
 #+LATEX: \newcommand{\tuple}[1]{\left(#1\right)}
-#+LATEX: \renewcommand{\cfrac}[3]{#1 \tuple{\frac{#2}{#3}}}
 #+LATEX: \newcommand{\R}{\mathbb{R}}
 #+LATEX: \newcommand{\Z}{\mathbb{Z}}
 #+LATEX: \newcommand{\Q}{\mathbb{Q}}
@@ -37,19 +36,19 @@
 
 * Aufgabe 1
 
-Für f:
+Für f mit $z \in \Z$:
 \newline
 
 $$ f(x) =
     \begin{cases}
         z   & \text{, für } x = z \;\;(1) \\
-        z   & \text{, für } z < x < z + 1 \;\;(2)
+        z   & \text{, für } z \leq x < z + 1 \;\;(2)
     \end{cases} $$
 \newline
 \newline
 (1) Sprungstellen von $z$ auf $z + 1$
     in ganz $\Z$ und damit unstetig \newline
-(2) konstant und damit stetig in ]z, z + 1[
+(2) konstant und damit stetig in [z, z + 1[
     für alle $z \in \Z$ \newline
 \Rightarrow damit ist f unstetig \newline
 \newline
