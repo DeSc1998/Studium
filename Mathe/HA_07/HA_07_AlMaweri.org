@@ -37,6 +37,43 @@
 
 * Aufgabe 1
 
+Für f:
+\newline
+
+$$ f(x) =
+    \begin{cases}
+        z   & \text{, für } x = z \;\;(1) \\
+        z   & \text{, für } z < x < z + 1 \;\;(2)
+    \end{cases} $$
+\newline
+\newline
+(1) Sprungstellen von $z$ auf $z + 1$
+    in ganz $\Z$ und damit unstetig \newline
+(2) konstant und damit stetig in ]z, z + 1[
+    für alle $z \in \Z$ \newline
+\Rightarrow damit ist f unstetig \newline
+\newline
+Für g:
+\newline
+\newline
+\begin{math}
+    g(x) = \frac{2}{2 + e^{-2x}}
+    \text{, exp-Funktion positiv, also keine Polarstelle und stetig in ganz }\mathbb{R}
+\end{math}
+\newline
+\newline
+Für $f \circ g$:
+\newline
+\newline
+\begin{math}
+    f(g(x)) = f\left(\frac{2}{2 + e^{-2x}}\right) =
+        \lfloor \frac{2}{2 + e^{-2x}} \rfloor \text{, mit }
+    e^{-2x} \mapsto \; ]0, \infty[ \\
+    \Rightarrow \lfloor \frac{2}{2 + e^{-2x}} \rfloor = 0, \forall x \in \R \\
+    \Rightarrow \text{ somit ist } f \circ g \text{ auf ganz } \R
+    \text{ konstant und damit stetig}
+\end{math}
+
 * Aufgabe 2
 Sei $a \in \R$ und sei da eine beliebige Folge $x_n$ mit
 $\lim_{n \rightarrow \infty} x_n = a$, dann gilt
@@ -64,9 +101,132 @@ daraus folgt, $f$ ist nicht stetig in $x = 1$.
 * Aufgabe 3
 ** a)
 *** (a)
+Es gilt
+
+\begin{align*}
+    \lim_{x \rightarrow x_0} \frac{\sqrt{2x} - \sqrt{2x_0}}{x - x_0} &=
+        \lim_{x \rightarrow x_0}
+            \frac{2(x - x_0)}{(x - x_0)(\sqrt{2x} + \sqrt{2x_0})} \\
+    &= \lim_{x \rightarrow x_0} \frac{2}{\sqrt{2x} + \sqrt{2x_0}} \\
+    & \overset{\text{GWS}}{=}
+        \frac{2}{2 \sqrt{2x_0}} = \frac{1}{\sqrt{2x_0}} \\
+    \Rightarrow f'(x) = \frac{1}{\sqrt{2x}}
+\end{align*}
+
 *** (b)
+Es gilt
+
+$$ f(x) = (x-1)|x-1| \Leftrightarrow f(x) =
+    \begin{cases}
+        (x-1)^2 &, x \geq 1 \\
+        -(x-1)^2 &, x < 1
+    \end{cases} $$
+
+dann gilt
+
+\begin{align*}
+    \lim_{x \rightarrow x_0} \frac{(x - 1)^2 - (x_0 - 1)^2}{x - x_0} &=
+        \lim_{x \rightarrow x_0} \frac{(x + x_0 - 2)(x - x_0)}{x - x_0} \\
+    &= \lim_{x \rightarrow x_0} (x + x_0 - 2)
+        \overset{\text{GWS}}{=} 2x_0 - 2
+\end{align*}
+
+desweiteren gilt
+
+\begin{align*}
+    \lim_{x \rightarrow x_0} \frac{-(x - 1)^2 + (x_0 - 1)^2}{x - x_0} &=
+        \lim_{x \rightarrow x_0} \frac{(x_0 + x - 2)(x_0 - x)}{x - x_0} \\
+    &= \lim_{x \rightarrow x_0} \frac{-(x_0 + x - 2)(x - x_0)}{x - x_0} \\
+    &= \lim_{x \rightarrow x_0} -(x + x_0 - 2)
+        \overset{\text{GWS}}{=} -2x_0 + 2
+\end{align*}
+
+daraus folgt
+
+$$ f'(x) =
+    \begin{cases}
+        2(x-1) &, x \geq 1 \\
+        -2(x-1) &, x < 1
+    \end{cases} $$
+
 ** b)
 *** (a)
+Es gilt
+
+$$ (5x^6 - \cos(6x))' = 30x^5 + 6\sin(6x) $$
+
 *** (b)
+Es gilt
+
+\begin{align*}
+    \tuple{\frac{\sin(2x^2 - 2\pi)}{\cos(5\pi - 2x^2)}}' &=
+        \tuple{\frac{\sin(2x^2)}{\cos(\pi - 2x^2)}}' =
+        \tuple{\frac{\sin(2x^2)}{-\cos(-2x^2)}}' =
+        \tuple{\frac{\sin(2x^2)}{-\cos(2x^2)}}' \\
+    &= \tuple{\sin(2x^2)\tuple{{-\cos(2x^2)}}^{-1}}' \\
+    &= -\cos(2x^2) 4x (\cos(2x^2))^{-1} -
+            \sin(2x^2) \frac{1}{\cos^2(2x^2)} \sin(2x^2) 4x \\
+    &= -4x - 4x \frac{\sin^2(2x^2)}{\cos^2(2x^2)} = -4x(\tan^2(2x^2) + 1)
+\end{align*}
+
 *** (c)
+Es gilt
+
+$$ \tuple{e^{(4x - 2)(3x + 3)}}' = \tuple{e^{12x^2 + 6x - 6}}' =
+    e^{12x^2 + 6x - 6}(24x + 6) $$
+
 * Aufgabe 4
+** a)
+\begin{math}
+    \lim \limits_{x \nearrow 1} f(x) =
+        \lim \limits_{x \nearrow 1} (ax + b - 3)
+        \overset{\text{GWS}}{=} a + b - 3
+    \newline
+    \newline
+    \lim \limits_{x \searrow 1} f(x) =
+        \lim \limits_{x \searrow 1} (3x^2) \overset{\text{GWS}}{=} 3
+    \newline
+    \newline
+    \text{Also: }\lim \limits_{x \nearrow 1} f(x) =
+        a + b - 3 = 3 = \lim \limits_{x \searrow 1} f(x)
+    \newline
+    \text{$\Rightarrow$ $f$ ist stetig in ganz } \R
+        \text{, wenn } a + b = 6 \text{ gilt.}
+\end{math}
+
+\pagebreak
+
+** b)
+\begin{math}
+    \text{obere Teilfunktion: }
+    \newline
+    \lim \limits_{x \to x_0} f(x) =
+        \lim \limits_{x \to x_0} \frac{(ax + b - 3) -
+            (ax_0 + b - 3)}{x - x_0} = \frac{a(x - x_0)}{x - x_0} = a
+    \newline
+    \newline
+    \text{untere Teilfunktion: }
+    \newline
+    f'(x) = 6x
+    \newline
+    \text{für: }f'(1) = 6 = a = \lim \limits_{x \to x_0} f(x)
+    \newline
+    \newline
+    \text{Somit ist f differenzierbar für: } a = 6 \text{ und alle } b \in \mathbb{R}
+\end{math}
+
+** c)
+\begin{math}
+    \text{obere Teilfunktion: }
+    \newline
+    \lim \limits_{x \nearrow 1} f(x) =
+        \lim \limits_{x \nearrow 1} (6x + 3) \overset{\text{GWS}}{=} 6 + 3 = 9
+    \newline
+    \newline
+    \text{Also: }\lim \limits_{x \searrow 1} f(x) =
+        3 \neq 9 \lim \limits_{x \nearrow 1} f(x)
+    \newline
+    \newline
+    \text{Somit ist f in } x = 1
+    \text{ nicht stetig und damit auch nicht differenzierbar}
+\end{math}
