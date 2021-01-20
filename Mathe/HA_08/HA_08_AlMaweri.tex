@@ -1,0 +1,215 @@
+% Created 2021-01-20 Mi 14:18
+% Intended LaTeX compiler: pdflatex
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{braket}
+\usepackage[germanb]{babel}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{BG}{RGB}{28, 20, 8}
+\definecolor{FG}{RGB}{60, 140, 0}
+\pagecolor{BG}
+\color{FG}
+\author{Daniel Geinets (453843), Christopher Neumann (409098), Dennis Schulze (458415)}
+\date{\today}
+\title{Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 08 - Al-Maweri 13}
+\hypersetup{
+ pdfauthor={Daniel Geinets (453843), Christopher Neumann (409098), Dennis Schulze (458415)},
+ pdftitle={Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 08 - Al-Maweri 13},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.5)}, 
+ pdflang={Germanb}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\setcounter{secnumdepth}{0}
+\newcommand{\tuple}[1]{\left(#1\right)}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+\hskip -\arraycolsep
+\let\@ifnextchar\new@ifnextchar
+\array{#1}}
+\makeatother
+
+\pagebreak
+
+\section{Aufgabe 1}
+\label{sec:orga3882f8}
+\begin{math}
+    \text{Zeige, dass  }|\tan(x)+\tan(y)| \geq |x+y|
+        \text{  für alle  }x,y \in \left]-\frac{\pi}{2}, \frac{\pi}{2} \right[
+    \newline
+    \newline
+\end{math}
+
+\begin{align*}
+    \frac{|\tan(x)+\tan(y)|}{|x+y|} &= f'(\varepsilon) = 1+\frac{1}{\cos(\varepsilon)^2} \\
+    \Leftrightarrow   \frac{|\tan(x)+\tan(y)|}{|x+y|} &= 1+\frac{1}{\cos(\varepsilon)^2} \\
+    \Leftrightarrow |\tan(x)+\tan(y)| &= (|x+y|)\left(1+\frac{1}{\cos(\varepsilon)^2}\right)\\
+    \Leftrightarrow |\tan(x)+\tan(y)| &= |x+y|+\frac{|x+y|}{\cos(\varepsilon)^2}\\
+\end{align*}
+
+\begin{math}
+    \newline
+    \cos(\varepsilon)^2 \text{  auf  } \left]-\frac{\pi}{2}, \frac{\pi}{2} \right[
+        \geq 0 \text{  , also}
+    \newline
+\end{math}
+
+\begin{align*}
+    \frac{|x+y|}{\cos(\varepsilon)^2} &\geq 0 \\
+    \Leftrightarrow|x+y|+\frac{|x+y|}{\cos(\varepsilon)^2} &\geq |x+y| \\
+    \Leftrightarrow|\tan(x)+\tan(y)| &\geq |x+y|
+\end{align*}
+
+\section{Aufgabe 2}
+\label{sec:org033ce5e}
+Es gilt
+
+\begin{align*}
+    |f(x) - f(y)| &\leq |x - y|^2 \\
+    \Leftrightarrow \frac{|f(x) - f(y)|}{|x - y|} &\leq |x - y|
+\end{align*}
+
+Die Funktion \(f\) muss zumindest einmal differenzierbar sein, dann gilt mit \(\xi \in ]y, x[\)
+
+\begin{equation*}
+    |f'(\xi)| \leq |x - y|
+\end{equation*}
+
+Behauptung: \(f'(x) = 0, \forall x \in \R\)
+
+Dann gilt
+
+\begin{equation*}
+    |f'(\xi)| = |0| = 0 \leq |x - y|
+\end{equation*}
+
+Daraus folgt
+
+\begin{align*}
+    |f(x) - f(y)| &= |f(x) - f(x)| \\
+    &= |0| = 0 \\
+    &\leq |x - y|^2
+\end{align*}
+
+\section{Aufgabe 3}
+\label{sec:org78f30ce}
+\begin{math}
+    \text{Berechne für  }f(x) = \sqrt{2+x}, T_2(x)\text{ und }
+        T_4(x) \text{ mit  }x_0 = 0
+    \newline
+\end{math}
+
+\begin{align*}
+    f(x) &= \sqrt{2+x} \\
+    f'(x) &= \frac{1}{2\sqrt{2+x}} \\
+    f''(x) &= -\frac{1}{4\sqrt{2+x}^3} \\
+    f'''(x) &= \frac{3}{8\sqrt{2+x}^5} \\
+    f^4(x) &= \frac{15}{16\sqrt{2+x}^7} \\
+    \Rightarrow f^{(n)}(x) &= (-1)^n \cdot \frac{(2n-2)!}{2^{2n-1}(n-1)!} \cdot (x+2)^{\frac{1}{2}-n}
+\end{align*}
+
+\begin{math}
+    \newline
+\end{math}
+
+\begin{align*}
+    T_2(x) &= \sqrt{2} + \frac{\frac{1}{2\sqrt{2}}}{1}x - \frac{\frac{1}{8\sqrt{2}^3}}{2!}x^2 \\
+    &= \sqrt{2} + \frac{1}{2\sqrt{2}}x - \frac{1}{16\sqrt{2}}x^2
+\end{align*}
+
+\begin{align*}
+    T_4(x) &= T_2(x) + \frac{\frac{3}{8\sqrt{2}^5}}{3!}x^3 - \frac{\frac{15}{16\sqrt{2}^7}}{4!}x^4 \\
+    &= \sqrt{2} + \frac{1}{2\sqrt{2}}x -\frac{1}{8\sqrt{2}}x^2 + \frac{1}{64\sqrt{2}}x^3 - \frac{5}{1024\sqrt{2}}x^4
+\end{align*}
+\newline
+\begin{math}
+    \text{Abschätzen des  }R_2(x) \text{ ,für } |x| < \frac{1}{2}
+    \newline
+    |R_2(x)| = \left|\frac{ \frac{3}{8 \sqrt{\varepsilon+2}^5}}{3!}x^3 \right|
+        = \left| \frac{1}{16\sqrt{\varepsilon+2}^5} \right| \cdot |x|^3
+    \newline
+    \text{Es gilt mit }\varepsilon+2 > \frac{1}{2} \Leftrightarrow \frac{1}{\varepsilon+2} < 2
+    \newline
+    \Rightarrow \left| \frac{1}{16\sqrt{\varepsilon+2}^5} \right| \cdot |x|^3
+        < \frac{1}{16} \cdot \sqrt{2}^5 \cdot \frac{1}{2^3}
+        = \frac{\sqrt{2}}{32} \approx 0.0442
+\end{math}
+
+\section{Aufgabe 4}
+\label{sec:org8bdb58f}
+Es gilt
+
+\begin{align*}
+    f(x) &= e^x \cos(x) \\
+    f'(x) &= e^x \cos(x) - e^x \sin(x) \\
+        &= e^x (\cos(x) - \sin(x)) \\
+    f''(x) &= e^x (\cos(x) - \sin(x)) + e^x (-\sin(x) - \cos(x)) \\
+        &= -2 e^x \sin(x) \\
+    f'''(x) &= -2 e^x \sin(x) -2 e^x \cos(x) \\
+        &= -2 e^x (\cos(x) + \sin(x)) \\
+    f''''(x) &= -2 e^x (\cos(x) + \sin(x)) - 2 e^x (-\sin(x) + \cos(x)) \\
+        &= -4 e^x \cos(x)
+\end{align*}
+
+desweiteren gilt
+
+\begin{align*}
+    f(0)     &= 1 \\
+    f'(0)    &= 1 \\
+    f''(0)   &= 0 \\
+    f'''(0)  &= -2
+\end{align*}
+
+dann gilt für \(T_3\)
+
+\begin{align*}
+    T_3(x) &= f(x_0) + \frac{f'(x_0)}{1!} x +
+        \frac{f''(x_0)}{2!} x^2 + \frac{f'''(x_0)}{3!} x^3 \\
+    &= 1 + x + 0 \cdot x^2 + (-\frac{1}{3}) x^3 \\
+    &= 1 + x - \frac{1}{3} x^3
+\end{align*}
+
+dann gilt für Restglied \(R_3\)
+
+$$ R_3(x) = \frac{f''''(\xi)}{4!} x^4 = \frac{-4 e^{\xi} \cos(\xi)}{4!} x^4
+    = \frac{- e^{\xi} \cos(\xi)}{3!} x^4 $$
+
+dann gilt mit \(|x| = 10^{-2}\)
+
+\begin{align*}
+    |R_3(x)| &\leq 10^{-8} \\
+    \Leftrightarrow \left| \frac{- e^{\xi} \cos(\xi)}{3!} x^4 \right| &\leq 10^{-8} \\
+    \Leftrightarrow \left| \frac{- e^{\xi} \cos(\xi)}{3!} \right| |x^4| &\leq 10^{-8} \\
+    \Leftrightarrow \left| \frac{- e^{\xi} \cos(\xi)}{3!} \right| |x|^4 &\leq 10^{-8} \\
+    \Leftrightarrow \left| \frac{- e^{\xi} \cos(\xi)}{3!} \right| (10^{-2})^4 &\leq 10^{-8} \\
+    \Leftrightarrow \left| \frac{- e^{\xi} \cos(\xi)}{3!} \right| &\leq 1 \\
+    \Leftrightarrow \frac{e^{\xi} \cos(\xi)}{3!} &\leq 1 \\
+    \Leftrightarrow e^{\xi} \cos(\xi) &\leq 6 \\
+\end{align*}
+
+das gilt für alle \(\xi \in ]-\frac{1}{100}, \frac{1}{100}[ \setminus \{0\}\). Daraus folgt
+
+$$ \forall x \in [-\frac{1}{100}, \frac{1}{100}], |R_3(x)| \leq 10^{-8} $$
+\end{document}
