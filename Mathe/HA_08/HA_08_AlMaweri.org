@@ -43,10 +43,10 @@
 \end{math}
 
 \begin{align*}
-    \frac{|\tan(x)+\tan(y)|}{|x+y|} &= f'(\varepsilon) = 1+\frac{1}{\cos(\varepsilon)^2} \\
-    \Leftrightarrow   \frac{|\tan(x)+\tan(y)|}{|x+y|} &= 1+\frac{1}{\cos(\varepsilon)^2} \\
-    \Leftrightarrow |\tan(x)+\tan(y)| &= (|x+y|)\left(1+\frac{1}{\cos(\varepsilon)^2}\right)\\
-    \Leftrightarrow |\tan(x)+\tan(y)| &= |x+y|+\frac{|x+y|}{\cos(\varepsilon)^2}\\
+    \frac{|\tan(x)+\tan(y)|}{|x+y|} &= f'(\varepsilon) = \frac{1}{\cos(\varepsilon)^2} \\
+    \Leftrightarrow   \frac{|\tan(x)+\tan(y)|}{|x+y|} &=  \frac{1}{\cos(\varepsilon)^2} \\
+    \Leftrightarrow |\tan(x)+\tan(y)| &= (|x+y|)\left(\frac{1}{\cos(\varepsilon)^2}\right)\\
+    \Leftrightarrow |\tan(x)+\tan(y)| &= \frac{|x+y|}{\cos(\varepsilon)^2}\\
 \end{align*}
 
 \begin{math}
@@ -57,9 +57,9 @@
 \end{math}
 
 \begin{align*}
-    \frac{|x+y|}{\cos(\varepsilon)^2} &\geq 0 \\
-    \Leftrightarrow|x+y|+\frac{|x+y|}{\cos(\varepsilon)^2} &\geq |x+y| \\
-    \Leftrightarrow|\tan(x)+\tan(y)| &\geq |x+y|
+    \frac{1}{\cos(\varepsilon)^2} &\geq 1 \\
+    \Leftrightarrow \frac{|x+y|}{\cos(\varepsilon)^2} &\geq |x+y| \\
+    \Leftrightarrow |\tan(x)+\tan(y)| &\geq |x+y|
 \end{align*}
 
 * Aufgabe 2
