@@ -1,0 +1,233 @@
+% Created 2021-01-27 Mi 14:53
+% Intended LaTeX compiler: pdflatex
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{braket}
+\usepackage[germanb]{babel}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{BG}{RGB}{28, 20, 8}
+\definecolor{FG}{RGB}{60, 140, 0}
+\pagecolor{BG}
+\color{FG}
+\author{Daniel Geinets (453843), Christopher Neumann (409098), Dennis Schulze (458415)}
+\date{\today}
+\title{Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 09 - Al-Maweri 13}
+\hypersetup{
+ pdfauthor={Daniel Geinets (453843), Christopher Neumann (409098), Dennis Schulze (458415)},
+ pdftitle={Analysis I und Lineare Algebra für Ingenieurwissenschaften \large  \\ Hausaufgabe 09 - Al-Maweri 13},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.5)}, 
+ pdflang={Germanb}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\setcounter{secnumdepth}{0}
+\newcommand{\tuple}[1]{\left(#1\right)}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+\hskip -\arraycolsep
+\let\@ifnextchar\new@ifnextchar
+\array{#1}}
+\makeatother
+
+\pagebreak
+
+\section{Aufgabe 1}
+\label{sec:org4ad72b5}
+\subsection{a)}
+\label{sec:org247ef05}
+Es gilt
+
+\begin{align*}
+    f(x) &= \ln(x) \\
+    f'(x) &= \frac{1}{x} = x^{-1} \\
+    f''(x) &= -\frac{1}{x^2} = -x^{-2} \\
+    f'''(x) &= \frac{2}{x^3} = x^{-1} \\
+\end{align*}
+
+dann gilt für die Taylorpoynome T\textsubscript{1} und T\textsubscript{2}
+
+\begin{align*}
+    T_1(x) &= f(x_0) + f'(x_0)(x - x_0) \\
+    &= 0 + 1 \cdot (x - 1) = x - 1 \\
+    T_2(x) &= f(x_0) + f'(x_0)(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 \\
+    &= 0 + 1 \cdot (x - 1) + \frac{-1}{2}(x - 1)^2
+        = x - 1 - \frac{(x - 1)^2}{2}
+\end{align*}
+
+für dessen Restglieder gilt
+
+\begin{align*}
+    R_1(x) &= \frac{f''(\xi)(x-1)^2}{2!} \\
+        &= \frac{1}{2} \cdot \frac{-1}{\xi^2} (x - 1)^2
+        = \frac{-(x - 1)^2}{2 \xi^2} \\
+    R_2(x) &= \frac{f'''(\xi)(x-1)^3}{3!} \\
+        &= \frac{1}{6} \cdot \frac{2}{\xi^3} (x - 1)^3
+        = \frac{(x - 1)^3}{3 \xi^3}
+\end{align*}
+
+dann gilt
+
+\begin{equation*}
+    \ln(x) = T_1(x) + R_1(x) \text{ bzw. } \ln(x) = T_2(x) + R_2(x)
+\end{equation*}
+
+Damit die Ungleichungen \(\ln(x) < T_1(x)\) und \(\ln(x) > T_2(x)\) gelten
+müssen die folgenden Ungleichungen erfüllt sein.
+
+\begin{equation*}
+    0 > R_1(x) \text{ und } 0 < R_2(x)
+\end{equation*}
+
+der Nenner der Restglieder ist immer größer 0 für alle \(\xi \in ]x_0, x[\)
+dann gilt
+
+\begin{align*}
+    x - 1 &> 0, \forall x \in ]1, \infty[ \\
+    \Leftarrow (x-1)^2 &> 0 \text{ bzw. } (x-1)^3 > 0, \forall x \in ]1, \infty[ \\
+    \Leftarrow -(x-1)^2 &< 0, \forall x \in ]1, \infty[ \\
+    \Leftarrow 0 &> R_1(x) \text{ bzw. } 0 < R_2(x), \forall x \in ]1, \infty[
+\end{align*}
+
+\subsection{b)}
+\label{sec:org99020ee}
+\uline{Für das Monotoniekriterium:} \newline
+
+\begin{math}
+x-1-\frac{(x-1)^2}{2} < \ln x \text{ , da:}
+\newline
+\newline
+(x-1-\frac{(x-1)^2}{2})' = 2-x < 0 \text{ , für } x \in ]2, \infty[ \Rightarrow \text{ streng monoton fallend}
+\newline
+\newline
+(\ln x)' = \frac{1}{x} > 0 \text{ , für } x \in ]1, \infty[ \Rightarrow \text{ streng monoton steigend}
+\newline
+\newline
+\text{Somit: }
+\end{math}
+\begin{align*}
+	\lim \limits_{x \to \infty}\left( x-1-\frac{(x-1)^2}{2}\right) &\overset{\text{GWS}}{=} -\infty \\
+	\lim \limits_{x \to \infty}(\ln x) &\overset{\text{GWS}}{=} \infty \\
+	\Rightarrow x-1-\frac{(x-1)^2}{2} &< \ln x \text{ , für } x \in ]1, \infty[
+\end{align*}
+
+\uline{Für den Mittelwertsatz:} \newline
+
+Zu zeigen ist, dass \(\ln\)(x)< x-1 für alle x \(\in\)  ]1,\(\infty\)[
+\newline
+\newline
+\(f(x) = \ln(x)\),  \(a\) = 1, b = x, \(\xi\)  \(\in\)  ]1,\(\infty\)[
+\newline
+\newline
+\(\frac{\ln(x)-\ln(1)}{x-1}\) = \(\frac{f(x)-f(1)}{x-1}\) = \(f'(\xi)\) = (ln(\(\xi\)))' = \(\frac{1}{\xi}\) \(\Leftrightarrow\)
+\newline
+\newline
+\(\frac{\ln(x)}{x-1}\) = \(\frac{1}{\xi}\)
+\newline
+\newline
+\(\Leftrightarrow\) ln(\(x\)) = \(\frac{1}{\xi}\) (\(x-1\))
+\newline
+\newline
+\(\frac{1}{\xi}\) < 1, \text{ da } \(\xi\) \(\in\)  ]1,\(\infty\)[ gilt \(\xi\) > 1  und  damit
+\(\frac{1}{\xi}\) < 1
+\newline
+\newline
+ln(\(x\)) < \(x-1\) \text{ für alle } \(x\) \(\in\)  ]1,\(\infty\)[
+
+\section{Aufgabe 2}
+\label{sec:orga7c0239}
+Es gilt
+
+\begin{align*}
+    f(x)    &= 3^x = e^{x \ln(3)} = (\ln(3))^0 e^{x \ln(3)} \\
+    f'(x)   &= \ln(3) e^{x \ln(3)} = (\ln(3))^1 e^{x \ln(3)} \\
+    f''(x)  &= (\ln(3))^2 e^{x \ln(3)} \\
+    f'''(x) &= (\ln(3))^3 e^{x \ln(3)} \\
+    &\vdots \\
+    f^{(n)}(x) &= (\ln(3))^n e^{x \ln(3)}
+\end{align*}
+
+dann gilt für das Taylorpolynom T\textsubscript{n}
+
+\begin{align*}
+    T_n(x) &= f(x_0) + \frac{f'(x_0)}{1!}x + \frac{f''(x_0)}{2!}x^2 + \dots + \frac{f(x_0)}{n!}x^n \\
+    &= 1 + \ln(3)x + \frac{(\ln(3))^2}{2}x^2 + \frac{(\ln(3))^3}{6}x^3 + \dots + \frac{(\ln(3))^n}{n!}x^n \\
+    &= \sum_{k = 0}^{n} \frac{(\ln(3))^k x^k}{k!}
+\end{align*}
+
+und es gilt für das Restglied R\textsubscript{n}
+
+\begin{equation*}
+    R_n(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}x^{n+1}
+        = \frac{ (\ln(3))^{n+1} e^{\ln(3)\xi}}{(n+1)!}x^{n+1}
+        = \frac{ (\ln(3))^{n+1} x^{n+1}}{(n+1)!} e^{\ln(3)\xi}
+\end{equation*}
+
+Betrachtet man das Restglied nun als Folge mit einem festen \(x \in ]1, \infty[\)
+und da dann das \(n\) gegen \(\infty\) konvergieren als, fällt auf, dass irgendeine
+Exponentialfunktion durch die "`Fakultätsfunktion"'. Da die "`Fakultätsfunktion"'
+schneller als jede Exponentialfunktion, müsste gelten
+
+\begin{equation*}
+    \lim_{n \leftarrow \infty} R_n(x) = 0, \forall x \in \R
+\end{equation*}
+
+\section{Aufgabe 3}
+\label{sec:org838d482}
+\subsection{a)}
+\label{sec:org6cb7490}
+Für \(x,y > 0, x,y \in \R\) gilt:
+
+\begin{align*}
+    0 &\leq (x-y)^2 \\
+    \Leftrightarrow 0 &\leq x^2 -2xy+y^2 \\
+    \Leftrightarrow 4xy &\leq x^2 + 2xy + y^2 \\
+    \Leftrightarrow xy &\leq \frac{x^2+2xy+y^2}{4} = \frac{(x+y)^2}{4} \\
+    \Leftrightarrow (xy)^{\frac{1}{2}} &\leq \frac{x+y}{2} \\
+    \Leftrightarrow \ln(xy^{\frac{1}{2}}) &\leq \ln\left(\frac{x+y}{2}\right) \\
+    \Leftrightarrow \frac{\ln(xy)}{2} = \frac{\ln(x) + \ln(y)}{2} &\leq \ln\left(\frac{x+y}{2}\right)
+\end{align*}
+
+\subsection{b)}
+\label{sec:orga8bebf1}
+\begin{math}
+\operatorname{artanh} x = \frac{1}{2}\ln\left(\frac{1+x}{1-x}\right) \text{ , für alle }x \in ]-1,1[
+\newline
+\end{math}
+\begin{align*}
+	y = \operatorname{artanh} x &= \tanh^{-1}x \\
+	\tanh^{-1}x &= y \\
+	\Leftrightarrow \tanh(\tanh^{-1}x) &= \tanh y \\
+	\Leftrightarrow x &= \tanh y = \frac{\sinh y}{\cosh y} = \frac{e^y - e^{-y}}{e^y + e^{-y}} \\
+	\Leftrightarrow x &= \frac{e^{2y} - 1}{e^{2y} + 1} \\
+	\Leftrightarrow e^{2y}-1 &= xe^{2y} + x \\
+	\Leftrightarrow (1-x)e^{2y} &= x+1 \\
+	\Leftrightarrow e^{2y} &= \frac{x+1}{x-1} \\
+	\Leftrightarrow 2y &= \ln \left(\frac{1+x}{1-x}\right) \\
+	\Leftrightarrow y &= \frac{1}{2} \ln \left(\frac{1+x}{1-x}\right) \\
+\end{align*}
+\begin{math}
+\Rightarrow \operatorname{artanh} x = \frac{1}{2} \ln \left(\frac{1+x}{1-x}\right) \text{ , für } -1 < x < 1
+\end{math}
+\end{document}
