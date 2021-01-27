@@ -89,6 +89,10 @@ dann gilt
     \Rightarrow 0 &> R_1(x) \text{ bzw. } 0 < R_2(x), \forall x \in ]1, \infty[
 \end{align*}
 
+somit gilt
+
+$$ x-1-\frac{(x-1)^2}{2} < \ln x < x - 1 $$
+
 ** b)
 _Für das Monotoniekriterium:_ \newline
 
