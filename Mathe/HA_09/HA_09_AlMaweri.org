@@ -72,7 +72,7 @@ dann gilt
     \ln(x) = T_1(x) + R_1(x) \text{ bzw. } \ln(x) = T_2(x) + R_2(x)
 \end{equation*}
 
-Damit die Ungleichungen $\ln(x) < T_1(x)$ und $\ln(x) > T_2(x)$ gelten
+Damit die Ungleichungen $\ln(x) < T_1(x)$ und $\ln(x) > T_2(x)$ gelten,
 müssen die folgenden Ungleichungen erfüllt sein.
 
 \begin{equation*}
@@ -84,9 +84,9 @@ dann gilt
 
 \begin{align*}
     x - 1 &> 0, \forall x \in ]1, \infty[ \\
-    \Leftarrow (x-1)^2 &> 0 \text{ bzw. } (x-1)^3 > 0, \forall x \in ]1, \infty[ \\
-    \Leftarrow -(x-1)^2 &< 0, \forall x \in ]1, \infty[ \\
-    \Leftarrow 0 &> R_1(x) \text{ bzw. } 0 < R_2(x), \forall x \in ]1, \infty[
+    \Rightarrow (x-1)^2 &> 0 \text{ bzw. } (x-1)^3 > 0, \forall x \in ]1, \infty[ \\
+    \Rightarrow -(x-1)^2 &< 0, \forall x \in ]1, \infty[ \\
+    \Rightarrow 0 &> R_1(x) \text{ bzw. } 0 < R_2(x), \forall x \in ]1, \infty[
 \end{align*}
 
 ** b)
@@ -163,7 +163,7 @@ und es gilt für das Restglied R_n
 
 Betrachtet man das Restglied nun als Folge mit einem festen $x \in ]1, \infty[$
 und da dann das $n$ gegen $\infty$ konvergieren als, fällt auf, dass irgendeine
-Exponentialfunktion durch die "Fakultätsfunktion". Da die "Fakultätsfunktion"
+Exponentialfunktion durch die "Fakultätsfunktion" geteilt wird. Da die "Fakultätsfunktion" wächst
 schneller als jede Exponentialfunktion, müsste gelten
 
 \begin{equation*}
@@ -180,7 +180,7 @@ Für $x,y > 0, x,y \in \R$ gilt:
     \Leftrightarrow 4xy &\leq x^2 + 2xy + y^2 \\
     \Leftrightarrow xy &\leq \frac{x^2+2xy+y^2}{4} = \frac{(x+y)^2}{4} \\
     \Leftrightarrow (xy)^{\frac{1}{2}} &\leq \frac{x+y}{2} \\
-    \Leftrightarrow \ln(xy^{\frac{1}{2}}) &\leq \ln\left(\frac{x+y}{2}\right) \\
+    \Leftrightarrow \ln((xy)^{\frac{1}{2}}) &\leq \ln\left(\frac{x+y}{2}\right) \\
     \Leftrightarrow \frac{\ln(xy)}{2} = \frac{\ln(x) + \ln(y)}{2} &\leq \ln\left(\frac{x+y}{2}\right)
 \end{align*}
 
